@@ -6,5 +6,15 @@
 본 과정을 통해 오라클 솔루션을 활용하여 마이크로 서비스 개발에 대한 전반적인 라이프사이클을 경험해 보실 수 있습니다.
 
 ## 데스크탑  설치 프로그램
-* Visual Studio Code
-* 
+* [Java SE Development Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Node.js](https://nodejs.org/ko/download)
+* [Apache Maven](https://maven.apache.org/download.cgi)
+* [Git](https://git-scm.com/download/win)
+* [Visual Studio Code](https://code.visualstudio.com/download)
+* [SQL Developer](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
+* [Insomnia](https://insomnia.rest/download)
+
+## Oracle Cloud 환경
+* [Oracle Compute Cloud Service](https://cloud.oracle.com/ko_KR/compute)
+* [Oracle Database Cloud Service](https://cloud.oracle.com/ko_KR/database)
+* [Oracle API Platform Cloud Service](https://cloud.oracle.com/ko_KR/api-platform)
