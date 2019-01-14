@@ -53,7 +53,7 @@ verify를 위한 메일이 발송됩니다.
 Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다. **Name your first API** 부분에 *myfirstapi* 혹은 *helloapiary* 와 같이 임의로 입력합니다.  
 ![apiary_first_api](images/apiary_first_api.png)
 
-축하합니다!! Apiary 계정을 성공적으로 생성하셨습니다.  
+축하합니다!! :clap: Apiary 계정을 성공적으로 생성하셨습니다.  
 아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.  
 ![apiary_first_api_editor](images/apiary_first_api_editor.png)
 
@@ -87,7 +87,7 @@ Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 AP
 ![apiary_write_api_1](images/apiary_write_api_1.png)
 
 이제부터 Movie API 문서를 작성하겠습니다.  
-:exclamation: **수정** 혹은 **수정 안함** 
+:meme:**작성**  이라고 표기되어 있는 부분만 변경 또는 재작성합니다.
 
 API Blueprint 버전 정도로 생각하면 됩니다. 현재 API Blueprint spec은 1A revision 9 입니다.
 ```markdown
@@ -104,7 +104,8 @@ API 문서 이름입니다. 한글도 가능합니다.
 # Movie API
 ```
 
-:recycle: **변경** : API에 대한 설명, 소개를 적는 부분입니다. 아래와 같이 수정합니다.
+:memo:**작성** > API에 대한 설명, 소개를 적는 부분입니다. 아래와 같이 수정합니다.
 ```markdown
+~~Polls is a simple API allowing consumers to view polls and vote in them.~~
 영화 정보를 제공하는 API 입니다.
 ```
