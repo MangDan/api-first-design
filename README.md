@@ -26,3 +26,8 @@
 4. API 서비스에 보안 및 정책을 적용하고 API Gateway에 서비스 배포하기
 
 ![Scenario](images/api_first_design_scenario.png)
+
+## Apiary 계정 생성하기
+먼저 [Apiary](https://apiary.io) 홈페이지에 접속합니다. 
+[https://apiary.io](https://apiary.io)
+![apiary home](images/api_home.png)
