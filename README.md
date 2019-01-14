@@ -28,6 +28,5 @@
 ![Scenario](images/api_first_design_scenario.png)
 
 ## Apiary 계정 생성하기
-먼저 [Apiary](https://apiary.io) 홈페이지에 접속합니다.  
-[https://apiary.io](https://apiary.io)
+먼저 [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.
 ![apiary home](images/apiary_home.png)
