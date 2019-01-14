@@ -86,14 +86,16 @@ Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 AP
 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다. 
 ![apiary_write_api_1](images/apiary_write_api_1.png)
 
-이제부터 Movie API 문서를 작성하겠습니다.
+이제부터 Movie API 문서를 작성하겠습니다.  
+옆의 주석을 참고해서 문서를 수정합니다. **수정 안함** 부분은 변경하지 않습니다. **수정** 부분은 변경합니다.  
+:exclamation <font color='red'>주석은 참고만 하고 입력하지 않습니다.</font>
 ```markdown
-FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+FORMAT: 1A <!-- 수정 안함 : API Blueprint 버전 정도로 생각하면 됩니다. 현재 API Blueprint spec은 1A revision 9 입니다. -->
+HOST: http://polls.apiblueprint.org/ <!-- 수정 안함 : 실제 서비스할 Production 서버의 주소입니다. 처음에는 없기 때문에 변경하지 않습니다. -->
 
-# Movie API
+# Movie API  <!-- 수정 안함 : API 문서 이름입니다. 한글도 가능합니다. -->
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+영화 정보를 제공하는 API 입니다.  <!-- 수정 : API에 대한 설명, 소개를 적는 부분입니다. -->
 ```
 
 
