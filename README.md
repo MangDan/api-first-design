@@ -87,7 +87,12 @@ Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 AP
 ![apiary_write_api_1](images/apiary_write_api_1.png)
 
 이제부터 Movie API 문서를 작성하겠습니다.  
-:meme:**작성**  이라고 표기되어 있는 부분만 변경 또는 재작성합니다. (빨간색을 초록색으로)
+:meme:**작성**  이라고 표기되어 있는 부분만 변경 또는 재작성합니다.  
+**변경 전** 부분을 **변경 후** 부분으로 변경합니다. Copy & Paste 할때는 앞 +/- 는 제외합니다.
+```diff
+- 변경 전
++ 변경 후 또는 추가
+```
 
 API Blueprint 버전 정도로 생각하면 됩니다. 현재 API Blueprint spec은 1A revision 9 입니다.
 ```markdown
@@ -115,3 +120,37 @@ API 문서 이름입니다. 한글도 가능합니다.
 - ## Questions Collection [/questions]
 + ## Movies Collection [/movies]
 ```
+
+:memo:**작성** > API 엔드포인트에 대한 Action (Method)를 정의합니다. 아래와 같이 수정합니다.
+```diff
+- ### List All Questions [GET]
++ ### List All Movies [GET]
+```
+
+:memo:**작성** > API 엔드포인트에 대한 Action (Method)를 정의합니다. 아래와 같이 수정합니다.
+```diff
+- + Response 200 (application/json)
+
+-         [
+-             {
+-                 "question": "Favourite programming language?",
+-                 "published_at": "2015-08-05T08:40:51.620Z",
+-                 "choices": [
+-                     {
+-                         "choice": "Swift",
+-                         "votes": 2048
+-                     }, {
+-                         "choice": "Python",
+-                         "votes": 1024
+-                     }, {
+-                         "choice": "Objective-C",
+-                         "votes": 512
+-                     }, {
+-                         "choice": "Ruby",
+-                         "votes": 256
+-                     }
+-                 ]
+-             }
+-         ]
+```
+
