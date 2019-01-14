@@ -65,13 +65,21 @@ Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다. **Nam
 문서 유형은 API Blueprint와 Swagger 2.0 스펙을 지원하는데, 여기서는 API Blueprint로 문서를 작성합니다.
 ```
 여기서 잠깐!!!
-무료 계정을 사용할 경우 Personal API만 만들 수 있습니다. Personal API는 개인적인 용도이며, 작성된 API 문서는 외부에 공개됩니다. Enterprise 버전을 구매할 경우 Team API를 만들 수 있습니다. Team API는 팀멤버를 구성하고 해당하는 팀멤버에게만 공유할 수 있습니다.
+무료 계정을 사용할 경우 Personal API만 만들 수 있습니다. Personal API는 개인적인 용도이며, 작성된 API 문서는 외부에 공개됩니다. 
+Enterprise 버전을 구매할 경우 Team API를 만들 수 있습니다. Team API는 팀멤버를 구성하고 해당하는 팀멤버에게만 공유할 수 있습니다.
 ```
 ```
 여기서 잠깐!!!
 API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 작성 언어입니다.
-API Blueprint는 MarkDown 형식으로 작성하며, 가장 작성하기 쉽고 이해하기 쉬운 언어이지만, 스텁이나 스니펫과 같은 코드 생성 기능을 지원하지 않습니다.
-Swagger는 현재는 OAS(Open API Specification)라고 불리며(하지만 여전히 개발자들 사이에서는 Swagger로 불립니다.) YAML 혹은 JSON 형식으로 작성이 되며, 개발자에게 좀 더 친숙하고, 많은 내용을 담을 수 있기 때문에 비 개발자에게는 복잡하게 느껴질 수 있습니다. API Blueprint에 비해서 복잡하고 어렵지만, 다양한 언어의 스텁 코드를 생성할 수 있는 기능(Swagger Codegen)과 같은 기능을 제공하며, 이미 만들어져 있는 API에서 바로 Swagger 문서를 만들 수 있습니다(ex. spring-boot api -> swagger). Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를 추출하는 방식으로 더 많이 사용됩니다. 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를 떠올리면 됩니다. (이 부분은 이견이 있을 수 있습니다.)
+API Blueprint는 MarkDown 형식으로 작성하며, 가장 작성하기 쉽고 이해하기 쉬운 언어이지만, 스텁이나 스니펫과 같은 코드 생성 
+기능을 지원하지 않습니다. Swagger는 현재는 OAS(Open API Specification)라고 불리며(하지만 여전히 개발자들 사이에서는 
+Swagger로 불립니다.) YAML 혹은 JSON 형식으로 작성이 되며, 개발자에게 좀 더 친숙하고, 많은 내용을 담을 수 있기 때문에 비 개발자에게는 
+다소 복잡하게 느껴질 수 있습니다. API Blueprint에 비해서 복잡하고 어렵지만, 다양한 언어의 스텁 코드를 생성할 수 있는 기능
+(Swagger Codegen)과 같은 기능을 제공하며, 이미 만들어져 있는 API에서 바로 Swagger 문서를 만들 수 있습니다
+(ex. spring-boot api -> swagger). 
+Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를 추출하는 
+방식으로 더 많이 사용됩니다. 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를 
+떠올리면 됩니다. (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)
 ```
 ![apiary_create_new_api_personal](images/apiary_create_new_api_personal.png)
 
