@@ -53,7 +53,17 @@ verify를 위한 메일이 발송됩니다.
 Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다. **Name your first API** 부분에 *myfirstapi* 혹은 *helloapiary* 와 같이 임의로 입력합니다.  
 ![apiary_first_api](images/apiary_first_api.png)
 
-축하합니다!! Apiary 계정을 성공적으로 생성하셨습니다. 아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.  
+축하합니다!! Apiary 계정을 성공적으로 생성하셨습니다.  
+아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.  
 ![apiary_first_api_editor](images/apiary_first_api_editor.png)
 
+## API Blueprint 문서 만들기
+좌측 상단의 API 이름을 클릭한 후 **Create New API Project**를 선택합니다.  
+![apiary_create_new_api](images/apiary_create_new_api.png)
+
+**Personal API**를 선택하고 API 이름은 **Movie API** 라고 입력합니다.
+```
+<span style="color:red">참고 : 무료 계정을 사용할 경우 Personal API만 만들 수 있습니다. Personal API는 개인적인 용도이며, 작성된 API 문서는 외부에 공개됩니다. Enterprise 버전을 구매할 경우 Team API를 만들 수 있습니다. Team API는 팀멤버를 구성하고 해당하는 팀멤버에게만 공유할 수 있습니다.</span>
+```
+![apiary_create_new_api_personal](images/apiary_create_new_api_personal.png)
 
