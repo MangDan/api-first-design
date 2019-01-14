@@ -28,32 +28,32 @@
 ![Scenario](images/api_first_design_scenario.png)
 
 ## Apiary 계정 생성하기
-먼저 [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.
+먼저 [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
 ![apiary home](images/apiary_home.png)
 
 **Continue with GitHub** 버튼을 클릭합니다.  
-GitHub 계정이 필요합니다. 만약에 없을 경우 [GitHub(https://github.com)](https://github.com)에서 계정을 생성하세요.
+GitHub 계정이 필요합니다. 만약에 없을 경우 [GitHub(https://github.com)](https://github.com)에서 계정을 생성하세요.  
 ![apiary_sign_up](images/apiary_sign_up.png)
 
-GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.
+GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
 ![apiary_github_account1](images/apiary_github_account1.png)
 
-verify를 위한 메일이 발송됩니다. 
+verify를 위한 메일이 발송됩니다.  
 ![apiary_github_auth](images/apiary_github_auth.png)
 
-등록한(로그인) 메일 계정으로 접속하여 verify 메일을 확인하고 **verify email address**를 클릭 합니다.
+등록한(로그인) 메일 계정으로 접속하여 verify 메일을 확인하고 **verify email address**를 클릭 합니다.  
 ![apiary_email_auth](images/apiary_email_auth.png)
 
-다시 Apiary 홈페이지로 접속하여 우측 상단의 **Sign In** 버튼을 클릭한 후 **Continue with GitHub** 버튼을 클릭 합니다.
+다시 Apiary 홈페이지로 접속하여 우측 상단의 **Sign In** 버튼을 클릭한 후 **Continue with GitHub** 버튼을 클릭 합니다.  
 ![apiary_signin](images/apiary_signin.png)
 
-다시 GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.
+다시 GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
 ![apiary_github_signin](images/apiary_github_signin.png)
 
-Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다. **Name your first API** 부분에 *myfirstapi* 혹은 *helloapiary* 와 같이 임의로 입력합니다.
+Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다. **Name your first API** 부분에 *myfirstapi* 혹은 *helloapiary* 와 같이 임의로 입력합니다.  
 ![apiary_first_api](images/apiary_first_api.png)
 
-축하합니다!! Apiary 계정을 성공적으로 생성하셨습니다. 아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.
+축하합니다!! Apiary 계정을 성공적으로 생성하셨습니다. 아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.  
 ![apiary_first_api_editor](images/apiary_first_api_editor.png)
 
 
