@@ -83,3 +83,19 @@ Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 AP
 ```
 ![apiary_create_new_api_personal](images/apiary_create_new_api_personal.png)
 
+생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다. 
+![apiary_write_api_1](images/apiary_write_api_1.png)
+
+이제부터 Movie API 문서를 작성하겠습니다.
+```markdown
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Movie API
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+```
+
+
+
+
