@@ -29,7 +29,5 @@
 
 ## Apiary 계정 생성하기
 먼저 [Apiary](https://apiary.io) 홈페이지에 접속합니다. 
-
 [https://apiary.io](https://apiary.io)
-
 ![apiary home](images/apiary_home.png)
