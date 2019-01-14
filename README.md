@@ -87,7 +87,7 @@ Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 AP
 ![apiary_write_api_1](images/apiary_write_api_1.png)
 
 이제부터 Movie API 문서를 작성하겠습니다.  
-:meme:**작성**  이라고 표기되어 있는 부분만 변경 또는 재작성합니다.
+:meme:**작성**  이라고 표기되어 있는 부분만 변경 또는 재작성합니다. (빨간색을 초록색으로)
 
 API Blueprint 버전 정도로 생각하면 됩니다. 현재 API Blueprint spec은 1A revision 9 입니다.
 ```markdown
@@ -105,9 +105,16 @@ API 문서 이름입니다. 한글도 가능합니다.
 ```
 
 :memo:**작성** > API에 대한 설명, 소개를 적는 부분입니다. 아래와 같이 수정합니다.
+~~```markdown
+Polls is a simple API allowing consumers to view polls and vote in them.
+```~~
+```markdown
+영화 정보를 제공하는 API 입니다.
+```
 
+
+:memo:**작성** > API에 대한 엔드포인트 URL입니다. 아래와 같이 수정합니다.
 ```diff
-  Unchanged Line
-- Polls is a simple API allowing consumers to view polls and vote in them.
-+ 영화 정보를 제공하는 API 입니다.
+## Questions Collection [/questions]
+## Movies Collection [/movies]
 ```
