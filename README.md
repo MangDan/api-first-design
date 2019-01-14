@@ -18,3 +18,11 @@
 * [Oracle Compute Cloud Service](https://cloud.oracle.com/ko_KR/compute)
 * [Oracle Database Cloud Service](https://cloud.oracle.com/ko_KR/database)
 * [Oracle API Platform Cloud Service](https://cloud.oracle.com/ko_KR/api-platform)
+
+## 시나리오
+1. Apiary에서 API Blueprint 작성하기
+2. Helidon (MP)과 ORDS를 사용하여 서비스 개발하기
+3. Dredd를 사용하여 API Blueprint와 Helidon 서비스간 호환 여부 검증 및 테스트하기
+4. Wercker와 Dredd, Github을 사용하여 지속적 통합 환경 구축하기
+5. API 서비스에 보안 및 정책을 적용하고 API Gateway에 서비스 배포하기
+
