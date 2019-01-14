@@ -126,8 +126,9 @@ API 문서 이름입니다. 한글도 가능합니다.
 - ### List All Questions [GET]
 + ### List All Movies [GET]
 ```
+<pre><code><del><span style="color:red">Hi</span></del> Hello, world!</code></pre>
 
-<pre><code><del><font color='red'>Hi</font></del> Hello, world!</code></pre>
+
 
 
 :memo:**작성** > API 엔드포인트에 대한 Action (Method)를 정의합니다. 아래와 같이 수정합니다.
