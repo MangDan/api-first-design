@@ -99,6 +99,7 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 <summary>
 <h2>API Blueprint 문서 작성하기<h2>
 </summary>
+<p>
 > 이제부터 Movie API 문서를 작성하겠습니다.  
 > :memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
 
@@ -311,5 +312,5 @@ Response 부분을 다음과 같이 수정합니다.
  - id : 18 (number, required)
  - name : Drama (string, required)
 ```
-
+</p>
 </details>
