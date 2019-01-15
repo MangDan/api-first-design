@@ -80,21 +80,22 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >>Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
 
 > ![apiary_create_new_api_personal](images/apiary_create_new_api_personal.png)
->	> :warning: **참고 : API Blueprint와 Swagger**  
->	> API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
->	> 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용) 등이 있습니다.  
->	> 정확하게는 API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞춰져 있다면, Swagger는 API를 정의하는데 포커스가 맞춰져 있습니다.  
->	> API Blueprint는 개발자가 아니어도 쉽게 배울 수 있으며, 작성하기 쉽고 이해하기 쉬운 마크다운 형식을 지원합니다.  
->	> 문서를 위한 스펙이기 때문에 실제 구현을 위한 정의가 Swagger에 비해 상대적으로 많이 포함되지 않아, 스텁이나 스니펫과  
->	> 같은 코드 생성 기능을 제공하기 어렵습니다.  
->	> Swagger는 Linux Foundation의 오픈소스 프로젝트인 OpenAPI Initiative에 추가되면서 현재는 Open API Specification (OAS)  
->	> 이라는 이름으로 불리고 있습니다. 개발자에게 친숙한 JSON, YAML 형식으로 작성하며, 구현을 위한 여러가지 스펙을 제공하기 때문에  
->	> 개발자 사이에서 많이 사용되고 있으며, 다양한 언어의 스텁 코드를 생성할 수 있는 기능도 제공될 수 있습니다. (e.g. Swagger Codegen)  
->	> 반면에 API Blueprint에 비해서 구현과 관련된 많은 내용이 포함되기 때문에 비 개발자에게는 다소 복잡하게 느껴질 수 있습니다.  
->	> Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를 추출하는  
->	> 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
->	> 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를  
->	> 떠올리면 됩니다. (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
+>> :warning: **참고 : API Blueprint와 Swagger**  
+>> API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
+>> 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용)  
+>> 등이 있습니다. API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞쳐져 있습니다. 반면에, Swagger는 API를  
+>> 정의하는데 포커스가 맞춰져 있다고 볼 수 있습니다.  API Blueprint는 개발자가 아니어도 쉽게 배울 수 있으며, 작성하기  
+>> 쉽고 이해하기 쉬운 마크다운 형식을 지원합니다.  
+>> 문서를 위한 스펙이기 때문에 실제 구현을 위한 정의가 Swagger에 비해 상대적으로 많이 포함되지 않아, 스텁이나 스니펫과  
+>> 같은 코드 생성 기능을 제공하기 어렵습니다. Swagger는 Linux Foundation의 오픈소스 프로젝트인 OpenAPI Initiative에  
+>> 추가되면서 현재는 Open API Specification (OAS) 이라는 이름으로 불리고 있습니다.  
+>> 개발자에게 친숙한 JSON, YAML 형식으로 작성하며, 구현을 위한 여러가지 스펙을 제공하기 때문에 개발자 사이에서 많이 사용되고  
+>> 있으며, 다양한 언어의 스텁 코드를 생성할 수 있는 기능도 제공될 수 있습니다. (e.g. Swagger Codegen)  
+>> 반면에 API Blueprint에 비해서 구현과 관련된 많은 내용이 포함되기 때문에 비 개발자에게는 다소 복잡하게 느껴질 수 있습니다.  
+>> Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를 추출하는  
+>> 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
+>> 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를  
+>> 떠올리면 됩니다. (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
 
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
 > ![apiary_write_api_1](images/apiary_write_api_1.png)
@@ -164,21 +165,21 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```diff
 > -        [
 > -            {
-> -                \"question\": \"Favourite programming language?\",
-> -                \"published_at\": \"2015-08-05T08:40:51.620Z\",
-> -                \"choices\": [
+> -                "question": "Favourite programming language?",
+> -                "published_at": "2015-08-05T08:40:51.620Z",
+> -                "choices": [
 > -                    {
-> -                        \"choice\": \"Swift\",
-> -                        \"votes\": 2048
+> -                        "choice": "Swift",
+> -                        "votes": 2048
 > -                    }, {
-> -                        \"choice\": \"Python\",
-> -                        \"votes\": 1024
+> -                        "choice": "Python",
+> -                        "votes": 1024
 > -                    }, {
-> -                        \"choice\": \"Objective-C\",
-> -                        \"votes\": 512
+> -                        "choice": "Objective-C",
+> -                        "votes": 512
 > -                    }, {
-> -                        \"choice\": \"Ruby\",
-> -                        \"votes\": 256
+> -                        "choice": "Ruby",
+> -                        "votes": 256
 > -                    }
 > -                ]
 > -            }
@@ -188,16 +189,16 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```markdown
 >         [
 >             {
->                 \"id\": \"19995\",
->                 \"title\": \"Avatar\",
->                 \"year\": \"2009\",
->                 \"runtime\" : 100
+>                 "id": 19995,
+>                 "title": "Avatar",
+>                 "year": "2009",
+>                 "runtime" : 100
 >             },
 >             {
->                 \"id\": \"2699\",
->                 \"title\": \"Titanic\",
->                 \"year\": \"1997\",
->                 \"runtime\" :194
+>                 "id": 2699,
+>                 "title": "Titanic",
+>                 "year": "1997",
+>                 "runtime" :194
 >             }
 >         ]
 > ```
@@ -231,7 +232,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > *변경 전*
 > ```diff
 > - + Request (application/json)
-
+>
 > -        {
 > -            "question": "Favourite programming language?",
 > -            "choices": [
