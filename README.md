@@ -30,10 +30,10 @@
 ## API 문서 설계
 <details>
 <summary>Apiary 계정 생성하기</summary>
-        
-> API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
-> 만약 계정을 가지고 있다면 이 단계를 건너뜁니다.  
-> 먼저 [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
+API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
+만약 계정을 가지고 있다면 이 단계를 건너뜁니다.  
+
+> [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
 > ![apiary home](images/apiary_home.png)
 
 > **Continue with GitHub** 버튼을 클릭합니다.  
@@ -63,8 +63,10 @@
 > 아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.  
 > ![apiary_first_api_editor](images/apiary_first_api_editor.png)
 
-## API Blueprint 프로젝트 만들기
-> 이제 API 프로젝트를 하나 만들어 보겠습니다.
+<details>
+<summary>API Blueprint 프로젝트 만들기</summary>
+이제 API 프로젝트를 하나 만들어 보겠습니다.
+
 > 좌측 상단의 API 이름을 클릭한 후 **Create New API Project**를 선택합니다.  
 > ![apiary_create_new_api](images/apiary_create_new_api.png)
 
@@ -93,43 +95,42 @@
 >	> 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를  
 >	> 떠올리면 됩니다. (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
 
-생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
-![apiary_write_api_1](images/apiary_write_api_1.png)
+> 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
+> ![apiary_write_api_1](images/apiary_write_api_1.png)
 </details>
 <details>
 <summary>API Blueprint 문서 작성하기</summary>
-
 이제부터 Movie API 문서를 작성하겠습니다.  
-:memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
+:memo: **마크가 표기되어 있는 부분만 변경 또는 재작성합니다.**  
 
 > API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
 > ```markdown
-FORMAT: 1A
+> FORMAT: 1A
 > ```
 
 > 실제 서비스할 Production 서버의 주소입니다.  
 > 처음에는 Production 환경이 없기 때문에 변경하지 않습니다.
 > ```markdown
-HOST: http://polls.apiblueprint.org/
+> HOST: http://polls.apiblueprint.org/
 > ```
 
-API 문서 이름입니다. 한글도 가능합니다.
-```markdown
-# Movie API
-```
+> API 문서 이름입니다. 한글도 가능합니다.
+> ```markdown
+> # Movie API
+> ```
 
-:memo:**수정**  
-API에 대한 설명, 소개를 적는 부분입니다.  
-변경 전 부분을 아래와 같이 수정합니다.  
-*변경 전*
-```diff
-- Polls is a simple API allowing consumers to view polls and vote in them.
-```
-*변경 후*
-```markdown
-영화 정보를 제공하는 API 입니다.
-```
+> :memo:**수정**  
+> API에 대한 설명, 소개를 적는 부분입니다.  
+> 변경 전 부분을 아래와 같이 수정합니다.  
+> *변경 전*
+> ```diff
+> - Polls is a simple API allowing consumers to view polls and vote in them.
+> ```
+> *변경 후*
+> ```markdown
+> 영화 정보를 제공하는 API 입니다.
+> ```
 
 :memo:**수정**  
 API에 대한 엔드포인트 URL입니다.  
