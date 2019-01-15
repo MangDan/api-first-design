@@ -114,26 +114,36 @@ API 문서 이름입니다. 한글도 가능합니다.
 ```
 
 :memo:**수정** > API에 대한 설명, 소개를 적는 부분입니다.  
-~~취소선~~ 부분을 아래와 같이 수정합니다.
-<pre><code><del>Polls is a simple API allowing consumers to view polls and vote in them.</del>
+변경 전 부분을 아래와 같이 수정합니다.
+```diff
+- 변경 전
+- Polls is a simple API allowing consumers to view polls and vote in them.
 
-영화 정보를 제공하는 API 입니다.</code></pre>
++ 변경 후
+영화 정보를 제공하는 API 입니다.
+```
 
 :memo:**수정** > API에 대한 엔드포인트 URL입니다.  
-~~취소선~~ 부분을 아래와 같이 수정합니다.
-<pre><code><del>## Questions Collection [/questions]</del>
+변경 전 부분을 아래와 같이 수정합니다.
+```diff
+- 변경 전
+- ## Questions Collection [/questions]
 
-## Movies Collection [/movies]</code></pre>
-
++ 변경 후
+## Movies Collection [/movies]
 
 :memo:**수정** > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
-~~취소선~~ 부분을 아래와 같이 수정합니다.
-<pre><code><del>### List All Questions [GET]</del>
-
-### List All Movies [GET]</code></pre>
-
-:memo:**수정** > 응답 JSON 샘플을 입력합니다. 
+변경 전 부분을 아래와 같이 수정합니다.
 ```diff
+- 변경 전
++ ### List All Questions [GET]
+
+### List All Movies [GET]
+```
+
+:memo:**수정** > 응답 JSON 샘플을 다음과 같이 변경합니다.
+```diff
+- 변경 전
 -        [
 -            {
 -                "question": "Favourite programming language?",
@@ -155,8 +165,8 @@ API 문서 이름입니다. 한글도 가능합니다.
 -                ]
 -            }
 -        ]
-```
-```json
+
++ 변경 후
         [
             {
                 "id": "19995",
