@@ -133,7 +133,29 @@ API 문서 이름입니다. 한글도 가능합니다.
 ### List All Movies [GET]</code></pre>
 
 :memo:**수정** > 응답 JSON 샘플을 입력합니다. 
-
+```diff
+-        [
+-            {
+-                "question": "Favourite programming language?",
+-                "published_at": "2015-08-05T08:40:51.620Z",
+-                "choices": [
+-                    {
+-                        "choice": "Swift",
+-                        "votes": 2048
+-                    }, {
+-                        "choice": "Python",
+-                        "votes": 1024
+-                    }, {
+-                        "choice": "Objective-C",
+-                        "votes": 512
+-                    }, {
+-                        "choice": "Ruby",
+-                        "votes": 256
+-                    }
+-                ]
+-            }
+-        ]
+```
 ```json
         [
             {
