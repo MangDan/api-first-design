@@ -246,9 +246,13 @@ Request 부분을 다음과 같이 수정합니다.
             
             Authorization : Basic AAA
 ```
-<details><summary>:memo:**Response 변경**</summary>
+<details>
+<summary>
+:memo:**Response 변경**
+</summary>
+<p>
 Response 부분을 다음과 같이 수정합니다.  
->*변경 전*
+*변경 전*
 ```diff
 - + Response 201 (application/json)
 
@@ -306,4 +310,5 @@ Response 부분을 다음과 같이 수정합니다.
  - id : 18 (number, required)
  - name : Drama (string, required)
 ```
+<p>
 </details>
