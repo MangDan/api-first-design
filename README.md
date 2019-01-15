@@ -248,8 +248,8 @@ Request 부분을 다음과 같이 수정합니다.
 ```
 
 >:memo:**Response 변경**  
-Response 부분을 다음과 같이 수정합니다.
-*변경 전*
+>Response 부분을 다음과 같이 수정합니다.  
+>*변경 전*
 ```diff
 - + Response 201 (application/json)
 
@@ -279,7 +279,7 @@ Response 부분을 다음과 같이 수정합니다.
 -                ]
 -            }
 ```
-*변경 후*
+>*변경 후*
 ```markdown
 + Response 200 (application/json)
     + Attributes
