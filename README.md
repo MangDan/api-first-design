@@ -68,7 +68,7 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 **Personal API**를 선택하고 API 이름은 **Movie API** 라고 입력합니다.  
 문서 유형은 API Blueprint와 Swagger 2.0 스펙을 지원하는데, 여기서는 API Blueprint로 문서를 작성합니다.
 
-> Personal API와 Team API  
+> :warning: **참고 : Personal API와 Team API**  
 > Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
 > 또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
 > 유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
@@ -76,11 +76,11 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 
 ![apiary_create_new_api_personal](images/apiary_create_new_api_personal.png)
 
-> API Blueprint와 Swagger  
+> :warning: **참고 : API Blueprint와 Swagger**  
 > API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
-> (이외에 RAML, Slate, Asciidoc 등이 있음)  
-> 정확하게는 API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞춰져 있다면, Swagger는 API를 정의하는데 포커스가 맞춰져 있습니다.
-> API Blueprint는 개발자가 아니어도 문서를 작성할 수 있도록 작성하기 쉽고 이해하기 쉬운 마크다운 형식을 지원합니다.  
+> 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용) 등이 있습니다.  
+> 정확하게는 API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞춰져 있다면, Swagger는 API를 정의하는데 포커스가 맞춰져 있습니다.  
+> API Blueprint는 개발자가 아니어도 쉽게 배울 수 있으며, 작성하기 쉽고 이해하기 쉬운 마크다운 형식을 지원합니다.  
 > 문서를 위한 스펙이기 때문에 실제 구현을 위한 정의가 Swagger에 비해 상대적으로 많이 포함되지 않아, 스텁이나 스니펫과  
 > 같은 코드 생성 기능을 제공하기 어렵습니다.  
 > Swagger는 Linux Foundation의 오픈소스 프로젝트인 OpenAPI Initiative에 추가되면서 현재는 Open API Specification (OAS)  
@@ -92,16 +92,14 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 > 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를  
 > 떠올리면 됩니다. (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
 
-생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다. 
+생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
 ![apiary_write_api_1](images/apiary_write_api_1.png)
 
 이제부터 Movie API 문서를 작성하겠습니다.  
 :memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
-**변경 전** 부분을 **변경 후** 부분으로 변경합니다. Copy & Paste 할때는 앞 +/- 는 제외합니다.
-```diff
-- 변경 전
-+ 변경 후 또는 추가
-```
+<pre>
+<del><font color="red">Hi</font></del> <br> Hello, world!
+</code>
 
 API Blueprint 버전 정도로 생각하면 됩니다. 현재 API Blueprint spec은 1A revision 9 입니다.
 ```markdown
@@ -135,7 +133,7 @@ API 문서 이름입니다. 한글도 가능합니다.
 - ### List All Questions [GET]
 + ### List All Movies [GET]
 ```
-<pre><code><del><span style="color:red">Hi</span></del> Hello, world!</code></pre>
+
 
 
 
