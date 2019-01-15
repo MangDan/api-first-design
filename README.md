@@ -1,7 +1,7 @@
 # 마이크로 서비스 개발을 위한 API 우선 설계 및 API 구축하기
 
 본 문서는 Oracle Apiary에서 API Blueprint를 활용하여 API 문서를 만들고, 만들어진 문서를 토대로 [Oracle Helidon](http://helidon.io)과 [Oracle Database의 REST Data Service](https://www.oracle.com/database/technologies/appdev/rest.html)로 마이크로 서비스를 구현하는 것을 보여줍니다. 
-또한 API 문서와 구현된 서비스간의 비호환 (서비스에 대응하는 문서 호환 여부) 여부를 확인, 검증하는 [Dredd](https://github.com/apiaryio/dredd) 도구과 CI/CD 도구인 [Wercker](https://app.wercker.com/)를 통합하여 API 비호환 테스트를 지속적으로 자동화하는 것을 방법을 보여줍니다.
+또한 API 문서와 구현된 서비스간의 "동기화?" 비호환 (서비스에 대응하는 문서 호환 여부) 여부를 확인, 검증하는 [Dredd](https://github.com/apiaryio/dredd) 도구과 CI/CD 도구인 [Wercker](https://app.wercker.com/)를 통합하여 API 비호환 테스트를 지속적으로 자동화하는 것을 방법을 보여줍니다.
 마지막으로 컨테이너에 배포된 API에 보안 및 다양한 정책을 적용해 보고, 최종적으로 API Gateway에 배포하여 서비스와 문서를 애플리케이션 개발자에게 오픈하는 내용을 담고 있습니다.
 본 문서를 통해 오라클 솔루션을 활용하여 마이크로 서비스 개발에 대한 전반적인 라이프사이클을 경험해 보실 수 있습니다.
 
@@ -73,8 +73,22 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 > 또한, 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
 > 무료 계정을 사용할 경우 Personal API로만 문서를 생성할 수 있습니다.  
 > 유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
-> Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다.  
+> Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
+
 ![apiary_create_new_api_personal](images/apiary_create_new_api_personal.png)
+
+> API Blueprint와 Swagger  
+> Swagger는 Liinux Foundation의 오픈소스 프로젝트인 OpenAPI Initiative에 추가되면서 Open API Specification (OAS)
+> API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 작성 언어입니다.
+> API Blueprint는 MarkDown 형식으로 작성하며, 가장 작성하기 쉽고 이해하기 쉬운 언어이지만, 스텁이나 스니펫과 같은 코드 생성 
+> 기능을 지원하지 않습니다. Swagger는 현재는 OAS(Open API Specification)라고 불리며(하지만 여전히 개발자들 사이에서는 
+> Swagger로 불립니다.) YAML 혹은 JSON 형식으로 작성이 되며, 개발자에게 좀 더 친숙하고, 많은 내용을 담을 수 있기 때문에 비 개발자에게는 
+> 다소 복잡하게 느껴질 수 있습니다. API Blueprint에 비해서 복잡하고 어렵지만, 다양한 언어의 스텁 코드를 생성할 수 있는 기능
+> (Swagger Codegen)과 같은 기능을 제공하며, 이미 만들어져 있는 API에서 바로 Swagger 문서를 만들 수 있습니다
+> (ex. spring-boot api -> swagger). 
+> Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를 추출하는 
+> 방식으로 더 많이 사용됩니다. 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를 
+> 떠올리면 됩니다. (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)
 
 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다. 
 ![apiary_write_api_1](images/apiary_write_api_1.png)
