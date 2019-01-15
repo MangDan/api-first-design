@@ -331,3 +331,24 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >>>   ***Include*** 혹은 ***객체명***을 지정하여 사용 가능합니다.  
 >>>   ***(e.g. Include MovieDetail, genres (array[Genres]), user(Person))***
 </details>
+
+<details>
+<summary>API Blueprint GitHub에 푸시하기</summary>
+
+작성된 API Blueprint 를 GitHub에 푸시해서 형상관리를 할 수 있습니다.
+이 작업을 위해서는 Apiary와 GitHub Sync가 되어야 하는데, 이 과정을 보여줍니다.
+
+> 먼저 GitHub에 Repository를 하나 생성합니다.   
+> GitHub에 로그인한 후 New repository를 클릭합니다.  
+> ![create_github_repo](images/create_github_repo.png)
+
+> Repository 이름을 입력합니다. 여기서는 *apiary_handson* 이라는 이름으로 생성합니다.  
+> ![create_github_repo](images/create_github_repo2.png)
+
+> 맨 아래 Import code를 클릭합니다.  
+> 본 과정에서 사용되는 소스와 설정파일을 포함한 Repository를 복제하면서 생성합니다.
+> ![import_github_code](images/import_github_code.png)
+
+> clone URL에 ***https://github.com/mangdan/apiary_handson*** 을 입력하고, Begin Import를 클릭합니다.
+> ![github_import_repo](images/github_import_repo.png)
+
