@@ -136,7 +136,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > :memo:**수정**  
 > API에 대한 엔드포인트 URL입니다.  
-> 변경 전 부분을 아래와 같이 수정합니다.
+> 변경 전 부분을 아래와 같이 수정합니다.  
 > *변경 전*
 > ```diff
 > - ## Questions Collection [/questions]
@@ -148,7 +148,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > :memo:**수정**  
 > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
-> 변경 전 부분을 아래와 같이 수정합니다.
+> 변경 전 부분을 아래와 같이 수정합니다.  
 > *변경 전*
 > ```diff
 > + ### List All Questions [GET]
@@ -159,7 +159,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 
 > :memo:**수정**  
-> 응답 JSON 샘플을 다음과 같이 변경합니다.
+> 응답 JSON 샘플을 다음과 같이 변경합니다.  
 > *변경 전*
 > ```diff
 > -        [
@@ -188,16 +188,16 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```markdown
 >         [
 >             {
->                 "id": "19995",
->                 "title": "Avatar",
->                 "year": "2009",
->                 "runtime" : 100
+>                 \"id\": \"19995\",
+>                 \"title\": \"Avatar\",
+>                 \"year\": \"2009\",
+>                 \"runtime\" : 100
 >             },
 >             {
->                 "id": "2699",
->                 "title": "Titanic",
->                 "year": "1997",
->                 "runtime" :194
+>                 \"id\": \"2699\",
+>                 \"title\": \"Titanic\",
+>                 \"year\": \"1997\",
+>                 \"runtime\" :194
 >             }
 >         ]
 > ```
@@ -235,10 +235,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -        {
 > -            "question": "Favourite programming language?",
 > -            "choices": [
-> -                "Swift",
-> -                "Python",
-> -                "Objective-C",
-> -                "Ruby"
+> -                \"Swift\",
+> -                \"Python\",
+> -                \"Objective-C\",
+> -                \"Ruby\"
 > -            ]
 > -        }
 > ```
@@ -266,21 +266,21 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -    + Body
 
 > -            {
-> -                "question": "Favourite programming language?",
-> -                "published_at": "2015-08-05T08:40:51.620Z",
-> -                "choices": [
+> -                \"question\": \"Favourite programming language?\",
+> -                \"published_at\": \"2015-08-05T08:40:51.620Z\",
+> -                \"choices\": [
 > -                    {
-> -                        "choice": "Swift",
-> -                        "votes": 0
+> -                        \"choice\": \"Swift\",
+> -                        \"votes\": 0
 > -                    }, {
-> -                        "choice": "Python",
-> -                        "votes": 0
+> -                        \"choice\": \"Python\",
+> -                        \"votes": 0
 > -                    }, {
-> -                        "choice": "Objective-C",
-> -                        "votes": 0
+> -                        \"choice": \"Objective-C\",
+> -                        \"votes": 0
 > -                    }, {
-> -                        "choice": "Ruby",
-> -                        "votes": 0
+> -                        \"choice": \"Ruby\",
+> -                        \"votes": 0
 > -                    }
 > -                ]
 > -            }
