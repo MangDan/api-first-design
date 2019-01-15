@@ -116,35 +116,36 @@ API 문서 이름입니다. 한글도 가능합니다.
 :memo:**수정** > API에 대한 설명, 소개를 적는 부분입니다.  
 변경 전 부분을 아래와 같이 수정합니다.
 ```diff
-- 변경 전
+- <!-- 변경 전 -->
 - Polls is a simple API allowing consumers to view polls and vote in them.
 
-+ 변경 후
++ <!-- 변경 후 -->
 영화 정보를 제공하는 API 입니다.
 ```
 
 :memo:**수정** > API에 대한 엔드포인트 URL입니다.  
 변경 전 부분을 아래와 같이 수정합니다.
 ```diff
-- 변경 전
+- <!-- 변경 전 -->
 - ## Questions Collection [/questions]
 
-+ 변경 후
++ <!-- 변경 후 -->
 ## Movies Collection [/movies]
 ```
 
 :memo:**수정** > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
 변경 전 부분을 아래와 같이 수정합니다.
 ```diff
-- 변경 전
+- <!-- 변경 전 -->
 + ### List All Questions [GET]
 
+<!-- 변경 후 -->
 ### List All Movies [GET]
 ```
 
 :memo:**수정** > 응답 JSON 샘플을 다음과 같이 변경합니다.
 ```diff
-- 변경 전
+- <!-- 변경 전 -->
 -        [
 -            {
 -                "question": "Favourite programming language?",
@@ -167,7 +168,7 @@ API 문서 이름입니다. 한글도 가능합니다.
 -            }
 -        ]
 
-+ 변경 후
+<!-- 변경 후 -->
         [
             {
                 "id": "19995",
@@ -187,14 +188,14 @@ API 문서 이름입니다. 한글도 가능합니다.
 두번 째 API Action을 수정 합니다.
 :memo:**수정** > Action을 다음과 같이 수정합니다.
 ```diff
-- 변경 전
+- <!-- 변경 전 -->
 - ### Create a New Question [POST]
 
 - You may create your own question using this action. It takes a JSON
 - object containing a question and a collection of answers in the
 - form of choices.
 
-+ 변경 후
+<!-- 변경 후 -->
 ### Get a Movie [GET /movies/{id}?{title}]
 
 Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
@@ -207,7 +208,7 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 
 :memo:**수정** > Request 부분을 다음과 같이 수정합니다.
 ```diff
-- 변경 전
+- <!-- 변경 전 -->
 - + Request (application/json)
 
 -        {
@@ -220,7 +221,7 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 -            ]
 -        }
 
-+ 변경 후
+<!-- 변경 후 -->
 + Parameters
     - id : 19995 (string, required)
     - title : Avatar (string, optional)
@@ -232,8 +233,8 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 ```
 
 :memo:**수정** > Response 부분을 다음과 같이 수정합니다.
+*변경 전*
 ```diff
-- 변경 전
 - + Response 201 (application/json)
 
 -    + Headers
@@ -261,8 +262,9 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 -                    }
 -                ]
 -            }
-
-+ 변경 후
+```
+*변경 후*
+```markdown
 + Response 200 (application/json)
     + Attributes
         + id : 2699
@@ -271,7 +273,7 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
         + runtime : 194
         + Include MovieDetail
         + genres (array[Genres])
-
+```
 
 
 # Data Structure
