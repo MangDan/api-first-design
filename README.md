@@ -148,7 +148,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ## Movies Collection [/movies]
 > ```
 
-> :memo:**엔드포인트 Action 수정**  
+> :memo:**API 엔드포인트 Action 수정**  
 > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
 > 수정 전 부분을 아래와 같이 수정합니다.  
 > ***수정 전***
@@ -254,6 +254,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >
 >             Authorization : Basic AAA
 > ```
+
 > :memo:**응답 데이터 수정**
 > Response 부분을 다음과 같이 수정합니다.  
 > 수정 전
@@ -286,7 +287,6 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -                ]
 > -            }
 > ```
-
 > *수정 후*
 > ```markdown
 > + Response 200 (application/json)
