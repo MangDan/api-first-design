@@ -265,27 +265,27 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 + 변경 후
 + Response 200 (application/json)
     + Attributes
-        - id : 2699
-        - title : Titanic
-        - year : 1997
-        - runtime : 194
-        - Include MovieDetail
-        - genres (array[Genres])
+        + id : 2699
+        + title : Titanic
+        + year : 1997
+        + runtime : 194
+        + Include MovieDetail
+        + genres (array[Genres])
 
 
 
 # Data Structure
 
 ## MovieDetail (object)
-- overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.
-- releaseDate : 2009.12.10
-- status : Released
-- homepage : http://www.titanicmovie.com
-- vote_average : 7.2
-- vote_count : 12114
+ - overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization. (string)
+ - releaseDate : 2009.12.10
+ - status : Released
+ - homepage : http://www.titanicmovie.com
+ - vote_average : 7.2
+ - vote_count : 12114
 
 
 ## Genres (object)
-- id : 18 (number, required)
-- name : Drama (string, required)
+ - id : 18 (number, required)
+ - name : Drama (string, required)
 ```
