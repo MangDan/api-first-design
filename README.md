@@ -89,8 +89,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> 문서를 위한 스펙이기 때문에 실제 구현을 위한 정의가 Swagger에 비해 상대적으로 많이 포함되지 않아, 스텁이나 스니펫과  
 >> 같은 코드 생성 기능을 제공하기 어렵습니다. Swagger는 Linux Foundation의 오픈소스 프로젝트인 OpenAPI  
 >> Initiative에 추가되면서 현재는 Open API Specification (OAS) 이라는 이름으로 불리고 있습니다.  
->> 개발자에게 친숙한 JSON, YAML 형식으로 작성하며, 구현을 위한 여러가지 스펙을 제공하기 때문에 개발자 사이에서 많이 사용되고  
->> 있으며, 다양한 언어의 스텁 코드를 생성할 수 있는 기능도 제공될 수 있습니다. (e.g. Swagger Codegen)  
+>> 개발자에게 친숙한 JSON, YAML 형식으로 작성하며, 구현을 위한 여러가지 스펙을 제공하기 때문에 개발자 사이에서 많이  
+>> 사용되고 있으며, 다양한 언어의 스텁 코드를 생성할 수 있는 기능도 제공될 수 있습니다. (e.g. Swagger Codegen)  
 >> 반면에 API Blueprint에 비해서 구현과 관련된 많은 내용이 포함되기 때문에 비 개발자에게는 다소 복잡하게 느껴질 수 있습니다.  
 >> Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를  
 >> 추출하는 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
@@ -222,8 +222,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > ```
 >> :warning: **참고 : Path Parameter 와 Query Parameter**  
->> Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/ 형태로  
->> 사용되며 필수로 포함되어야 합니다.  
+>> Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/  
+>> 형태로 사용되며 필수로 포함되어야 합니다.  
 >> Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
 >> 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
 
@@ -291,12 +291,12 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```markdown
 > + Response 200 (application/json)
 >     + Attributes
->         + id : 2699
->         + title : Titanic
->         + year : 1997
->         + runtime : 194
->         + Include MovieDetail
->         + genres (array[Genres])
+>         - id : 2699
+>         - title : Titanic
+>         - year : 1997
+>         - runtime : 194
+>         - Include MovieDetail
+>         - genres (array[Genres])
 >
 >
 >
@@ -315,4 +315,18 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > - id : 18 (number, required)
 > - name : Drama (string, required)
 > ```
+>> :warning: **참고 : MSON (Markdown Syntax for Object Notation)**  
+>> 두번 째 API Action에 대한 요청/응답 데이터를 작성할 때 JSON 형태의 데이터가 아니어서 의아했을 거라고 생각됩니다.  
+>> 이 데이터 정의 방식은 API Blueprint의 또하나의 데이터 정의 방식인 [MSON](https://apiblueprint.org/documentation/mson/specification.html) (Markdown Syntax for Object  
+>> Notation) 이라는 스펙으로 JSON보다 간결한 방식으로 데이터를 작성할 수 있게 도와줍니다.  
+>> 기본적인 사용법은 다음과 같습니다.  
+>>> *+Parameters or +Attributes*  
+>>>   *- 키 : 샘플 값 - 설명 (값 유형, 필수 여부)*  여기서 샘플 값, 설명, 값 유형, 필수 여부는 옵셔널 입니다.
+>>>   아래는 사용예 입니다.
+>>>   *- id : 1001 - 아이디 (number, required)*
+>>>   *id*는 키, *1001*은 샘플 값, *아이디*는 설명, *number*는 값 유형, *required*는 필수 여부를 나타냅니다.
+>>>   이 외에 # Data Structure 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서 Include 혹은 객체명을  
+>>>   지정하여 사용 가능합니다. (e.g. Include MovieDetail, genres (array[Genres]), user(Person))   
+>>>   비 개발자의 경우 JSON에 익숙하지 않은 경우가 많으며, 이 경우 MSON을 사용하면 좀 더 쉽게 데이터 구성이 가능하고,   
+>>>   바로 Apiary에서 바로 JSON으로 변환하여 문서를 만들어 줍니다.   
 </details>
