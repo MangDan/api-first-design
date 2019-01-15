@@ -96,14 +96,16 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 ![apiary_write_api_1](images/apiary_write_api_1.png)
 
 이제부터 Movie API 문서를 작성하겠습니다.  
-:memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.
+:memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
 
-API Blueprint 버전 정도로 생각하면 됩니다. 현재 API Blueprint spec은 1A revision 9 입니다.
+API Blueprint 버전 정도로 생각하면 됩니다.  
+현재 API Blueprint spec은 1A revision 9 입니다.  
 ```markdown
 FORMAT: 1A
 ```
 
-실제 서비스할 Production 서버의 주소입니다. 처음에는 Production 환경이 없기 때문에 변경하지 않습니다.
+실제 서비스할 Production 서버의 주소입니다.  
+처음에는 Production 환경이 없기 때문에 변경하지 않습니다.
 ```markdown
 HOST: http://polls.apiblueprint.org/
 ```
@@ -113,39 +115,46 @@ API 문서 이름입니다. 한글도 가능합니다.
 # Movie API
 ```
 
-:memo:**수정** > API에 대한 설명, 소개를 적는 부분입니다.  
-변경 전 부분을 아래와 같이 수정합니다.
+:memo:**수정**  
+API에 대한 설명, 소개를 적는 부분입니다.  
+변경 전 부분을 아래와 같이 수정합니다.  
+*변경 전*
 ```diff
-- <!-- 변경 전 -->
 - Polls is a simple API allowing consumers to view polls and vote in them.
-
-+ <!-- 변경 후 -->
+```
+*변경 후*
+```markdown
 영화 정보를 제공하는 API 입니다.
 ```
 
-:memo:**수정** > API에 대한 엔드포인트 URL입니다.  
+:memo:**수정**  
+API에 대한 엔드포인트 URL입니다.  
 변경 전 부분을 아래와 같이 수정합니다.
+*변경 전*
 ```diff
-- <!-- 변경 전 -->
 - ## Questions Collection [/questions]
-
-+ <!-- 변경 후 -->
+```
+*변경 후*
+```markdown
 ## Movies Collection [/movies]
 ```
 
-:memo:**수정** > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
+:memo:**수정**  
+API 엔드포인트에 대한 Action (Method)를 정의합니다.  
 변경 전 부분을 아래와 같이 수정합니다.
+*변경 전*
 ```diff
-- <!-- 변경 전 -->
 + ### List All Questions [GET]
-
-<!-- 변경 후 -->
+```
+*변경 후*
+```markdown
 ### List All Movies [GET]
 ```
 
-:memo:**수정** > 응답 JSON 샘플을 다음과 같이 변경합니다.
+:memo:**수정**  
+응답 JSON 샘플을 다음과 같이 변경합니다.
+*변경 전*
 ```diff
-- <!-- 변경 전 -->
 -        [
 -            {
 -                "question": "Favourite programming language?",
@@ -167,8 +176,9 @@ API 문서 이름입니다. 한글도 가능합니다.
 -                ]
 -            }
 -        ]
-
-<!-- 변경 후 -->
+```
+*변경 후*
+```markdown
         [
             {
                 "id": "19995",
@@ -186,29 +196,33 @@ API 문서 이름입니다. 한글도 가능합니다.
 ```
 
 두번 째 API Action을 수정 합니다.
-:memo:**수정** > Action을 다음과 같이 수정합니다.
+:memo:**수정**  
+Action을 다음과 같이 수정합니다.
+*변경 전*
 ```diff
-- <!-- 변경 전 -->
 - ### Create a New Question [POST]
 
 - You may create your own question using this action. It takes a JSON
 - object containing a question and a collection of answers in the
 - form of choices.
-
-<!-- 변경 후 -->
+```
+*변경 후*
+```markdown
 ### Get a Movie [GET /movies/{id}?{title}]
 
 Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 ```
+
 > :warning: **참고 : Path Parameter 와 Query Parameter**  
 > Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/ 형태로  
 > 사용되며 필수로 포함되어야 합니다.  
 > Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
 > 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
 
-:memo:**수정** > Request 부분을 다음과 같이 수정합니다.
+:memo:**수정**  
+Request 부분을 다음과 같이 수정합니다.
+*변경 전*
 ```diff
-- <!-- 변경 전 -->
 - + Request (application/json)
 
 -        {
@@ -220,8 +234,9 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 -                "Ruby"
 -            ]
 -        }
-
-<!-- 변경 후 -->
+```
+*변경 후*
+```markdown
 + Parameters
     - id : 19995 (string, required)
     - title : Avatar (string, optional)
@@ -232,7 +247,8 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
             Authorization : Basic AAA
 ```
 
-:memo:**수정** > Response 부분을 다음과 같이 수정합니다.
+:memo:**수정**  
+Response 부분을 다음과 같이 수정합니다.
 *변경 전*
 ```diff
 - + Response 201 (application/json)
@@ -273,7 +289,7 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
         + runtime : 194
         + Include MovieDetail
         + genres (array[Genres])
-```
+
 
 
 # Data Structure
