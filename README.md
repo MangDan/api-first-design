@@ -131,6 +131,7 @@ API 문서 이름입니다. 한글도 가능합니다.
 
 + 변경 후
 ## Movies Collection [/movies]
+```
 
 :memo:**수정** > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
 변경 전 부분을 아래와 같이 수정합니다.
@@ -209,4 +210,51 @@ API 문서 이름입니다. 한글도 가능합니다.
                 ]
             }
         ]
+```
+
+두번 째 API Action을 수정 합니다.
+:memo:**수정** > Action을 다음과 같이 수정합니다.
+```diff
+- 변경 전
+- ### Create a New Question [POST]
+
+- You may create your own question using this action. It takes a JSON
+- object containing a question and a collection of answers in the
+- form of choices.
+
++ 변경 후
+### Get a Movie [GET /movies/{id}?{title}]
+
+Movie ID와 Title로 조회하는 API 입니다.
+```
+> :warning: **참고 : Path Parameter 와 Query Parameter**  
+> Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/ 형태로  
+> 사용되며 필수로 포함되어야 합니다.  
+> Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
+> 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
+
+:memo:**수정** > Request 부분을 다음과 같이 수정합니다.
+```diff
+- 변경 전
+- + Request (application/json)
+
+-        {
+-            "question": "Favourite programming language?",
+-            "choices": [
+-                "Swift",
+-                "Python",
+-                "Objective-C",
+-                "Ruby"
+-            ]
+-        }
+
++ 변경 후
++ Parameters
+    - id : 19995 (string, required)
+    - title : Avatar (string, optional)
+    
++ Request
+    + Header
+            
+            Authorization : Basic AAA
 ```
