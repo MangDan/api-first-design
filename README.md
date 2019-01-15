@@ -113,49 +113,47 @@ API 문서 이름입니다. 한글도 가능합니다.
 # Movie API
 ```
 
-:memo:**변경** > API에 대한 설명, 소개를 적는 부분입니다.  
+:memo:**수정** > API에 대한 설명, 소개를 적는 부분입니다.  
 ~~취소선~~ 부분을 아래와 같이 수정합니다.
 <pre><code><del>Polls is a simple API allowing consumers to view polls and vote in them.</del>
 
 영화 정보를 제공하는 API 입니다.</code></pre>
 
-:memo:**작성** > API에 대한 엔드포인트 URL입니다.  
+:memo:**수정** > API에 대한 엔드포인트 URL입니다.  
 ~~취소선~~ 부분을 아래와 같이 수정합니다.
 <pre><code><del>## Questions Collection [/questions]</del>
 
 ## Movies Collection [/movies]</code></pre>
 
 
-:memo:**작성** > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
+:memo:**수정** > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
 ~~취소선~~ 부분을 아래와 같이 수정합니다.
 <pre><code><del>### List All Questions [GET]</del>
 
 ### List All Movies [GET]</code></pre>
 
-:memo:**작성** > API 엔드포인트에 대한 Action (Method)를 정의합니다. 아래와 같이 수정합니다.
-```diff
-- + Response 200 (application/json)
+:memo:**수정** > 응답 JSON 샘플을 입력합니다. 
 
--         [
--             {
--                 "question": "Favourite programming language?",
--                 "published_at": "2015-08-05T08:40:51.620Z",
--                 "choices": [
--                     {
--                         "choice": "Swift",
--                         "votes": 2048
--                     }, {
--                         "choice": "Python",
--                         "votes": 1024
--                     }, {
--                         "choice": "Objective-C",
--                         "votes": 512
--                     }, {
--                         "choice": "Ruby",
--                         "votes": 256
--                     }
--                 ]
--             }
--         ]
+```markdown
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "19995",
+                "title": "Avatar",
+                "year": "2009",
+                "genre": [{'id': 28, 'name': 'Action'}, 
+                          {'id': 12, 'name': 'Adventure'}, 
+                          {'id': 14, 'name': 'Fantasy'}, 
+                          {'id': 878, 'name': 'Science Fiction'}]
+            },
+            {
+                "id": "2699",
+                "title": "Titanic",
+                "year": "1997",
+                "genre": [{'id': 28, 'name': 'Action'}, 
+                          {'id': 18, 'name': 'Drama'}, 
+                          {'id': 10749, 'name': 'Romance'}]
+            }
+        ]
 ```
-
