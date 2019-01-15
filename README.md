@@ -134,26 +134,47 @@ API 문서 이름입니다. 한글도 가능합니다.
 
 :memo:**수정** > 응답 JSON 샘플을 입력합니다. 
 
-```markdown
-+ Response 200 (application/json)
-
+```json
         [
             {
                 "id": "19995",
                 "title": "Avatar",
                 "year": "2009",
-                "genre": [{'id': 28, 'name': 'Action'}, 
-                          {'id': 12, 'name': 'Adventure'}, 
-                          {'id': 14, 'name': 'Fantasy'}, 
-                          {'id': 878, 'name': 'Science Fiction'}]
+                "genre": [{
+                        "id": 28,
+                        "name": "Action"
+                    },
+                    {
+                        "id": 12,
+                        "name": "Adventure"
+                    },
+                    {
+                        "id": 14,
+                        "name": "Fantasy"
+                    },
+                    {
+                        "id": 878,
+                        "name": "Science Fiction"
+                    }
+                ]
             },
             {
                 "id": "2699",
                 "title": "Titanic",
                 "year": "1997",
-                "genre": [{'id': 28, 'name': 'Action'}, 
-                          {'id': 18, 'name': 'Drama'}, 
-                          {'id': 10749, 'name': 'Romance'}]
+                "genre": [{
+                        "id": 28,
+                        "name": "Action"
+                    },
+                    {
+                        "id": 18,
+                        "name": "Drama"
+                    },
+                    {
+                        "id": 10749,
+                        "name": "Romance"
+                    }
+                ]
             }
         ]
 ```
