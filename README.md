@@ -96,7 +96,7 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 ![apiary_write_api_1](images/apiary_write_api_1.png)
 
 <details>
-<summary>API Blueprint 문서 작성하기</summary>
+<h2>API Blueprint 문서 작성하기</h2>
 
 이제부터 Movie API 문서를 작성하겠습니다.  
 :memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
