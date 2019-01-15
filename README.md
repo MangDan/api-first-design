@@ -265,10 +265,10 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 + 변경 후
 + Response 200 (application/json)
     + Attributes
-        - id : m1
-        - title : The Graduate
-        - year : 2016
-        - genre : Comedy, Action
+        - id : 2699
+        - title : Titanic
+        - year : 1997
+        - runtime : 194
         - Include MovieDetail
         - genres (array[Genres])
 
