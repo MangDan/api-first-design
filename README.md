@@ -60,7 +60,7 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.  
 ![apiary_first_api_editor](images/apiary_first_api_editor.png)
 
-## API Blueprint 문서 만들기
+## API Blueprint 프로젝트 만들기
 이제 API 문서를 만들어보겠습니다.
 좌측 상단의 API 이름을 클릭한 후 **Create New API Project**를 선택합니다.  
 ![apiary_create_new_api](images/apiary_create_new_api.png)
@@ -95,6 +95,10 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
 ![apiary_write_api_1](images/apiary_write_api_1.png)
 
+<details>
+<summary>
+## API Blueprint 문서 작성하기
+</summary>
 이제부터 Movie API 문서를 작성하겠습니다.  
 :memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
 
@@ -246,13 +250,9 @@ Request 부분을 다음과 같이 수정합니다.
             
             Authorization : Basic AAA
 ```
-<details>
-<summary>
-:memo:**Response 변경**
-</summary>
-<p>
+:memo:Response 변경
 Response 부분을 다음과 같이 수정합니다.  
-*변경 전*
+변경 전
 ```diff
 - + Response 201 (application/json)
 
@@ -282,6 +282,7 @@ Response 부분을 다음과 같이 수정합니다.
 -                ]
 -            }
 ```
+
 >*변경 후*
 ```markdown
 + Response 200 (application/json)
@@ -310,5 +311,5 @@ Response 부분을 다음과 같이 수정합니다.
  - id : 18 (number, required)
  - name : Drama (string, required)
 ```
-<p>
+
 </details>
