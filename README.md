@@ -323,9 +323,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >>> ***+Parameters or +Attributes***  
 >>>   ***- id : 1001 - 아이디 (number, required)*** 여기서 키 값인 id를 제외하고 옵셔널입니다.  
 >>>   *id*는 키 값, *1001*은 샘플 값, *아이디*는 설명, *number*는 값 유형, *required*는 필수 여부를  
->>>   나타냅니다. 이 외에 # Data Structure 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서  
->>>   Include 혹은 객체명을 지정하여 사용 가능합니다.  
->>>   (e.g. Include MovieDetail, genres (array[Genres]), user(Person))  
+>>>   나타냅니다. 이 외에 ***# Data Structure*** 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서  
+>>>   ***Include*** 혹은 ***객체명***을 지정하여 사용 가능합니다.  
+>>>   ***(e.g. Include MovieDetail, genres (array[Genres]), user(Person))***  
 >>>   비 개발자의 경우 JSON에 익숙하지 않은 경우가 많으며, 이 경우 MSON을 사용하면 좀 더 쉽게 문서 작성이 가능하며,  
 >>>   실제로 문서에서는 JSON으로 변환되기 때문에 개발자는 JSON 형태로 데이터를 확인할 수 있습니다. 
 </details>
