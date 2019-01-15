@@ -97,16 +97,16 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 
 <details>
 <summary>
-## API Blueprint 문서 작성하기
+<h2>API Blueprint 문서 작성하기<h2>
 </summary>
-이제부터 Movie API 문서를 작성하겠습니다.  
-:memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
+> 이제부터 Movie API 문서를 작성하겠습니다.  
+> :memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
 
-API Blueprint 버전 정도로 생각하면 됩니다.  
-현재 API Blueprint spec은 1A revision 9 입니다.  
-```markdown
-FORMAT: 1A
-```
+> API Blueprint 버전 정도로 생각하면 됩니다.  
+> 현재 API Blueprint spec은 1A revision 9 입니다.  
+> ```markdown
+> FORMAT: 1A
+> ```
 
 실제 서비스할 Production 서버의 주소입니다.  
 처음에는 Production 환경이 없기 때문에 변경하지 않습니다.
