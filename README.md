@@ -62,6 +62,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Apiary 계정을 성공적으로 생성하였습니다. :clap:  
 > 아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.  
 > ![apiary_first_api_editor](images/apiary_first_api_editor.png)
+</details>
 
 <details>
 <summary>API Blueprint 프로젝트 만들기</summary>
@@ -98,6 +99,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
 > ![apiary_write_api_1](images/apiary_write_api_1.png)
 </details>
+
 <details>
 <summary>API Blueprint 문서 작성하기</summary>
 이제부터 Movie API 문서를 작성하겠습니다.  
@@ -132,91 +134,91 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 영화 정보를 제공하는 API 입니다.
 > ```
 
-:memo:**수정**  
-API에 대한 엔드포인트 URL입니다.  
-변경 전 부분을 아래와 같이 수정합니다.
-*변경 전*
-```diff
-- ## Questions Collection [/questions]
-```
-*변경 후*
-```markdown
-## Movies Collection [/movies]
-```
+> :memo:**수정**  
+> API에 대한 엔드포인트 URL입니다.  
+> 변경 전 부분을 아래와 같이 수정합니다.
+> *변경 전*
+> ```diff
+> - ## Questions Collection [/questions]
+> ```
+> *변경 후*
+> ```markdown
+> ## Movies Collection [/movies]
+> ```
 
-:memo:**수정**  
-API 엔드포인트에 대한 Action (Method)를 정의합니다.  
-변경 전 부분을 아래와 같이 수정합니다.
-*변경 전*
-```diff
-+ ### List All Questions [GET]
-```
-*변경 후*
-```markdown
-### List All Movies [GET]
-```
+> :memo:**수정**  
+> API 엔드포인트에 대한 Action (Method)를 정의합니다.  
+> 변경 전 부분을 아래와 같이 수정합니다.
+> *변경 전*
+> ```diff
+> + ### List All Questions [GET]
+> ```
+> *변경 후*
+> ```markdown
+> ### List All Movies [GET]
+> ```
 
-:memo:**수정**  
-응답 JSON 샘플을 다음과 같이 변경합니다.
-*변경 전*
-```diff
--        [
--            {
--                "question": "Favourite programming language?",
--                "published_at": "2015-08-05T08:40:51.620Z",
--                "choices": [
--                    {
--                        "choice": "Swift",
--                        "votes": 2048
--                    }, {
--                        "choice": "Python",
--                        "votes": 1024
--                    }, {
--                        "choice": "Objective-C",
--                        "votes": 512
--                    }, {
--                        "choice": "Ruby",
--                        "votes": 256
--                    }
--                ]
--            }
--        ]
-```
-*변경 후*
-```markdown
-        [
-            {
-                "id": "19995",
-                "title": "Avatar",
-                "year": "2009",
-                "runtime" : 100
-            },
-            {
-                "id": "2699",
-                "title": "Titanic",
-                "year": "1997",
-                "runtime" :194
-            }
-        ]
-```
+> :memo:**수정**  
+> 응답 JSON 샘플을 다음과 같이 변경합니다.
+> *변경 전*
+> ```diff
+> -        [
+> -            {
+> -                \"question\": \"Favourite programming language?\",
+> -                \"published_at\": \"2015-08-05T08:40:51.620Z\",
+> -                \"choices\": [
+> -                    {
+> -                        \"choice\": \"Swift\",
+> -                        \"votes\": 2048
+> -                    }, {
+> -                        \"choice\": \"Python\",
+> -                        \"votes\": 1024
+> -                    }, {
+> -                        \"choice\": \"Objective-C\",
+> -                        \"votes\": 512
+> -                    }, {
+> -                        \"choice\": \"Ruby\",
+> -                        \"votes\": 256
+> -                    }
+> -                ]
+> -            }
+> -        ]
+> ```
+> *변경 후*
+> ```markdown
+>         [
+>             {
+>                 "id": "19995",
+>                 "title": "Avatar",
+>                 "year": "2009",
+>                 "runtime" : 100
+>             },
+>             {
+>                 "id": "2699",
+>                 "title": "Titanic",
+>                 "year": "1997",
+>                 "runtime" :194
+>             }
+>         ]
+> ```
 
-두번 째 API Action을 수정 합니다.
-:memo:**수정**  
-Action을 다음과 같이 수정합니다.
-*변경 전*
-```diff
-- ### Create a New Question [POST]
+> 두번 째 API Action을 수정 합니다.
+> :memo:**수정**  
+> Action을 다음과 같이 수정합니다.
+> *변경 전*
+> ```diff
+> - ### Create a New Question [POST]
 
-- You may create your own question using this action. It takes a JSON
-- object containing a question and a collection of answers in the
-- form of choices.
-```
-*변경 후*
-```markdown
-### Get a Movie [GET /movies/{id}?{title}]
+> - You may create your own question using this action. It takes a JSON
+> - object containing a question and a collection of answers in the
+> - form of choices.
+> ```
+> *변경 후*
+> ```markdown
+> ### Get a Movie [GET /movies/{id}?{title}]
 
-Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
-```
+> Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
+> ```
 
 > :warning: **참고 : Path Parameter 와 Query Parameter**  
 > Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/ 형태로  
@@ -224,93 +226,92 @@ Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
 > 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
 
-:memo:**수정**  
-Request 부분을 다음과 같이 수정합니다.
-*변경 전*
-```diff
-- + Request (application/json)
+> :memo:**수정**  
+> Request 부분을 다음과 같이 수정합니다.
+> *변경 전*
+> ```diff
+> - + Request (application/json)
 
--        {
--            "question": "Favourite programming language?",
--            "choices": [
--                "Swift",
--                "Python",
--                "Objective-C",
--                "Ruby"
--            ]
--        }
-```
-*변경 후*
-```markdown
-+ Parameters
-    - id : 19995 (string, required)
-    - title : Avatar (string, optional)
+> -        {
+> -            "question": "Favourite programming language?",
+> -            "choices": [
+> -                "Swift",
+> -                "Python",
+> -                "Objective-C",
+> -                "Ruby"
+> -            ]
+> -        }
+> ```
+> *변경 후*
+> ```markdown
+> + Parameters
+>     - id : 19995 (string, required)
+>     - title : Avatar (string, optional)
     
-+ Request
-    + Header
+> + Request
+>     + Header
             
-            Authorization : Basic AAA
-```
-:memo:Response 변경
-Response 부분을 다음과 같이 수정합니다.  
-변경 전
-```diff
-- + Response 201 (application/json)
+>             Authorization : Basic AAA
+> ```
+> :memo:Response 변경
+> Response 부분을 다음과 같이 수정합니다.  
+> 변경 전
+> ```diff
+> - + Response 201 (application/json)
 
--    + Headers
--
--            Location: /questions/2
+> -    + Headers
+> -
+> -            Location: /questions/2
 
--    + Body
+> -    + Body
 
--            {
--                "question": "Favourite programming language?",
--                "published_at": "2015-08-05T08:40:51.620Z",
--                "choices": [
--                    {
--                        "choice": "Swift",
--                        "votes": 0
--                    }, {
--                        "choice": "Python",
--                        "votes": 0
--                    }, {
--                        "choice": "Objective-C",
--                        "votes": 0
--                    }, {
--                        "choice": "Ruby",
--                        "votes": 0
--                    }
--                ]
--            }
-```
+> -            {
+> -                "question": "Favourite programming language?",
+> -                "published_at": "2015-08-05T08:40:51.620Z",
+> -                "choices": [
+> -                    {
+> -                        "choice": "Swift",
+> -                        "votes": 0
+> -                    }, {
+> -                        "choice": "Python",
+> -                        "votes": 0
+> -                    }, {
+> -                        "choice": "Objective-C",
+> -                        "votes": 0
+> -                    }, {
+> -                        "choice": "Ruby",
+> -                        "votes": 0
+> -                    }
+> -                ]
+> -            }
+> ```
 
->*변경 후*
-```markdown
-+ Response 200 (application/json)
-    + Attributes
-        + id : 2699
-        + title : Titanic
-        + year : 1997
-        + runtime : 194
-        + Include MovieDetail
-        + genres (array[Genres])
+> *변경 후*
+> ```markdown
+> + Response 200 (application/json)
+>     + Attributes
+>         + id : 2699
+>         + title : Titanic
+>         + year : 1997
+>         + runtime : 194
+>         + Include MovieDetail
+>         + genres (array[Genres])
 
 
 
-# Data Structure
+> # Data Structure
 
-## MovieDetail (object)
- - overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization. (string)
- - releaseDate : 2009.12.10
- - status : Released
- - homepage : http://www.titanicmovie.com
- - vote_average : 7.2
- - vote_count : 12114
+> ## MovieDetail (object)
+> - overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization. (string)
+> - releaseDate : 2009.12.10
+> - status : Released
+> - homepage : http://www.titanicmovie.com
+> - vote_average : 7.2
+> - vote_count : 12114
 
 
 ## Genres (object)
- - id : 18 (number, required)
- - name : Drama (string, required)
-```
-</p>
+> - id : 18 (number, required)
+> - name : Drama (string, required)
+> ```
 </details>
