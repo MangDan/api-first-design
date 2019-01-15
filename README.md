@@ -97,10 +97,6 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 
 이제부터 Movie API 문서를 작성하겠습니다.  
 :memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
-<code>
-<del><font color='red'>Hi</font></del>
-Hello, world!
-</code>
 
 API Blueprint 버전 정도로 생각하면 됩니다. 현재 API Blueprint spec은 1A revision 9 입니다.
 ```markdown
@@ -118,10 +114,12 @@ API 문서 이름입니다. 한글도 가능합니다.
 ```
 
 :memo:**작성** > API에 대한 설명, 소개를 적는 부분입니다. 아래와 같이 수정합니다.
-```diff
-- Polls is a simple API allowing consumers to view polls and vote in them.
-+ 영화 정보를 제공하는 API 입니다.
-```
+<pre>
+<code>
+<del><font color='red'>Polls is a simple API allowing consumers to view polls and vote in them.</font></del>
+영화 정보를 제공하는 API 입니다.
+</code>
+</pre>
 
 :memo:**작성** > API에 대한 엔드포인트 URL입니다. 아래와 같이 수정합니다.
 ```diff
