@@ -87,13 +87,13 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> 정의하는데 포커스가 맞춰져 있다고 볼 수 있습니다.  API Blueprint는 개발자가 아니어도 쉽게 배울 수 있으며, 작성하기  
 >> 쉽고 이해하기 쉬운 마크다운 형식을 지원합니다.  
 >> 문서를 위한 스펙이기 때문에 실제 구현을 위한 정의가 Swagger에 비해 상대적으로 많이 포함되지 않아, 스텁이나 스니펫과  
->> 같은 코드 생성 기능을 제공하기 어렵습니다. Swagger는 Linux Foundation의 오픈소스 프로젝트인 OpenAPI Initiative에  
->> 추가되면서 현재는 Open API Specification (OAS) 이라는 이름으로 불리고 있습니다.  
+>> 같은 코드 생성 기능을 제공하기 어렵습니다. Swagger는 Linux Foundation의 오픈소스 프로젝트인 OpenAPI  
+>> Initiative에 추가되면서 현재는 Open API Specification (OAS) 이라는 이름으로 불리고 있습니다.  
 >> 개발자에게 친숙한 JSON, YAML 형식으로 작성하며, 구현을 위한 여러가지 스펙을 제공하기 때문에 개발자 사이에서 많이 사용되고  
 >> 있으며, 다양한 언어의 스텁 코드를 생성할 수 있는 기능도 제공될 수 있습니다. (e.g. Swagger Codegen)  
 >> 반면에 API Blueprint에 비해서 구현과 관련된 많은 내용이 포함되기 때문에 비 개발자에게는 다소 복잡하게 느껴질 수 있습니다.  
->> Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를 추출하는  
->> 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
+>> Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를  
+>> 추출하는 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
 >> 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를  
 >> 떠올리면 됩니다. (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
 
@@ -103,8 +103,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 <details>
 <summary>API Blueprint 문서 작성하기</summary>
+
 이제부터 Movie API 문서를 작성하겠습니다.  
-:memo: **마크가 표기되어 있는 부분만 변경 또는 재작성합니다.**  
+:memo: **마크가 표기되어 있는 부분만 수정 또는 추가합니다.**  
 
 > API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
@@ -123,45 +124,45 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > # Movie API
 > ```
 
-> :memo:**수정**  
+> :memo:**API 설명 수정**  
 > API에 대한 설명, 소개를 적는 부분입니다.  
-> 변경 전 부분을 아래와 같이 수정합니다.  
-> *변경 전*
+> 수정 전 부분을 아래와 같이 수정합니다.  
+> ***수정 전***
 > ```diff
 > - Polls is a simple API allowing consumers to view polls and vote in them.
 > ```
-> *변경 후*
+> ***수정 후***
 > ```markdown
 > 영화 정보를 제공하는 API 입니다.
 > ```
 
-> :memo:**수정**  
+> :memo:**API 엔드포인트 수정**  
 > API에 대한 엔드포인트 URL입니다.  
-> 변경 전 부분을 아래와 같이 수정합니다.  
-> *변경 전*
+> 수정 전 부분을 아래와 같이 수정합니다.  
+> ***수정 전***
 > ```diff
 > - ## Questions Collection [/questions]
 > ```
-> *변경 후*
+> ***수정 후***
 > ```markdown
 > ## Movies Collection [/movies]
 > ```
 
-> :memo:**수정**  
+> :memo:**엔드포인트 Action 수정**  
 > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
-> 변경 전 부분을 아래와 같이 수정합니다.  
-> *변경 전*
+> 수정 전 부분을 아래와 같이 수정합니다.  
+> ***수정 전***
 > ```diff
 > + ### List All Questions [GET]
 > ```
-> *변경 후*
+> ***수정 후***
 > ```markdown
 > ### List All Movies [GET]
 > ```
 
-> :memo:**수정**  
-> 응답 JSON 샘플을 다음과 같이 변경합니다.  
-> *변경 전*
+> :memo:**응답 JSON 샘플 수정**  
+> 응답 JSON 샘플을 다음과 같이 수정합니다.  
+> ***수정 전***
 > ```diff
 > -        [
 > -            {
@@ -185,7 +186,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -            }
 > -        ]
 > ```
-> *변경 후*
+> ***수정 후***
 > ```markdown
 >         [
 >             {
@@ -203,10 +204,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >         ]
 > ```
 
-> 두번 째 API Action을 수정 합니다.
-> :memo:**수정**  
+두번 째 API Action을 수정 합니다.  
+> :memo:**API Action 수정**  
 > Action을 다음과 같이 수정합니다.
-> *변경 전*
+> ***수정 전***
 > ```diff
 > - ### Create a New Question [POST]
 
@@ -214,22 +215,21 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > - object containing a question and a collection of answers in the
 > - form of choices.
 > ```
-> *변경 후*
+> ***수정 후***
 > ```markdown
 > ### Get a Movie [GET /movies/{id}?{title}]
 
 > Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > ```
+>> :warning: **참고 : Path Parameter 와 Query Parameter**  
+>> Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/ 형태로  
+>> 사용되며 필수로 포함되어야 합니다.  
+>> Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
+>> 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
 
-> :warning: **참고 : Path Parameter 와 Query Parameter**  
-> Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/ 형태로  
-> 사용되며 필수로 포함되어야 합니다.  
-> Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
-> 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
-
-> :memo:**수정**  
+> :memo:**요청 파라미터 수정**  
 > Request 부분을 다음과 같이 수정합니다.
-> *변경 전*
+> ***수정 전***
 > ```diff
 > - + Request (application/json)
 >
@@ -243,7 +243,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -            ]
 > -        }
 > ```
-> *변경 후*
+> ***수정 후***
 > ```markdown
 > + Parameters
 >     - id : 19995 (string, required)
@@ -254,9 +254,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
             
 >             Authorization : Basic AAA
 > ```
-> :memo:Response 변경
+> :memo:**응답 데이터 수정**
 > Response 부분을 다음과 같이 수정합니다.  
-> 변경 전
+> 수정 전
 > ```diff
 > - + Response 201 (application/json)
 
@@ -287,7 +287,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -            }
 > ```
 
-> *변경 후*
+> *수정 후*
 > ```markdown
 > + Response 200 (application/json)
 >     + Attributes
