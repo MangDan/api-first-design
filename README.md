@@ -210,7 +210,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ***수정 전***
 > ```diff
 > - ### Create a New Question [POST]
-
+>
 > - You may create your own question using this action. It takes a JSON
 > - object containing a question and a collection of answers in the
 > - form of choices.
@@ -218,7 +218,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ***수정 후***
 > ```markdown
 > ### Get a Movie [GET /movies/{id}?{title}]
-
+>
 > Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > ```
 >> :warning: **참고 : Path Parameter 와 Query Parameter**  
@@ -248,10 +248,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > + Parameters
 >     - id : 19995 (string, required)
 >     - title : Avatar (string, optional)
-    
+>
 > + Request
 >     + Header
-            
+>
 >             Authorization : Basic AAA
 > ```
 > :memo:**응답 데이터 수정**
@@ -259,13 +259,13 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 수정 전
 > ```diff
 > - + Response 201 (application/json)
-
+>
 > -    + Headers
 > -
 > -            Location: /questions/2
-
+>
 > -    + Body
-
+>
 > -            {
 > -                \"question\": \"Favourite programming language?\",
 > -                \"published_at\": \"2015-08-05T08:40:51.620Z\",
@@ -297,11 +297,11 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >         + runtime : 194
 >         + Include MovieDetail
 >         + genres (array[Genres])
-
-
-
+>
+>
+>
 > # Data Structure
-
+>
 > ## MovieDetail (object)
 > - overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization. (string)
 > - releaseDate : 2009.12.10
@@ -309,9 +309,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > - homepage : http://www.titanicmovie.com
 > - vote_average : 7.2
 > - vote_count : 12114
-
-
-## Genres (object)
+>
+>
+> ## Genres (object)
 > - id : 18 (number, required)
 > - name : Drama (string, required)
 > ```
