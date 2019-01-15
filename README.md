@@ -247,7 +247,7 @@ Request 부분을 다음과 같이 수정합니다.
             Authorization : Basic AAA
 ```
 
-:memo:**수정**  
+>:memo:**Response 변경**  
 Response 부분을 다음과 같이 수정합니다.
 *변경 전*
 ```diff
