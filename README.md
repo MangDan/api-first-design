@@ -173,41 +173,13 @@ API 문서 이름입니다. 한글도 가능합니다.
                 "id": "19995",
                 "title": "Avatar",
                 "year": "2009",
-                "genre": [{
-                        "id": 28,
-                        "name": "Action"
-                    },
-                    {
-                        "id": 12,
-                        "name": "Adventure"
-                    },
-                    {
-                        "id": 14,
-                        "name": "Fantasy"
-                    },
-                    {
-                        "id": 878,
-                        "name": "Science Fiction"
-                    }
-                ]
+                "runtime" : 100
             },
             {
                 "id": "2699",
                 "title": "Titanic",
                 "year": "1997",
-                "genre": [{
-                        "id": 28,
-                        "name": "Action"
-                    },
-                    {
-                        "id": 18,
-                        "name": "Drama"
-                    },
-                    {
-                        "id": 10749,
-                        "name": "Romance"
-                    }
-                ]
+                "runtime" :194
             }
         ]
 ```
@@ -225,7 +197,7 @@ API 문서 이름입니다. 한글도 가능합니다.
 + 변경 후
 ### Get a Movie [GET /movies/{id}?{title}]
 
-Movie ID와 Title로 조회하는 API 입니다.
+Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 ```
 > :warning: **참고 : Path Parameter 와 Query Parameter**  
 > Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/ 형태로  
@@ -257,4 +229,63 @@ Movie ID와 Title로 조회하는 API 입니다.
     + Header
             
             Authorization : Basic AAA
+```
+
+:memo:**수정** > Response 부분을 다음과 같이 수정합니다.
+```diff
+- 변경 전
+- + Response 201 (application/json)
+
+-    + Headers
+-
+-            Location: /questions/2
+
+-    + Body
+
+-            {
+-                "question": "Favourite programming language?",
+-                "published_at": "2015-08-05T08:40:51.620Z",
+-                "choices": [
+-                    {
+-                        "choice": "Swift",
+-                        "votes": 0
+-                    }, {
+-                        "choice": "Python",
+-                        "votes": 0
+-                    }, {
+-                        "choice": "Objective-C",
+-                        "votes": 0
+-                    }, {
+-                        "choice": "Ruby",
+-                        "votes": 0
+-                    }
+-                ]
+-            }
+
++ 변경 후
++ Response 200 (application/json)
+    + Attributes
+        - id : m1
+        - title : The Graduate
+        - year : 2016
+        - genre : Comedy, Action
+        - Include MovieDetail
+        - genres (array[Genres])
+
+
+
+# Data Structure
+
+## MovieDetail (object)
+- overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.
+- releaseDate : 2009.12.10
+- status : Released
+- homepage : http://www.titanicmovie.com
+- vote_average : 7.2
+- vote_count : 12114
+
+
+## Genres (object)
+- id : 18 (number, required)
+- name : Drama (string, required)
 ```
