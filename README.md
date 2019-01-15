@@ -27,7 +27,10 @@
 
 ![Scenario](images/api_first_design_scenario.png)
 
-## Apiary 계정 생성하기
+## API 문서 설계
+<details>
+<summary>Apiary 계정 생성하기</summary>
+        
 API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
 만약 계정을 가지고 있다면 이 단계를 건너뜁니다.  
 먼저 [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
@@ -94,9 +97,9 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 
 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
 ![apiary_write_api_1](images/apiary_write_api_1.png)
-
+</details>
 <details>
-<h2>API Blueprint 문서 작성하기</h2>
+<summary>API Blueprint 문서 작성하기</summary>
 
 이제부터 Movie API 문서를 작성하겠습니다.  
 :memo: 마크가 표기되어 있는 부분만 변경 또는 재작성합니다.  
@@ -104,14 +107,14 @@ Apiary 계정을 성공적으로 생성하였습니다. :clap:
 > API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
 > ```markdown
-> FORMAT: 1A
+FORMAT: 1A
 > ```
 
-실제 서비스할 Production 서버의 주소입니다.  
-처음에는 Production 환경이 없기 때문에 변경하지 않습니다.
-```markdown
+> 실제 서비스할 Production 서버의 주소입니다.  
+> 처음에는 Production 환경이 없기 때문에 변경하지 않습니다.
+> ```markdown
 HOST: http://polls.apiblueprint.org/
-```
+> ```
 
 API 문서 이름입니다. 한글도 가능합니다.
 ```markdown
