@@ -317,15 +317,17 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 >> :warning: **참고 : MSON (Markdown Syntax for Object Notation)**  
 >> 두번 째 API Action에 대한 요청/응답 데이터를 작성할 때 JSON 형태의 데이터가 아니어서 의아했을 거라고 생각됩니다.  
+>> 하지만, Apiary 우측의 HTML 문서에서는 JSON으로 변환되어 보이는 것을 확인 할 수 있을 겁니다.
 >> 이 데이터 정의 방식은 API Blueprint의 또하나의 데이터 정의 방식인 [MSON](https://apiblueprint.org/documentation/mson/specification.html) (Markdown Syntax for Object  
->> Notation) 이라는 스펙으로 JSON보다 간결한 방식으로 데이터를 작성할 수 있게 도와줍니다.  
+>> Notation) 이라는 스펙으로 JSON보다 간결한 방식으로 데이터를 작성할 수 있게 도와주는 스펙입니다.  
+>> 비 개발자의 경우 JSON에 익숙하지 않은 경우가 많은데, 이 경우 MSON을 사용하면 좀 더 쉽게 문서 작성이 가능합니다.  
+>> 또한, 변환된 HTML 문서에서는 JSON으로 변환되어 제공되기 때문에 개발자는 필요한 JSON 형태로 데이터를 확인할 수 있습니다. 
+>> MSON으로 문서를 작성하면서, 우측의 HTML 문서를 보면 JSON으로 실시간 변환되는 것을 확인할 수 있습니다.
 >> 기본적인 사용법은 다음과 같습니다.  
 >>> ***+Parameters or +Attributes***  
 >>>   ***- id : 1001 - 아이디 (number, required)*** 여기서 키 값인 id를 제외하고 옵셔널입니다.  
 >>>   *id*는 키 값, *1001*은 샘플 값, *아이디*는 설명, *number*는 값 유형, *required*는 필수 여부를  
 >>>   나타냅니다. 이 외에 ***# Data Structure*** 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서  
 >>>   ***Include*** 혹은 ***객체명***을 지정하여 사용 가능합니다.  
->>>   ***(e.g. Include MovieDetail, genres (array[Genres]), user(Person))***  
->>>   비 개발자의 경우 JSON에 익숙하지 않은 경우가 많으며, 이 경우 MSON을 사용하면 좀 더 쉽게 문서 작성이 가능하며,  
->>>   실제로 문서에서는 JSON으로 변환되기 때문에 개발자는 JSON 형태로 데이터를 확인할 수 있습니다. 
+>>>   ***(e.g. Include MovieDetail, genres (array[Genres]), user(Person))***
 </details>
