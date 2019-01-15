@@ -114,13 +114,10 @@ API 문서 이름입니다. 한글도 가능합니다.
 ```
 
 :memo:**작성** > API에 대한 설명, 소개를 적는 부분입니다. 아래와 같이 수정합니다.
-<pre>
-<code>
-<del><font color='red'>Polls is a simple API allowing consumers to view polls and vote in them.</font></del>
+<pre><code>
+<del><font color="red">Polls is a simple API allowing consumers to view polls and vote in them.</font></del>
 
-영화 정보를 제공하는 API 입니다.
-</code>
-</pre>
+영화 정보를 제공하는 API 입니다.</code></pre>
 
 :memo:**작성** > API에 대한 엔드포인트 URL입니다. 아래와 같이 수정합니다.
 ```diff
