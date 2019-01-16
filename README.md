@@ -490,7 +490,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![ords_template_1](images/ords_template_1.png)
 
 > Finish 버튼을 클릭하여 완료합니다.  
-> ![ords_module_complete_1](images/ords_module_complete_1.png
+> ![ords_module_complete_1](images/ords_module_complete_1.png)
 
 > 마지막으로 Handler (Action)을 추가합니다.  
 > 생성한 movie template을 클릭하고 마우스 우 클릭 후 Add Handler > GET 을 선택합니다.  
