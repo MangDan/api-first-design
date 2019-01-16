@@ -398,8 +398,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <details>
 <summary>Helidon MP (MicroProfile) 프로젝트 생성하기</summary>
 
-> Windows Command 창을 열고 다음과 같이 환경 변수를 수정합니다.
-> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.
+> Windows Command 창을 열고 다음과 같이 환경 변수를 수정합니다.  
+> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.  
 > ```
 > setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
 > setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
@@ -411,20 +411,100 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > echo %JAVA_HOME%
 > ```
 
-> c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고, 
-> 해당 폴더안에서 Helidon Template을 활용하여 Project를 생성합니다. 
-> 여기서는 MicroProfile 기반 프로젝트를 생성합니다.
+> c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고,  
+> 해당 폴더안에서 Helidon Template을 활용하여 Project를 생성합니다.  
+> 여기서는 MicroProfile 기반 프로젝트를 생성합니다.  
 > ```
 > mkdir c:\Oracle\workspace
 > cd c:\Oracle\workspace
 > ```
+
 > 아래 내용을 Copy & Paste 한 후 실행합니다.
 > ```
-> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.10.5 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
+> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
 > ```
 >> :warning: **참고 : 프로젝트 이름과 패키지 이름**  
->> 아래 내용은 변경이 가능한 부분입니다. 하지만 원활한 실습 진행을 위해 기본으로 생성하는 것을 권장합니다.
->> -DgroupId=io.helidon.examples  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.
->> -DartifactId=quickstart-mp     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.
->> -Dpackage=io.helidon.examples.quickstart.mp  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.
+>> 아래 내용은 변경이 가능한 부분입니다. 하지만 원활한 실습 진행을 위해 기본으로 생성하는 것을 권장합니다.  
+>> -DgroupId=io.helidon.examples  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
+>> -DartifactId=quickstart-mp     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
+>> -Dpackage=io.helidon.examples.quickstart.mp  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.  
+
+> 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
+> 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
+> :warning: 최초 다운로드 받는 시간이 5분 이상 소요됩니다. 다운로드 받는 동안 다음 단계인 ORDS를 먼저 진행합니다.  
+> ![helidon_generate](images/helidon_generate.png)
+
+> Helidon MP 프로젝트를 생성하는 동안 ORDS 실습을 진행합니다.  
+> SQL Developer를 실행합니다.  
+> ```
+> {sqldeveloper 설치폴더}/bin/sqldeveloper.exe 더블 클릭 (혹은 바탕화면에 아이콘이 있을 경우 클릭)
+> ```
+
+> SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
+> 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
+> ```
+> Connection Name : oracle@apidb
+> Username : oracle
+> Password : Welcome123!
+> Hostname : ip (todo)
+> Port : 1521
+> SID : apidb
+> ```
+> <그림 추가>
+
+> 좌측 생성된 Connect 이름을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
+> Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 를 입력합니다.  
+> ```
+> SELECT * FROM MOVIE;
+> ```
+
+> 조회된 Movie 테이블의 데이트를 확인할 수 있습니다.  
+> 좌측의 REST Data Services 옆 + 버튼을 클릭하여 확장하면 Modules, Privileges, Roles 가 있습니다.  
+> ![select_movie_click_rest](images/select_movie_click_rest.png)
+
+> **Modules**를 마우스 우 클릭하고 **New Module**을 선택합니다.  
+>> :warning: **참고**  
+>> 여기선 Module과 Template이라는 것을 설정합니다.  
+>> Module의 URI Prefix와 Template의 URI Pattern이라는 것을 순서대로 입력할 것입니다.  
+>> 입력하게 되면 실제 REST 서비스의 주소는 다음과 같이 생성됩니다.   
+>> 여기서 스키마Alias는 **oracle** 입니다.  
+>>```
+>> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}
+>>```
+
+> Module에서는 다음과 같이 입력합니다.   
+> ```
+> Module Name : **본인이름 영문명 (e.g donghukim)**
+> URI Prefix : **본인이름 영문명 (e.g donghukim)**
+> Publish - Make this RESTful Service available for use : **Check**
+> ```
+> ![ords_module_1](images/ords_module_1.png)
+
+> Next를 클릭하여 Template 설정을 합니다. 다음과 같이 입력합니다.
+> ```
+> URI Pattern : **movie**
+> ```
+> ![ords_template_1](images/ords_template_1.png)
+
+> Finish 버튼을 클릭하여 완료합니다.  
+> ![ords_module_complete_1](images/ords_module_complete_1.png
+
+> 마지막으로 Handler (Action)을 추가합니다.  
+> 생성한 movie template을 클릭하고 마우스 우 클릭 후 Add Handler > GET 을 선택합니다.  
+> ![handler_get_1](images/handler_get_1.png)
+
+> Apply를 선택합니다.
+> ![handler_get_apply_1](images/handler_get_apply_1.png)
+
+> 쿼리를 다음과 같이 입력하고 바로 위 저장 버튼을 클릭합니다.
+>```
+> SELECT * FROM MOVIE;
+>```
+
+> 브라우저에서 다음과 같은 URL로 접속합니다. module uri prefix만 본인이 입력한 값으로 변경합니다.  
+>```
+> http://129.213.146.191:8080/ords/oracle/**donghukim**/movie
+>```
+> 다음과 같은 json 데이터가 나오면 성공입니다.
+> ![ords_json_all](images/ords_json_all.png)
 </details>
