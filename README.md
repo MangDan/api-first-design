@@ -437,6 +437,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 <details>
 <summary>ORDS를 활용하여 REST 서비스 만들기</summary>
+
 > Helidon MP 프로젝트를 생성하는 동안 ORDS 실습을 진행합니다.  
 > SQL Developer를 실행합니다.  
 > ```
