@@ -397,4 +397,26 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 ## API 서비스 개발하기
 <details>
 <summary>Helidon MP (MicroProfile) 프로젝트 생성하기</summary>
+
+> Windows Command 창을 열고 다음과 같이 환경 변수를 수정합니다.
+> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.
+> ```
+> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
+> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
+> ```
+
+> Windows Command 창을 다시 열고 정상적으로 환경이 설정 되었는지 확인합니다.
+> ```
+> mvn -version
+> echo %JAVA_HOME%
+> ```
+
+> ```
+> c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고, 
+> 해당 폴더안에서 Helidon Template을 활용하여 Project를 생성합니다. 
+> 여기서는 MicroProfile 기반 프로젝트를 생성합니다.
+> mkdir c:\Oracle\workspace
+> cd c:\Oracle\workspace
+> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.10.5 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
+> ```
 </details>
