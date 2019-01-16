@@ -446,12 +446,12 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
 > ```
-> Connection Name : **oracle@apidb**
-> Username : **oracle**
-> Password : **Welcome123!**
-> Hostname : **ip (todo)**
-> Port : **1521**
-> SID : **apidb**
+> Connection Name : oracle@apidb**
+> Username : oracle
+> Password : Welcome123!
+> Hostname : ip (todo)
+> Port : 1521
+> SID : apidb
 > ```
 > <그림 추가>
 
@@ -477,15 +477,15 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > Module에서는 다음과 같이 입력합니다.   
 > ```
-> Module Name : **본인이름 영문명 (e.g donghukim)**
-> URI Prefix : **본인이름 영문명 (e.g donghukim)**
-> Publish - Make this RESTful Service available for use : **Check**
+> Module Name : 본인이름 영문명 (e.g donghukim)
+> URI Prefix : 본인이름 영문명 (e.g donghukim)
+> Publish - Make this RESTful Service available for use : Check
 > ```
 > ![ords_module_1](images/ords_module_1.png)
 
 > Next를 클릭하여 Template 설정을 합니다. 다음과 같이 입력합니다.
 > ```
-> URI Pattern : **movie**
+> URI Pattern : movie
 > ```
 > ![ords_template_1](images/ords_template_1.png)
 
