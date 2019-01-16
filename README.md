@@ -433,7 +433,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
 > :warning: 최초 다운로드 받는 시간이 5분 이상 소요됩니다. 다운로드 받는 동안 다음 단계인 ORDS를 먼저 진행합니다.  
 > ![helidon_generate](images/helidon_generate.png)
+</detail>
 
+<details>
+<summary>ORDS를 활용하여 REST 서비스 만들기</summary>
 > Helidon MP 프로젝트를 생성하는 동안 ORDS 실습을 진행합니다.  
 > SQL Developer를 실행합니다.  
 > ```
@@ -507,4 +510,13 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >```
 > 다음과 같은 json 데이터가 나오면 성공입니다.
 > ![ords_json_all](images/ords_json_all.png)
+</details>
+
+<details>
+<summary>간단한 Helidon MP 서비스 개발 및 테스트하기</summary>
+
+> Visual Studio Code를 실행합니다.  
+> 좌측 상단 버튼 클릭 후 **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
+> ![mscode_open_workspace](images/mscode_open_workspace.png)
+
 </details>
