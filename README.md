@@ -425,9 +425,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 >> :warning: **참고 : 프로젝트 이름과 패키지 이름**  
 >> 아래 내용은 변경이 가능한 부분입니다. 하지만 원활한 실습 진행을 위해 기본으로 생성하는 것을 권장합니다.  
->> -DgroupId=io.helidon.examples  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
->> -DartifactId=quickstart-mp     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
->> -Dpackage=io.helidon.examples.quickstart.mp  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.  
+>> **-DgroupId=io.helidon.examples**  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
+>> **-DartifactId=quickstart-mp**     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
+>> **-Dpackage=io.helidon.examples.quickstart.mp**  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.  
 
 > 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
 > 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
@@ -443,12 +443,12 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
 > ```
-> Connection Name : oracle@apidb
-> Username : oracle
-> Password : Welcome123!
-> Hostname : ip (todo)
-> Port : 1521
-> SID : apidb
+> Connection Name : **oracle@apidb**
+> Username : **oracle**
+> Password : **Welcome123!**
+> Hostname : **ip (todo)**
+> Port : **1521**
+> SID : **apidb**
 > ```
 > <그림 추가>
 
@@ -503,7 +503,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > 브라우저에서 다음과 같은 URL로 접속합니다. module uri prefix만 본인이 입력한 값으로 변경합니다.  
 >```
-> http://129.213.146.191:8080/ords/oracle/**donghukim**/movie
+> http://129.213.146.191:8080/ords/oracle/donghukim/movie
 >```
 > 다음과 같은 json 데이터가 나오면 성공입니다.
 > ![ords_json_all](images/ords_json_all.png)
