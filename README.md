@@ -411,12 +411,20 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > echo %JAVA_HOME%
 > ```
 
-> ```
 > c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고, 
 > 해당 폴더안에서 Helidon Template을 활용하여 Project를 생성합니다. 
 > 여기서는 MicroProfile 기반 프로젝트를 생성합니다.
+> ```
 > mkdir c:\Oracle\workspace
 > cd c:\Oracle\workspace
+> ```
+> 아래 내용을 Copy & Paste 한 후 실행합니다.
+> ```
 > mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.10.5 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
 > ```
+>> :warning: **참고 : 프로젝트 이름과 패키지 이름**  
+>> 아래 내용은 변경이 가능한 부분입니다. 하지만 원활한 실습 진행을 위해 기본으로 생성하는 것을 권장합니다.
+>> -DgroupId=io.helidon.examples  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.
+>> -DartifactId=quickstart-mp     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.
+>> -Dpackage=io.helidon.examples.quickstart.mp  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.
 </details>
