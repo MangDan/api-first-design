@@ -433,7 +433,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
 > :warning: 최초 다운로드 받는 시간이 5분 이상 소요됩니다. 다운로드 받는 동안 다음 단계인 ORDS를 먼저 진행합니다.  
 > ![helidon_generate](images/helidon_generate.png)
-</detail>
+</details>
 
 <details>
 <summary>ORDS를 활용하여 REST 서비스 만들기</summary>
