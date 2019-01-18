@@ -334,15 +334,15 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> MSON으로 문서를 작성하면서, 우측의 HTML 문서를 보면 JSON으로 실시간 변환되는 것을 확인할 수 있습니다.
 >> 기본적인 사용법은 다음과 같습니다.  
 >>>```
->>> ***+Parameters or +Attributes***  
->>>   ***- id : 1001 - 아이디입니다. (number, required)***   
+>>> +Parameters or +Attributes  
+>>>   - id : 1001 - 아이디입니다. (number, required)   
 >>> 
 >>>   Request일 경우 +Parameters, Response일 경우 +Attributes를 입력하고, 하위에 포함할 항목을 입력합니다.
 >>>   항목은 - 혹은 +로 시작합니다. 여기서는 키 값인 id를 제외하고 나머지는 옵셔널입니다.  
->>>   ***"id"***는 키 값, ***"1001"***은 샘플 값, ***"아이디"***는 설명, ***"number"***는 값 유형, ***"required"***는  
->>>   필수 여부를 나타냅니다. 이 외에 ***# Data Structure*** 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서  
->>>   ***Include*** 혹은 ***객체명***을 지정하여 사용 가능합니다.  
->>>   ***(e.g. Include "객체명", genres (array["객체명"]), user(""객체명))***
+>>>   "id"는 키 값, "1001"은 샘플 값, "아이디"는 설명, "number"는 값 유형, "required"는  
+>>>   필수 여부를 나타냅니다. 이 외에 # Data Structure 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서  
+>>>   Include 혹은 객체명을 지정하여 사용 가능합니다.  
+>>>   (e.g. Include "객체명", genres (array["객체명"]), user(""객체명))
 >>>```
 </details>
 
@@ -408,7 +408,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![github_doc](images/github_doc.png)
 </details>
 
-## API 서비스 개발하기
+## 2. API 서비스 개발하기
 <details>
 <summary>Helidon MP (MicroProfile) 프로젝트 생성하기</summary>
 
