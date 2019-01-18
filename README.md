@@ -534,4 +534,25 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 좌측 상단 버튼 클릭 후 **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
 > ![mscode_open_workspace](images/mscode_open_workspace.png)
 
+> 기본 Helidon MP Project Structure 입니다.  
+> ![helidon_base_structure](images/helidon_base_structure.png)
+
+> VS Code의 상단 터미널 메뉴를 선택하고 새 터미널을 오픈합니다.  
+> VS Code의 터미널에서 생성한 Helidon Project 폴더로 이동한 후  
+> (기본 프로젝트명으로 생성했을 경우 cd quickstart-mp) 다음과 같이 Packaging을 합니다.
+>```
+> mvn package
+>```
+
+> 완료되면 다음과 같이 실행합니다.
+>```
+> java -jar target/{프로젝트명}.jar (기본으로 생성했을 경우 quickstart-mp.jar)
+>```
+> ![start_greet_service](images/start_greet_service.png)
+
+> 다음과 같이 브라우저로 접속해봅니다.
+>```
+> http://localhost:8080/greet
+>```
+> ![helidon_greet_hello](images/helidon_greet_hello.png)
 </details>
