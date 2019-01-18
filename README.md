@@ -29,7 +29,7 @@
 
 ![Scenario2](images/api_first_design_scenario.png)
 
-## API 문서 작성하기
+## 1. API 문서 작성하기
 <details>
 <summary>Apiary 계정 생성하기</summary>
 API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
@@ -86,18 +86,18 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
 >> 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용)  
 >> 등이 있습니다. API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞쳐져 있습니다. 반면에, Swagger는 API를  
->> 정의하는데 포커스가 맞춰져 있다고 볼 수 있습니다.  API Blueprint는 개발자가 아니어도 쉽게 배울 수 있으며, 작성하기  
+>> 정의하는데 포커스가 맞춰져 있다고 볼 수 있습니다. API Blueprint는 개발자가 아니어도 쉽게 배울 수 있으며, 작성하기  
 >> 쉽고 이해하기 쉬운 마크다운 형식을 지원합니다.  
 >> 문서를 위한 스펙이기 때문에 실제 구현을 위한 정의가 Swagger에 비해 상대적으로 많이 포함되지 않아, 스텁이나 스니펫과  
 >> 같은 코드 생성 기능을 제공하기 어렵습니다. Swagger는 Linux Foundation의 오픈소스 프로젝트인 OpenAPI  
 >> Initiative에 추가되면서 현재는 Open API Specification (OAS) 이라는 이름으로 불리고 있습니다.  
->> 개발자에게 친숙한 JSON, YAML 형식으로 작성하며, 구현을 위한 여러가지 스펙을 제공하기 때문에 개발자 사이에서 많이  
+>> 개발자에게 친숙한 JSON, YAML 형식으로 작성하며, 구현을 위한 여러가지 스펙을 포함하고 있기 때문에 개발자 사이에서 많이  
 >> 사용되고 있으며, 다양한 언어의 스텁 코드를 생성할 수 있는 기능도 제공될 수 있습니다. (e.g. Swagger Codegen)  
->> 반면에 API Blueprint에 비해서 구현과 관련된 많은 내용이 포함되기 때문에 비 개발자에게는 다소 복잡하게 느껴질 수 있습니다.  
->> Swagger는 문서의 복잡성이 높기 때문에 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를  
+>> 반면에 API Blueprint에 비해서 구현에 관련된 많은 내용이 포함되기 때문에 비 개발자에게는 다소 복잡하게 느껴질 수 있습니다.  
+>> Swagger는 상대적으로 문서의 복잡성이 높아서 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를  
 >> 추출하는 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
->> 따라서, 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를  
->> 떠올리면 됩니다. (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
+>> 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를 떠올리면 됩니다.  
+>> (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
 
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
 > ![apiary_write_api_1](images/apiary_write_api_1.png)
@@ -109,7 +109,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 이제부터 Movie API 문서를 작성하겠습니다.  
 :memo: **마크가 표기되어 있는 부분만 수정 또는 추가합니다.**  
 
-> API Blueprint 버전 정도로 생각하면 됩니다.  
+> 첫 번째 라인은 API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
 > ```markdown
 > FORMAT: 1A
@@ -128,43 +128,43 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > :memo:**API 설명 수정**  
 > API에 대한 설명, 소개를 적는 부분입니다.  
-> 수정 전 부분을 아래와 같이 수정합니다.  
-> ***수정 전***
+> 기존 부분을 아래와 같이 수정합니다.  
+> ***기존 내용***
 > ```diff
 > - Polls is a simple API allowing consumers to view polls and vote in them.
 > ```
-> ***수정 후***
+> ***수정 내용***
 > ```markdown
 > 영화 정보를 제공하는 API 입니다.
 > ```
 
 > :memo:**API 엔드포인트 수정**  
 > API에 대한 엔드포인트 URL입니다.  
-> 수정 전 부분을 아래와 같이 수정합니다.  
-> ***수정 전***
+> 기존 부분을 아래와 같이 수정합니다.  
+> ***기존 내용***
 > ```diff
 > - ## Questions Collection [/questions]
 > ```
-> ***수정 후***
+> ***수정 내용***
 > ```markdown
 > ## Movies Collection [/movies]
 > ```
 
 > :memo:**API 엔드포인트 Action 수정**  
 > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
-> 수정 전 부분을 아래와 같이 수정합니다.  
-> ***수정 전***
+> 기존 부분을 아래와 같이 수정합니다.  
+> ***기존 내용***
 > ```diff
-> + ### List All Questions [GET]
+> - ### List All Questions [GET]
 > ```
-> ***수정 후***
+> ***수정 내용***
 > ```markdown
 > ### List All Movies [GET]
 > ```
 
 > :memo:**응답 JSON 샘플 수정**  
-> 응답 JSON 샘플을 다음과 같이 수정합니다.  
-> ***수정 전***
+> 기존 응답 JSON 샘플을 다음과 같이 수정합니다.  
+> ***기존 내용***
 > ```diff
 > -        [
 > -            {
@@ -188,7 +188,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -            }
 > -        ]
 > ```
-> ***수정 후***
+> ***수정 내용***
 > ```markdown
 >         [
 >             {
@@ -208,8 +208,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 두번 째 API Action을 수정 합니다.  
 > :memo:**API Action 수정**  
-> Action을 다음과 같이 수정합니다.
-> ***수정 전***
+> 기존 Action을 다음과 같이 수정합니다.
+> ***기존 내용***
 > ```diff
 > - ### Create a New Question [POST]
 >
@@ -217,7 +217,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > - object containing a question and a collection of answers in the
 > - form of choices.
 > ```
-> ***수정 후***
+> ***수정 내용***
 > ```markdown
 > ### Get a Movie [GET /movies/{id}?{title}]
 >
@@ -230,8 +230,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
 
 > :memo:**요청 파라미터 수정**  
-> Request 부분을 다음과 같이 수정합니다.
-> ***수정 전***
+> 기존 Request 부분을 다음과 같이 수정합니다.
+> ***기존 내용***
 > ```diff
 > - + Request (application/json)
 >
@@ -245,7 +245,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -            ]
 > -        }
 > ```
-> ***수정 후***
+> ***수정 내용***
 > ```markdown
 > + Parameters
 >     - id : 19995 (string, required)
@@ -258,8 +258,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 
 > :memo:**응답 데이터 수정**
-> Response 부분을 다음과 같이 수정합니다.  
-> 수정 전
+> 기존 Response 부분을 다음과 같이 수정합니다.  
+> ***기존 내용***
 > ```diff
 > - + Response 201 (application/json)
 >
@@ -289,7 +289,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > -                ]
 > -            }
 > ```
-> *수정 후*
+> ***수정 내용***
 > ```markdown
 > + Response 200 (application/json)
 >     + Attributes
@@ -319,11 +319,11 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 >> :warning: **참고 : MSON (Markdown Syntax for Object Notation)**  
 >> 두번 째 API Action에 대한 요청/응답 데이터를 작성할 때 JSON 형태의 데이터가 아니어서 의아했을 거라고 생각됩니다.  
->> 하지만, Apiary 우측의 HTML 문서에서는 JSON으로 변환되어 보이는 것을 확인 할 수 있을 겁니다.
+>> 하지만 Apiary 우측의 HTML 문서에서는 JSON으로 변환되어 보이는 것을 확인 할 수 있을 겁니다.
 >> 이 데이터 정의 방식은 API Blueprint의 또하나의 데이터 정의 방식인 [MSON](https://apiblueprint.org/documentation/mson/specification.html) (Markdown Syntax for Object  
 >> Notation) 이라는 스펙으로 JSON보다 간결한 방식으로 데이터를 작성할 수 있게 도와주는 스펙입니다.  
 >> 비 개발자의 경우 JSON에 익숙하지 않은 경우가 많은데, 이 경우 MSON을 사용하면 좀 더 쉽게 문서 작성이 가능합니다.  
->> 또한, 변환된 HTML 문서에서는 JSON으로 변환되어 제공되기 때문에 개발자는 필요한 JSON 형태로 데이터를 확인할 수 있습니다. 
+>> 또한 변환된 HTML 문서에서는 JSON으로 변환되어 제공되기 때문에 개발자는 필요한 JSON 형태로 데이터를 확인할 수 있습니다. 
 >> MSON으로 문서를 작성하면서, 우측의 HTML 문서를 보면 JSON으로 실시간 변환되는 것을 확인할 수 있습니다.
 >> 기본적인 사용법은 다음과 같습니다.  
 >>> ***+Parameters or +Attributes***  
