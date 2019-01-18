@@ -528,7 +528,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 </details>
 
 <details>
-<summary>간단한 Helidon MP 서비스 개발 및 테스트하기</summary>
+<summary>간단한 Helidon MP 서비스 개발 및 실행하기</summary>
 
 > Visual Studio Code를 실행합니다.  
 > 좌측 상단 버튼 클릭 후 **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
@@ -546,7 +546,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > 완료되면 다음과 같이 실행합니다.
 >```
-> java -jar target/{프로젝트명}.jar (기본으로 생성했을 경우 quickstart-mp.jar)
+> java -jar target/{프로젝트명}.jar  
+> (기본으로 생성했을 경우 java -jar target/quickstart-mp.jar)
 >```
 > ![start_greet_service](images/start_greet_service.png)
 
@@ -558,15 +559,41 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
 > 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 Clone합니다.  
-> Helidon 프로젝트에 movie api 관련 소스를 복사합니다.
+> 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요 (C:\Oracle\workspace\quickstart-mp)
 >```
 > git clone https://github.com/{본인깃헙}/oraclecloud_api_handson ../../oraclecloud_api_handson
->
-> cp ../../oraclecloud_api_handson/movie_api/movie*.json src/main/resources/
-> cp ../../oraclecloud_api_handson/movie_api/*.java src/main/java/io/helidon/examples/quickstart/mp
-> 
+> or
+> git clone https://github.com/mangdan/oraclecloud_api_handson ../../oraclecloud_api_handson
 >```
 
+> Helidon 프로젝트에 movie api 관련 소스를 복사합니다.  
+> 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요 (C:\Oracle\workspace\quickstart-mp)
+>```
+> cp ../../oraclecloud_api_handson/movie_api/movie*.json src/main/resources/
+> cp ../../oraclecloud_api_handson/movie_api/*.java src/main/java/io/helidon/examples/quickstart/mp
+>```
 
-> ![helidon_greet_hello](images/helidon_greet_hello.png)
+> 다시 Packaging 및 실행합니다.   
+> 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요 (C:\Oracle\workspace\quickstart-mp)
+>```
+> mvn package
+>
+> java -jar target/{프로젝트명}.jar  
+> (기본으로 생성했을 경우 java -jar target/quickstart-mp.jar)
+>```
+> ![helidon_movie_run](images/helidon_movie_run.png)
+
+> 다음과 같이 브라우저로 접속해봅니다.
+>```
+> http://localhost:8080/movie
+>
+> http://localhost:8080/movie/titanic
+>```
+> ![helidon_run_movie](images/helidon_run_movie.png)
+> ![helidon_run_movie_titanic](images/helidon_run_movie_titanic.png)
 </details>
+
+<details>
+<summary>Dredd를 활용하여 API 문서와 API간의 동기화 검증하기</summary>
+ 
+ </details>
