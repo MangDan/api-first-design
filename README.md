@@ -25,7 +25,9 @@
 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 환경 구축하기
 4. API 서비스에 보안 및 정책을 적용하고 API Gateway에 서비스 배포하기
 
-![Scenario](images/api_first_design_scenario.png)
+![Scenario1](images/api_first_design_scenario_0.png)
+
+![Scenario2](images/api_first_design_scenario.png)
 
 ## API 문서 작성하기
 <details>
