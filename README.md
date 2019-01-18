@@ -555,4 +555,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > http://localhost:8080/greet
 >```
 > ![helidon_greet_hello](images/helidon_greet_hello.png)
+
+> VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
+> git clone https://github.com/MangDan/helidon_mp_base
+
+> ![helidon_greet_hello](images/helidon_greet_hello.png)
 </details>
