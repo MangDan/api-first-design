@@ -363,7 +363,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 본 과정에서 사용되는 소스와 설정파일을 포함한 Repository를 복제하면서 생성합니다.  
 > ![import_github_code](images/import_github_code.png)
 
-> clone URL에 ***https://github.com/mangdan/apiary_handson*** 을 입력하고, Begin Import를 클릭합니다.  
+> clone URL에 ***https://github.com/mangdan/oraclecloud_api_handson*** 을 입력하고, Begin Import를 클릭합니다.  
 > ![github_import_repo](images/github_import_repo.png)
 
 > GitHub Repository가 생성되었습니다. Repository 링크를 클릭하면 Repository와 Import한 파일들을 확인 할 수 있습니다.  
@@ -557,7 +557,16 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![helidon_greet_hello](images/helidon_greet_hello.png)
 
 > VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
-> git clone https://github.com/MangDan/helidon_mp_base
+> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 Clone합니다.  
+> Helidon 프로젝트에 movie api 관련 소스를 복사합니다.
+>```
+> git clone https://github.com/{본인깃헙}/oraclecloud_api_handson ../../oraclecloud_api_handson
+>
+> cp ../../oraclecloud_api_handson/movie_api/movie*.json src/main/resources/
+> cp ../../oraclecloud_api_handson/movie_api/*.java src/main/java/io/helidon/examples/quickstart/mp
+> 
+>```
+
 
 > ![helidon_greet_hello](images/helidon_greet_hello.png)
 </details>
