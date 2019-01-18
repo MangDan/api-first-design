@@ -129,6 +129,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > :memo:**API 설명 수정**  
 > API에 대한 설명, 소개를 적는 부분입니다.  
 > 기존 부분을 아래와 같이 수정합니다.  
+>
 > ***기존 내용***
 > ```diff
 > - Polls is a simple API allowing consumers to view polls and vote in them.
@@ -141,6 +142,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > :memo:**API 엔드포인트 수정**  
 > API에 대한 엔드포인트 URL입니다.  
 > 기존 부분을 아래와 같이 수정합니다.  
+>
 > ***기존 내용***
 > ```diff
 > - ## Questions Collection [/questions]
@@ -153,6 +155,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > :memo:**API 엔드포인트 Action 수정**  
 > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
 > 기존 부분을 아래와 같이 수정합니다.  
+>
 > ***기존 내용***
 > ```diff
 > - ### List All Questions [GET]
@@ -164,6 +167,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > :memo:**응답 JSON 샘플 수정**  
 > 기존 응답 JSON 샘플을 다음과 같이 수정합니다.  
+>
 > ***기존 내용***
 > ```diff
 > -        [
@@ -208,7 +212,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 두번 째 API Action을 수정 합니다.  
 > :memo:**API Action 수정**  
-> 기존 Action을 다음과 같이 수정합니다.
+> 기존 Action을 다음과 같이 수정합니다.  
+>
 > ***기존 내용***
 > ```diff
 > - ### Create a New Question [POST]
@@ -230,7 +235,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
 
 > :memo:**요청 파라미터 수정**  
-> 기존 Request 부분을 다음과 같이 수정합니다.
+> 기존 Request 부분을 다음과 같이 수정합니다.  
+>
 > ***기존 내용***
 > ```diff
 > - + Request (application/json)
@@ -259,6 +265,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > :memo:**응답 데이터 수정**
 > 기존 Response 부분을 다음과 같이 수정합니다.  
+>
 > ***기존 내용***
 > ```diff
 > - + Response 201 (application/json)
@@ -326,12 +333,17 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> 또한 변환된 HTML 문서에서는 JSON으로 변환되어 제공되기 때문에 개발자는 필요한 JSON 형태로 데이터를 확인할 수 있습니다. 
 >> MSON으로 문서를 작성하면서, 우측의 HTML 문서를 보면 JSON으로 실시간 변환되는 것을 확인할 수 있습니다.
 >> 기본적인 사용법은 다음과 같습니다.  
+>>>```
 >>> ***+Parameters or +Attributes***  
->>>   ***- id : 1001 - 아이디 (number, required)*** 여기서 키 값인 id를 제외하고 옵셔널입니다.  
->>>   *id*는 키 값, *1001*은 샘플 값, *아이디*는 설명, *number*는 값 유형, *required*는 필수 여부를  
->>>   나타냅니다. 이 외에 ***# Data Structure*** 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서  
+>>>   ***- id : 1001 - 아이디입니다. (number, required)***   
+>>> 
+>>>   Request일 경우 +Parameters, Response일 경우 +Attributes를 입력하고, 하위에 포함할 항목을 입력합니다.
+>>>   항목은 - 혹은 +로 시작합니다. 여기서는 키 값인 id를 제외하고 나머지는 옵셔널입니다.  
+>>>   ***"id"***는 키 값, ***"1001"***은 샘플 값, ***"아이디"***는 설명, ***"number"***는 값 유형, ***"required"***는  
+>>>   필수 여부를 나타냅니다. 이 외에 ***# Data Structure*** 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서  
 >>>   ***Include*** 혹은 ***객체명***을 지정하여 사용 가능합니다.  
->>>   ***(e.g. Include MovieDetail, genres (array[Genres]), user(Person))***
+>>>   ***(e.g. Include "객체명", genres (array["객체명"]), user(""객체명))***
+>>>```
 </details>
 
 <details>
