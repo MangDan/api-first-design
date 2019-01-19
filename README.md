@@ -522,6 +522,8 @@ API 문서와 구현된 서비스간 일치 여부 검증을 테스트하는 도
 
 > Apiary의 Test 탭을 클릭하면 Dredd에 대한 사용방법과 초기 설정을 위한 가이드를 볼 수 있습니다.  
 > Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
+> 두 번째 Dredd init 부분을 보면 apiaryApiKey와 apiaryApiName를 볼 수 있는데,  
+> Dredd와 Apiary가 통신하기 위해 필요한 부분으로 사용자와 문서별로 상이합니다.
 > ![dredd_install_init](images/dredd_install_init.png)
 
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
@@ -550,8 +552,7 @@ API 문서와 구현된 서비스간 일치 여부 검증을 테스트하는 도
 > </pre></code>
 > ![dredd_init](images/dredd_init.png)
 
-> dredd.yml 파일이 생성되었습니다.  
-> dredd 명령어를 실행합니다.
+> dredd.yml 파일이 생성되었습니다. dredd 명령어를 실행합니다.  
 >```
 > dredd
 >```
@@ -559,11 +560,12 @@ API 문서와 구현된 서비스간 일치 여부 검증을 테스트하는 도
 
 > Apiary Tests 로 다시 들어가보면 테스트 결과 리포트를 볼 수 있습니다.
 > ![apiary_dredd_result](images/apiary_dredd_result.png)
-
 </details>
 
 <details>
 <summary>Dredd와 Wercker를 활용하여 Continuous Integration 환경 구성하기</summary>
+
+Wercker
 </details>
 <br><br><br><br>
 
