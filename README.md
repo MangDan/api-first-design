@@ -643,9 +643,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 </details>
 
-## 4. API에 보안 및 정책적용 후 게이트웨이에 배포하기
+## 4. API에 보안 및 정책 적용 후 게이트웨이에 배포하기
 <details>
-<summary>Continuous Integration 테스트</summary>
+<summary>서비스 등록 및 API 정책 적용하기</summary>
 
 > 다음은 현재 Oracle Compute Cloud에 배포되어 있는 Helidon API 서비스 입니다.  
 > 여러분들이 만든 Helidon API 소스와 동일한 소스가 아래 10개의 Docker Container에 배포되어 있습니다.  
@@ -660,6 +660,11 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 서비스를 등록합니다.
 > API를 등록하고 정책과 보안을 적용합니다.
 > 게이트웨이에 배포합니다.
+</details>
+
+<details>
+<summary>배포된 서비스 테스트 하기</summary>
+   
 > Insommnia를 실행하여 게이트웨이에 배포된 서비스 테스트를 합니다.
 </details>
 
