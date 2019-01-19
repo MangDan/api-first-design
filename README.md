@@ -160,13 +160,13 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >             {
 >                 "id": 19995,
 >                 "title": "Avatar",
->                 "release_date": "2009",
+>                 "release_date": "2009.12.18",
 >                 "runtime" : 100
 >             },
 >             {
 >                 "id": 2699,
 >                 "title": "Titanic",
->                 "release_date": "1997",
+>                 "release_date": "1997.12.19",
 >                 "runtime" :194
 >             }
 >         ]
@@ -260,7 +260,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >     + Attributes
 >         - id : 2699
 >         - title : Titanic
->         - release_date : 1997.11.18
+>         - release_date : 1997.12.19,
 >         - runtime : 194
 >         - Include MovieDetail
 >         - genres (array[Genres])
@@ -524,28 +524,36 @@ API Blueprint와 Swagger를 지원합니다.
 > ![dredd_install_init](images/dredd_install_init.png)
 
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
-> 작업 위치는 마찬가지로 Helidon 프로젝트 폴더내에서 진행합니다.  
+> 작업 위치는 로컬로 Clone한 GitHub Repository 폴더에서 진행합니다. (oraclecloud_api_handson)
+> 위 폴더의 apiary.apid는 API Blueprint 문서로 Apiary GitHub Sync 실습을 통해서 푸시한 파일을 내려받은 파일입니다.
+> 
 >```
-> cd c:\Oracle\workspace\quickstart-mp
+> cd c:\Oracle\oraclecloud_api_handson
 >
 > npm install -g dredd
 >```
 > ![dredd_install](images/dredd_install.png)
 
 > dredd init 작업 수행 시 필요한 apiaryApiKey와 apiaryApiName은 API 문서마다 상이하니 아래 내용을 그대로  
-> 복사하지 말고, 꼭 Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName를 확인하고 실행합니다.
-> <pre><code>dredd init -r apiary -j apiaryApiKey:fe79f8fc114e7f3b24681e108ce6a422 -j apiaryApiName:movieapi69
+> 복사하지 말고, 꼭 Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName를 확인하고 실행합니다.  
+> 굵은 글씨 부분을 따라서 입력합니다.  
+> 참고로 apiary.apid는 API Blueprint 문서로 Apiary GitHub Sync 실습을 통해서 푸시한 파일을 Clone 한 파일입니다.
+> <pre><code>dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
 > 
-> ? Location of the API description document <font color='red'>../../oraclecloud_api_handson/apiary.apid</font>
-> ? Command to start the API server under test java -jar target/quickstart-mp.jar
-> ? Host of the API under test http://localhost:8080
-> ? Do you want to use hooks to customize Dredd's behavior? Y
-> ? Programming language of the hooks JavaScript
-> ? Found Travis CI configuration, do you want to add Dredd? N
+> ? Location of the API description document <B>../../oraclecloud_api_handson/apiary.apid</B>
+> ? Command to start the API server under test <B>java -jar target/quickstart-mp.jar</B>
+> ? Host of the API under test <B>http://localhost:8080</B>
+> ? Do you want to use hooks to customize Dredd's behavior? <B>Y</B>
+> ? Programming language of the hooks <B>JavaScript</B>
+> ? Found Travis CI configuration, do you want to add Dredd? <B>N</B>
 > </pre></code>
+> ![dredd_init](images/dredd_init.png)
 
-> dredd init 작업 수행 시 필요한 apiaryApiKey와 apiaryApiName은 API 문서마다 다르게 생성됩니다.  
-> Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName으로 실행합니다.
+> dredd.yml 파일이 생성되었습니다.  
+> dredd 명령어를 실행합니다.
+>```
+> dredd
+>```
 
 
 
