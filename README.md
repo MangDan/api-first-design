@@ -395,18 +395,17 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > mvn -version
 > echo %JAVA_HOME%
 > ```
-> ![vscode_confirm_env](images/vscode_confirm_env.png)
-> 
->> <details>
->> <summary>:heavy_plus_sign: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
+<details>
+<summary>:heavy_plus_sign: <font color=red>Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</font></summary>
 
->>  Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.
->> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 하며, 실행 후 Command 창을 다시 열어야 합니다.
->> ```
->> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
->> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
->> ```
->> </details>
+> Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.
+> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 하며, 실행 후 Command 창을 다시 열어야 합니다.
+> ```
+> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
+> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
+> ```
+</details>
+> ![vscode_confirm_env](images/vscode_confirm_env.png)
    
 > c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고,  
 > 해당 폴더안에서 Helidon Template을 활용하여 Project를 생성합니다.  
