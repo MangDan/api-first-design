@@ -283,7 +283,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 >
 > 위 데이터 정의 방식은 API Blueprint에서 지원하는 MSON 이라고 하는 데이터 정의 스펙입니다.  
-> [참고 : MSON (Markdown Syntax for Object Notation)](#mson)
+> [참고 -> MSON (Markdown Syntax for Object Notation)](#mson)
 
 </details>
 
@@ -356,7 +356,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![vscode_confirm_env](images/vscode_confirm_env.png)
 
 <details>
-<summary>:heavy_plus_sign: <font color=red>Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</font></summary>
+<summary>:heavy_plus_sign: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
 
 > Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.  
 > 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.
@@ -366,7 +366,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 </details>
 
-> 여기서는 MicroProfile [(Helidon MP)](#helidon) 기반 프로젝트를 생성합니다.  
+
+> 여기서는 MicroProfile 기반 Helidon 프로젝트를 생성합니다. [참고 -> Helidon](#helidon)
 > c:\Oracle\workspace 폴더로 이동 후 Helidon Template Project 생성을 위해 mvn generate를 실행합니다.
 > ```
 > cd c:\Oracle\workspace
@@ -384,13 +385,15 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 기본 Helidon MP Project Structure 입니다.  
 > ![helidon_base_structure](images/helidon_base_structure.png)
 
-> Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 Packaging을 합니다.
+> Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 Packaging을 합니다.  
+> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
 >```
 > cd quickstart-mp
 > mvn package
 >```
 
-> 완료되면 다음과 같이 실행합니다.
+> 완료되면 다음과 같이 실행합니다.  
+> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
 >```
 > java -jar target/quickstart-mp.jar
 >```
@@ -411,7 +414,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Helidon 프로젝트에 movie api 소스를 복사합니다.  
 >```
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\quickstart-mp\src\main\resources
-> cp ../../oraclecloud_api_handson/movie_api/*.java c:\Oracle\workspace\quickstart-mp\src/main/java/io/helidon/examples/quickstart/mp
+> cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\quickstart-mp\src/main/java/io/helidon/examples/quickstart/mp
 >```
 > ![clone_cp](images/clone_cp.png)
 
@@ -436,13 +439,13 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 <details>
 <summary>ORDS를 활용하여 REST 서비스 만들기</summary>
-
-> Helidon MP 프로젝트를 생성하는 동안 ORDS 실습을 진행합니다.  
 > SQL Developer를 실행합니다.  
-> ```
-> {sqldeveloper 설치폴더}/bin/sqldeveloper.exe 더블 클릭 (혹은 바탕화면에 아이콘이 있을 경우 클릭)
-> ```
+> 좌측 생성된 Connect 이름 (oracle@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
+<그림 추가>
 
+<details>
+<summary>Connection 생성이 안되어 있는 경우</summary>
+   
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
 > ```
@@ -454,8 +457,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > SID - apidb
 > ```
 > <그림 추가>
+</details>
 
-> 좌측 생성된 Connect 이름을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
+
 > Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 를 입력합니다.  
 > ```
 > SELECT * FROM MOVIE;
