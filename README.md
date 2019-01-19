@@ -356,7 +356,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![vscode_confirm_env](images/vscode_confirm_env.png)
 
 <details>
-<summary>:point_right: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;:point_right: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
 
 > Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.  
 > 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.
@@ -364,8 +364,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
 > setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
 > ```
-</details>
-
+</details><br>
 
 > 여기서는 MicroProfile 기반 Helidon 프로젝트를 생성합니다. [참고 -> Helidon](#helidon)
 > c:\Oracle\workspace 폴더로 이동 후 Helidon Template Project 생성을 위해 mvn generate를 실행합니다.
@@ -445,7 +444,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <그림 추가>
 
 <details>
-&nbsp;&nbsp;&nbsp;<summary>:point_right: Connection 생성이 안되어 있는 경우 (클릭)</summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;:point_right: Connection 생성이 안되어 있는 경우 (클릭)</summary>
    
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
@@ -458,7 +457,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > SID - apidb
 > ```
 > <그림 추가>
-</details><br><br>
+</details><br>
 
 > Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 를 입력합니다.  
 > ```
@@ -519,9 +518,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 </details>
 
 
-
-
-
+<br>
+------------------------------------------------------------------------------------
+<br>
 ## 참고
 #### Helidon
 > [Helidon](https://helidon.io)은 오라클이 만든 마이크로 서비스 개발 프레임웍입니다.  
