@@ -395,6 +395,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > mvn -version
 > echo %JAVA_HOME%
 > ```
+> ![vscode_confirm_env](images/vscode_confirm_env.png)
+
 <details>
 <summary>:heavy_plus_sign: <font color=red>Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</font></summary>
 
@@ -405,8 +407,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
 > ```
 </details>
-> ![vscode_confirm_env](images/vscode_confirm_env.png)
-   
+
 > c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고,  
 > 해당 폴더안에서 Helidon Template을 활용하여 Project를 생성합니다.  
 > 여기서는 MicroProfile 기반 프로젝트를 생성합니다.  
