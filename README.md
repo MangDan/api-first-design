@@ -642,6 +642,35 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Wercker가 CI/CD 솔루션이므로 모든 테스트를 마친 API는 최종적으로는 다양한 운영 환경에 자동 배포가 될 수 있습니다.
 
 </details>
+
+## 4. API에 보안 및 정책적용 후 게이트웨이에 배포하기
+<details>
+<summary>Continuous Integration 테스트</summary>
+
+> 다음은 현재 Oracle Compute Cloud에 배포되어 있는 Helidon API 서비스 입니다.  
+> 여러분들이 만든 Helidon API 소스와 동일한 소스가 아래 10개의 Docker Container에 배포되어 있습니다.  
+> 아래 배포된 서비스들 중 하나를 선택해서 실습을 진행합니다.  
+...............  
+...............  
+...............  
+...............  
+...............  
+...............  
+> API Platform에 접속합니다.
+> 서비스를 등록합니다.
+> API를 등록하고 정책과 보안을 적용합니다.
+> 게이트웨이에 배포합니다.
+> Insommnia를 실행하여 게이트웨이에 배포된 서비스 테스트를 합니다.
+</details>
+
+## 5. 애플리케이션 개발자를 위해 개발자 포탈에 퍼블리시 하기
+<details>
+<summary>Continuous Integration 테스트</summary>
+
+> Apiary 와 연동 후 개발자 포탈에 퍼블리시 합니다. (내 계정으로, 혹은 이 부분은 문서로만...)
+> 개발자 포탈에 접속하여 API와 문서를 확인합니다.
+> 끝~~~~
+</details>
 <br><br><br><br>
 
 ## 참고
