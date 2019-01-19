@@ -516,19 +516,20 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <details>
 <summary>Dredd를 활용하여 API 문서와 API간의 동기화 검증하기</summary>
 
-Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며, API 문서와 구현된 서비스간 일치 여부 검증을 테스트합니다.  
-API Blueprint와 Swagger를 지원합니다.  
+Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며,  
+API 문서와 구현된 서비스간 일치 여부 검증을 테스트하는 도구입니다.  
+현재 API Blueprint와 Swagger를 지원합니다.  
 
 > Apiary의 Test 탭을 클릭하면 Dredd에 대한 사용방법과 초기 설정을 위한 가이드를 볼 수 있습니다.  
 > Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
 > ![dredd_install_init](images/dredd_install_init.png)
 
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
-> 작업 위치는 로컬로 Clone한 GitHub Repository 폴더에서 진행합니다. (oraclecloud_api_handson)
+> 작업 위치는 Helidon Project (quickstart-mp) 입니다.
 > 위 폴더의 apiary.apid는 API Blueprint 문서로 Apiary GitHub Sync 실습을 통해서 푸시한 파일을 내려받은 파일입니다.
 > 
 >```
-> cd c:\Oracle\oraclecloud_api_handson
+> cd c:\Oracle\workspace\quickstart-mp
 >
 > npm install -g dredd
 >```
@@ -554,9 +555,15 @@ API Blueprint와 Swagger를 지원합니다.
 >```
 > dredd
 >```
+> ![local_dredd_test](images/local_dredd_test.png)
 
+> Apiary Tests 로 다시 들어가보면 테스트 결과 리포트를 볼 수 있습니다.
+> ![apiary_dredd_result](images/apiary_dredd_result.png)
 
+</details>
 
+<details>
+<summary>Dredd와 Wercker를 활용하여 Continuous Integration 환경 구성하기</summary>
 </details>
 <br><br><br><br>
 
