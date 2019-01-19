@@ -594,6 +594,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Wercker Application을 성공적으로 생성하였습니다.
 > ![wercker_create_new_app_5](images/wercker_create_new_app_5.png)
 
+> 빌드 시작
+> ![wercker_trigger_build_now](images/wercker_trigger_build_now.png)
+
 </details>
 <br><br><br><br>
 
