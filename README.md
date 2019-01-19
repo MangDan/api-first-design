@@ -339,7 +339,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > GitHub에 로그인한 후 New repository를 클릭합니다.  
 > ![create_github_repo](images/create_github_repo.png)
 
-> Repository 이름을 입력합니다. 여기서는 *apiary_handson* 이라는 이름으로 생성합니다.  
+> Repository 이름을 입력합니다. 여기서는 *oraclecloud_api_handson* 이라는 이름으로 생성합니다.  
 > ![create_github_repo](images/create_github_repo2.png)
 
 > 맨 아래 Import code를 클릭합니다.  
@@ -351,13 +351,6 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > GitHub Repository가 생성되었습니다. Repository 링크를 클릭하면 Repository와 Import한 파일들을 확인 할 수 있습니다.  
 > ![github_import_complete](images/github_import_complete.png)
-
-> 다시 Apiary로 돌아가서 우측 상단의 사용자 아이콘을 클릭한 후 Account settings를 클릭합니다.  
-> ![apiry_account_settings](images/apiry_account_settings.png)
-
-> 다음과 같이 GitHub 계정 정보를 입력하고 Check connection with GitHub 을 클릭합니다.  
-> *Nothing to check. You have no API connected with GitHub.* 라는 메시지가 나오면 성공입니다.  
-> ![apiary_github_settings](images/apiary_github_settings.png)
 
 > 이제 Apiary 상단의 사람 모양 아이콘 옆 Settings 아이콘을 클릭합니다.  
 > 이 Settings 는 작성한 문서에 대한 설정을 하기 위한 설정 버튼입니다.  
@@ -372,7 +365,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > *Authorize apairyio* 버튼을 클릭합니다.  
 > ![auth_github_aiary](images/auth_github_aiary.png)
 
-> 다시 하단의 *Link your GitHub account* 버튼을 클릭하면 다음과 같이 repository를 선택할 수 있습니다.  
+> 다시 하단의 *Link your GitHub account* 버튼을 클릭하면 다음과 같이 생성한 repository를 선택할 수 있습니다.  
 > 옆의 Connect 버튼을 클릭합니다.  
 > ![conn_git_repo](images/conn_git_repo.png)
  
