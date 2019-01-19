@@ -366,9 +366,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 </details>
 
+
 > c:\Oracle 하위 폴더로 workspace 폴더를 생성하고,  
 > 해당 폴더안에서 Helidon Template Project를 생성합니다.  
-> 여기서는 MicroProfile (Helidon MP) 기반 프로젝트를 생성합니다.  
+> 여기서는 MicroProfile [(Helidon MP)](#helidon) 기반 프로젝트를 생성합니다.  
 
 > ```
 > mkdir c:\Oracle\workspace
