@@ -534,10 +534,9 @@ API Blueprint와 Swagger를 지원합니다.
 
 > dredd init 작업 수행 시 필요한 apiaryApiKey와 apiaryApiName은 API 문서마다 상이하니 아래 내용을 그대로  
 > 복사하지 말고, 꼭 Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName를 확인하고 실행합니다.
-> <pre><code>
-> dredd init -r apiary -j apiaryApiKey:fe79f8fc114e7f3b24681e108ce6a422 -j apiaryApiName:movieapi69
+> <pre><code>dredd init -r apiary -j apiaryApiKey:fe79f8fc114e7f3b24681e108ce6a422 -j apiaryApiName:movieapi69
 > 
-> ? Location of the API description document ../../oraclecloud_api_handson/apiary.apid
+> ? Location of the API description document <b>../../oraclecloud_api_handson/apiary.apid</b>
 > ? Command to start the API server under test java -jar target/quickstart-mp.jar
 > ? Host of the API under test http://localhost:8080
 > ? Do you want to use hooks to customize Dredd's behavior? Y
