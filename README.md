@@ -184,17 +184,13 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > - object containing a question and a collection of answers in the
 > - form of choices.
 > ```
-> ***수정 내용***
+> ***수정 내용***  
+> 다음과 같이 Path 파라미터(id)와 Query 파라미터(title) 정의합니다.
 > ```markdown
 > ### Get a Movie [GET /movies/{id}?{title}]
 >
 > Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > ```
->> :warning: **참고 : Path Parameter 와 Query Parameter**  
->> 위 URL 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter를 의미합니다.  
->> Path Parameter는 REST URL Path에 포함되는 파라미터로 URL에 필수로 포함되어야 합니다.  
->> Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
->> http://{host}:{port}/{endpoint}/**{path_param}?{query_param}**  
 
 > :red_circle:**요청 파라미터 수정**  
 > 기존 Request 부분을 다음과 같이 수정합니다.  
@@ -285,6 +281,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > - id : 18 (number, required)
 > - name : Drama (string, required)
 > ```
+>
+> 위 데이터 정의 방식은 API Blueprint에서 지원하는 MSON 이라고 하는 데이터 정의 스펙입니다.  
+> [참고 : MSON (Markdown Syntax for Object Notation)](#mson)
+
 </details>
 
 <details>
@@ -365,7 +365,6 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
 > ```
 </details>
-
 
 > c:\Oracle 하위 폴더로 workspace 폴더를 생성하고,  
 > 해당 폴더안에서 Helidon Template Project를 생성합니다.  
@@ -532,19 +531,19 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
  </details>
 
 ## 참고
-<details>
-<summary>Helidon</summary>
-
-### Helidon
+#### Helidon
 > [Helidon](https://helidon.io)은 오라클이 만든 마이크로 서비스 개발 프레임웍입니다.  
 > Eclipse Microprofile 스펙을 구현한 [Helidon MP](https://helidon.io/docs/latest/#/guides/02_MP_REST_web-service)와 최신 React 개발 방식을 지원하는  
 > Microframework인 [Helidon SE](https://helidon.io/docs/latest/#/guides/01_SE_REST_web-service)를 제공합니다. 
 > 또한 Docker Image 생성을 위한 Dockerfile과 Kubernetes 배포 파일 (app.yaml)을 기본 제공합니다.  
-</details>
 
-<details>
-<summary>API Blueprint와 Swagger</summary>
+#### Apiary에서 Personal API와 Team API
+> Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
+> 또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
+> 유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
+> Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
 
+#### API Blueprint와 Swagger
 > API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
 > 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용)  
 > 등이 있습니다. API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞쳐져 있습니다. 반면에 Swagger는 API를  
@@ -560,20 +559,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 추출하는 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
 > 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를 떠올리면 됩니다.  
 > (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
-</details>
 
-<details>
-<summary>Personal API와 Team API</summary>
-
-> Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
-> 또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
-> 유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
-> Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
-</details>
-
-<details>
-<summary>MSON (Markdown Syntax for Object Notation)</summary>
-
+#### MSON
 > 두번 째 API Action에 대한 요청/응답 데이터를 작성할 때 JSON 형태의 데이터가 아니어서 의아했을 거라고 생각됩니다.  
 > 하지만 Apiary 우측의 HTML 문서에서는 JSON으로 변환되어 보이는 것을 확인 할 수 있을 겁니다.
 > 이 데이터 정의 방식은 API Blueprint의 또하나의 데이터 정의 방식인 [MSON](https://apiblueprint.org/documentation/mson/specification.html) (Markdown Syntax for Object  
@@ -593,13 +580,9 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >>   Include 혹은 객체명을 지정하여 사용 가능합니다.  
 >>   (e.g. Include "객체명", genres (array["객체명"]), user(""객체명))
 >>```
-</details>
 
-<details>
-<summary>DgroupId, DartifactId, Dpackage</summary>
-
->> 아래 내용은 변경이 가능한 부분입니다. 하지만 원활한 실습 진행을 위해 기본으로 생성하는 것을 권장합니다.  
->> **-DgroupId=io.helidon.examples**  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
->> **-DartifactId=quickstart-mp**     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
->> **-Dpackage=io.helidon.examples.quickstart.mp**  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.  
+#### DgroupId, DartifactId, Dpackage
+> **-DgroupId=io.helidon.examples**  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
+> **-DartifactId=quickstart-mp**     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
+> **-Dpackage=io.helidon.examples.quickstart.mp**  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.  
 </details>
