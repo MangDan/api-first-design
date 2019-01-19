@@ -523,17 +523,32 @@ API Blueprint와 Swagger를 지원합니다.
 > Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
 > ![dredd_install_init](images/dredd_install_init.png)
 
-> Visual Studio Code의 터미널 환경에서 Dredd Install 및 Init 작업을 수행합니다.  
-> dredd init 작업 수행 시 입력하는 apiaryApiKey와 apiaryApiName은 문서마다 다르게 생성됩니다.
+> Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
 > 작업 위치는 마찬가지로 Helidon 프로젝트 폴더내에서 진행합니다.  
-
 >```
 > cd c:\Oracle\workspace\quickstart-mp
 >
 > npm install -g dredd
->
-> dredd init -r apiary -j apiaryApiKey:fe79f8fc114e7f3b24681e108ce6a422 -j apiaryApiName:movieapi69
 >```
+> ![dredd_install](images/dredd_install.png)
+
+> dredd init 작업 수행 시 필요한 apiaryApiKey와 apiaryApiName은 API 문서마다 상이하니 아래 내용을 그대로  
+> 복사하지 말고, 꼭 Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName를 확인하고 실행합니다.
+> <pre><code>
+> dredd init -r apiary -j apiaryApiKey:fe79f8fc114e7f3b24681e108ce6a422 -j apiaryApiName:movieapi69
+> 
+> ? Location of the API description document ../../oraclecloud_api_handson/apiary.apid
+> ? Command to start the API server under test java -jar target/quickstart-mp.jar
+> ? Host of the API under test http://localhost:8080
+> ? Do you want to use hooks to customize Dredd's behavior? Y
+> ? Programming language of the hooks JavaScript
+> ? Found Travis CI configuration, do you want to add Dredd? N
+> </pre></code>
+
+> dredd init 작업 수행 시 필요한 apiaryApiKey와 apiaryApiName은 API 문서마다 다르게 생성됩니다.  
+> Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName으로 실행합니다.
+
+
 
 </details>
 <br><br><br><br>
