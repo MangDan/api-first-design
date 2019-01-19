@@ -3,9 +3,9 @@
 본 문서는 Oracle Apiary에서 API Blueprint를 활용하여 API 문서를 만들고, 만들어진 문서를 토대로 [Oracle Helidon](http://helidon.io)과 [Oracle Database의 REST Data Service](https://www.oracle.com/database/technologies/appdev/rest.html)로 마이크로 서비스를 구현하는 것을 보여줍니다. 
 또한 API 문서와 구현된 서비스간의 "동기화?" 비호환 (서비스에 대응하는 문서 호환 여부) 여부를 확인, 검증하는 [Dredd](https://github.com/apiaryio/dredd) 도구과 CI/CD 도구인 [Wercker](https://app.wercker.com/)를 통합하여 API 비호환 테스트를 지속적으로 자동화하는 것을 방법을 보여줍니다.
 마지막으로 컨테이너에 배포된 API에 보안 및 다양한 정책을 적용해 보고, 최종적으로 API Gateway에 배포하여 서비스와 문서를 애플리케이션 개발자에게 오픈하는 내용을 담고 있습니다.
-본 문서를 통해 오라클 솔루션을 활용하여 마이크로 서비스 개발에 대한 전반적인 라이프사이클을 경험해 보실 수 있습니다.
+본 문서를 통해 오라클 솔루션을 활용하여 마이크로 서비스 개발에 대한 전반적인 라이프사이클을 경험해 볼 수 있습니다.
 
-## 데스크탑  설치 프로그램
+## 데스크탑 설치 프로그램
 * [Java SE Development Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Node.js](https://nodejs.org/ko/download)
 * [Apache Maven](https://maven.apache.org/download.cgi)
@@ -19,9 +19,13 @@
 * [Oracle Database Cloud Service](https://cloud.oracle.com/ko_KR/database)
 * [Oracle API Platform Cloud Service](https://cloud.oracle.com/ko_KR/api-platform)
 
+## GitHub 계정
+* [GitHub](https://github.com)
+
 ## 시나리오
 1. Apiary에서 API Blueprint 작성하기
-2. Helidon (MP)과 ORDS를 사용하여 서비스 개발하고 Dredd를 사용하여 API Blueprint와 Helidon 서비스간 호환 여부 검증 및 테스트하기
+2. Helidon (MP)과 ORDS를 사용하여 서비스 개발하고 Dredd를 사용하여 API Blueprint와 Helidon 서비스간  
+   호환 여부 검증 및 테스트하기
 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 환경 구축하기
 4. API 서비스에 보안 및 정책을 적용하고 API Gateway에 서비스 배포하기
 
@@ -39,49 +43,22 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![apiary home](images/apiary_home.png)
 
 > **Continue with GitHub** 버튼을 클릭합니다.  
-> GitHub 계정이 필요합니다. 만약에 없을 경우 [GitHub(https://github.com)](https://github.com)에서 계정을 생성하세요.  
 > ![apiary_sign_up](images/apiary_sign_up.png)
 
 > GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
 > ![apiary_github_account1](images/apiary_github_account1.png)
 
-> GitHub에서 verify를 위한 메일이 발송됩니다.  
-> ![apiary_github_auth](images/apiary_github_auth.png)
+> Apiary에서 GitHub에 인증을 위한 권한을 요청합니다.  
+> **Authorize apiaryio** 버튼을 클릭합니다.  
+> ![apiary_github_signup](images/apiary_github_signup.png)
 
-> GitHub 로그인 메일 계정으로 접속하여 verify 메일을 확인하고 **verify email address**를 클릭 합니다.  
-> ![apiary_email_auth](images/apiary_email_auth.png)
-
-> 다시 Apiary 홈페이지로 접속한 후 우측 상단의 **Sign In** 버튼을 클릭, **Continue with GitHub** 버튼을 클릭 합니다.  
-> ![apiary_signin](images/apiary_signin.png)
-
-> GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
-> ![apiary_github_signin](images/apiary_github_signin.png)
+> Apiary에서 사용할 이메일을 입력합니다.  
+> GitHub 이메일을 입력합니다.  
+> ![apiary_github_signup2](images/apiary_github_signup2.png)
 
 > Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다.  
-> **Name your first API** 부분에 *myfirstapi* 혹은 *helloapiary* 와 같이 임의로 입력합니다.  
-> ![apiary_first_api](images/apiary_first_api.png)
-
-> Apiary 계정을 성공적으로 생성하였습니다. :clap:  
-> 아래 화면은 Apiary 에디터 화면으로 좌측이 에디터, 우측이 실시간으로 만들어지는 API 문서입니다.  
-> ![apiary_first_api_editor](images/apiary_first_api_editor.png)
-</details>
-
-<details>
-<summary>API Blueprint 프로젝트 만들기</summary>
-이제 API 프로젝트를 하나 만들어 보겠습니다.
-
-> 좌측 상단의 API 이름을 클릭한 후 **Create New API Project**를 선택합니다.  
-> ![apiary_create_new_api](images/apiary_create_new_api.png)
-
-> **Personal API**를 선택하고 API 이름은 **Movie API** 라고 입력합니다.  
-> 문서 유형은 API Blueprint와 Swagger 2.0 스펙을 지원하는데, 여기서는 API Blueprint로 문서를 작성합니다.
->>:warning: **참고 : Personal API와 Team API**  
->>Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
->>또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
->>유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
->>Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
-
-> ![apiary_create_new_api_personal](images/apiary_create_new_api_personal.png)
+> **Name your first API** 부분에 다음과 같이 *Movie API*를 입력하고 Blueprint를 선택합니다.
+> ![apiary_new_api](images/apiary_new_api.png)
 >> :warning: **참고 : API Blueprint와 Swagger**  
 >> API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
 >> 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용)  
@@ -98,7 +75,14 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> 추출하는 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
 >> 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를 떠올리면 됩니다.  
 >> (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
+>>
+>>:warning: **참고 : Personal API와 Team API**  
+>>Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
+>>또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
+>>유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
+>>Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
 
+> Apiary 계정과 첫 API Blueprint 프로젝트를 성공적으로 생성하였습니다. :clap:  
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
 > ![apiary_write_api_1](images/apiary_write_api_1.png)
 </details>
