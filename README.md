@@ -388,23 +388,25 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <details>
 <summary>Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 개발하기</summary>
 
-> 모든 작업은 Visual Studio Code를 통해서 진행합니다.
-> Visual Studio Code를 실행하고 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
+> 모든 작업은 Visual Studio Code를 통해서 진행합니다.  
+> Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
+> 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
 > ```
 > mvn -version
 > echo %JAVA_HOME%
 > ```
 > ![vscode_confirm_env](images/vscode_confirm_env.png)
+> 
+>> <details>
+>> <summary>:heavy_plus_sign: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
 
-<details>
-<summary>:memo: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
-> Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.
-> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 하며, 실행 후 Command 창을 다시 열어야 합니다.
-> ```
-> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
-> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
-> ```
-</details>
+>>  Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.
+>> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 하며, 실행 후 Command 창을 다시 열어야 합니다.
+>> ```
+>> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
+>> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
+>> ```
+>> </details>
    
 > c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고,  
 > 해당 폴더안에서 Helidon Template을 활용하여 Project를 생성합니다.  
