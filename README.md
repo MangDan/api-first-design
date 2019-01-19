@@ -445,7 +445,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <그림 추가>
 
 <details>
-<summary>:point_right: Connection 생성이 안되어 있는 경우 (클릭)</summary>
+&nbsp;&nbsp;&nbsp;<summary>:point_right: Connection 생성이 안되어 있는 경우 (클릭)</summary>
    
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
