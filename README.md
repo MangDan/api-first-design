@@ -598,6 +598,42 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.
 > ![wercker_trigger_build_now](images/wercker_trigger_build_now.png)
 
+> 상단 **wercker_pipeline** 버튼을 클릭하면 Wercker Application이 보입니다.  
+> Application을 클릭합니다.
+> ![wercker_pipeline](images/wercker_pipeline.png)
+
+> 구성한 Wercker Application에 의해 빌드가 진행된 내역을 볼 수 있습니다. 
+> ![wercker_first_build](images/wercker_first_build.png)
+
+> 처음 GitHub Repository를 생성할 때 따로 제공해드린 GitHub Repository를 Import한 것을 기억하실 겁니다.  
+> Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며, Wercker는 wercker.yml 파일에 기술된  
+> 스탭과 파이프라인을 실행합니다. ([참고 -> Wercker 동작](#wercker-config) 
+> ![mygithub_repo](images/mygithub_repo.png)
+
+> 첫 번째 빌드에서는 오류는 발생하지 않았지만, dredd.yml 파일에 기술되어야 하는 apiaryApiKey와 apiaryApiName이  
+> 없어서 Apiary로 테스트 결과 데이트가 전송되지 않습니다.  
+> Apiary의 상단 Tests 링크를 클릭하고 dredd init 라인에 있는 apiaryApiKey와 apiaryApiName을 복사합니다.  
+> ![dredd_install_init_2](images/dredd_install_init_2.png)
+
+> GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 Pencil 아이콘을 클릭합니다.
+> ![github_dredd](images/github_dredd.png)
+
+> 다음과 같이 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.
+> ![github_dredd_modify](images/github_dredd_modify.png)
+
+> Wercker에서 Build가 시작된 것을 확인할 수 있습니다.
+> ![wercker_build_start](images/wercker_build_start.png)
+
+> Wercker에서 Build 및 Test가 오류 없이 완료되었습니다.
+> ![wercker_build_complete](images/wercker_build_complete.png)
+
+> Apiary의 Tests로 들어가서 **Continuous Integration**을 클릭하면 다음과 같이 결과 리포트를 확인할 수 있습니다.  
+> ![apiary_ci_result](images/apiary_ci_result.png)
+
+> API Blueprint 문서와 API 소스가 변경이 일어나면 Wercker에 의해서 자동으로 문서 호환 여부를 체크하여 결과를  
+> 다양한 채널 (Apiary, 이메일, Slack 등)로 전송해줍니다.  
+> Wercker가 CI/CD 솔루션이므로 모든 테스트를 마친 API는 최종적으로는 다양한 운영 환경에 자동 배포가 될 수 있습니다.
+
 </details>
 <br><br><br><br>
 
@@ -659,4 +695,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 #### Dredd
 > Apiary에서 제공하는 Dredd는 영화 [저지 드레드](#dredd)의 주인공인 드레드의 이름을 따서 만들어졌습니다.  
+
+### Wercker-Config
+> 테이블 형태로 기술...
+
 </details>
