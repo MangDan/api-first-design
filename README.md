@@ -366,33 +366,25 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 </details>
 
-> c:\Oracle 하위 폴더로 workspace 폴더를 생성하고,  
-> 해당 폴더안에서 Helidon Template Project를 생성합니다.  
 > 여기서는 MicroProfile [(Helidon MP)](#helidon) 기반 프로젝트를 생성합니다.  
-
+> c:\Oracle\workspace 폴더로 이동 후 Helidon Template Project 생성을 위해 mvn generate를 실행합니다.
 > ```
-> mkdir c:\Oracle\workspace
 > cd c:\Oracle\workspace
-> ```
-
-> 아래 내용을 Copy & Paste 한 후 실행합니다.
-> ```
+> 
 > mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
 > ```
 
 > 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
 > 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
-> ![helidon_generate](images/helidon_generate.png)
+> ![maven_generate_helidon](images/maven_generate_helidon.png)
 
-> Visual Studio Code를 실행합니다.  
 > 좌측 상단 버튼 클릭 후 **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
 > ![mscode_open_workspace](images/mscode_open_workspace.png)
 
 > 기본 Helidon MP Project Structure 입니다.  
 > ![helidon_base_structure](images/helidon_base_structure.png)
 
-> VS Code의 상단 터미널 메뉴를 선택하고 새 터미널을 오픈합니다.  
-> VS Code의 터미널에서 생성한 Helidon Project 폴더로 이동한 후 다음과 같이 Packaging을 합니다.
+> Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 Packaging을 합니다.
 >```
 > cd quickstart-mp
 > mvn package
@@ -411,32 +403,24 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![helidon_greet_hello](images/helidon_greet_hello.png)
 
 > VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
-> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 Clone합니다.  
-> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요.
+> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 로컬로 Clone합니다.  
 >```
-> cd c:\Oracle\workspace\quickstart-mp
->
-> git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson ../../oraclecloud_api_handson
+> git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
 >```
-> ![git_clone](images/git_clone.png)
 
 > Helidon 프로젝트에 movie api 소스를 복사합니다.  
-> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요.
 >```
-> cd c:\Oracle\workspace\quickstart-mp
->
-> cp ../../oraclecloud_api_handson/movie_api/movie*.json src/main/resources/
-> cp ../../oraclecloud_api_handson/movie_api/*.java src/main/java/io/helidon/examples/quickstart/mp
+> cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\quickstart-mp\src\main\resources
+> cp ../../oraclecloud_api_handson/movie_api/*.java c:\Oracle\workspace\quickstart-mp\src/main/java/io/helidon/examples/quickstart/mp
 >```
-> ![copy_movie_api](images/copy_movie_api.png)
+> ![clone_cp](images/clone_cp.png)
 
 > 다시 Packaging 및 실행합니다.   
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
 >```
 > mvn package
 >
-> java -jar target/{프로젝트명}.jar  
-> (기본으로 생성했을 경우 java -jar target/quickstart-mp.jar)
+> java -jar target/quickstart-mp.jar
 >```
 > ![helidon_movie_run](images/helidon_movie_run.png)
 
@@ -528,7 +512,11 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <details>
 <summary>Dredd를 활용하여 API 문서와 API간의 동기화 검증하기</summary>
  
- </details>
+</details>
+
+
+
+
 
 ## 참고
 #### Helidon
