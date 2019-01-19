@@ -404,7 +404,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
 > setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
 > ```
-<details>
+</details>
    
 > c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고,  
 > 해당 폴더안에서 Helidon Template을 활용하여 Project를 생성합니다.  
