@@ -472,10 +472,11 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 여기선 Module과 Template이라는 것을 설정합니다.  
 > Module의 URI Prefix와 Template의 URI Pattern이라는 것을 순서대로 입력할 것입니다.  
 > 입력하게 되면 실제 REST 서비스의 주소는 다음과 같이 생성됩니다.   
-> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}
-> 여기서 스키마Alias는 **myords** 입니다.  
+> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
+> 현재 실습을 위해 구성되어 있는 DB Cloud 스키마의 Alias는 **myords** 입니다.  
 
-> Module에서는 다음과 같이 입력합니다.   
+> Module에서는 다음과 같이 입력합니다.  
+> 여러 사람이 같이 사용하는 DB이므로 Module은 영문이름과 같이 유니크한 값으로 입력합니다.
 > ```
 > Module Name - 본인이름 영문명 (e.g dankim)
 > URI Prefix - 본인이름 영문명 (e.g dankim)
@@ -514,7 +515,26 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 <details>
 <summary>Dredd를 활용하여 API 문서와 API간의 동기화 검증하기</summary>
- 
+
+Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며, API 문서와 구현된 서비스간 일치 여부 검증을 테스트합니다.  
+API Blueprint와 Swagger를 지원합니다.  
+
+> Apiary의 Test 탭을 클릭하면 Dredd에 대한 사용방법과 초기 설정을 위한 가이드를 볼 수 있습니다.  
+> Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
+> ![dredd_install_init](images/dredd_install_init.png)
+
+> Visual Studio Code의 터미널 환경에서 Dredd Install 및 Init 작업을 수행합니다.  
+> dredd init 작업 수행 시 입력하는 apiaryApiKey와 apiaryApiName은 문서마다 다르게 생성됩니다.
+> 작업 위치는 마찬가지로 Helidon 프로젝트 폴더내에서 진행합니다.  
+
+>```
+> cd c:\Oracle\workspace\quickstart-mp
+>
+> npm install -g dredd
+>
+> dredd init -r apiary -j apiaryApiKey:fe79f8fc114e7f3b24681e108ce6a422 -j apiaryApiName:movieapi69
+>```
+
 </details>
 <br><br><br><br>
 
@@ -549,7 +569,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
 
 #### MSON
-> 두번 째 API Action에 대한 요청/응답 데이터를 작성할 때 JSON 형태의 데이터가 아니어서 의아했을 거라고 생각됩니다.  
+> 두번 째 API Action에 대한 요청/응답 데이터를 작성할 때 JSON 형태의 데이터가 아니어서 의아했을텐데요.  
 > 하지만 Apiary 우측의 HTML 문서에서는 JSON으로 변환되어 보이는 것을 확인 할 수 있을 겁니다.
 > 이 데이터 정의 방식은 API Blueprint의 또하나의 데이터 정의 방식인 [MSON](https://apiblueprint.org/documentation/mson/specification.html) (Markdown Syntax for Object  
 > Notation) 이라는 스펙으로 JSON보다 간결한 방식으로 데이터를 작성할 수 있게 도와주는 스펙입니다.  
@@ -573,4 +593,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > **-DgroupId=io.helidon.examples**  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
 > **-DartifactId=quickstart-mp**     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
 > **-Dpackage=io.helidon.examples.quickstart.mp**  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.  
+
+#### Dredd
+> Apiary에서 제공하는 Dredd는 영화 [저지 드레드](#dredd)의 주인공인 드레드의 이름을 따서 만들어졌습니다.  
 </details>
