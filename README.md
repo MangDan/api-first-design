@@ -59,10 +59,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다.  
 > **Name your first API** 부분에 다음과 같이 *Movie API*를 입력하고 Blueprint를 선택합니다.
 > ![apiary_new_api](images/apiary_new_api.png)
->> :warning: **참고 : API Blueprint와 Swagger**  
+>> :white_check_mark: **API Blueprint와 Swagger (참고만 하세요)**  
 >> API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
 >> 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용)  
->> 등이 있습니다. API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞쳐져 있습니다. 반면에, Swagger는 API를  
+>> 등이 있습니다. API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞쳐져 있습니다. 반면에 Swagger는 API를  
 >> 정의하는데 포커스가 맞춰져 있다고 볼 수 있습니다. API Blueprint는 개발자가 아니어도 쉽게 배울 수 있으며, 작성하기  
 >> 쉽고 이해하기 쉬운 마크다운 형식을 지원합니다.  
 >> 문서를 위한 스펙이기 때문에 실제 구현을 위한 정의가 Swagger에 비해 상대적으로 많이 포함되지 않아, 스텁이나 스니펫과  
@@ -76,7 +76,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> 일반적으로 Design First 를 말할때는 API Blueprint, Code First를 말할때는 Swagger를 떠올리면 됩니다.  
 >> (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
 >>
->>:warning: **참고 : Personal API와 Team API**  
+>>:white_check_mark: **Personal API와 Team API (참고만 하세요)**  
 >>Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
 >>또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
 >>유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
@@ -91,7 +91,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <summary>API Blueprint 문서 작성하기</summary>
 
 이제부터 Movie API 문서를 작성하겠습니다.  
-:memo: **마크가 표기되어 있는 부분만 수정 또는 추가합니다.**  
+:red_circle: **마크가 표기되어 있는 부분만 수정 또는 추가합니다.**  
 
 > 첫 번째 라인은 API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
@@ -110,7 +110,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > # Movie API
 > ```
 
-> :memo:**API 설명 수정**  
+> :red_circle:**API 설명 수정**  
 > API에 대한 설명, 소개를 적는 부분입니다.  
 > 기존 부분을 아래와 같이 수정합니다.  
 >
@@ -123,7 +123,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 영화 정보를 제공하는 API 입니다.
 > ```
 
-> :memo:**API 엔드포인트 수정**  
+> :red_circle:**API 엔드포인트 수정**  
 > API에 대한 엔드포인트 URL입니다.  
 > 기존 부분을 아래와 같이 수정합니다.  
 >
@@ -136,7 +136,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ## Movies Collection [/movies]
 > ```
 
-> :memo:**API 엔드포인트 Action 수정**  
+> :red_circle:**API 엔드포인트 Action 수정**  
 > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
 > 기존 부분을 아래와 같이 수정합니다.  
 >
@@ -149,7 +149,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ### List All Movies [GET]
 > ```
 
-> :memo:**응답 JSON 샘플 수정**  
+> :red_circle:**응답 JSON 샘플 수정**  
 > 기존 응답 JSON 샘플을 다음과 같이 수정합니다.  
 >
 > ***기존 내용***
@@ -195,7 +195,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 
 두번 째 API Action을 수정 합니다.  
-> :memo:**API Action 수정**  
+> :red_circle:**API Action 수정**  
 > 기존 Action을 다음과 같이 수정합니다.  
 >
 > ***기존 내용***
@@ -218,7 +218,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >> Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
 >> http://{host}:{port}/{endpoint}/**{path_param}?{query_param}**  
 
-> :memo:**요청 파라미터 수정**  
+> :red_circle:**요청 파라미터 수정**  
 > 기존 Request 부분을 다음과 같이 수정합니다.  
 >
 > ***기존 내용***
@@ -247,7 +247,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >             Authorization : Basic AAA
 > ```
 
-> :memo:**응답 데이터 수정**
+> :red_circle:**응답 데이터 수정**
 > 기존 Response 부분을 다음과 같이 수정합니다.  
 >
 > ***기존 내용***
@@ -307,7 +307,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > - id : 18 (number, required)
 > - name : Drama (string, required)
 > ```
->> :warning: **참고 : MSON (Markdown Syntax for Object Notation)**  
+>> :white_check_mark: **MSON (Markdown Syntax for Object Notation) (참고만 하세요)**  
 >> 두번 째 API Action에 대한 요청/응답 데이터를 작성할 때 JSON 형태의 데이터가 아니어서 의아했을 거라고 생각됩니다.  
 >> 하지만 Apiary 우측의 HTML 문서에서는 JSON으로 변환되어 보이는 것을 확인 할 수 있을 겁니다.
 >> 이 데이터 정의 방식은 API Blueprint의 또하나의 데이터 정의 방식인 [MSON](https://apiblueprint.org/documentation/mson/specification.html) (Markdown Syntax for Object  
@@ -388,17 +388,17 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <details>
 <summary>Helidon MP (MicroProfile) 프로젝트 생성하기</summary>
 
-> Windows Command 창을 열고 다음과 같이 환경 변수를 수정합니다.  
-> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.  
-> ```
-> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
-> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
-> ```
-
 > Windows Command 창을 다시 열고 정상적으로 환경이 설정 되었는지 확인합니다.
 > ```
 > mvn -version
 > echo %JAVA_HOME%
+> ```
+
+> Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.
+> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 하며, 실행 후 Command 창을 다시 열어야 합니다.
+> ```
+> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
+> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
 > ```
 
 > c:\Oracle 폴더로 이동한 후 workspace 폴더를 생성하고,  
@@ -413,7 +413,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ```
 > mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
 > ```
->> :warning: **참고 : 프로젝트 이름과 패키지 이름**  
+>> :white_check_mark: **프로젝트 이름과 패키지 이름 (참고만 하세요)**  
 >> 아래 내용은 변경이 가능한 부분입니다. 하지만 원활한 실습 진행을 위해 기본으로 생성하는 것을 권장합니다.  
 >> **-DgroupId=io.helidon.examples**  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
 >> **-DartifactId=quickstart-mp**     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
@@ -421,8 +421,72 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
 > 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
-> :warning: 최초 다운로드 받는 시간이 5분 이상 소요됩니다. 다운로드 받는 동안 다음 단계인 ORDS를 먼저 진행합니다.  
 > ![helidon_generate](images/helidon_generate.png)
+
+> Visual Studio Code를 실행합니다.  
+> 좌측 상단 버튼 클릭 후 **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
+> ![mscode_open_workspace](images/mscode_open_workspace.png)
+
+> 기본 Helidon MP Project Structure 입니다.  
+> ![helidon_base_structure](images/helidon_base_structure.png)
+
+> VS Code의 상단 터미널 메뉴를 선택하고 새 터미널을 오픈합니다.  
+> VS Code의 터미널에서 생성한 Helidon Project 폴더로 이동한 후 다음과 같이 Packaging을 합니다.
+>```
+> cd quickstart-mp
+> mvn package
+>```
+
+> 완료되면 다음과 같이 실행합니다.
+>```
+> java -jar target/quickstart-mp.jar
+>```
+> ![start_greet_service](images/start_greet_service.png)
+
+> 다음과 같이 브라우저로 접속해봅니다.
+>```
+> http://localhost:8080/greet
+>```
+> ![helidon_greet_hello](images/helidon_greet_hello.png)
+
+> VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
+> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 Clone합니다.  
+> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요.
+>```
+> cd c:\Oracle\workspace\quickstart-mp
+>
+> git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson ../../oraclecloud_api_handson
+>```
+> ![git_clone](images/git_clone.png)
+
+> Helidon 프로젝트에 movie api 소스를 복사합니다.  
+> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요.
+>```
+> cd c:\Oracle\workspace\quickstart-mp
+>
+> cp ../../oraclecloud_api_handson/movie_api/movie*.json src/main/resources/
+> cp ../../oraclecloud_api_handson/movie_api/*.java src/main/java/io/helidon/examples/quickstart/mp
+>```
+> ![copy_movie_api](images/copy_movie_api.png)
+
+> 다시 Packaging 및 실행합니다.   
+> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
+>```
+> mvn package
+>
+> java -jar target/{프로젝트명}.jar  
+> (기본으로 생성했을 경우 java -jar target/quickstart-mp.jar)
+>```
+> ![helidon_movie_run](images/helidon_movie_run.png)
+
+> 다음과 같이 브라우저로 접속해봅니다.
+>```
+> http://localhost:8080/movie
+>
+> http://localhost:8080/movie/titanic
+>```
+> ![helidon_run_movie](images/helidon_run_movie.png)
+> ![helidon_run_movie_titanic](images/helidon_run_movie_titanic.png)
 </details>
 
 <details>
@@ -501,72 +565,6 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >```
 > 다음과 같은 json 데이터가 나오면 성공입니다.
 > ![ords_json_all](images/ords_json_all.png)
-</details>
-
-<details>
-<summary>간단한 Helidon MP 서비스 개발 및 실행하기</summary>
-
-> Visual Studio Code를 실행합니다.  
-> 좌측 상단 버튼 클릭 후 **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
-> ![mscode_open_workspace](images/mscode_open_workspace.png)
-
-> 기본 Helidon MP Project Structure 입니다.  
-> ![helidon_base_structure](images/helidon_base_structure.png)
-
-> VS Code의 상단 터미널 메뉴를 선택하고 새 터미널을 오픈합니다.  
-> VS Code의 터미널에서 생성한 Helidon Project 폴더로 이동한 후  
-> (기본 프로젝트명으로 생성했을 경우 cd quickstart-mp) 다음과 같이 Packaging을 합니다.
->```
-> mvn package
->```
-
-> 완료되면 다음과 같이 실행합니다.
->```
-> java -jar target/{프로젝트명}.jar  
-> (기본으로 생성했을 경우 java -jar target/quickstart-mp.jar)
->```
-> ![start_greet_service](images/start_greet_service.png)
-
-> 다음과 같이 브라우저로 접속해봅니다.
->```
-> http://localhost:8080/greet
->```
-> ![helidon_greet_hello](images/helidon_greet_hello.png)
-
-> VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
-> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 Clone합니다.  
-> 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요 (C:\Oracle\workspace\quickstart-mp)
->```
-> git clone https://github.com/{본인깃헙}/oraclecloud_api_handson ../../oraclecloud_api_handson
-> or
-> git clone https://github.com/mangdan/oraclecloud_api_handson ../../oraclecloud_api_handson
->```
-
-> Helidon 프로젝트에 movie api 관련 소스를 복사합니다.  
-> 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요 (C:\Oracle\workspace\quickstart-mp)
->```
-> cp ../../oraclecloud_api_handson/movie_api/movie*.json src/main/resources/
-> cp ../../oraclecloud_api_handson/movie_api/*.java src/main/java/io/helidon/examples/quickstart/mp
->```
-
-> 다시 Packaging 및 실행합니다.   
-> 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행하세요 (C:\Oracle\workspace\quickstart-mp)
->```
-> mvn package
->
-> java -jar target/{프로젝트명}.jar  
-> (기본으로 생성했을 경우 java -jar target/quickstart-mp.jar)
->```
-> ![helidon_movie_run](images/helidon_movie_run.png)
-
-> 다음과 같이 브라우저로 접속해봅니다.
->```
-> http://localhost:8080/movie
->
-> http://localhost:8080/movie/titanic
->```
-> ![helidon_run_movie](images/helidon_run_movie.png)
-> ![helidon_run_movie_titanic](images/helidon_run_movie_titanic.png)
 </details>
 
 <details>
