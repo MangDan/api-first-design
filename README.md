@@ -567,7 +567,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > GitHub 계정을 활용하여 Wercker 계정을 생성합니다. 상단의 **Sign Up** 버튼을 클릭합니다.
 > ![wercker_home](images/wercker_home.png)
 
-> **SIGN UP USING GITHUB** 버튼을 클릭합니다.
+> **SIGN UP USING GITHUB** 버튼을 클릭하고 GitHub 아이디와 패스워드를 입력합니다.
 > ![wercker_github_signup](images/wercker_github_signup.png)
 
 > **Authorize wercker** 버튼을 클릭합니다.
@@ -588,13 +588,14 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > **Wercker will check out the code without using an SSH key** 선택합니다.
 > ![wercker_create_new_app_3](images/wercker_create_new_app_3.png)
 
-> **Create** 버튼을 클릭하여 Wercker Application을 생성합니다.
+> **Create** 버튼을 클릭하여 Wercker Application을 생성합니다.  
+> 혹은 우측 상단의 + 버튼을 클릭하고 Add Application을 선택합니다.
 > ![wercker_create_new_app_4](images/wercker_create_new_app_4.png)
 
 > Wercker Application을 성공적으로 생성하였습니다.
 > ![wercker_create_new_app_5](images/wercker_create_new_app_5.png)
 
-> 빌드 시작
+> 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.
 > ![wercker_trigger_build_now](images/wercker_trigger_build_now.png)
 
 </details>
