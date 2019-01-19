@@ -514,7 +514,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 </details>
 
 <details>
-<summary>Dredd를 활용하여 API 문서와 API간의 동기화 검증하기</summary>
+<summary>Dredd를 활용하여 API 문서와 API간의 호환 여부 검증하기</summary>
 
 > Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며, API 문서와 구현된 서비스간 일치 여부 검증을 테스트하는 도구입니다.  
 > 현재 API Blueprint와 Swagger를 지원합니다.  
@@ -559,8 +559,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![apiary_dredd_result](images/apiary_dredd_result.png)
 </details>
 
+
+## 3. Continuous Integration 환경 구성하기
 <details>
-<summary>Dredd와 Wercker를 활용하여 Continuous Integration 환경 구성하기</summary>
+<summary>Wercker 계정 생성하기</summary>
 
 > Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만,  
 > Wercker와 GitHub을 활용하여 지속적으로 검증 및 테스트를 수행할 수 있습니다.  
@@ -576,7 +578,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Name, Email을 입력하고 **FINISH UP** 버튼을 클릭합니다.
 > ![wercker_email](images/wercker_email.png)
 
-> **Create your first application** 버튼을 클릭합니다.
+> **Create your first application** 버튼을 클릭합니다.  
+> 혹은 우측 상단의 + 버튼을 클릭하고, Add Application을 선택합니다.
 > ![wercker_create_first_app](images/wercker_create_first_app.png)
 
 > 다음과 같이 SCM을 GitHub으로 선택하고 Next 버튼을 클릭합니다.
@@ -604,10 +607,14 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > 구성한 Wercker Application에 의해 빌드가 진행된 내역을 볼 수 있습니다. 
 > ![wercker_first_build](images/wercker_first_build.png)
+</details>
 
+<details>
+<summary>Continuous Integration 테스트</summary>
+   
 > 처음 GitHub Repository를 생성할 때 따로 제공해드린 GitHub Repository를 Import한 것을 기억하실 겁니다.  
 > Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며, Wercker는 wercker.yml 파일에 기술된  
-> 스탭과 파이프라인을 실행합니다. ([참고 -> Wercker 동작](#wercker-config) 
+> 스탭과 파이프라인을 실행합니다. ([참고 -> Wercker Config])(#wercker-config) 
 > ![mygithub_repo](images/mygithub_repo.png)
 
 > 첫 번째 빌드에서는 오류는 발생하지 않았지만, dredd.yml 파일에 기술되어야 하는 apiaryApiKey와 apiaryApiName이  
@@ -615,7 +622,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Apiary의 상단 Tests 링크를 클릭하고 dredd init 라인에 있는 apiaryApiKey와 apiaryApiName을 복사합니다.  
 > ![dredd_install_init_2](images/dredd_install_init_2.png)
 
-> GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 Pencil 아이콘을 클릭합니다.
+> GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
 > ![github_dredd](images/github_dredd.png)
 
 > 다음과 같이 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.
