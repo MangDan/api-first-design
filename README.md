@@ -458,8 +458,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > SID - apidb
 > ```
 > <그림 추가>
-</details>
-
+</details><br><br>
 
 > Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 를 입력합니다.  
 > ```
