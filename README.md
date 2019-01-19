@@ -534,6 +534,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 ## 참고
 <details>
 <summary>Helidon</summary>
+
 ### Helidon
 > [Helidon](https://helidon.io)은 오라클이 만든 마이크로 서비스 개발 프레임웍입니다.  
 > Eclipse Microprofile 스펙을 구현한 [Helidon MP](https://helidon.io/docs/latest/#/guides/02_MP_REST_web-service)와 최신 React 개발 방식을 지원하는  
