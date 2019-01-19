@@ -540,7 +540,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > 참고로 apiary.apid는 API Blueprint 문서로 Apiary GitHub Sync 실습을 통해서 푸시한 파일을 Clone 한 파일입니다.
 > <pre><code>dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
 > 
-> ? Location of the API description document <B>../../oraclecloud_api_handson/apiary.apid</B>
+> ? Location of the API description document <B>../../oraclecloud_api_handson/apiary.apib</B>
 > ? Command to start the API server under test <B>java -jar target/quickstart-mp.jar</B>
 > ? Host of the API under test <B>http://localhost:8080</B>
 > ? Do you want to use hooks to customize Dredd's behavior? <B>Y</B>
