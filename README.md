@@ -440,7 +440,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <summary>ORDS를 활용하여 REST 서비스 만들기</summary>
    
 > SQL Developer를 실행합니다.  
-> 좌측 생성된 Connect 이름 (oracle@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
+> 좌측에 생성된 Connection (ords@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
 <그림 추가>
 
 <details>
@@ -449,12 +449,12 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
 > ```
-> Connection Name - oracle@apidb
-> Username - oracle
+> Connection Name - ords@ordsdb
+> Username - ords
 > Password - Welcome123!
 > Hostname - ip (todo)
 > Port - 1521
-> SID - apidb
+> SID - ordsdb
 > ```
 > <그림 추가>
 </details><br>
@@ -473,12 +473,12 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Module의 URI Prefix와 Template의 URI Pattern이라는 것을 순서대로 입력할 것입니다.  
 > 입력하게 되면 실제 REST 서비스의 주소는 다음과 같이 생성됩니다.   
 > http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}
-> 여기서 스키마Alias는 **oracle** 입니다.  
+> 여기서 스키마Alias는 **myords** 입니다.  
 
 > Module에서는 다음과 같이 입력합니다.   
 > ```
-> Module Name - 본인이름 영문명 (e.g donghukim)
-> URI Prefix - 본인이름 영문명 (e.g donghukim)
+> Module Name - 본인이름 영문명 (e.g dankim)
+> URI Prefix - 본인이름 영문명 (e.g dankim)
 > Publish Make this RESTful Service available for use - Check
 > ```
 > ![ords_module_1](images/ords_module_1.png)
@@ -501,12 +501,12 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > 쿼리를 다음과 같이 입력하고 바로 위 저장 버튼을 클릭합니다.
 >```
-> SELECT * FROM MOVIE;
+> select id, title, release_date, runtime from movie
 >```
 
 > 브라우저에서 다음과 같은 URL로 접속합니다. module uri prefix만 본인이 입력한 값으로 변경합니다.  
 >```
-> http://129.213.146.191:8080/ords/oracle/donghukim/movie
+> http://129.213.146.191:8080/ords/myords/dankim/movie
 >```
 > 다음과 같은 json 데이터가 나오면 성공입니다.
 > ![ords_json_all](images/ords_json_all.png)
