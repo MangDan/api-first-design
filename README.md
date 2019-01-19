@@ -439,6 +439,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 <details>
 <summary>ORDS를 활용하여 REST 서비스 만들기</summary>
+   
 > SQL Developer를 실행합니다.  
 > 좌측 생성된 Connect 이름 (oracle@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
 <그림 추가>
