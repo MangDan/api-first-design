@@ -356,7 +356,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![vscode_confirm_env](images/vscode_confirm_env.png)
 
 <details>
-<summary>:heavy_plus_sign: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
+<summary>:point_right: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
 
 > Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.  
 > 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.
@@ -445,7 +445,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <그림 추가>
 
 <details>
-<summary>Connection 생성이 안되어 있는 경우</summary>
+<summary>:point_right: Connection 생성이 안되어 있는 경우 (클릭)</summary>
    
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
