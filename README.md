@@ -182,13 +182,13 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >             {
 >                 "id": 19995,
 >                 "title": "Avatar",
->                 "year": "2009",
+>                 "release_date": "2009",
 >                 "runtime" : 100
 >             },
 >             {
 >                 "id": 2699,
 >                 "title": "Titanic",
->                 "year": "1997",
+>                 "release_date": "1997",
 >                 "runtime" :194
 >             }
 >         ]
@@ -213,10 +213,10 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > ```
 >> :warning: **참고 : Path Parameter 와 Query Parameter**  
->> Path Parameter는 REST URL Path에 포함되는 파라미터로 http://{host}:{port}/{endpoint}/{path_param}/  
->> 형태로 사용되며 필수로 포함되어야 합니다.  
+>> 위 URL 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter를 의미합니다.  
+>> Path Parameter는 REST URL Path에 포함되는 파라미터로 URL에 필수로 포함되어야 합니다.  
 >> Query Parameter는 URL에 ?다음에 붙는 파라미터로 key=value 형태로 사용되며, 옵셔널한 값이 사용될 수 있습니다.  
->> 위 내용 중 {id} 부분이 Path Parameter를 의미하며, ?{title} 부분이 Query Parameter 입니다.  
+>> http://{host}:{port}/{endpoint}/**{path_param}?{query_param}**  
 
 > :memo:**요청 파라미터 수정**  
 > 기존 Request 부분을 다음과 같이 수정합니다.  
@@ -238,8 +238,8 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ***수정 내용***
 > ```markdown
 > + Parameters
->     - id : 19995 (string, required)
->     - title : Avatar (string, optional)
+>     - id : 2699 (string, required)
+>     - title : Titanic (string, optional)
 >
 > + Request
 >     + Header
@@ -286,7 +286,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >     + Attributes
 >         - id : 2699
 >         - title : Titanic
->         - year : 1997
+>         - release_date : 1997.11.18
 >         - runtime : 194
 >         - Include MovieDetail
 >         - genres (array[Genres])
@@ -297,7 +297,6 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 >
 > ## MovieDetail (object)
 > - overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization. (string)
-> - releaseDate : 2009.12.10
 > - status : Released
 > - homepage : http://www.titanicmovie.com
 > - vote_average : 7.2
