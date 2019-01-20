@@ -70,8 +70,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 <summary>API Blueprint 문서 작성하기</summary>
 
 이제부터 Movie API 문서를 작성합니다.  
-아래의 API Blueprint를 복사해서 좌측 에디터의 내용을 지우고 붙여넣기 합니다.
-
+> 아래의 API Blueprint를 복사해서 좌측 에디터의 내용을 지우고 붙여넣기 합니다.  
 >```markdown
 > FORMAT: 1A
 > HOST: http://polls.apiblueprint.org/
@@ -140,7 +139,11 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > - name : Drama (string, required)
 >```
 
-:red_circle: **아래 내용은 이 문서에 대한 설명으로 건너뛰셔도 됩니다.**  
+> 우측의 자동 변환된 HTML문서를 확인하고, **List All Movies**와 **Get a Movie**를 클릭하여 내용을 확인합니다.  
+> 우측 상단의 Save 버튼을 클릭하여 저장합니다.  
+> ![apiary_write_complete](images/apiary_write_complete.png)
+
+:red_circle: **아래 내용은 작성된 API Blueprint에 대한 설명으로, 한번 읽어 보시기 바랍니다.**  
 
 > 첫 번째 라인은 API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
@@ -279,7 +282,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > ![list_all_repo](images/list_all_repo.png)
 
 > *Authorize apairyio* 버튼을 클릭합니다.  
-> ![auth_github_aiary](images/auth_github_aiary.png)
+> <img src="images/auth_github_aiary.png" width="40%">
 
 > 다시 하단의 *Link your GitHub account* 버튼을 클릭하면 다음과 같이 생성한 repository를 선택할 수 있습니다.  
 > 옆의 Connect 버튼을 클릭합니다.  
@@ -291,11 +294,11 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 작성한 API Blueprint문서와 GitHub Repository가 싱크되었습니다.  
 > ![apiary_git_sync_complete](images/apiary_git_sync_complete.png)
 
-> 다시 상단의 Editor 버튼을 클릭하면 우측 Save 버튼 옆에 Push 버튼이 생성 된 것을 확인하실 수 있습니다.  
+> 다시 상단의 Editor 버튼을 클릭하면 우측 **Save** 버튼 옆에 **Push** 버튼이 생성 된 것을 확인하실 수 있습니다.  
 > 이제 문서를 변경하면 변경이 되었다는 알림(빨간점)이 Push 버튼에 나타나며, Push 버튼을 클릭하여 GitHub에 바로 푸시할 수 있습니다.  
 > ![apiary_push_btn](images/apiary_push_btn.png)
 
-> GitHub Repository에는 apiary.apid 파일이 생성됩니다.  
+> GitHub Repository에는 apiary.apib 파일이 생성됩니다.  
 > GitHub에 생성된 파일을 클릭하여 내용을 확인합니다.  
 > ![github_doc](images/github_doc.png)
 </details>
