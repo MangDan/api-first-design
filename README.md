@@ -45,7 +45,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 
 > **Continue with GitHub** 버튼을 클릭합니다.  
 > ![apiary_sign_up](images/apiary_sign_up.png){: width="100" height="100"}
-> <img src="images/apiary_sign_up.png" width="50%">
+> <img src="images/apiary_sign_up.png" width="30%">
 
 > GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
 > ![apiary_github_account1](images/apiary_github_account1.png)
