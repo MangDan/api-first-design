@@ -255,10 +255,10 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > 먼저 GitHub에 Repository를 하나 생성합니다.   
 > GitHub에 로그인한 후 New repository를 클릭합니다.  
-> <img src="images/create_github_repo.png" width="60%">
+> <img src="images/create_github_repo.png" width="100%">
 
 > Repository 이름을 입력합니다. 여기서는 *oraclecloud_api_handson* 이라는 이름으로 생성합니다.  
-> <img src="images/create_github_repo2.png" width="60%">
+> <img src="images/create_github_repo2.png" width="100%">
 
 > 맨 아래 Import code를 클릭합니다.  
 > 본 과정에서 사용되는 소스와 설정파일을 포함한 Repository를 복제하면서 생성합니다.  
