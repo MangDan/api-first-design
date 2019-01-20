@@ -69,8 +69,8 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 <details>
 <summary>API Blueprint 문서 작성하기</summary>
 
-이제부터 Movie API 문서를 작성하겠습니다.  
-좌측 에디터 영역에 아래 내용을 모두 복사해서 붙여넣기하여 변경합니다.
+이제부터 Movie API 문서를 작성합니다.  
+아래의 API Blueprint를 복사해서 좌측 에디터의 내용을 지우고 붙여넣기 합니다.
 
 >```markdown
 > FORMAT: 1A
@@ -140,11 +140,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > - name : Drama (string, required)
 >```
 
-
-이제부터 Movie API 문서를 작성하겠습니다.  영ㅇ
-이제부터 Movie API 문서를 작성하겠습니다.  
-이제부터 Movie API 문서를 작성하겠습니다.  
-:red_circle: **마크가 표기되어 있는 부분만 수정 또는 추가합니다.**  
+:red_circle: **아래 내용은 이 문서에 대한 설명으로 건너뛰셔도 됩니다.**  
 
 > 첫 번째 라인은 API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
@@ -163,73 +159,22 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > # Movie API
 > ```
 
-> :red_circle:**API 설명 수정**  
 > API에 대한 설명, 소개를 적는 부분입니다.  
-> 기존 부분을 아래와 같이 수정합니다.  
->
-> ***기존 내용***
-> ```diff
-> - Polls is a simple API allowing consumers to view polls and vote in them.
-> ```
-> ***수정 내용***
 > ```markdown
 > 영화 정보를 제공하는 API 입니다.
 > ```
 
-> :red_circle:**API 엔드포인트 수정**  
 > API에 대한 엔드포인트 URL입니다.  
-> 기존 부분을 아래와 같이 수정합니다.  
->
-> ***기존 내용***
-> ```diff
-> - ## Questions Collection [/questions]
-> ```
-> ***수정 내용***
 > ```markdown
 > ## Movies Collection [/movies]
 > ```
 
-> :red_circle:**API 엔드포인트 Action 수정**  
 > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
-> 기존 부분을 아래와 같이 수정합니다.  
->
-> ***기존 내용***
-> ```diff
-> - ### List All Questions [GET]
-> ```
-> ***수정 내용***
 > ```markdown
 > ### List All Movies [GET]
 > ```
 
-> :red_circle:**응답 JSON 샘플 수정**  
-> 기존 응답 JSON 샘플을 다음과 같이 수정합니다.  
->
-> ***기존 내용***
-> ```diff
-> -        [
-> -            {
-> -                "question": "Favourite programming language?",
-> -                "published_at": "2015-08-05T08:40:51.620Z",
-> -                "choices": [
-> -                    {
-> -                        "choice": "Swift",
-> -                        "votes": 2048
-> -                    }, {
-> -                        "choice": "Python",
-> -                        "votes": 1024
-> -                    }, {
-> -                        "choice": "Objective-C",
-> -                        "votes": 512
-> -                    }, {
-> -                        "choice": "Ruby",
-> -                        "votes": 256
-> -                    }
-> -                ]
-> -            }
-> -        ]
-> ```
-> ***수정 내용***
+> 응답 JSON 샘플입니다.  
 > ```markdown
 >         [
 >             {
@@ -247,44 +192,15 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >         ]
 > ```
 
-두번 째 API Action을 수정 합니다.  
-> :red_circle:**API Action 수정**  
-> 기존 Action을 다음과 같이 수정합니다.  
->
-> ***기존 내용***
-> ```diff
-> - ### Create a New Question [POST]
->
-> - You may create your own question using this action. It takes a JSON
-> - object containing a question and a collection of answers in the
-> - form of choices.
-> ```
-> ***수정 내용***  
-> 다음과 같이 Path 파라미터(id)와 Query 파라미터(title) 정의합니다.
+두번 째는 파라미터를 받아서 조회하여 반환되는 Action입니다.  
+> 다음과 같이 Path 파라미터(id)와 Query 파라미터(title) 정의합니다.  
 > ```markdown
 > ### Get a Movie [GET /movies/{id}?{title}]
 >
 > Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > ```
 
-> :red_circle:**요청 파라미터 수정**  
-> 기존 Request 부분을 다음과 같이 수정합니다.  
->
-> ***기존 내용***
-> ```diff
-> - + Request (application/json)
->
-> -        {
-> -            "question": "Favourite programming language?",
-> -            "choices": [
-> -                \"Swift\",
-> -                \"Python\",
-> -                \"Objective-C\",
-> -                \"Ruby\"
-> -            ]
-> -        }
-> ```
-> ***수정 내용***
+> 요청 파라미터 부분입니다. JSON 샘플이 아닌 [MSON](#mson) 방식을 사용합니다.
 > ```markdown
 > + Parameters
 >     - id : 2699 (string, required)
@@ -296,40 +212,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >             Authorization : Basic AAA
 > ```
 
-> :red_circle:**응답 데이터 수정**
-> 기존 Response 부분을 다음과 같이 수정합니다.  
->
-> ***기존 내용***
-> ```diff
-> - + Response 201 (application/json)
->
-> -    + Headers
-> -
-> -            Location: /questions/2
->
-> -    + Body
->
-> -            {
-> -                \"question\": \"Favourite programming language?\",
-> -                \"published_at\": \"2015-08-05T08:40:51.620Z\",
-> -                \"choices\": [
-> -                    {
-> -                        \"choice\": \"Swift\",
-> -                        \"votes\": 0
-> -                    }, {
-> -                        \"choice\": \"Python\",
-> -                        \"votes": 0
-> -                    }, {
-> -                        \"choice": \"Objective-C\",
-> -                        \"votes": 0
-> -                    }, {
-> -                        \"choice": \"Ruby\",
-> -                        \"votes": 0
-> -                    }
-> -                ]
-> -            }
-> ```
-> ***수정 내용***
+> 응답 파라미터 부분입니다. JSON 샘플이 아닌 [MSON](#mson) 방식을 사용합니다.
 > ```markdown
 > + Response 200 (application/json)
 >     + Attributes
