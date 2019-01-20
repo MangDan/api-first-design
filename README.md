@@ -15,6 +15,7 @@
 * [Insomnia](https://insomnia.rest/download)
 
 ## Oracle Cloud 환경
+* [Oracle Apiary Cloud Service](https://apiary.io)
 * [Oracle Compute Cloud Service](https://cloud.oracle.com/ko_KR/compute)
 * [Oracle Database Cloud Service](https://cloud.oracle.com/ko_KR/database)
 * [Oracle API Platform Cloud Service](https://cloud.oracle.com/ko_KR/api-platform)
@@ -22,7 +23,7 @@
 ## GitHub 계정
 * [GitHub](https://github.com)
 
-## 시나리오
+## 실습 내용
 1. Apiary에서 API Blueprint 작성하기
 2. Helidon (MP)과 ORDS를 사용하여 서비스 개발하고 Dredd를 사용하여 API Blueprint와 Helidon 서비스간  
    호환 여부 검증 및 테스트하기
@@ -43,7 +44,7 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![apiary home](images/apiary_home.png)
 
 > **Continue with GitHub** 버튼을 클릭합니다.  
-> ![apiary_sign_up](images/apiary_sign_up.png)
+> ![apiary_sign_up](images/apiary_sign_up.png){: width="50%" }
 
 > GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
 > ![apiary_github_account1](images/apiary_github_account1.png)
