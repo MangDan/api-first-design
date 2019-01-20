@@ -423,9 +423,9 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >```
 > http://localhost:8080/greet
 >```
-> <img src="images/helidon_greet_hello.png" width="60%">
+> <img src="images/helidon_greet_hello.png" width="60%">  
 > **VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.**  
-
+<br>
 <details>
 <summary>:point_right: Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 경우 (클릭)</summary>
 
@@ -456,11 +456,13 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 > java -jar target/quickstart-mp.jar
 >```
 </details>
+<br>
 
-> Apiary에서 설계한 문서 기반으로 간단하게 개발된 소스를 활용하여 진행합니다.  
+
+Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 소스를 활용하여 패키징 및 테스트합니다.   
 > VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
 > 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 로컬로 Clone합니다. (apiary blueprint 포함)  
-> ***실습 시간 관계상 미리 다운로드 받은 레파지토리로 진행합니다. 아래 단계는 건너뜁니다.*** 
+> ***실습 시간 관계상 미리 다운로드 받은 레파지토리로 진행합니다. 아래 단계는 건너뜁니다.***  
 >```
 > git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
 >```
@@ -511,7 +513,7 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 >
 > npm install -g dredd
 >```
-> ![dredd_install](images/dredd_install.png)
+> <img src="images/dredd_install.png" width="60%">
 
 > dredd init 작업 수행 시 필요한 apiaryApiKey와 apiaryApiName은 API 문서마다 상이하니 아래 내용을 그대로  
 > 복사하지 말고, 꼭 Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName를 확인하고 실행합니다.  
@@ -532,10 +534,10 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 >```
 > dredd
 >```
-> ![local_dredd_test](images/local_dredd_test.png)
+> <img src="images/local_dredd_test.png" width="60%">
 
-> Apiary Tests 로 다시 들어가보면 테스트 결과 리포트를 볼 수 있습니다.
-> ![apiary_dredd_result](images/apiary_dredd_result.png)
+> Apiary Tests 로 다시 들어가보면 테스트 결과 리포트를 볼 수 있습니다.  
+> <img src="images/apiary_dredd_result.png" width="80%">
 </details>
 
 
@@ -545,47 +547,47 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 
 > Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만,  
 > Wercker와 GitHub을 활용하여 지속적으로 검증 및 테스트를 수행할 수 있습니다.  
-> GitHub 계정을 활용하여 Wercker 계정을 생성합니다. 상단의 **Sign Up** 버튼을 클릭합니다.
-> ![wercker_home](images/wercker_home.png)
+> 우선 GitHub 계정을 활용하여 Wercker 계정을 생성합니다. 상단의 **Sign Up** 버튼을 클릭합니다.  
+> <img src="images/wercker_home.png" width="80%">
 
-> **SIGN UP USING GITHUB** 버튼을 클릭하고 GitHub 아이디와 패스워드를 입력합니다.
-> ![wercker_github_signup](images/wercker_github_signup.png)
+> **SIGN UP USING GITHUB** 버튼을 클릭하고 GitHub 아이디와 패스워드를 입력합니다.  
+> <img src="images/wercker_github_signup.png" width="60%">
 
-> **Authorize wercker** 버튼을 클릭합니다.
-> ![wercker_github_auth](images/wercker_github_auth.png)
+> **Authorize wercker** 버튼을 클릭합니다.  
+> <img src="images/wercker_github_auth.png" width="60%">
 
-> Name, Email을 입력하고 **FINISH UP** 버튼을 클릭합니다.
-> ![wercker_email](images/wercker_email.png)
+> Name, Email을 입력하고 **FINISH UP** 버튼을 클릭합니다.  
+> <img src="images/wercker_email.png" width="60%">
 
 > **Create your first application** 버튼을 클릭합니다.  
-> 혹은 우측 상단의 + 버튼을 클릭하고, Add Application을 선택합니다.
-> ![wercker_create_first_app](images/wercker_create_first_app.png)
+> 혹은 우측 상단의 + 버튼을 클릭하고, Add Application을 선택합니다.  
+> <img src="images/wercker_create_first_app.png" width="80%">
 
-> 다음과 같이 SCM을 GitHub으로 선택하고 Next 버튼을 클릭합니다.
-> ![wercker_create_new_app_1](images/wercker_create_new_app_1.png)
+> 다음과 같이 SCM을 GitHub으로 선택하고 Next 버튼을 클릭합니다.  
+> <img src="images/wercker_create_new_app_1.png" width="60%">
 
-> GitHub Repository를 선택합니다.
-> ![wercker_create_new_app_2](images/wercker_create_new_app_2.png)
+> GitHub Repository를 선택합니다.  
+> <img src="images/wercker_create_new_app_2.png" width="60%">
 
-> **Wercker will check out the code without using an SSH key** 선택합니다.
-> ![wercker_create_new_app_3](images/wercker_create_new_app_3.png)
+> **Wercker will check out the code without using an SSH key** 선택합니다.  
+> <img src="images/wercker_create_new_app_3.png" width="60%">
 
 > **Create** 버튼을 클릭하여 Wercker Application을 생성합니다.  
-> 혹은 우측 상단의 + 버튼을 클릭하고 Add Application을 선택합니다.
-> ![wercker_create_new_app_4](images/wercker_create_new_app_4.png)
+> 혹은 우측 상단의 + 버튼을 클릭하고 Add Application을 선택합니다.  
+> <img src="images/wercker_create_new_app_4.png" width="80%">
 
-> Wercker Application을 성공적으로 생성하였습니다.
-> ![wercker_create_new_app_5](images/wercker_create_new_app_5.png)
+> Wercker Application을 성공적으로 생성하였습니다.  
+> <img src="images/wercker_create_new_app_5.png" width="80%">
 
-> 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.
-> ![wercker_trigger_build_now](images/wercker_trigger_build_now.png)
+> 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.  
+> <img src="images/wercker_trigger_build_now.png" width="60%">
 
 > 상단 **wercker_pipeline** 버튼을 클릭하면 Wercker Application이 보입니다.  
-> Application을 클릭합니다.
-> ![wercker_pipeline](images/wercker_pipeline.png)
+> Application을 클릭합니다.  
+> <img src="images/wercker_pipeline.png" width="80%">
 
-> 구성한 Wercker Application에 의해 빌드가 진행된 내역을 볼 수 있습니다. 
-> ![wercker_first_build](images/wercker_first_build.png)
+> 구성한 Wercker Application에 의해 빌드가 진행된 내역을 볼 수 있습니다.  
+> <img src="images/wercker_first_build.png" width="80%">
 </details>
 
 <details>
@@ -593,28 +595,28 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
    
 > 처음 GitHub Repository를 생성할 때 따로 제공해드린 GitHub Repository를 Import한 것을 기억하실 겁니다.  
 > Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며, Wercker는 wercker.yml 파일에 기술된  
-> 스탭과 파이프라인을 실행합니다. ([참고 -> Wercker Config])(#wercker-config) 
-> ![mygithub_repo](images/mygithub_repo.png)
+> 스탭과 파이프라인을 실행합니다. ([참고 -> Wercker Config])(#wercker-config)  
+> <img src="images/mygithub_repo.png" width="60%">
 
 > 첫 번째 빌드에서는 오류는 발생하지 않았지만, dredd.yml 파일에 기술되어야 하는 apiaryApiKey와 apiaryApiName이  
 > 없어서 Apiary로 테스트 결과 데이트가 전송되지 않습니다.  
 > Apiary의 상단 Tests 링크를 클릭하고 dredd init 라인에 있는 apiaryApiKey와 apiaryApiName을 복사합니다.  
-> ![dredd_install_init_2](images/dredd_install_init_2.png)
+> <img src="images/dredd_install_init_2.png" width="80%">
 
 > GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
-> ![github_dredd](images/github_dredd.png)
+> <img src="images/github_dredd.png" width="60%">
 
-> 다음과 같이 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.
-> ![github_dredd_modify](images/github_dredd_modify.png)
+> 다음과 같이 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
+> <img src="images/github_dredd_modify.png" width="60%">
 
-> Wercker에서 Build가 시작된 것을 확인할 수 있습니다.
-> ![wercker_build_start](images/wercker_build_start.png)
+> Wercker에서 Build가 시작된 것을 확인할 수 있습니다.  
+> <img src="images/wercker_build_start.png" width="80%">
 
-> Wercker에서 Build 및 Test가 오류 없이 완료되었습니다.
-> ![wercker_build_complete](images/wercker_build_complete.png)
+> Wercker에서 Build 및 Test가 오류 없이 완료되었습니다.  
+> <img src="images/wercker_build_complete.png" width="80%">
 
 > Apiary의 Tests로 들어가서 **Continuous Integration**을 클릭하면 다음과 같이 결과 리포트를 확인할 수 있습니다.  
-> ![apiary_ci_result](images/apiary_ci_result.png)
+> <img src="images/apiary_ci_result.png" width="80%">
 
 > API Blueprint 문서와 API 소스가 변경이 일어나면 Wercker에 의해서 자동으로 문서 호환 여부를 체크하여 결과를  
 > 다양한 채널 (Apiary, 이메일, Slack 등)로 전송해줍니다.  
