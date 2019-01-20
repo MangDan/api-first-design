@@ -272,7 +272,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > 이제 Apiary 상단의 사람 모양 아이콘 옆 Settings 아이콘을 클릭합니다.  
 > 이 Settings 는 작성한 문서에 대한 설정을 하기 위한 설정 버튼입니다.  
-> ![apiary_doc_settings](images/apiary_doc_settings.png)
+> <img src="images/apiary_doc_settings.png" width="80%">
 
 > 맨 하단 *Link your GitHub account* 버튼을 클릭합니다.  
 > <img src="images/doc_link_github.png" width="60%">
@@ -295,7 +295,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > 다시 상단의 Editor 버튼을 클릭하면 우측 **Save** 버튼 옆에 **Push** 버튼이 생성 된 것을 확인하실 수 있습니다.  
 > 이제 문서를 변경하면 변경이 되었다는 알림(빨간점)이 Push 버튼에 나타나며, Push 버튼을 클릭하여 GitHub에 바로 푸시할 수 있습니다.  
-> ![apiary_push_btn](images/apiary_push_btn.png)
+> <img src="images/apiary_push_btn.png" width="80%">
 
 > GitHub Repository에는 apiary.apib 파일이 생성됩니다.  
 > GitHub에 생성된 파일을 클릭하여 내용을 확인합니다.  
@@ -303,99 +303,6 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 </details>
 
 ## 2. API 서비스 개발하기
-<details>
-<summary>Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 개발하기</summary>
-
-> 작업은 Visual Studio Code를 통해서 진행합니다.  
-> Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
-> 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
-> ```
-> mvn -version
-> echo %JAVA_HOME%
-> ```
-> ![vscode_confirm_env](images/vscode_confirm_env.png)
-
-<details>
-<summary>&nbsp;&nbsp;&nbsp;&nbsp;:point_right: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
-
-> Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.  
-> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.
-> ```
-> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
-> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
-> ```
-</details><br>
-
-> 여기서는 MicroProfile 기반 Helidon 프로젝트를 생성합니다. [참고 -> Helidon](#helidon)
-> c:\Oracle\workspace 폴더로 이동 후 Helidon Template Project 생성을 위해 mvn generate를 실행합니다.
-> ```
-> cd c:\Oracle\workspace
-> 
-> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
-> ```
-
-> 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
-> 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
-> ![maven_generate_helidon](images/maven_generate_helidon.png)
-
-> 좌측 상단 버튼 클릭 후 **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
-> ![mscode_open_workspace](images/mscode_open_workspace.png)
-
-> 기본 Helidon MP Project Structure 입니다.  
-> ![helidon_base_structure](images/helidon_base_structure.png)
-
-> Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 Packaging을 합니다.  
-> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
->```
-> cd quickstart-mp
-> mvn package
->```
-
-> 완료되면 다음과 같이 실행합니다.  
-> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
->```
-> java -jar target/quickstart-mp.jar
->```
-> ![start_greet_service](images/start_greet_service.png)
-
-> 다음과 같이 브라우저로 접속해봅니다.
->```
-> http://localhost:8080/greet
->```
-> ![helidon_greet_hello](images/helidon_greet_hello.png)
-
-> VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
-> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 로컬로 Clone합니다.  
->```
-> git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
->```
-
-> Helidon 프로젝트에 movie api 소스를 복사합니다.  
->```
-> cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\quickstart-mp\src\main\resources
-> cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\quickstart-mp\src/main/java/io/helidon/examples/quickstart/mp
->```
-> ![clone_cp](images/clone_cp.png)
-
-> 다시 Packaging 및 실행합니다.   
-> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
->```
-> mvn package
->
-> java -jar target/quickstart-mp.jar
->```
-> ![helidon_movie_run](images/helidon_movie_run.png)
-
-> 다음과 같이 브라우저로 접속해봅니다.
->```
-> http://localhost:8080/movie
->
-> http://localhost:8080/movie/titanic
->```
-> ![helidon_run_movie](images/helidon_run_movie.png)
-> ![helidon_run_movie_titanic](images/helidon_run_movie_titanic.png)
-</details>
-
 <details>
 <summary>ORDS를 활용하여 REST 서비스 만들기</summary>
    
@@ -467,10 +374,122 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > 브라우저에서 다음과 같은 URL로 접속합니다. module uri prefix만 본인이 입력한 값으로 변경합니다.  
 >```
-> http://129.213.146.191:8080/ords/myords/dankim/movie
+> http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie
 >```
 > 다음과 같은 json 데이터가 나오면 성공입니다.
 > ![ords_json_all](images/ords_json_all.png)
+</details>
+
+<details>
+<summary>Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 개발하기</summary>
+
+> 작업은 Visual Studio Code를 통해서 진행합니다.  
+> Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
+> 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
+> ```
+> mvn -version
+> echo %JAVA_HOME%
+> ```
+> <img src="images/vscode_confirm_env.png" width="80%">
+
+<details>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;:point_right: Maven Path와 Java Home 변수 설정 안되어 있을 경우 (클릭)</summary>
+
+> Maven Path와 Java Home 설정이 안되어 있을 경우 Windows Command 창을 열고 다음과 같이 실행합니다.  
+> 아래 Maven과 JDK는 자신의 PC 설치 위치를 확인하고 설정하여야 합니다.
+> ```
+> setx path "%PATH%;c:\Oracle\apache-maven-3.6.0\bin"
+> setx JAVA_HOME "c:\Program Files\Java\jdk1.8.0_202"
+> ```
+</details><br>
+
+> 여기서는 MicroProfile 기반 Helidon 프로젝트로 API를 개발합니다. [참고 -> Helidon](#helidon)  
+> ***실습 시간 관계상 미리 생성한 프로젝트로 진행합니다.***  
+> Visual Studio Code 좌측 상단의 아래 이미지 클릭, **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
+> ![mscode_open_workspace](images/mscode_open_workspace.png)
+
+> 기본 Helidon MP Project Structure 입니다.  
+> ![helidon_base_structure](images/helidon_base_structure.png)
+
+> Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 패키징 및 서비스 실행합니다.  
+> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
+> ```
+> cd c:\Oracle\workspace\quickstart-mp
+> mvn package
+> java -jar target/quickstart-mp.jar
+> ```
+
+> 다음과 같이 브라우저로 접속해봅니다.
+>```
+> http://localhost:8080/greet
+>```
+> ![helidon_greet_hello](images/helidon_greet_hello.png)
+> **VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.**  
+
+<details>
+<summary>:point_right: Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 경우 (클릭)</summary>
+
+Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 수 있습니다.  
+다음은 실행 명령어 예제입니다. 여기서는 Helidon (MP)로 진행합니다.
+> Helidon MP
+> ```
+> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
+> ```
+
+> Helidon SE
+> ```
+> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-se -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=quickstart-se -Dpackage=io.helidon.examples.quickstart.se
+> ```
+
+> 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
+> 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
+> ![maven_generate_helidon](images/maven_generate_helidon.png)
+
+> 기본 Helidon MP 프로젝트 스트럭쳐입니다.  
+> ![helidon_base_structure](images/helidon_base_structure.png)
+
+> 생성된 프로젝트 폴더로 이동 후 다음과 같이 패키징을 합니다.  
+> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
+>```
+> cd quickstart-mp
+> mvn package
+> java -jar target/quickstart-mp.jar
+>```
+</details>
+
+> Apiary에서 설계한 문서 기반으로 간단하게 개발된 소스를 활용하여 진행합니다.  
+> VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
+> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 로컬로 Clone합니다. (apiary blueprint 포함)  
+> ***실습 시간 관계상 미리 다운로드 받은 레파지토리로 진행합니다. 아래 단계는 건너뜁니다.*** 
+>```
+> git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
+>```
+
+> Helidon 프로젝트에 movie api 소스를 복사합니다.  
+>```
+> cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\quickstart-mp\src\main\resources
+> cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\quickstart-mp\src/main/java/io/helidon/examples/quickstart/mp
+>```
+> ![clone_cp](images/clone_cp.png)
+
+> 다시 패키징 및 실행합니다.   
+> :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
+>```
+> mvn package
+>
+> java -jar target/quickstart-mp.jar
+>```
+> ![helidon_movie_run](images/helidon_movie_run.png)
+
+> 다음과 같이 브라우저로 접속해봅니다.
+>```
+> http://localhost:8080/movie
+>
+> http://localhost:8080/movie/titanic
+>```
+> ![helidon_run_movie](images/helidon_run_movie.png)
+> ![helidon_run_movie_titanic](images/helidon_run_movie_titanic.png)  
+> **VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.**  
 </details>
 
 <details>
@@ -482,7 +501,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > Apiary의 Test 탭을 클릭하면 Dredd에 대한 사용방법과 초기 설정을 위한 가이드를 볼 수 있습니다.  
 > Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
 > 두 번째 Dredd init 부분을 보면 apiaryApiKey와 apiaryApiName를 볼 수 있는데,  
-> Dredd와 Apiary가 통신하기 위해 필요한 부분으로 사용자와 문서별로 상이합니다.
+> Dredd와 Apiary가 통신하기 위해 필요한 부분으로 사용자와 문서별로 상이하므로, 기록해놓습니다.
 > ![dredd_install_init](images/dredd_install_init.png)
 
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
