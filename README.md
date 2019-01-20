@@ -255,43 +255,43 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > 먼저 GitHub에 Repository를 하나 생성합니다.   
 > GitHub에 로그인한 후 New repository를 클릭합니다.  
-> ![create_github_repo](images/create_github_repo.png)
+> <img src="images/create_github_repo.png" width="40%">
 
 > Repository 이름을 입력합니다. 여기서는 *oraclecloud_api_handson* 이라는 이름으로 생성합니다.  
-> ![create_github_repo](images/create_github_repo2.png)
+> <img src="images/create_github_repo2.png" width="40%">
 
 > 맨 아래 Import code를 클릭합니다.  
 > 본 과정에서 사용되는 소스와 설정파일을 포함한 Repository를 복제하면서 생성합니다.  
-> ![import_github_code](images/import_github_code.png)
+> <img src="images/import_github_code.png" width="40%">
 
 > clone URL에 ***https://github.com/mangdan/oraclecloud_api_handson*** 을 입력하고, Begin Import를 클릭합니다.  
-> ![github_import_repo](images/github_import_repo.png)
+> <img src="images/github_import_repo.png" width="40%">
 
 > GitHub Repository가 생성되었습니다. Repository 링크를 클릭하면 Repository와 Import한 파일들을 확인 할 수 있습니다.  
-> ![github_import_complete](images/github_import_complete.png)
+> <img src="images/github_import_complete.png" width="40%">
 
 > 이제 Apiary 상단의 사람 모양 아이콘 옆 Settings 아이콘을 클릭합니다.  
 > 이 Settings 는 작성한 문서에 대한 설정을 하기 위한 설정 버튼입니다.  
 > ![apiary_doc_settings](images/apiary_doc_settings.png)
 
 > 맨 하단 *Link your GitHub account* 버튼을 클릭합니다.  
-> ![doc_link_github](images/doc_link_github.png)
+> <img src="images/doc_link_github.png" width="40%">
 
 > 맨 하단 *List all repositories* 버튼을 클릭합니다.  
-> ![list_all_repo](images/list_all_repo.png)
+> <img src="images/list_all_repo.png" width="40%">
 
 > *Authorize apairyio* 버튼을 클릭합니다.  
 > <img src="images/auth_github_aiary.png" width="40%">
 
 > 다시 하단의 *Link your GitHub account* 버튼을 클릭하면 다음과 같이 생성한 repository를 선택할 수 있습니다.  
 > 옆의 Connect 버튼을 클릭합니다.  
-> ![conn_git_repo](images/conn_git_repo.png)
+> <img src="images/conn_git_repo.png" width="40%">
  
 > *Commit and start sync* 버튼을 클릭합니다.  
-> ![commit_and_sync](images/commit_and_sync.png)
+> <img src="images/commit_and_sync.png" width="40%">
 
 > 작성한 API Blueprint문서와 GitHub Repository가 싱크되었습니다.  
-> ![apiary_git_sync_complete](images/apiary_git_sync_complete.png)
+> <img src="images/apiary_git_sync_complete.png" width="40%">
 
 > 다시 상단의 Editor 버튼을 클릭하면 우측 **Save** 버튼 옆에 **Push** 버튼이 생성 된 것을 확인하실 수 있습니다.  
 > 이제 문서를 변경하면 변경이 되었다는 알림(빨간점)이 Push 버튼에 나타나며, Push 버튼을 클릭하여 GitHub에 바로 푸시할 수 있습니다.  
@@ -299,7 +299,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > GitHub Repository에는 apiary.apib 파일이 생성됩니다.  
 > GitHub에 생성된 파일을 클릭하여 내용을 확인합니다.  
-> ![github_doc](images/github_doc.png)
+> <img src="images/github_doc.png" width="40%">
 </details>
 
 ## 2. API 서비스 개발하기
