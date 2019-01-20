@@ -591,11 +591,11 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 </details>
 
 <details>
-<summary>Continuous Integration 테스트</summary>
+<summary>Continuous Integration 실행</summary>
    
 > 처음 GitHub Repository를 생성할 때 따로 제공해드린 GitHub Repository를 Import한 것을 기억하실 겁니다.  
 > Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며, Wercker는 wercker.yml 파일에 기술된  
-> 스탭과 파이프라인을 실행합니다. ([참고 -> Wercker Config])(#wercker-config)  
+> 스탭과 파이프라인을 실행합니다. [(참고 -> Wercker Config)](#wercker-config)  
 > <img src="images/mygithub_repo.png" width="60%">
 
 > 첫 번째 빌드에서는 오류는 발생하지 않았지만, dredd.yml 파일에 기술되어야 하는 apiaryApiKey와 apiaryApiName이  
