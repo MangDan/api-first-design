@@ -67,7 +67,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 </details>
 
 <details>
-<summary>API Blueprint 문서 작성하기</summary>
+<summary>API Blueprint 설계 문서 작성하기</summary>
 
 이제부터 Movie API 문서를 작성합니다.  
 > 아래의 API Blueprint를 복사해서 좌측 에디터의 내용을 지우고 붙여넣기 합니다.  
@@ -150,33 +150,33 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > ```markdown
 > FORMAT: 1A
 > ```
-
+>
 > 실제 서비스할 Production 서버의 주소입니다.  
 > 처음에는 Production 환경이 없기 때문에 변경하지 않습니다.
 > ```markdown
 > HOST: http://polls.apiblueprint.org/
 > ```
-
+>
 > API 문서 이름입니다. 한글도 가능합니다.
 > ```markdown
 > # Movie API
 > ```
-
+>
 > API에 대한 설명, 소개를 적는 부분입니다.  
 > ```markdown
 > 영화 정보를 제공하는 API 입니다.
 > ```
-
+>
 > API에 대한 엔드포인트 URL입니다.  
 > ```markdown
 > ## Movies Collection [/movies]
 > ```
-
+>
 > API 엔드포인트에 대한 Action (Method)를 정의합니다.  
 > ```markdown
 > ### List All Movies [GET]
 > ```
-
+>
 > 응답 JSON 샘플입니다.  
 > ```markdown
 >         [
@@ -194,15 +194,15 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >             }
 >         ]
 > ```
-
-두번 째는 파라미터를 받아서 조회하여 반환되는 Action입니다.  
+>
+> 두번 째는 파라미터를 받아서 조회하여 반환되는 Action입니다.  
 > 다음과 같이 Path 파라미터(id)와 Query 파라미터(title) 정의합니다.  
 > ```markdown
 > ### Get a Movie [GET /movies/{id}?{title}]
 >
 > Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > ```
-
+>
 > 요청 파라미터 부분입니다. JSON 샘플이 아닌 [MSON](#mson) 방식을 사용합니다.
 > ```markdown
 > + Parameters
@@ -214,7 +214,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >
 >             Authorization : Basic AAA
 > ```
-
+>
 > 응답 파라미터 부분입니다. JSON 샘플이 아닌 [MSON](#mson) 방식을 사용합니다.
 > ```markdown
 > + Response 200 (application/json)
