@@ -41,7 +41,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 만약 계정을 가지고 있다면 이 단계를 건너뜁니다.  
 
 > [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
-> ![apiary home](images/apiary_home.png)
+> <img src="images/apiary_home.png" width="80%">
 
 > **Continue with GitHub** 버튼을 클릭합니다.  
 > <img src="images/apiary_sign_up.png" width="40%">
@@ -63,7 +63,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > Apiary 계정과 첫 API Blueprint 프로젝트를 성공적으로 생성하였습니다. :clap:  
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
-> ![apiary_write_api_1](images/apiary_write_api_1.png)
+> <img src="images/apiary_write_api_1.png" width="80%">
 </details>
 
 <details>
