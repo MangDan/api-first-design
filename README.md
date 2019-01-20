@@ -70,6 +70,16 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <summary>API Blueprint 문서 작성하기</summary>
 
 이제부터 Movie API 문서를 작성하겠습니다.  
+좌측 에디터 영역에 아래 내용을 모두 복사해서 붙여넣기 합니다.  
+
+>```
+> ㅁㅁㅁ
+>```
+
+
+이제부터 Movie API 문서를 작성하겠습니다.  영ㅇ
+이제부터 Movie API 문서를 작성하겠습니다.  
+이제부터 Movie API 문서를 작성하겠습니다.  
 :red_circle: **마크가 표기되어 있는 부분만 수정 또는 추가합니다.**  
 
 > 첫 번째 라인은 API Blueprint 버전 정도로 생각하면 됩니다.  
