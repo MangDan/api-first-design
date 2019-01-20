@@ -333,7 +333,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > 조회된 Movie 테이블의 데이트를 확인할 수 있습니다.  
 > 좌측의 REST Data Services 옆 + 버튼을 클릭하여 확장하면 Modules, Privileges, Roles 가 있습니다.  
-> ![select_movie_click_rest](images/select_movie_click_rest.png)
+> <img src="images/select_movie_click_rest.png" width="80%">
 
 > **Modules**를 마우스 우 클릭하고 **New Module**을 선택합니다.  
 > 여기선 Module과 Template이라는 것을 설정합니다.  
@@ -349,23 +349,23 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > URI Prefix - 본인이름 영문명 (e.g dankim)
 > Publish Make this RESTful Service available for use - Check
 > ```
-> ![ords_module_1](images/ords_module_1.png)
+> <img src="images/ords_module_1.png" width="60%">
 
 > Next를 클릭하여 Template 설정을 합니다. 다음과 같이 입력합니다.
 > ```
 > URI Pattern : movie
 > ```
-> ![ords_template_1](images/ords_template_1.png)
+> <img src="images/ords_template_1.png" width="60%">
 
 > Finish 버튼을 클릭하여 완료합니다.  
-> ![ords_module_complete_1](images/ords_module_complete_1.png)
+> <img src="images/ords_module_complete_1.png" width="60%">
 
 > 마지막으로 Handler (Action)을 추가합니다.  
 > 생성한 movie template을 클릭하고 마우스 우 클릭 후 Add Handler > GET 을 선택합니다.  
-> ![handler_get_1](images/handler_get_1.png)
+> <img src="images/handler_get_1.png" width="60%">
 
-> Apply를 선택합니다.
-> ![handler_get_apply_1](images/handler_get_apply_1.png)
+> Apply를 선택합니다.  
+> <img src="images/handler_get_apply_1.png" width="60%">
 
 > 쿼리를 다음과 같이 입력하고 바로 위 저장 버튼을 클릭합니다.
 >```
@@ -377,7 +377,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie
 >```
 > 다음과 같은 json 데이터가 나오면 성공입니다.
-> ![ords_json_all](images/ords_json_all.png)
+> <img src="images/ords_json_all.png" width="60%">
 </details>
 
 <details>
@@ -405,11 +405,11 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > 여기서는 MicroProfile 기반 Helidon 프로젝트로 API를 개발합니다. [참고 -> Helidon](#helidon)  
 > ***실습 시간 관계상 미리 생성한 프로젝트로 진행합니다.***  
-> Visual Studio Code 좌측 상단의 아래 이미지 클릭, **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.
-> ![mscode_open_workspace](images/mscode_open_workspace.png)
+> Visual Studio Code 좌측 상단의 아래 이미지 클릭, **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.  
+> <img src="images/mscode_open_workspace.png" width="80%">
 
 > 기본 Helidon MP Project Structure 입니다.  
-> ![helidon_base_structure](images/helidon_base_structure.png)
+> <img src="images/helidon_base_structure.png" width="80%">
 
 > Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 패키징 및 서비스 실행합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
@@ -423,7 +423,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >```
 > http://localhost:8080/greet
 >```
-> ![helidon_greet_hello](images/helidon_greet_hello.png)
+> <img src="images/helidon_greet_hello.png" width="60%">
 > **VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.**  
 
 <details>
@@ -443,10 +443,10 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 
 > 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
 > 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
-> ![maven_generate_helidon](images/maven_generate_helidon.png)
+> <img src="images/maven_generate_helidon.png" width="60%">
 
 > 기본 Helidon MP 프로젝트 스트럭쳐입니다.  
-> ![helidon_base_structure](images/helidon_base_structure.png)
+> <img src="images/helidon_base_structure.png" width="80%">
 
 > 생성된 프로젝트 폴더로 이동 후 다음과 같이 패키징을 합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
@@ -470,7 +470,7 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\quickstart-mp\src\main\resources
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\quickstart-mp\src/main/java/io/helidon/examples/quickstart/mp
 >```
-> ![clone_cp](images/clone_cp.png)
+> <img src="images/clone_cp.png" width="60%">
 
 > 다시 패키징 및 실행합니다.   
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
@@ -479,7 +479,7 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 >
 > java -jar target/quickstart-mp.jar
 >```
-> ![helidon_movie_run](images/helidon_movie_run.png)
+> <img src="images/helidon_movie_run.png" width="60%">
 
 > 다음과 같이 브라우저로 접속해봅니다.
 >```
