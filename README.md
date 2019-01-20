@@ -143,7 +143,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 우측 상단의 Save 버튼을 클릭하여 저장합니다.  
 > ![apiary_write_complete](images/apiary_write_complete.png)
 
-:red_circle: **아래 내용은 작성된 API Blueprint에 대한 설명으로, 한번 읽어 보시기 바랍니다.**  
+:point_right: **한번 읽어보세요.** - 작성된 API Blueprint에 대한 설명입니다.  
 
 > 첫 번째 라인은 API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
