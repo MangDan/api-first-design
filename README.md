@@ -44,23 +44,22 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 > ![apiary home](images/apiary_home.png)
 
 > **Continue with GitHub** 버튼을 클릭합니다.  
-> ![apiary_sign_up](images/apiary_sign_up.png){: width="100" height="100"}
 > <img src="images/apiary_sign_up.png" width="30%">
 
 > GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
-> ![apiary_github_account1](images/apiary_github_account1.png)
+> <img src="images/apiary_github_account1.png" width="30%">
 
 > Apiary에서 GitHub에 인증을 위한 권한을 요청합니다.  
 > **Authorize apiaryio** 버튼을 클릭합니다.  
-> ![apiary_github_signup](images/apiary_github_signup.png)
+> <img src="images/apiary_github_signup.png" width="30%">
 
 > Apiary에서 사용할 이메일을 입력합니다.  
 > GitHub 이메일을 입력합니다.  
-> ![apiary_github_signup2](images/apiary_github_signup2.png)
+> <img src="images/apiary_github_signup2.png" width="30%">
 
 > Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다.  
 > **Name your first API** 부분에 다음과 같이 *Movie API*를 입력하고 Blueprint를 선택합니다.
-> ![apiary_new_api](images/apiary_new_api.png)
+> <img src="images/apiary_new_api.png" width="30%">
 
 > Apiary 계정과 첫 API Blueprint 프로젝트를 성공적으로 생성하였습니다. :clap:  
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
