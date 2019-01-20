@@ -34,10 +34,10 @@
 
 ![Scenario2](images/api_first_design_scenario.png)
 
-## 1. API 문서 작성하기
+## 1. API 설계 문서 작성하기
 <details>
 <summary>Apiary 계정 생성하기</summary>
-API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
+API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
 만약 계정을 가지고 있다면 이 단계를 건너뜁니다.  
 
 > [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
@@ -70,10 +70,74 @@ API 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하
 <summary>API Blueprint 문서 작성하기</summary>
 
 이제부터 Movie API 문서를 작성하겠습니다.  
-좌측 에디터 영역에 아래 내용을 모두 복사해서 붙여넣기 합니다.  
+좌측 에디터 영역에 아래 내용을 모두 복사해서 붙여넣기하여 변경합니다.
 
->```
-> ㅁㅁㅁ
+>```markdown
+> FORMAT: 1A
+> HOST: http://polls.apiblueprint.org/
+> 
+> # Movie API
+> 
+> 영화 정보를 제공하는 API 입니다.
+> 
+> ## Movies Collection [/movies]
+> 
+> ### List All Movies [GET]
+> 
+> + Response 200 (application/json)
+> 
+>         [
+>             {
+>                 "id": "19995",
+>                 "title": "Avatar",
+>                 "release_date": "2009.12.18",
+>                 "runtime" : 100
+>             },
+>             {
+>                 "id": "2699",
+>                 "title": "Titanic",
+>                 "release_date": "1997.12.19",
+>                 "runtime" :194
+>             }
+>         ]
+> 
+> ### Get a Movie [GET /movies/{id}?{title}]
+> 
+> Movie ID와 Title로 조회하는 API 입니다.
+> 
+> + Parameters
+>     - id : 2699 (string, required)
+>     - title : Titanic (string, optional)
+>     
+> + Request
+>     + Header
+>             
+>             Authorization : Basic AAA
+> 
+> + Response 200 (application/json)
+>     + Attributes
+>         - id : 2699
+>         - title : Titanic
+>         - release_date : 1997.12.19
+>         - runtime : 194
+>         - Include MovieDetail
+>         - genres (array[Genres])
+> 
+> 
+> 
+> # Data Structure
+> 
+> ## MovieDetail (object)
+> - overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.
+> - status : Released
+> - homepage : http://www.titanicmovie.com
+> - vote_average : 7.2
+> - vote_count : 12114
+> 
+> 
+> ## Genres (object)
+> - id : 18 (number, required)
+> - name : Drama (string, required)
 >```
 
 
