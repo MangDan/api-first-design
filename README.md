@@ -758,8 +758,25 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 <details>
 <summary>배포된 서비스 테스트 하기</summary>
-   
-> Insommnia를 실행하여 게이트웨이에 배포된 서비스 테스트를 합니다.
+
+REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합니다.  
+> Insomnia를 실행하고 중앙 **New Request**를 실행합니다.  
+> <img src="images/insom_welcome.png" width="80%"> 
+
+> **Create** 버튼을 클릭합니다.  
+> <img src="images/insom_new_request.png" width="80%">  
+
+> 상단에 복사한 Movie API의 엔드포인트를 입력하고 **Send** 버튼을 클릭합니다.  
+> 인증 정보가 없기 때문에 ***Invalid User*** 오류가 발생합니다.  
+> <img src="images/insom_auth_invalid_user.png" width="80%">  
+
+> 상단에 복사한 Movie API의 엔드포인트를 입력하고 **Send** 버튼을 클릭합니다.  
+> 인증 정보가 없기 때문에 ***Invalid User*** 오류가 발생합니다.  
+> <img src="images/insom_auth_invalid_user.png" width="80%">  
+
+> 상단 **Auth** 탭을 선택하고 **Basic Auth**를 선택합니다.
+> <img src="images/insom_auth_basic.png" width="80%">  
+
 </details>
 
 ## 5. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (동영상)
