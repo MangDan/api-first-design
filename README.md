@@ -143,7 +143,9 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 우측 상단의 Save 버튼을 클릭하여 저장합니다.  
 > ![apiary_write_complete](images/apiary_write_complete.png)
 
-:point_down: **아래 한번 읽어보세요.** - 작성된 API Blueprint에 대한 설명입니다.  
+<details>
+<summary>:point_right: **(선택사항) 작성된 API Blueprint에 대한 설명으로 한번 읽어보세요. (클릭)**</summary>
+
 > 첫 번째 라인은 API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
 > ```markdown
@@ -244,6 +246,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >
 > 위 데이터 정의 방식은 API Blueprint에서 지원하는 MSON 이라고 하는 데이터 정의 스펙입니다.  
 > [참고 -> MSON (Markdown Syntax for Object Notation)](#mson)
+</details>
 
 </details>
 
@@ -311,7 +314,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 <그림 추가>
 
 <details>
-> <summary>:point_right: ++Connection 생성이 안되어 있는 경우 (클릭)++</summary>
+> <summary>:point_right: (선택사항) Connection 생성이 안되어 있는 경우 (클릭)</summary>
 >
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
