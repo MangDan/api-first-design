@@ -655,7 +655,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > ID : donghu.kim@oracle.com
 > Password : Qweasdzxc123
 >```
-> <img src="images/apipcs_first_api.png" width="80%">
+> <img src="images/apipcs_api.png" width="80%">
 
 > 먼저 서비스를 등록합니다.  
 > 서비스 메뉴를 클릭하고, 우측 상단 **생성** 버튼을 클릭합니다.  
@@ -664,7 +664,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > 다음과 같이 입력하고 **생성** 버튼을 클릭합니다.  
 > **실습 환경이 단일 인스턴스 환경이므로, 서비스 이름을 다르게 주어야 합니다.**  
 >```
-> 이름 : My ORDS Service - KDH(이니셜 혹은 유니크한 값)  
+> 이름 : My ORDS Service - Oracle(이니셜 혹은 유니크한 값)  
 > 버전 : 1.0  
 > 서비스 유형 : HTTP  
 > 끝점 이름 : ORDS Movie Service  
@@ -674,12 +674,12 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <img src="images/apipcs_service_create.png" width="60%">
 
 > API 메뉴를 클릭하고 **생성** 버튼을 클릭합니다.  
-> <img src="images/apipcs_api.png" width="80%">
+> <img src="images/apipcs_first_api.png" width="80%">
 
 > 다음과 같이 입력하고 **생성** 버튼을 클릭합니다.  
 > **실습 환경이 단일 인스턴스 환경이므로, API 이름을 다르게 주어야 합니다.**  
 >```
-> 이름 : Movie API - KDH(이니셜 혹은 유니크한 값)
+> 이름 : Movie API - Oracle(이니셜 혹은 유니크한 값)
 > 버전 : 1.0
 >```
 > <img src="images/apipcs_api_create.png" width="60%">
@@ -692,7 +692,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > API 요청에서는 노출할 Movie API에 대한 엔드포인트를 지정할 수 있습니다.  
 > API 끝점 URL에 다음과 같이 입력하고 적용합니다.  
 >```
-> API 끝점 URL : movie_kdh(이니셜 혹은 유니크한 값)
+> API 끝점 URL : movie_oracle(이니셜 혹은 유니크한 값)
 >```
 > <img src="images/apipcs_api_impl_req.png" width="60%">
 
@@ -745,9 +745,9 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > 이제 게이트웨이에 배치합니다. 좌측 **배치** 아이콘을 클릭하고 우측 상단의 **API 배치** 아이콘을 클릭합니다.  
 > <img src="images/apipcs_api_gateway_deploy.png" width="60%">  
 
-> 다양한 환경에 구성된 게이트웨이를 볼 수 있습니다. Oracle Compute Compute Cloud에 구성되어 있는 게이트웨이에 배치합니다.  
-> 실습은 **OCI Production Gateway 1**에만 배치합니다.  
-> 참고로 다른 **논리 게이트웨이**는 샘플 게이트웨이로 **물리적으로 게이트웨이 노드**가 구성되어 있지 않습니다.  
+> **OCI Production Gateway 1**를 제외한 **게이트웨이**는 샘플 게이트웨이로 [3세대 게이트웨이](#3rd-generation-gateway) 특징인  
+> 다양한 환경(클라우드, On-Premise) 구성이 가능하다는 것을 보여주기 위한 예시로 **물리적으로 게이트웨이 노드**가 구성되어 있지 않습니다. 
+> 실습은 Oracle Compute Cloud에 구성되어 있는 **OCI Production Gateway 1**에만 배치합니다.  
 > <img src="images/apipcs_api_gateway_deploy_complete.png" width="60%">  
 
 > 대기 중(1) 상태에서 배치됨(1) 상태로 변경되면 배치가 완료된 것입니다.  
@@ -859,5 +859,12 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 
 ### Wercker-Config
 > 테이블 형태로 기술...
+
+### 3rd Generation Gateway
+> 서비스는 서비스 특성 혹은 비즈니스 목적에 따라 다양한 환경 (클라우드 혹은 On-premise)에서 운영될 수 있습니다.  
+> 이러한 환경을 위해서는 게이트웨이 또한 서비스와 가장 근접한 위치에 구성이 가능해야 합니다.  
+> 2세대 게이트웨이는 DMZ 밖으로 구성하기 어려웠지만, 3세대 게이트웨이는 마이크로 서비스 아키텍쳐를 지원하기 위해  
+> 다양한 환경에 구성이 가능하도록 설계되었으며, 마이크로 게이트웨이 (Lightweight Gateway, e.g Grizzly)로써 빠른 확장이  
+> 가능한 것이 특징입니다.
 
 </details>
