@@ -147,7 +147,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 * * *
 <details>
-<summary>:point_right: **(선택사항) 작성된 API Blueprint에 대한 설명으로 한번 읽어보세요. (클릭)**</summary>
+<summary>:point_right: (선택사항) 작성된 API Blueprint에 대한 설명으로 한번 읽어보세요. (클릭)</summary>
 
 > 첫 번째 라인은 API Blueprint 버전 정도로 생각하면 됩니다.  
 > 현재 API Blueprint spec은 1A revision 9 입니다.  
@@ -250,7 +250,9 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 위 데이터 정의 방식은 API Blueprint에서 지원하는 MSON 이라고 하는 데이터 정의 스펙입니다.  
 > [참고 -> MSON (Markdown Syntax for Object Notation)](#mson)
 </details>
+
 * * *
+
 </details>
 
 <details>
@@ -316,25 +318,29 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
    
 > SQL Developer를 실행합니다.  
 > 좌측에 생성된 Connection (myords@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
-<그림 추가>
+> <img src="images/sqldev_worksheet.png" width="60%">
+
+* * *
 
 <details>
-> <summary>:point_right: (선택사항) Connection 생성이 안되어 있는 경우 (클릭)</summary>
->
+<summary>:point_right: (선택사항) Connection 생성이 안되어 있는 경우 (클릭)</summary>
+
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
 > ```
-> Connection Name - myords@ordsdb
+> Connection Name - myords@apidb
 > Username - myords
 > Password - Welcome123!
-> Hostname - ip (todo)
+> Hostname - 129.213.146.191
 > Port - 1521
-> SID - ordsdb
+> SID - apidb
 > ```
-> <그림 추가>
-</details><br>
+> <img src="images/sqldev_connection.png" width="60%">
+</details>
 
-> Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 를 입력합니다.  
+* * *
+
+> Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 혹은 상단의 실행 를 입력합니다.  
 > ```
 > SELECT * FROM MOVIE;
 > ```
@@ -374,15 +380,17 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > Apply를 선택합니다.  
 > <img src="images/handler_get_apply_1.png" width="60%">
 
-> 쿼리를 다음과 같이 입력하고 바로 위 저장 버튼을 클릭합니다.
+> 쿼리를 다음과 같이 입력하고 바로 위 저장 버튼을 클릭합니다.  
+> :title은 쿼리 파라미터입니다.
 >```
-> select id, title, release_date, runtime from movie
+> select id, title, release_date, runtime from movie where upper(title) like '%' || upper(:title) || '%'
 >```
 
 > 브라우저에서 다음 URL로 접속해봅니다.  
 > **module uri prefix**만 본인이 입력한 값으로 변경합니다.  
 >```
 > http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie
+> http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie?title=toy
 >```
 > 다음과 같은 json 데이터가 나오면 성공입니다.
 > <img src="images/ords_json_all.png" width="60%">
