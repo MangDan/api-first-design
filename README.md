@@ -307,17 +307,17 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 <summary>ORDS를 활용하여 REST 서비스 만들기</summary>
    
 > SQL Developer를 실행합니다.  
-> 좌측에 생성된 Connection (ords@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
+> 좌측에 생성된 Connection (myords@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
 <그림 추가>
 
 <details>
-<summary>&nbsp;&nbsp;&nbsp;&nbsp;:point_right: Connection 생성이 안되어 있는 경우 (클릭)</summary>
-   
+> <summary>:point_right: ++Connection 생성이 안되어 있는 경우 (클릭)++</summary>
+>
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
 > ```
-> Connection Name - ords@ordsdb
-> Username - ords
+> Connection Name - myords@ordsdb
+> Username - myords
 > Password - Welcome123!
 > Hostname - ip (todo)
 > Port - 1521
