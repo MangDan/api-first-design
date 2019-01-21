@@ -767,15 +767,24 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 > <img src="images/insom_new_request.png" width="80%">  
 
 > 상단에 복사한 Movie API의 엔드포인트를 입력하고 **Send** 버튼을 클릭합니다.  
-> 인증 정보가 없기 때문에 ***Invalid User*** 오류가 발생합니다.  
+> Basic Auth 정책이 적용되어 있어서 ***Invalid User*** 오류가 발생합니다.  
 > <img src="images/insom_auth_invalid_user.png" width="80%">  
 
-> 상단에 복사한 Movie API의 엔드포인트를 입력하고 **Send** 버튼을 클릭합니다.  
-> 인증 정보가 없기 때문에 ***Invalid User*** 오류가 발생합니다.  
-> <img src="images/insom_auth_invalid_user.png" width="80%">  
-
-> 상단 **Auth** 탭을 선택하고 **Basic Auth**를 선택합니다.
+> 상단 **Auth** 탭을 선택하고 **Basic Auth**를 선택합니다.  
 > <img src="images/insom_auth_basic.png" width="80%">  
+
+> 상단 **Auth** 탭을 선택하고 **Basic Auth**를 선택합니다.  
+> 다음과 같이 사용자 정보를 입력하고 **Send** 버튼을 클릭하여 응답 결과를 확인합니다.
+>```
+> USERNAME - weblogic
+> PASSWORD - welcome1
+>```
+> <img src="images/insom_auth_test.png" width="80%">  
+
+> 다음은 트래픽 관리 테스트입니다.  
+> 분당 5건 이상 호출 시 제한이 걸리기 때문에, **Send** 버튼을 연속으로 5번 이상 클릭합니다.  
+> 다음과 같이 **API Rate Limit has been reached** 오류가 발생한 것을 확인할 수 있습니다.
+> <img src="images/insom_traffic_test.png" width="80%">  
 
 </details>
 
