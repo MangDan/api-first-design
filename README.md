@@ -395,7 +395,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >```
 
 > 다음과 같은 json 데이터가 보이면 성공입니다.  
-> 위 서비스는 4.API Platform에 등록할 때 사용되니, 기록해 놓으시기 바랍니다.
+> **위 서비스는 4.API Platform에 등록할 때 사용되니, 기록해 놓으시기 바랍니다.**
 > <img src="images/ords_json_all.png" width="60%">
 </details>
 
@@ -444,7 +444,9 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >```
 > <img src="images/helidon_greet_hello.png" width="60%">  
 > **VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.**  
-<br>
+
+***
+
 <details>
 <summary>:point_right: Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 경우 (클릭)</summary>
 
@@ -475,8 +477,8 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 > java -jar target/quickstart-mp.jar
 >```
 </details>
-<br>
 
+***
 
 Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 소스를 활용하여 패키징 및 테스트합니다.   
 > VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
@@ -514,7 +516,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 </details>
 
 <details>
-<summary>Dredd를 활용하여 API 문서와 API간의 호환 여부 검증하기</summary>
+<summary>Dredd를 활용하여 API 설계문서와 서비스간의 일치 여부 검증하기</summary>
 
 > Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며, API 문서와 구현된 서비스간 일치 여부 검증을 테스트하는 도구입니다.  
 > 현재 API Blueprint와 Swagger를 지원합니다.  
@@ -647,19 +649,112 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 <details>
 <summary>서비스 등록 및 API 정책 적용하기</summary>
 
-> 다음은 현재 Oracle Compute Cloud에 배포되어 있는 Helidon API 서비스 입니다.  
-> 여러분들이 만든 Helidon API 소스와 동일한 소스가 아래 10개의 Docker Container에 배포되어 있습니다.  
-> 아래 배포된 서비스들 중 하나를 선택해서 실습을 진행합니다.  
-...............  
-...............  
-...............  
-...............  
-...............  
-...............  
-> API Platform에 접속합니다.
-> 서비스를 등록합니다.
-> API를 등록하고 정책과 보안을 적용합니다.
-> 게이트웨이에 배포합니다.
+> API Management Portal에 접속합니다.
+>```
+> Management Portal : https://apipcs-mangdan1.apiplatform.ocp.oraclecloud.com/apiplatform
+> ID : donghu.kim@oracle.com
+> Password : Qweasdzxc123
+>```
+> <img src="images/apipcs_first_api.png" width="80%">
+
+> 먼저 서비스를 등록합니다.  
+> 서비스 메뉴를 클릭하고, 우측 상단 **생성** 버튼을 클릭합니다.
+> <img src="images/apipcs_service_1.png" width="80%">
+
+> 다음과 같이 입력하고 **생성** 버튼을 클릭합니다.  
+> ** 실습 환경이 단일 인스턴스 환경이므로, 서비스 이름을 다르게 주어야 합니다.**  
+>```
+> 이름 : My ORDS Service - KDH(이니셜 혹은 유니크한 값)  
+> 버전 : 1.0  
+> 서비스 유형 : HTTP  
+> 끝점 이름 : ORDS Movie Service  
+> 끝점 URL (본인이 생성한 ORDS 서비스 주소) : http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie  
+> 게이트웨이 노드 프록시 사용 - 체크  
+>```
+> <img src="images/apipcs_service_create.png" width="60%">
+
+> API 메뉴를 클릭하고 **생성** 버튼을 클릭합니다.  
+> <img src="images/apipcs_api.png" width="80%">
+
+> 다음과 같이 입력하고 **생성** 버튼을 클릭합니다.  
+> ** 실습 환경이 단일 인스턴스 환경이므로, API 이름을 다르게 주어야 합니다.**  
+>```
+> 이름 : Movie API - KDH(이니셜 혹은 유니크한 값)
+> 버전 : 1.0
+>```
+> <img src="images/apipcs_api_create.png" width="60%">
+
+> 생성된 Movie API를 클릭하고 좌측 **API 구현** 아이콘을 클릭합니다.  
+> API에 대한 엔드포인트, 호출할 서비스 지정, 보안 및 다양한 정책을 적용하는 부분입니다.  
+> **API 요청** 클릭 후 우측 **편집** 버튼을 클릭합니다.  
+> <img src="images/apipcs_api_impl.png" width="60%">
+
+> API 요청에서는 노출할 Movie API에 대한 엔드포인트를 지정할 수 있습니다. 
+> API 끝점 URL에 다음과 같이 입력하고 적용합니다.  
+>```
+> API 끝점 URL : movie_kdh(이니셜 혹은 유니크한 값)
+>```
+> <img src="images/apipcs_api_impl_req.png" width="60%">
+
+> 다음은 **서비스 요청** 우측 편집 버튼을 클릭합니다.
+> **서비스 선택**을 클릭하고 좀 전에 생성한 서비스를 지정하고 적용합니다. 
+> <img src="images/apipcs_api_service.png" width="60%">  
+> <img src="images/apipcs_api_service_select.png" width="60%">  
+
+> 다음과 같이 구성되었습니다.  
+> 우측 상단의 **저장** 버튼을 클릭하여 저장합니다.   
+> <img src="images/apipcs_save_1.png" width="60%">  
+
+> 이제 보안을 적용합니다.  
+> 우측 **사용 가능한 정책** 부분에 **보안** 메뉴를 클릭하면, 여러가지 보안 정책을 볼 수 있습니다.  
+> 여기서는 가장 기본인 **기본 인증**을 적용합니다.  
+> **기본 인증**을 클릭하고 **적용** 버튼을 클릭합니다.  
+> <img src="images/apipcs_security_basic.png" width="60%">  
+
+> **API 요청** 다음에 정책이 실행되도록 선택하고, **다음** 아이콘을 클릭합니다.  
+> <img src="images/apipcs_api_security_basic_next.png" width="60%">
+
+> 탭 버튼중 **모든 사용자**를 선택하고 적용합니다.
+> API Platform Cloud는 오라클의 사용자 및 인증 관리 서비스인 IDCS (Identity Cloud Service)와 연동되어 있습니다.  
+> 여기서는 IDCS에 등록된 모든 사용자로 인증하게 됩니다.  
+> <img src="images/apipcs_api_security_basic_all.png" width="60%">
+
+> 이번엔 **트래픽 관리** 정책을 적용해보겠습니다.  
+> 우측 정책 중 **트래픽 관리**의 **API 비율 제한** 정책을 클릭하고 **적용** 버튼을 클릭합니다.  
+> <img src="images/apipcs_api_traffic_apply.png" width="60%">
+
+> **API 비율 제한** 정책은 **기본 인증** 정책 이후에 실행되도록 선택하고 다음 아이콘을 클릭합니다.  
+> <img src="images/apipcs_api_traffic_next.png" width="60%">
+
+> 하나의 **논리 게이트웨이**에서 1분 당 5건 이상 호출되지 못하도록 제한을 겁니다.  
+> 다음과 같이 설정하고 **적용** 버튼을 클릭합니다.  
+>```
+> API 비율 제한 : 논리적 게이트웨이당
+> API 비율 제한 : 5
+> 시간 간격 : 분
+>```
+> <img src="images/apipcs_api_traffic_setting.png" width="60%">
+
+> 우측 상단의 **저장** 버튼을 클릭하여 저장합니다.  
+> <img src="images/apipcs_api_complete_save.png" width="60%">
+
+> 이제 게이트웨이에 배치합니다. 좌측 **배치** 아이콘을 클릭하고 우측 상단의 **API 배치** 아이콘을 클릭합니다.  
+> <img src="images/apipcs_api_gateway_deploy.png" width="60%">
+
+> 이제 게이트웨이에 배치합니다. 좌측 **배치** 아이콘을 클릭하고 우측 상단의 **API 배치** 아이콘을 클릭합니다.  
+> <img src="images/apipcs_api_gateway_deploy.png" width="60%">
+
+> 다양한 환경에 구성된 게이트웨이를 볼 수 있습니다. Oracle Compute Compute Cloud에 구성되어 있는 게이트웨이에 배치합니다.  
+> 실습은 **OCI Production Gateway 1**에만 배치합니다.  
+> 참고로 다른 **논리 게이트웨이**는 샘플 게이트웨이로 **물리적으로 게이트웨이 노드**가 구성되어 있지 않습니다.
+> <img src="images/apipcs_api_gateway_deploy_complete.png" width="60%">
+
+> 대기 중(1) 상태에서 배치됨(1) 상태로 변경되면 배치가 완료된 것입니다.  
+> Management Portal에서 설정된 정책은 각 게이트웨이에 지정된 폴링 타임에 맞춰 적용됩니다. 기본 폴링 타임은 2분 입니다.  
+> 배포가 완료되면 다음과 같이 최종 API 엔드포인트 URL을 보실 수 있습니다. URL 복사 버튼을 클릭하여 URL을 복사 합니다.  
+> <img src="images/apipcs_api_gateway_deployed.png" width="60%">
+
+
 </details>
 
 <details>
