@@ -69,8 +69,8 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 <details>
 <summary>API Blueprint 설계 문서 작성하기</summary>
 
-이제부터 Movie API 문서를 작성합니다.  
-> 아래의 API Blueprint를 복사해서 좌측 에디터의 내용을 지우고 붙여넣기 합니다.  
+이제부터 Movie API 설계 문서를 작성합니다.  
+> 아래의 API Blueprint를 복사해서 좌측 에디터의 샘플 Blueprint를 지우고 붙여넣기 합니다.  
 >```markdown
 > FORMAT: 1A
 > HOST: http://polls.apiblueprint.org/
@@ -139,10 +139,13 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > - name : Drama (string, required)
 >```
 
-> 우측의 자동 변환된 HTML문서를 확인하고, **List All Movies**와 **Get a Movie**를 클릭하여 내용을 확인합니다.  
+> 요청/응답 데이터 정의는 JSON 샘플과 [MSON](#mson) 방식으로 정의하였습니다.  
+> 자동으로 변환된 HTML문서를 오른쪽 영역에서 볼 수 있습니다.  
+> **List All Movies**와 **Get a Movie**를 클릭하여 URL, 요청 파리미터 및 JSON 응답, Mock URL을 확인할 수 있습니다.  
 > 우측 상단의 Save 버튼을 클릭하여 저장합니다.  
 > ![apiary_write_complete](images/apiary_write_complete.png)
 
+* * *
 <details>
 <summary>:point_right: **(선택사항) 작성된 API Blueprint에 대한 설명으로 한번 읽어보세요. (클릭)**</summary>
 
@@ -173,7 +176,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > ## Movies Collection [/movies]
 > ```
 >
-> API 엔드포인트에 대한 Action (Method)를 정의합니다.  
+> API 엔드포인트에 대한 Action (GET/POST/PUT/DELETE)을 정의합니다.  
 > ```markdown
 > ### List All Movies [GET]
 > ```
@@ -247,7 +250,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 위 데이터 정의 방식은 API Blueprint에서 지원하는 MSON 이라고 하는 데이터 정의 스펙입니다.  
 > [참고 -> MSON (Markdown Syntax for Object Notation)](#mson)
 </details>
-<br>
+* * *
 </details>
 
 <details>
