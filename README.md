@@ -247,13 +247,13 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 위 데이터 정의 방식은 API Blueprint에서 지원하는 MSON 이라고 하는 데이터 정의 스펙입니다.  
 > [참고 -> MSON (Markdown Syntax for Object Notation)](#mson)
 </details>
-
+<br>
 </details>
 
 <details>
 <summary>API Blueprint GitHub에 푸시하기</summary>
 
-작성된 API Blueprint 를 GitHub에 푸시해서 형상관리를 할 수 있습니다.
+작성된 API Blueprint 를 GitHub에 푸시해서 형상관리를 할 수 있습니다.  
 이 작업을 위해서는 Apiary와 GitHub Sync가 되어야 하는데, 이 과정을 보여줍니다.
 
 > 먼저 GitHub에 Repository를 하나 생성합니다.   
@@ -268,9 +268,11 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/import_github_code.png" width="60%">
 
 > clone URL에 ***https://github.com/mangdan/oraclecloud_api_handson*** 을 입력하고, Begin Import를 클릭합니다.  
+> 위 레파지토리에는 Helidon 소스, Dredd 및 Wercker 설정 파일등이 포함되어 있으며, 다음 실습에서 사용됩니다.  
 > <img src="images/github_import_repo.png" width="60%">
 
-> GitHub Repository가 생성되었습니다. Repository 링크를 클릭하면 Repository와 Import한 파일들을 확인 할 수 있습니다.  
+> GitHub Repository가 생성되었습니다.  
+> Repository 링크를 클릭하면 Repository와 Import한 파일들을 확인 할 수 있습니다.  
 > <img src="images/github_import_complete.png" width="60%">
 
 > 이제 Apiary 상단의 사람 모양 아이콘 옆 Settings 아이콘을 클릭합니다.  
@@ -339,17 +341,16 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/select_movie_click_rest.png" width="80%">
 
 > **Modules**를 마우스 우 클릭하고 **New Module**을 선택합니다.  
-> 여기선 Module과 Template이라는 것을 설정합니다.  
-> Module의 URI Prefix와 Template의 URI Pattern이라는 것을 순서대로 입력할 것입니다.  
-> 입력하게 되면 실제 REST 서비스의 주소는 다음과 같이 생성됩니다.   
+> 여기선 Module과 Template이라는 것을 설정 하는데, Module의 URI Prefix와 Template의 URI Pattern을 설정합니다.  
+> 설정이 완료되면 ORDS에서 서비스되는 REST 서비스의 주소는 다음과 같이 구성됩니다.  
 > http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
-> 현재 실습을 위해 구성되어 있는 DB Cloud 스키마의 Alias는 **myords** 입니다.  
+> 스키마 Alias는 사전에 설정이 되어 있으며, 현재 스키마의 Alias는 **myords** 입니다.  
 
-> Module에서는 다음과 같이 입력합니다.  
-> 여러 사람이 같이 사용하는 DB이므로 Module은 영문이름과 같이 유니크한 값으로 입력합니다.
+> Module 설정 Wizard에서 다음과 같이 입력합니다.  
+> 여러 사람이 같이 사용하는 DB이므로 Module은 설정이 안되어 있는 유니크한 값으로 입력합니다.
 > ```
-> Module Name - 본인이름 영문명 (e.g dankim)
-> URI Prefix - 본인이름 영문명 (e.g dankim)
+> Module Name - dankim1 (예시)
+> URI Prefix - dankim1 (예시)
 > Publish Make this RESTful Service available for use - Check
 > ```
 > <img src="images/ords_module_1.png" width="60%">
@@ -363,8 +364,8 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > Finish 버튼을 클릭하여 완료합니다.  
 > <img src="images/ords_module_complete_1.png" width="60%">
 
-> 마지막으로 Handler (Action)을 추가합니다.  
-> 생성한 movie template을 클릭하고 마우스 우 클릭 후 Add Handler > GET 을 선택합니다.  
+> 마지막으로 **Handler (Action)**을 추가합니다.  
+> 생성한 movie template을 클릭하고 마우스 우 클릭 후 **Add Handler > GET** 을 선택합니다.  
 > <img src="images/handler_get_1.png" width="60%">
 
 > Apply를 선택합니다.  
@@ -375,7 +376,8 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > select id, title, release_date, runtime from movie
 >```
 
-> 브라우저에서 다음과 같은 URL로 접속합니다. module uri prefix만 본인이 입력한 값으로 변경합니다.  
+> 브라우저에서 다음 URL로 접속해봅니다.  
+> **module uri prefix**만 본인이 입력한 값으로 변경합니다.  
 >```
 > http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie
 >```
