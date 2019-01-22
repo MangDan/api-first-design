@@ -5,8 +5,8 @@
 배포된 서비스(ORDS)에 보안 및 다양한 정책을 적용해 보고, 마지막으로 API Gateway에 배포하여 API문서와 API 엔드포인트를 애플리케이션 개발자에게 오픈하는 내용을 담고 있습니다.
 본 문서를 통해 오라클 솔루션을 활용하여 마이크로 서비스 개발에 대한 통합된 개발 라이프사이클을 경험해 볼 수 있습니다.
 
-## 실습을 위해 필요한 프로그램과 환경
-### 데스크탑 설치 프로그램
+### 실습을 위해 필요한 프로그램과 환경
+#### 데스크탑 설치 프로그램
 * [Java SE Development Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Node.js](https://nodejs.org/ko/download)
 * [Apache Maven](https://maven.apache.org/download.cgi)
@@ -15,27 +15,32 @@
 * [SQL Developer](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
 * [Insomnia](https://insomnia.rest/download)
 
-### Oracle Cloud 환경
+#### Oracle Cloud 환경
 * [Oracle Apiary Cloud Service](https://apiary.io)
 * [Oracle Compute Cloud Service](https://cloud.oracle.com/ko_KR/compute)
 * [Oracle Database Cloud Service](https://cloud.oracle.com/ko_KR/database)
 * [Oracle API Platform Cloud Service](https://cloud.oracle.com/ko_KR/api-platform)
 
-### GitHub 계정
+#### GitHub 계정
 * [GitHub](https://github.com)
 
-## 실습 내용
+### 실습 내용
+#### PART 1 - API Blueprint 문서 설계와 Microprofile 기반 Helidon, Wercker CI를 경험해볼 수 있어요!!!
 1. API 설계 문서 (API Blueprint) 작성하기
-2. ORDS와 Helidon을 활용하여 서비스를 개발하고 API 설계 문서 일치 여부 테스트하기
+2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
-4. 서비스에 보안 및 정책을 적용하고 API Gateway에 배포하기
-5. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (동영상)
+
+#### PART 2 - SQL만 알면 REST 서비스를 만들 수 있습니다. 또한 3세대 API Platform 환경을 경험해볼 수 있어요!!!
+1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
+2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배포하기
+3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (실습X)
 
 ![Scenario1](images/api_first_design_scenario_0.png)
 
 ![Scenario2](images/api_first_design_scenario.png)
 
-## 1. API 설계 문서 (API Blueprint) 작성하기
+#### PART 1
+### 1. API 설계 문서 (API Blueprint) 작성하기
 <details>
 <summary>Apiary 계정 생성하기</summary>
 API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
@@ -317,95 +322,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/github_doc.png" width="60%">
 </details>
 
-## 2. ORDS와 Helidon을 활용하여 서비스를 개발하고 API 설계 문서 일치 여부 테스트하기
-<details>
-<summary>ORDS를 활용하여 REST 서비스 만들기</summary>
-   
-> SQL Developer를 실행합니다.  
-> 좌측에 생성된 Connection (myords@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
-> <img src="images/sqldev_worksheet.png" width="60%">
-
-* * *
-
-<details>
-<summary>:point_right: (선택사항) Connection 생성이 안되어 있는 경우 (클릭)</summary>
-
-> SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
-> 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
-> ***(스키마당 동시에 SQL Developer에서 접속할 수 있는 세션수 제한이 있을까? 확인 필요함 ㅜㅜ)***
-> ```
-> Connection Name - myords@apidb
-> Username - myords
-> Password - Welcome123!
-> Hostname - 129.213.146.191
-> Port - 1521
-> SID - apidb
-> ```
-> <img src="images/sqldev_connection.png" width="60%">
-</details>
-
-* * *
-
-> Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 혹은 상단의 실행 를 입력합니다.  
-> ```
-> select id, title, release_date, runtime from movie;
-> ```
-
-> 조회된 Movie 테이블의 데이트를 확인할 수 있습니다.  
-> 좌측의 REST Data Services 옆 + 버튼을 클릭하여 확장하면 Modules, Privileges, Roles 가 있습니다.  
-> <img src="images/select_movie_click_rest.png" width="80%">
-
-> **Modules**를 마우스 우 클릭하고 **New Module**을 선택합니다.  
-> 여기선 Module과 Template이라는 것을 설정 하는데, Module의 URI Prefix와 Template의 URI Pattern을 설정합니다.  
-> 설정이 완료되면 ORDS에서 서비스되는 REST 서비스의 주소는 다음과 같이 구성됩니다.  
-> 스키마 Alias는 사전에 설정이 되어 있으며, 현재 스키마의 Alias는 **myords** 입니다.  
->```
-> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
->```
-
-> Module 설정 Wizard에서 다음과 같이 입력합니다.  
-> 여러 사람이 같이 사용하는 DB이므로 Module은 설정이 안되어 있는 유니크한 값으로 입력합니다.
-> ```
-> Module Name - dankim1 (예시)
-> URI Prefix - dankim1 (예시)
-> Publish Make this RESTful Service available for use - Check
-> ```
-> <img src="images/ords_module_1.png" width="60%">
-
-> Next를 클릭하여 Template 설정을 합니다. 다음과 같이 입력합니다.
-> ```
-> URI Pattern : movie
-> ```
-> <img src="images/ords_template_1.png" width="60%">
-
-> Finish 버튼을 클릭하여 완료합니다.  
-> <img src="images/ords_module_complete_1.png" width="60%">
-
-> 마지막으로 **Handler (Action)**을 추가합니다.  
-> 생성한 movie template을 클릭하고 마우스 우 클릭 후 **Add Handler > GET** 을 선택합니다.  
-> <img src="images/handler_get_1.png" width="60%">
-
-> Apply를 선택합니다.  
-> <img src="images/handler_get_apply_1.png" width="60%">
-
-> 쿼리를 다음과 같이 입력하고 바로 위 저장 버튼을 클릭합니다.  
-> :title은 쿼리 파라미터입니다.
->```
-> select id, title, release_date, runtime from movie where upper(title) like '%' || upper(:title) || '%'
->```
-
-> 브라우저에서 다음 URL로 접속해봅니다.  
-> **module uri prefix**만 본인이 입력한 값으로 변경합니다.  
->```
-> http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie
-> http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie?title=toy
->```
-
-> 다음과 같은 json 데이터가 보이면 성공입니다.  
-> **위 서비스는 4.API Platform에서 등록할 때 사용되니, 메모해 놓으시기 바랍니다.**
-> <img src="images/ords_json_all.png" width="60%">
-</details>
-
+### 2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
 <details>
 <summary>Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 개발하기</summary>
 
@@ -575,7 +492,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 </details>
 
 
-## 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
+### 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
 <details>
 <summary>Wercker 계정 생성하기</summary>
 
@@ -625,8 +542,8 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 </details>
 
 <details>
-<summary>Continuous Integration 실행</summary>
-   
+<summary>Continuous Integration 환경 구성 및 실행</summary>
+
 > 처음 GitHub Repository를 생성할 때 따로 제공해드린 GitHub Repository를 Import한 것을 기억하실 겁니다.  
 > Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며, Wercker는 wercker.yml 파일에 기술된  
 > 스탭과 파이프라인을 실행합니다. [(참고 -> Wercker Config)](#wercker-config)  
@@ -664,7 +581,97 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 </details>
 
-## 4. 서비스에 보안 및 정책을 적용하고 API Gateway에 배포하기
+## PART - 1
+### 1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
+<details>
+<summary>ORDS를 활용하여 REST 서비스 만들기</summary>
+   
+> SQL Developer를 실행합니다.  
+> 좌측에 생성된 Connection (myords@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
+> <img src="images/sqldev_worksheet.png" width="60%">
+
+* * *
+
+<details>
+<summary>:point_right: (선택사항) Connection 생성이 안되어 있는 경우 (클릭)</summary>
+
+> SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
+> 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
+> ***(스키마당 동시에 SQL Developer에서 접속할 수 있는 세션수 제한이 있을까? 확인 필요함 ㅜㅜ)***
+> ```
+> Connection Name - myords@apidb
+> Username - myords
+> Password - Welcome123!
+> Hostname - 129.213.146.191
+> Port - 1521
+> SID - apidb
+> ```
+> <img src="images/sqldev_connection.png" width="60%">
+</details>
+
+* * *
+
+> Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 혹은 상단의 실행 를 입력합니다.  
+> ```
+> select id, title, release_date, runtime from movie;
+> ```
+
+> 조회된 Movie 테이블의 데이트를 확인할 수 있습니다.  
+> 좌측의 REST Data Services 옆 + 버튼을 클릭하여 확장하면 Modules, Privileges, Roles 가 있습니다.  
+> <img src="images/select_movie_click_rest.png" width="80%">
+
+> **Modules**를 마우스 우 클릭하고 **New Module**을 선택합니다.  
+> 여기선 Module과 Template이라는 것을 설정 하는데, Module의 URI Prefix와 Template의 URI Pattern을 설정합니다.  
+> 설정이 완료되면 ORDS에서 서비스되는 REST 서비스의 주소는 다음과 같이 구성됩니다.  
+> 스키마 Alias는 사전에 설정이 되어 있으며, 현재 스키마의 Alias는 **myords** 입니다.  
+>```
+> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
+>```
+
+> Module 설정 Wizard에서 다음과 같이 입력합니다.  
+> 여러 사람이 같이 사용하는 DB이므로 Module은 설정이 안되어 있는 유니크한 값으로 입력합니다.
+> ```
+> Module Name - dankim1 (예시)
+> URI Prefix - dankim1 (예시)
+> Publish Make this RESTful Service available for use - Check
+> ```
+> <img src="images/ords_module_1.png" width="60%">
+
+> Next를 클릭하여 Template 설정을 합니다. 다음과 같이 입력합니다.
+> ```
+> URI Pattern : movie
+> ```
+> <img src="images/ords_template_1.png" width="60%">
+
+> Finish 버튼을 클릭하여 완료합니다.  
+> <img src="images/ords_module_complete_1.png" width="60%">
+
+> 마지막으로 **Handler (Action)**을 추가합니다.  
+> 생성한 movie template을 클릭하고 마우스 우 클릭 후 **Add Handler > GET** 을 선택합니다.  
+> <img src="images/handler_get_1.png" width="60%">
+
+> Apply를 선택합니다.  
+> <img src="images/handler_get_apply_1.png" width="60%">
+
+> 쿼리를 다음과 같이 입력하고 바로 위 저장 버튼을 클릭합니다.  
+> :title은 쿼리 파라미터입니다.
+>```
+> select id, title, release_date, runtime from movie where upper(title) like '%' || upper(:title) || '%'
+>```
+
+> 브라우저에서 다음 URL로 접속해봅니다.  
+> **module uri prefix**만 본인이 입력한 값으로 변경합니다.  
+>```
+> http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie
+> http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie?title=toy
+>```
+
+> 다음과 같은 json 데이터가 보이면 성공입니다.  
+> **위 서비스는 4.API Platform에서 등록할 때 사용되니, 메모해 놓으시기 바랍니다.**
+> <img src="images/ords_json_all.png" width="60%">
+</details>
+
+### 2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배치하기
 <details>
 <summary>서비스 등록 및 API 정책 적용하기</summary>
 
@@ -768,12 +775,12 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > 대기 중(1) 상태에서 배치됨(1) 상태로 변경되면 배치가 완료된 것입니다.  
 > Management Portal에서 설정된 정책은 각 게이트웨이에 지정된 폴링 타임에 맞춰 적용됩니다. 기본 폴링 타임은 2분 입니다.  
-> 배포가 완료되면 다음과 같이 최종 API 엔드포인트 URL을 보실 수 있습니다. URL 복사 버튼을 클릭하여 URL을 복사 합니다.  
+> 배치가 완료되면 다음과 같이 최종 API 엔드포인트 URL을 보실 수 있습니다. URL 복사 버튼을 클릭하여 URL을 복사 합니다.  
 > <img src="images/apipcs_api_gateway_deployed.png" width="60%">  
 </details>
 
 <details>
-<summary>배포된 서비스 테스트 하기</summary>
+<summary>배치된 서비스 테스트 하기</summary>
 
 REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합니다.  
 > Insomnia를 실행하고 중앙 **New Request**를 실행합니다.  
@@ -804,7 +811,7 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 
 </details>
 
-## 5. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (내용만 보세요.)
+### 3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (실습X)
 <details>
 <summary>Apiary 연동 및 API 개발자 포탈에 게시</summary>
 
