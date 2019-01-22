@@ -804,7 +804,7 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 
 </details>
 
-## 5. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 ()
+## 5. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (내용만 보세요.)
 <details>
 <summary>Apiary 연동 및 API 개발자 포탈에 게시</summary>
 
@@ -821,6 +821,11 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 > 포탈에 API를 퍼블리시가 완료되었습니다.  
 > <img src="images/apipcs_publish_complete.png" width="80%">  
 
+</details>
+
+<details>
+<summary>개발자 포탈에서 API 검색 및 문서 보기</summary>
+ 
 > API 개발자 포탈에 로그인 합니다.  
 > 애플리케이션 개발자가 애플리케이션을 등록하고, API 검색, 사용 요청등을 할 수 있는 공간입니다.  
 > <img src="images/apipcs_devp_login.png" width="80%"> 
@@ -836,18 +841,6 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 <br><br><br><br>
 
 ## 참고
-#### Helidon
-> [Helidon](https://helidon.io)은 오라클이 만든 마이크로 서비스 개발 프레임웍입니다.  
-> Eclipse Microprofile 스펙을 구현한 [Helidon MP](https://helidon.io/docs/latest/#/guides/02_MP_REST_web-service)와 최신 React 개발 방식을 지원하는  
-> Microframework인 [Helidon SE](https://helidon.io/docs/latest/#/guides/01_SE_REST_web-service)를 제공합니다. 
-> 또한 Docker Image 생성을 위한 Dockerfile과 Kubernetes 배포 파일 (app.yaml)을 기본 제공합니다.  
-
-#### Apiary Team API and Personal API
-> Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
-> 또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
-> 유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
-> Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
-
 #### API Blueprint and Swagger
 > API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
 > 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용)  
@@ -886,6 +879,12 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 >>   (e.g. Include "객체명", genres (array["객체명"]), user(""객체명))
 >>```
 
+#### Helidon
+> [Helidon](https://helidon.io)은 오라클이 만든 마이크로 서비스 개발 프레임웍입니다.  
+> Eclipse Microprofile 스펙을 구현한 [Helidon MP](https://helidon.io/docs/latest/#/guides/02_MP_REST_web-service)와 최신 React 개발 방식을 지원하는  
+> Microframework인 [Helidon SE](https://helidon.io/docs/latest/#/guides/01_SE_REST_web-service)를 제공합니다. 
+> 또한 Docker Image 생성을 위한 Dockerfile과 Kubernetes 배포 파일 (app.yaml)을 기본 제공합니다.  
+
 #### DgroupId, DartifactId, Dpackage
 > **-DgroupId=io.helidon.examples**  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
 > **-DartifactId=quickstart-mp**     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
@@ -902,6 +901,12 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 > 이러한 환경을 위해서는 게이트웨이 또한 서비스와 가장 근접한 위치에 구성이 가능해야 합니다.  
 > 2세대 게이트웨이는 DMZ 밖으로 구성하기 어려웠지만, 3세대 게이트웨이는 마이크로 서비스 아키텍쳐를 지원하기 위해  
 > 다양한 환경에 구성이 가능하도록 설계되었으며, 마이크로 게이트웨이 (Lightweight Gateway, e.g Grizzly)로써 빠른 확장이  
-> 가능한 것이 특징입니다.
+> 가능한 것이 특징입니다.  
+
+#### Apiary Team API and Personal API
+> Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
+> 또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
+> 유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
+> Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
 
 </details>
