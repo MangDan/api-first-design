@@ -80,7 +80,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 
 > 영화 정보를 제공하는 API 입니다.
 > 
-> ## Movies Collection [/movies]
+> ## Movie Collection [/movies]
 > 
 > ### List All Movies [GET]
 > 
@@ -174,7 +174,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >
 > API에 대한 엔드포인트 URL입니다.  
 > ```markdown
-> ## Movies Collection [/movies]
+> ## Movie Collection [/movies]
 > ```
 >
 > API 엔드포인트에 대한 Action (GET/POST/PUT/DELETE)을 정의합니다.  
