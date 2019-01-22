@@ -46,7 +46,7 @@
 
 ***
 
-### PART 1
+## PART 1
 #### 1. API 설계 문서 (API Blueprint) 작성하기
 <details>
 <summary>Apiary 계정 생성하기</summary>
@@ -588,10 +588,10 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 </details>
 
-### PART 2
+## PART 2
 #### 1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
 <details>
-<summary>ORDS를 활용하여 REST 서비스 만들기</summary>
+<summary>ORDS REST 서비스 만들고 배포</summary>
    
 > SQL Developer를 실행합니다.  
 > 좌측에 생성된 Connection (myords@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
