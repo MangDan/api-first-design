@@ -59,7 +59,8 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/apiary_github_signup2.png" width="40%">
 
 > Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다.  
-> **Name your first API** 부분에 다음과 같이 *Movie API*를 입력하고 Blueprint를 선택합니다.  
+> **Name your first API** 부분에 다음과 같이 *Movie API*를 입력하고 문서 타입은 API Blueprint로 선택합니다.  
+> Apiary는 Swagger와 API Blueprint 두가지를 지원 합니다. (참고 -> [API Blueprint and Swagger](#api-blueprint-and-swagger)
 > <img src="images/apiary_new_api.png" width="40%">
 
 > Apiary 계정과 첫 API Blueprint 프로젝트를 성공적으로 생성하였습니다. :clap:  
@@ -273,8 +274,11 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 본 과정에서 사용되는 소스와 설정파일을 포함한 Repository를 복제하면서 생성합니다.  
 > <img src="images/import_github_code.png" width="60%">
 
-> clone URL에 ***https://github.com/mangdan/oraclecloud_api_handson*** 을 입력하고, Begin Import를 클릭합니다.  
-> 위 레파지토리에는 Helidon 소스, Dredd 및 Wercker 설정 파일등이 포함되어 있으며, 다음 실습에서 사용됩니다.  
+> clone URL에 다음과 같이 입력하고, Begin Import를 클릭합니다.  
+> Import하는 레파지토리에는 Helidon 소스, Dredd 및 Wercker 설정 파일등이 포함되어 있으며, 다음 실습에서 사용됩니다.  
+>```
+> https://github.com/mangdan/oraclecloud_api_handson
+>```
 > <img src="images/github_import_repo.png" width="60%">
 
 > GitHub Repository가 생성되었습니다.  
@@ -328,6 +332,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
+> ***(스키마당 동시에 SQL Developer에서 접속할 수 있는 세션수 제한이 있을까? 확인 필요함 ㅜㅜ)***
 > ```
 > Connection Name - myords@apidb
 > Username - myords
@@ -343,7 +348,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > Worksheet가 보이면 다음과 같이 쿼리를 입력하고 **Ctrl + Enter** 혹은 상단의 실행 를 입력합니다.  
 > ```
-> SELECT * FROM MOVIE;
+> select id, title, release_date, runtime from movie;
 > ```
 
 > 조회된 Movie 테이블의 데이트를 확인할 수 있습니다.  
@@ -353,8 +358,10 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > **Modules**를 마우스 우 클릭하고 **New Module**을 선택합니다.  
 > 여기선 Module과 Template이라는 것을 설정 하는데, Module의 URI Prefix와 Template의 URI Pattern을 설정합니다.  
 > 설정이 완료되면 ORDS에서 서비스되는 REST 서비스의 주소는 다음과 같이 구성됩니다.  
-> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
 > 스키마 Alias는 사전에 설정이 되어 있으며, 현재 스키마의 Alias는 **myords** 입니다.  
+>```
+> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
+>```
 
 > Module 설정 Wizard에서 다음과 같이 입력합니다.  
 > 여러 사람이 같이 사용하는 DB이므로 Module은 설정이 안되어 있는 유니크한 값으로 입력합니다.
@@ -395,7 +402,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >```
 
 > 다음과 같은 json 데이터가 보이면 성공입니다.  
-> **위 서비스는 4.API Platform에 등록할 때 사용되니, 메모해 놓으시기 바랍니다.**
+> **위 서비스는 4.API Platform에서 등록할 때 사용되니, 메모해 놓으시기 바랍니다.**
 > <img src="images/ords_json_all.png" width="60%">
 </details>
 
@@ -423,8 +430,10 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 </details><br>
 
 > 여기서는 MicroProfile 기반 Helidon 프로젝트로 API를 개발합니다. [참고 -> Helidon](#helidon)  
-> ***실습 시간 관계상 미리 생성한 프로젝트로 진행합니다.***  
-> Visual Studio Code 좌측 상단의 아래 이미지 클릭, **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택, 열기를 선택합니다.  
+> Maven Generate를 통해 Helidon Template Project를 다운로드 받을 수 있지만, 
+> (참조: Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 방법) ***실습 시간 관계상 미리 생성한 프로젝트로 진행합니다.***  
+> Visual Studio Code 좌측 상단의 아래 이미지 클릭, **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택,  
+> 열기를 선택합니다.  
 > <img src="images/mscode_open_workspace.png" width="80%">
 
 > 기본 Helidon MP Project Structure 입니다.  
@@ -449,9 +458,10 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 ***
 
 <details>
-<summary>:point_right: Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 경우 (클릭)</summary>
+<summary>:point_right: Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 방법 (클릭)</summary>
 
-Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 수 있습니다.  
+Maven generate를 통해 Helidon 템플릿 프로젝트와 디자인 타임 라이브러리, 런타임 라이브러리를  
+다운로드 받습니다. 네트워크 환경에 따라 대략 5분 ~ 10분 가량 소요됩니다.
 다음은 실행 명령어 예제입니다. 여기서는 Helidon (MP)로 진행합니다.
 > Helidon MP
 > ```
@@ -485,6 +495,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
 > 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 로컬로 Clone합니다. (apiary blueprint 포함)  
 > ***실습 시간 관계상 미리 다운로드 받은 레파지토리로 진행합니다. 아래 단계는 건너뜁니다.***  
+> ***만일, c:\Oracle\oraclecloud_api_handson 폴더가 없을 경우 다음 git clone을 실행하세요.***  
 >```
 > git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
 >```
@@ -525,13 +536,13 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > Apiary의 Test 탭을 클릭하면 Dredd에 대한 사용방법과 초기 설정을 위한 가이드를 볼 수 있습니다.  
 > Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
 > 두 번째 Dredd init 부분을 보면 apiaryApiKey와 apiaryApiName를 볼 수 있는데,  
-> Dredd와 Apiary가 통신하기 위해 필요한 부분으로 사용자와 문서별로 상이하므로, 기록해놓습니다.
+> Dredd와 Apiary가 통신하기 위해 필요한 부분으로 사용자와 문서별로 상이하므로, 메모해놓습니다.
 > ![dredd_install_init](images/dredd_install_init.png)
 
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
 > 작업 위치는 Helidon Project (quickstart-mp) 입니다.  
 >```
-> cd c:\Oracle\workspace\quickstart-mp
+> cd c:\Oracle\workspace\helidon-moviesvc-mp
 >
 > npm install -g dredd
 >```
@@ -541,9 +552,10 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > 복사하지 말고, 꼭 Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName를 확인하고 실행합니다.  
 > 굵은 글씨 부분을 따라서 입력합니다.  
 > 참고로 apiary.apid는 API Blueprint 문서로 Apiary GitHub Sync 실습을 통해서 푸시한 파일을 Clone 한 파일입니다.
-> <pre><code>dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
+> <pre><code><B>cp ../../oraclecloud_api_handson/apiary.apib .</B>
+> dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
 > 
-> ? Location of the API description document <B>../../oraclecloud_api_handson/apiary.apib</B>
+> ? Location of the API description document <B>apiary.apib</B>
 > ? Command to start the API server under test <B>java -jar target/helidon-moviesvc-mp.jar</B>
 > ? Host of the API under test <B>http://localhost:8080</B>
 > ? Do you want to use hooks to customize Dredd's behavior? <B>Y</B>
@@ -639,6 +651,12 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > Apiary의 Tests로 들어가서 **Continuous Integration**을 클릭하면 다음과 같이 결과 리포트를 확인할 수 있습니다.  
 > <img src="images/apiary_ci_result.png" width="80%">
+>
+>> 오류난 상황을 만들어보고 싶으면 다음 Apiary에서 작성한 Movie API의 44번째 라인을 다음과 같이 수정하고  
+>> 우측 상단의 Save, Push를 하면 오류 및 오류 정보를 Apiary에서 확인할 수 있습니다. (선택사항 입니다.)
+>>```
+>> - id : 2699 (number, required)    ---->     - id : 2699 (string, required)
+>>```
 
 > API Blueprint 문서와 API 소스가 변경이 일어나면 Wercker에 의해서 자동으로 문서 호환 여부를 체크하여 결과를  
 > 다양한 채널 (Apiary, 이메일, Slack 등)로 전송해줍니다.  
@@ -650,7 +668,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 <details>
 <summary>서비스 등록 및 API 정책 적용하기</summary>
 
-> API Management Portal에 접속합니다.
+> API Management Portal에 접속합니다.  (관리자 계정 외 별도 계정을 만들어야 할 거 같음 ㅜㅜ)
 >```
 > Management Portal : https://apipcs-mangdan1.apiplatform.ocp.oraclecloud.com/apiplatform
 > ID : donghu.kim@oracle.com
@@ -679,6 +697,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > 다음과 같이 입력하고 **생성** 버튼을 클릭합니다.  
 > **실습 환경이 단일 인스턴스 환경이므로, API 이름을 다르게 주어야 합니다.**  
+> (계정을 여러개 준비해야 할 거 같음... 짜증 ㅜㅜ)  
 >```
 > 이름 : Movie API - Oracle(이니셜 혹은 유니크한 값)
 > 버전 : 1.0
@@ -785,13 +804,34 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 
 </details>
 
-## 5. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (동영상)
+## 5. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 ()
 <details>
-<summary>Continuous Integration 테스트</summary>
+<summary>Apiary 연동 및 API 개발자 포탈에 게시</summary>
 
-> Apiary 와 연동 후 개발자 포탈에 퍼블리시 합니다. (내 계정으로, 혹은 이 부분은 문서로만...)
-> 개발자 포탈에 접속하여 API와 문서를 확인합니다.
-> 끝~~~~
+> API Platform에서 생성한 API를 클릭 후 **게시** 아이콘 클릭, **Apiary** 클릭
+> <img src="images/apipcs_publish.png" width="80%">  
+
+> Apiry에 만든 문서 클릭 (Personal API는 지원하지 않습니다, Team API만 지원합니다.)  
+> 참고 : [Apiary Team API and Personal API](#apiary-team-api-and-personal-api)
+> <img src="images/apipcs_publish.png" width="80%">  
+
+> 저장하고 포탈에 등록합니다.  
+> <img src="images/apipcs_publish_reg_portal.png" width="80%">  
+
+> 포탈에 API를 퍼블리시가 완료되었습니다.  
+> <img src="images/apipcs_publish_complete.png" width="80%">  
+
+> API 개발자 포탈에 로그인 합니다.  
+> 애플리케이션 개발자가 애플리케이션을 등록하고, API 검색, 사용 요청등을 할 수 있는 공간입니다.  
+> <img src="images/apipcs_devp_login.png" width="80%"> 
+
+> 게시한 Movie API를 확인할 수 있습니다.  
+> <img src="images/apipcs_devp_apis.png" width="80%"> 
+
+> Movie API를 클릭하면, Apiary의 Movie API 문서를 확인할 수 있습니다.  
+> 앱 개발자는 사용할 애플리케이션 정보를 등록하고, API 사용 요청 및 승인 과정등을 통해 Access할 수 있습니다.  
+> <img src="images/apipcs_devp_api_detail.png" width="80%"> 
+
 </details>
 <br><br><br><br>
 
@@ -802,13 +842,13 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 > Microframework인 [Helidon SE](https://helidon.io/docs/latest/#/guides/01_SE_REST_web-service)를 제공합니다. 
 > 또한 Docker Image 생성을 위한 Dockerfile과 Kubernetes 배포 파일 (app.yaml)을 기본 제공합니다.  
 
-#### Apiary에서 Personal API와 Team API
+#### Apiary Team API and Personal API
 > Personal API는 무료 서비스로 개인만 작업이 가능하며, 팀단위 협업 기능은 지원하지 않습니다.  
 > 또한 작성된 API 문서는 해당 문서의 URL만 알면 누구나 볼 수 있도록 공개됩니다.  
 > 유료 서비스인 Enterprise 버전을 구매할 경우 팀 단위 협업이 가능한 Team API 문서를 생성할 수 있습니다.  
 > Team API는 팀멤버를 구성하고 팀멤버만 볼 수 있는 Private API로 구성할 수 있습니다. 
 
-#### API Blueprint와 Swagger
+#### API Blueprint and Swagger
 > API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
 > 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용)  
 > 등이 있습니다. API Blueprint의 경우 API 문서를 생성하는데 포커스가 맞쳐져 있습니다. 반면에 Swagger는 API를  
