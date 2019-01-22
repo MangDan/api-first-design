@@ -507,9 +507,9 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > 다음과 같이 브라우저로 접속해봅니다.
 >```
-> http://localhost:8080/movie
+> http://localhost:8080/movies
 >
-> http://localhost:8080/movie/titanic
+> http://localhost:8080/movies/2699?title=titanic
 >```
 > ![helidon_run_movie](images/helidon_run_movie.png)
 > ![helidon_run_movie_titanic](images/helidon_run_movie_titanic.png)  
