@@ -899,14 +899,23 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 
 #### DgroupId, DartifactId, Dpackage
 > **-DgroupId=io.helidon.examples**  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
-> **-DartifactId=quickstart-mp**     프로젝트의 이름입니다. 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
+> **-DartifactId=quickstart-mp**     프로젝트의 이름으로 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
 > **-Dpackage=io.helidon.examples.quickstart.mp**  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.  
 
 #### Dredd
-> Apiary에서 제공하는 Dredd는 영화 [저지 드레드](#dredd)의 주인공인 드레드의 이름을 따서 만들어졌습니다.  
+> Apiary가 주도하는 오픈 소스인 API 문서 검증 테스트 도구 Dredd는 영화 [저지 드레드](#dredd)의 주인공인  
+> 드레드의 이름을 따서 만들어졌습니다. API 문서가 실제 동작하는 API 서비스와 내용이 다를 경우 개발자의 신뢰를 잃게 됩니다.  
+> 단순히 기업내에서 사용하는 API일 경우도 문제가 되겠지만, 많은 개발자들에게 오픈된 오픈 API라면, 이는 기업의 비즈니스에  
+> 직접적인 영향을 주게 되는 매우 크리티컬한 문제가 될 수 있습니다.  
+> Dredd는 바로 이러한 문제를 사전에 예방하여 API 문서를 항상 최신의 상태로 유지함으로써, API에 대한 신뢰 및 높은 퀄리티를  
+> 보장하기 위한 목적으로 개발되었습니다.  
+> 현재 API Blueprint 와 Swagger2.0 (3.0은 지원 예정) 문서를 지원합니다.
 
 ### Wercker-Config
-> 테이블 형태로 기술...
+> Wercker는 GitHub Repository [SCM] 파일을 끌고 온 후 Repository에 포함된 설정 파일과 프로젝트 소스를 기반으로  
+> 동작합니다. 메인은 wercker.yml 파일로 기본적으로 wercker.yml 파일에 정의한 Docker Image를 Pull해서 컨테이너를  
+> 기반으로 동작하며, wercker.yml 에는 파이프라인과 각 파이프라인에 해당하는 스탭을 정의하도록 되어 있습니다.  
+> 정의한 각 파이프라인별로 Wercker UI에서 워크플로우를 구성할 수도 있습니다.  
 
 ### 3rd Generation Gateway
 > 서비스는 서비스 특성 혹은 비즈니스 목적에 따라 다양한 환경 (클라우드 혹은 On-premise)에서 운영될 수 있습니다.  
