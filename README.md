@@ -5,6 +5,8 @@
 배포된 서비스(ORDS)에 보안 및 다양한 정책을 적용해 보고, 마지막으로 API Gateway에 배포하여 API문서와 API 엔드포인트를 애플리케이션 개발자에게 오픈하는 내용을 담고 있습니다.
 본 문서를 통해 오라클 솔루션을 활용하여 마이크로 서비스 개발에 대한 통합된 개발 라이프사이클을 경험해 볼 수 있습니다.
 
+***
+
 ### 실습을 위해 필요한 프로그램과 환경
 #### 데스크탑 설치 프로그램
 * [Java SE Development Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
