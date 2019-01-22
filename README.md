@@ -128,7 +128,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > # Data Structure
 > 
 > ## MovieDetail (object)
-> - overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.
+> - overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization. (string)
 > - status : Released
 > - homepage : http://www.titanicmovie.com
 > - vote_average : 7.2
