@@ -433,9 +433,9 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 패키징 및 서비스 실행합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
 > ```
-> cd c:\Oracle\workspace\quickstart-mp
+> cd c:\Oracle\workspace\helidon-moviesvc-mp
 > mvn package
-> java -jar target/quickstart-mp.jar
+> java -jar target/helidon-moviesvc-mp.jar
 > ```
 
 > 다음과 같이 브라우저로 접속해봅니다.
@@ -454,12 +454,12 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 다음은 실행 명령어 예제입니다. 여기서는 Helidon (MP)로 진행합니다.
 > Helidon MP
 > ```
-> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=quickstart-mp -Dpackage=io.helidon.examples.quickstart.mp
+> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=helidon-moviesvc-mp -Dpackage=io.helidon.examples.quickstart.mp
 > ```
 
 > Helidon SE
 > ```
-> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-se -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=quickstart-se -Dpackage=io.helidon.examples.quickstart.se
+> mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-se -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=helidon-moviesvc-mp -Dpackage=io.helidon.examples.quickstart.se
 > ```
 
 > 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
@@ -474,7 +474,7 @@ Maven generate를 통해 Helidon 템플릿 프로젝트를 다운로드 받을 �
 >```
 > cd quickstart-mp
 > mvn package
-> java -jar target/quickstart-mp.jar
+> java -jar target/helidon-moviesvc-mp.jar
 >```
 </details>
 
@@ -490,8 +490,8 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > Helidon 프로젝트에 movie api 소스를 복사합니다.  
 >```
-> cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\quickstart-mp\src\main\resources
-> cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\quickstart-mp\src/main/java/io/helidon/examples/quickstart/mp
+> cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\helidon-moviesvc-mp\src\main\resources
+> cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\helidon-moviesvc-mp\src/main/java/io/helidon/examples/quickstart/mp
 >```
 > <img src="images/clone_cp.png" width="60%">
 
@@ -500,7 +500,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 >```
 > mvn package
 >
-> java -jar target/quickstart-mp.jar
+> java -jar target/helidon-moviesvc-mp.jar
 >```
 > <img src="images/helidon_movie_run.png" width="60%">
 
@@ -543,7 +543,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <pre><code>dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
 > 
 > ? Location of the API description document <B>../../oraclecloud_api_handson/apiary.apib</B>
-> ? Command to start the API server under test <B>java -jar target/quickstart-mp.jar</B>
+> ? Command to start the API server under test <B>java -jar target/helidon-moviesvc-mp.jar</B>
 > ? Host of the API under test <B>http://localhost:8080</B>
 > ? Do you want to use hooks to customize Dredd's behavior? <B>Y</B>
 > ? Programming language of the hooks <B>JavaScript</B>
