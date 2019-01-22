@@ -653,7 +653,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 >```
 > Management Portal : https://apipcs-mangdan1.apiplatform.ocp.oraclecloud.com/apiplatform
 > ID : donghu.kim@oracle.com
-> Password : Qweasdzxc123
+> Password : **********
 >```
 > <img src="images/apipcs_api.png" width="80%">
 
