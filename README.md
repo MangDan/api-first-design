@@ -24,23 +24,28 @@
 #### GitHub 계정
 * [GitHub](https://github.com)
 
+***
+
 ### 실습 내용
-#### PART 1 - API Blueprint 문서 설계와 Microprofile 기반 Helidon, Wercker CI를 경험해볼 수 있어요!!!
+![Scenario1](images/api_first_design_scenario_0.png)
+
+![Scenario2](images/api_first_design_scenario.png)
+#### [PART 1](#part-1) - API Blueprint 문서 설계와 Microprofile 기반 Helidon을 활용한 서비스 개발, 그리고 Wercker CI까지!!!
 1. API 설계 문서 (API Blueprint) 작성하기
 2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
 
-#### PART 2 - SQL만 알면 REST 서비스를 만들 수 있습니다. 또한 3세대 API Platform 환경을 경험해볼 수 있어요!!!
+#### [PART 2](#part-2) - SQL만 알아도 REST 서비스를 개발하고 배포까지! 또한 3세대 API Platform 환경을 경험해볼 수 있어요!!!
 1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
 2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배포하기
 3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (실습X)
 
-![Scenario1](images/api_first_design_scenario_0.png)
 
-![Scenario2](images/api_first_design_scenario.png)
 
-#### PART 1
-### 1. API 설계 문서 (API Blueprint) 작성하기
+***
+
+### PART 1
+#### 1. API 설계 문서 (API Blueprint) 작성하기
 <details>
 <summary>Apiary 계정 생성하기</summary>
 API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
@@ -322,7 +327,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/github_doc.png" width="60%">
 </details>
 
-### 2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
+#### 2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
 <details>
 <summary>Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 개발하기</summary>
 
@@ -492,7 +497,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 </details>
 
 
-### 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
+#### 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
 <details>
 <summary>Wercker 계정 생성하기</summary>
 
@@ -581,8 +586,8 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 </details>
 
-## PART - 1
-### 1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
+### PART 2
+#### 1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
 <details>
 <summary>ORDS를 활용하여 REST 서비스 만들기</summary>
    
@@ -671,7 +676,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <img src="images/ords_json_all.png" width="60%">
 </details>
 
-### 2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배치하기
+#### 2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배치하기
 <details>
 <summary>서비스 등록 및 API 정책 적용하기</summary>
 
@@ -811,7 +816,7 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 
 </details>
 
-### 3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (실습X)
+#### 3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (실습X)
 <details>
 <summary>Apiary 연동 및 API 개발자 포탈에 게시</summary>
 
