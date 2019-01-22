@@ -101,7 +101,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 >             }
 >         ]
 > 
-> ### Get a Movie [GET /movies/{id}?{title}]
+> ### Get a Movie [GET /movies/{id}?title={title}]
 > 
 > Movie ID와 Title로 조회하는 API 입니다.
 > 
@@ -203,7 +203,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 두번 째는 파라미터를 받아서 조회하여 반환되는 Action입니다.  
 > 다음과 같이 Path 파라미터(id)와 Query 파라미터(title) 정의합니다.  
 > ```markdown
-> ### Get a Movie [GET /movies/{id}?{title}]
+> ### Get a Movie [GET /movies/{id}?title={title}]
 >
 > Movie ID와 Title로 조회하여 상세 Movie 정보를 반환합니다.
 > ```
