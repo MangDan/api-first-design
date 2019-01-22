@@ -88,13 +88,13 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 
 >         [
 >             {
->                 "id": "19995",
+>                 "id": 19995,
 >                 "title": "Avatar",
 >                 "release_date": "2009.12.18",
 >                 "runtime" : 100
 >             },
 >             {
->                 "id": "2699",
+>                 "id": 2699,
 >                 "title": "Titanic",
 >                 "release_date": "1997.12.19",
 >                 "runtime" :194
@@ -106,7 +106,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > Movie ID와 Title로 조회하는 API 입니다.
 > 
 > + Parameters
->     - id : 2699 (string, required)
+>     - id : 2699 (number, required)
 >     - title : Titanic (string, optional)
 >     
 > + Request
@@ -116,7 +116,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 
 > + Response 200 (application/json)
 >     + Attributes
->         - id : 2699
+>         - id : 2699 (number, required)
 >         - title : Titanic
 >         - release_date : 1997.12.19
 >         - runtime : 194
@@ -211,7 +211,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 요청 파라미터 부분입니다. JSON 샘플이 아닌 [MSON](#mson) 방식을 사용합니다.
 > ```markdown
 > + Parameters
->     - id : 2699 (string, required)
+>     - id : 2699 (number, required)
 >     - title : Titanic (string, optional)
 >
 > + Request
@@ -224,7 +224,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > ```markdown
 > + Response 200 (application/json)
 >     + Attributes
->         - id : 2699
+>         - id : 2699 (number, required)
 >         - title : Titanic
 >         - release_date : 1997.12.19,
 >         - runtime : 194
