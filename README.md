@@ -685,12 +685,12 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > 브라우저에서 다음 URL로 접속해봅니다.  
 > **module uri prefix**만 본인이 입력한 값으로 변경합니다.  
 >```
-> http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie
-> http://129.213.146.191:8080/ords/myords/{module_uri_prefix}/movie?title=toy
+> http://129.213.146.191:8080/ords/{myords#}/{module_uri_prefix}/movie
+> http://129.213.146.191:8080/ords/{myords#}/{module_uri_prefix}/movie?title=toy
 >```
 
 > 다음과 같은 json 데이터가 보이면 성공입니다.  
-> **위 서비스는 4.API Platform에서 등록할 때 사용되니, 메모해 놓으시기 바랍니다.**
+> **위 서비스는 4.API Platform에서 등록할 때 사용되니, URL을 메모해 놓으시기 바랍니다.**
 > <img src="images/ords_json_all.png" width="60%">
 </details>
 
