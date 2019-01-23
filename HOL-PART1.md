@@ -277,7 +277,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/commit_and_sync.png" width="60%">
 
 > 작성한 API Blueprint문서와 GitHub Repository가 싱크됩니다.  
-> <img src="images/apiary_git_sync_complete.png" width="60%">
+> <img src="images/apiary_git_sync_complete.png" width="80%">
 
 > 다시 상단의 Editor 버튼을 클릭하면 우측 **Save** 버튼 옆에 **Push** 버튼이 생성 된 것을 확인하실 수 있습니다.  
 > 이제 문서를 변경하면 변경이 되었다는 알림(빨간점)이 Push 버튼에 나타나며, Push 버튼을 클릭하여 GitHub에 바로 푸시할 수 있습니다.  
@@ -295,6 +295,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 작업은 Visual Studio Code를 통해서 진행합니다.  
 > Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
 > 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
+> **Windows PowerShell 기준**
 > ```
 > mvn -version
 > echo $env:JAVA_HOME
