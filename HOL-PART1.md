@@ -412,7 +412,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
 >    - **Visual Studio Code 터미널에서 수행**
 >```
-> cd helidon-moviesvc-mp
+> cd c:\Oracle\workspace\helidon-moviesvc-mp
 > 
 > mvn package
 >
@@ -440,25 +440,25 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > Apiary의 Test 탭을 클릭하면 Dredd에 대한 사용방법과 초기 설정을 위한 가이드를 볼 수 있습니다.  
 > Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
-> 두 번째 Dredd init 부분을 보면 apiaryApiKey와 apiaryApiName를 볼 수 있는데,  
-> Dredd와 Apiary가 통신하기 위해 필요한 부분으로 사용자와 문서별로 상이하므로 메모해놓습니다.
-> ![dredd_install_init](images/dredd_install_init.png)
+> 보이는 순서대로 로컬 PC에서 수행하면 됩니다.
+> 2 번째 부분은 dredd init하는 부분으로 apiaryApiKey와 apiaryApiName은 dredd와 Apiary 통신을 위해  
+> **개인별로 다 다르므로 Apiary 웹 페이지에서 보이는 본인 것을 사용하시기 바랍니다. 이후 실습을 위해 메모장에 복사해 둡니다.**
+> ![dredd_install_init](images/dredd_install_init_new.png)
 
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
 > 작업 위치는 Helidon Project (quickstart-mp) 입니다.  
+>    - **Visual Studio Code 터미널에서 수행**
 >```
 > cd c:\Oracle\workspace\helidon-moviesvc-mp
 >
 > npm install -g dredd
 >```
-> <img src="images/dredd_install.png" width="60%">
+> <img src="images/dredd_install.png" width="100%">
 
-> dredd init 작업 수행 시 필요한 apiaryApiKey와 apiaryApiName은 API 문서마다 상이하니 아래 내용을 그대로  
-> 복사하지 말고, 꼭 Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName를 확인하고 실행합니다.  
-> 굵은 글씨 부분을 따라서 입력합니다.  
+> Apiary 본인 계정의 Tests에서 확인한 2번째 dredd init 명령을 수행합니다.
 > 참고로 로컬 테스트를 위해서는 Apiary에서 다운로드 받은 apiary 문서 파일 (확장자 .apib)이 필요합니다.  
 > helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비해놓은 파일을 이용해 진행합니다.
-> <code><pre>dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
+> <code><pre>dredd init -r apiary -j apiaryApiKey:<B>{본인의 apiaryApiKey}</B> -j <B>apiaryApiName:{본인의 apiaryApiName}</B>
 > 
 > ? Location of the API description document <B>apiary.apib</B>
 > ? Command to start the API server under test <B>java -jar target/helidon-moviesvc-mp.jar</B>
@@ -473,10 +473,10 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 >```
 > dredd
 >```
-> <img src="images/local_dredd_test.png" width="60%">
+> <img src="images/local_dredd_test.png" width="100%">
 
 > Apiary Tests 로 다시 들어가보면 테스트 결과 리포트를 볼 수 있습니다.  
-> <img src="images/apiary_dredd_result.png" width="80%">
+> <img src="images/apiary_dredd_result.png" width="100%">
 </details>
 
 
