@@ -57,3 +57,5 @@
 3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기  
 &nbsp;&nbsp;&nbsp;&nbsp;■ Apiary 연동 및 API 개발자 포탈에 게시 (실습X)  
 &nbsp;&nbsp;&nbsp;&nbsp;■ 개발자 포탈에서 API 검색 및 문서 보기  
+
+- [PART 2 실습으로 가기](HOL-PART2.md)
