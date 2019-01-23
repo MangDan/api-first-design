@@ -566,3 +566,88 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > API 문서와 서비스를 항상 최신의 상태로 유지시켜 줍니다.  
 
 </details>
+<br><br><br><br>
+
+## 참고
+#### API Blueprint and Swagger
+> API Blueprint와 Swagger는 API 문서 작성 시 가장 많이 사용되고 있는 API 문서 정의 언어입니다.  
+> 이외에 MuleSoft의 RAML(YAML)과 Slate(Markdown), Asciidoc (Spring-boot REST Doc 에서 기본으로 사용)  
+> 등이 있습니다. API Blueprint는 API 문서를 생성하는데 포커스가 맞쳐져 있습니다. 반면에 Swagger는 API를  
+> 정의하는데 포커스가 맞춰져 있다고 볼 수 있습니다. API Blueprint는 개발자가 아니어도 쉽게 배울 수 있으며, 작성하기  
+> 쉽고 이해하기 쉬운 마크다운 형식을 지원합니다.  
+> 문서를 위한 스펙이기 때문에 실제 구현을 위한 정의가 Swagger에 비해 상대적으로 많이 포함되지 않아, 스텁이나 스니펫과  
+> 같은 코드 생성 기능을 제공하기 어렵습니다.  
+> Swagger는 Linux Foundation의 오픈소스 프로젝트인 OpenAPI Initiative에 추가되면서 현재는  
+> Open API Specification (OAS) 이라는 이름으로 불리고 있습니다.  
+> 개발자에게 친숙한 JSON, YAML 형식으로 작성하며, 구현을 위한 여러가지 스펙을 포함하고 있기 때문에 개발자 사이에서 많이  
+> 사용되고 있으며, 다양한 언어의 스텁 코드를 생성할 수 있는 기능도 제공될 수 있습니다. (e.g. Swagger Codegen)  
+> 반면에 API Blueprint에 비해서 구현에 관련된 많은 내용이 포함되기 때문에 비 개발자에게는 다소 복잡하게 느껴질 수 있습니다.  
+> Swagger는 상대적으로 문서의 복잡성이 높아서 문서를 먼저 만들고 API를 만들기 보다는 이미 만들어진 API에서 Swagger문서를  
+> 추출하는 방식으로 더 많이 사용됩니다. (ORDS를 포함 많은 개발 언어 및 프레임웍에서 Swagger 생성 기능을 제공합니다.)  
+> 일반적으로 Design First를 말할때는 API Blueprint, Code First를 말할때는 Swagger를 떠올리면 됩니다.  
+> (물론 Swagger가 더 익숙한 사용자라면 Swagger가 Design First Approach가 될 수 있습니다.)  
+
+#### MSON
+> 두번 째 API Action에 대한 요청/응답 데이터를 작성할 때 JSON 형태의 데이터가 아니어서 조금 의아했을텐데요.  
+> 하지만 Apiary 우측의 HTML 문서에서는 JSON으로 변환되어 보이는 것을 확인 할 수 있을 겁니다.
+> 이 데이터 정의 방식은 API Blueprint의 또하나의 데이터 정의 방식인 [MSON](https://apiblueprint.org/documentation/mson/specification.html) (Markdown Syntax for Object  
+> Notation) 이라는 스펙으로 JSON보다 간결한 방식으로 데이터를 작성할 수 있게 도와줍니다.  
+> 비 개발자의 경우 JSON에 익숙하지 않은 경우가 많은데, 이 경우 MSON을 사용하면 좀 더 쉽게 문서 작성이 가능합니다.  
+> 또한 변환된 HTML 문서에서는 JSON으로 변환되어 제공되기 때문에 개발자는 필요한 JSON 형태로 데이터를 확인할 수 있습니다. 
+> MSON으로 문서를 작성하면서, 우측의 HTML 문서를 보면 JSON으로 실시간 변환되는 것을 확인할 수 있습니다.
+> 기본적인 사용법은 다음과 같습니다.  
+>>```
+>> +Parameters or +Attributes  
+>>   - id : 1001 - 아이디입니다. (number, required)   
+>> 
+>>   Request일 경우 +Parameters, Response일 경우 +Attributes를 입력하고, 하위에 포함할 항목을 입력합니다.
+>>   항목은 - 혹은 +로 시작합니다. 여기서는 키 값인 id를 제외하고 나머지는 옵셔널입니다.  
+>>   "id"는 키 값, "1001"은 샘플 값, "아이디"는 설명, "number"는 값 유형, "required"는  
+>>   필수 여부를 나타냅니다. 이 외에 # Data Structure 를 통해서 별도의 데이터 객체를 정의할 수 있으며, MSON에서  
+>>   Include 혹은 객체명을 지정하여 사용 가능합니다.  
+>>   (e.g. Include "객체명", genres (array["객체명"]), user(""객체명))
+>>```
+
+#### Helidon
+> [Helidon](https://helidon.io)은 오라클이 만든 마이크로 서비스 개발 프레임웍입니다.  
+> Eclipse Microprofile 스펙을 구현한 [Helidon MP](https://helidon.io/docs/latest/#/guides/02_MP_REST_web-service)와 최신 React 개발 방식을 지원하는 Microframework인 [Helidon SE](https://helidon.io/docs/latest/#/guides/01_SE_REST_web-service)를 제공합니다. 
+> 또한 Docker Image 생성을 위한 Dockerfile과 Kubernetes 배포 파일 (app.yaml)을 기본으로 포함됩니다.  
+
+#### Maven Generate Option
+> **-DgroupId=io.helidon.examples**  프로젝트의 고유한 식별 값입니다. 변경 가능합니다.  
+> **-DartifactId=quickstart-mp**     프로젝트의 이름으로 해당 이름의 폴더가 생성되며, 패키징 될 경우 이 이름을 사용합니다. 변경 가능합니다.  
+> **-Dpackage=io.helidon.examples.quickstart.mp**  프로젝트의 기본 패키지 경로입니다. 변경 가능합니다.  
+
+#### Dredd
+> Apiary가 주도하는 오픈 소스인 API 문서 검증 테스트 도구 Dredd는 영화 [저지 드레드](#dredd)의 주인공인  
+> 드레드의 이름을 따서 만들어졌습니다. API 문서가 실제 동작하는 API 서비스와 내용이 다를 경우 개발자의 신뢰를 잃게 됩니다.  
+> 단순히 기업내에서 사용하는 API일 경우도 문제가 되겠지만, 많은 개발자들에게 오픈된 오픈 API라면, 이는 기업의 비즈니스에  
+> 직접적인 영향을 주게 되는 매우 크리티컬한 문제가 될 수 있습니다.  
+>> 필자의 경우 국내 한 공공 오픈 API를 사용해서 앱을 개발하려고 한 적이 있었는데, 문서의 내용과 실제 호출되는 서비스가 달라서  
+>> 이 서비스를 사용해야 할 지 고민한 적이 있었습니다. 만약 관리가 안되는 API라면 추후 앱을 다시 개발해야 하는 상황이 올 수 있어서  
+>> 결국 더 정확한 문서를 제공하는 다른 서비스를 사용하기로 결정한 적이 있습니다.  
+> Dredd는 바로 이러한 문제를 사전에 예방하여 API 문서를 항상 최신의 상태로 유지함으로써, API에 대한 신뢰 및 높은 퀄리티를  
+> 보장하기 위한 목적으로 개발되었습니다.  
+> 현재 API Blueprint 와 Swagger2.0 (3.0은 지원 예정) 문서를 지원합니다.
+
+### Wercker-Config
+> Wercker는 GitHub Repository [SCM] 파일을 끌고 온 후 Repository에 포함된 설정 파일과 프로젝트 소스를 기반으로  
+> 동작합니다. 메인은 wercker.yml 파일로 기본적으로 wercker.yml 파일에 정의한 Docker Image를 Pull해서 컨테이너화 하여  
+> 동작하며, wercker.yml에 기술된 파이프라인과 각 파이프라인에 해당하는 스탭으로 실행됩니다.  
+> 파이프라인별로 각각의 Docker Image를 다르게 가져갈 수 있으며, 각 파이프라인별로 Wercker UI에서 워크플로우를 구성할 수도 있습니다.  
+> 아래는 wercker.yml파일 예시입니다.
+>```
+> # This references an OpenJDK container from the
+> # Docker Hub https://hub.docker.com/_/openjdk/
+> box: openjdk:8-jdk
+> 
+> # This is the build pipeline
+> build:
+> # This is the step
+>   steps:
+>     - install-packages:
+>       packages: maven
+>     - script:
+>       name: maven build
+>              code: mvn clean package
+>```
