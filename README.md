@@ -34,7 +34,7 @@
 ![Scenario2](images/api_first_design_scenario.png)
 #### [PART 1](#HOL-PART1.md)
 ###### API Blueprint 문서 설계와 Microprofile 기반 Helidon을 활용한 서비스 개발, 그리고 Wercker CI까지!!!
-1. API 설계 문서 (API Blueprint) 작성하기
+1. API 설계 문서 (API Blueprint) 작성하기  
 &nbsp;&nbsp;&nbsp;&nbsp;- Apiary 계정 생성하기
 - API Blueprint 설계 문서 작성하기
 - API Blueprint GitHub에 푸시하기
