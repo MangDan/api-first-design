@@ -295,7 +295,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 작업은 Visual Studio Code를 통해서 진행합니다.  
 > Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
 > 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
-> <br>**Windows PowerShell 기준**
+>    - **Windows PowerShell 기준**
 > ```
 > mvn -version
 > echo $env:JAVA_HOME
