@@ -476,6 +476,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <img src="images/local_dredd_test.png" width="100%">
 
 > Apiary Tests 로 다시 들어가보면 테스트 결과 리포트를 볼 수 있습니다.  
+> ** Apiary에서 정의한 Movie API 스펙에 맞게 Helidon기반 REST API가 잘 구현되었는지 테스트 결과 입니다. **
 > <img src="images/apiary_dredd_result.png" width="100%">
 </details>
 
@@ -484,8 +485,8 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 <details>
 <summary>Wercker 계정 생성하기</summary>
 
-> Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만,  
-> Wercker와 GitHub을 활용하여 지속적으로 검증 및 테스트를 수행하고 결과 리포트를 전송합니다.  
+> Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,
+> Wercker와 GitHub을 활용하여 개발 소스 Commit과 동시에 자동으로 테스트를 수행하도록 하여, 검증 및 테스트 및 결과 리포트을 자동화할 수 있습니다.
 > 우선 GitHub 계정을 활용하여 Wercker 계정을 생성합니다.  
 > [Wercker](#http://app.wercker.com)에 접속합니다. 상단의 **Sign Up** 버튼을 클릭합니다.  
 > <img src="images/wercker_home.png" width="80%">
@@ -520,7 +521,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <img src="images/wercker_create_new_app_5.png" width="80%">
 
 > 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.  
-> <img src="images/wercker_trigger_build_now.png" width="60%">
+> <img src="images/wercker_trigger_build_now.png" width="100%">
 
 > 상단 **wercker_pipeline** 버튼을 클릭하면 Wercker Application이 보입니다.  
 > Application을 클릭합니다.  
