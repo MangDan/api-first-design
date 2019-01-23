@@ -1,17 +1,14 @@
-# 마이크로 서비스 개발을 위한 API 우선 설계 및 API 구축하기 - PART 1
+# (PART 1) 마이크로 서비스 개발을 위한 API 우선 설계 및 API 구축하기
 
-#### [PART 1](#part-1) 내용
 ## API Blueprint 문서 설계와 Microprofile 기반 Helidon을 활용한 서비스 개발, 그리고 Wercker CI까지!!!
 1. API 설계 문서 (API Blueprint) 작성하기
 2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
 
-### 전체 흐름도
+## 전체 흐름도
 ![Scenario2](images/api_first_design_scenario.png)
 
-***
-
-## PART 1
+## PART 1 실습하기
 #### 1. API 설계 문서 (API Blueprint) 작성하기
 <details>
 <summary>Apiary 계정 생성하기</summary>
