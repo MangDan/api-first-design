@@ -545,10 +545,10 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <img src="images/dredd_install_init_2.png" width="80%">
 
 > GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
-> <img src="images/github_dredd.png" width="60%">
+> <img src="images/github_dredd.png" width="80%">
 
-> 다음과 같이 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
-> <img src="images/github_dredd_modify.png" width="60%">
+> 다음과 같이 본인의 apiaryApiKey와 apiaryApiName 값으로 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
+> <img src="images/github_dredd_modify.png" width="80%">
 
 > Wercker trigger가 작동하면서 자동으로 Build가 시작되는 것을 확인할 수 있습니다.  
 > <img src="images/wercker_build_start.png" width="80%">
@@ -558,10 +558,10 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > Apiary의 Tests로 들어가서 **Continuous Integration**을 클릭하면 다음과 같이 Dredd가 전송한   
 > 결과 리포트를 확인할 수 있습니다.  
-> <img src="images/apiary_ci_result.png" width="80%">
+> <img src="images/apiary_ci_result.png" width="100%">
 >
 >> 오류난 상황을 만들어보고 싶으면 다음 Apiary에서 작성한 Movie API의 44번째 라인을 다음과 같이 수정하고  
->> 우측 상단의 Save, Push를 하면 오류 및 오류 정보를 Apiary에서 확인할 수 있습니다. (선택사항 입니다.)
+>> 우측 상단의 Save, Push를 하면 오류 및 오류 정보를 Apiary에서 확인할 수 있습니다. **(선택사항 입니다.)**
 >>```
 >> - id : 2699 (number, required)    ---->     - id : 2699 (string, required)
 >>```
