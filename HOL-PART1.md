@@ -29,14 +29,14 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > GitHub 이메일을 입력합니다.  
 > <img src="images/apiary_github_signup2.png" width="40%">
 
-> Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다.  
+> Apiary 계정을 처음 만들면 기본 API 프로젝트 하나를 생성해야 합니다.  
 > **Name your first API** 부분에 다음과 같이 *Movie API*를 입력하고 문서 타입은 API Blueprint로 선택합니다.  
 > Apiary는 Swagger와 API Blueprint 두가지를 지원 합니다. (참고 -> [API Blueprint and Swagger](#api-blueprint-and-swagger)
 > <img src="images/apiary_new_api.png" width="40%">
 
 > Apiary 계정과 첫 API Blueprint 프로젝트를 성공적으로 생성하였습니다. :clap:  
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
-> <img src="images/apiary_write_api_1.png" width="80%">
+> <img src="images/apiary_write_api_1.png" width="100%">
 </details>
 
 <details>
