@@ -43,7 +43,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 <summary>API Blueprint 설계 문서 작성하기</summary>
 
 이제부터 Movie API 설계 문서를 작성합니다.  
-> 아래의 API Blueprint를 복사해서 좌측 에디터의 샘플 Blueprint를 지우고 붙여넣기 합니다.  
+> 아래의 API Blueprint 코드를 복사해서 좌측 에디터의 샘플 Blueprint를 덮어 씁니다. 
 >```markdown
 > FORMAT: 1A
 > HOST: http://polls.apiblueprint.org/
@@ -112,9 +112,9 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > - name : Drama (string, required)
 >```
 
-> 요청/응답 데이터 정의는 JSON 샘플과 [MSON](#mson) 방식으로 정의하였습니다.  
+> 요청/응답 데이터 정의는 두 가지 유형을 보여주기 위해 JSON 형식과 [MSON](#mson) 형식으로 정의하였습니다.  
 > 자동으로 변환된 HTML문서를 오른쪽 영역에서 볼 수 있습니다.  
-> **List All Movies**와 **Get a Movie**를 클릭하여 URL, 요청 파리미터 및 JSON 응답, Mock URL을 확인할 수 있습니다.  
+> **List All Movies**와 **Get a Movie**를 클릭하여 각각의 서비스 URL, 요청 파리미터 및 JSON 응답, Mock URL을 확인할 수 있습니다.  
 > 우측 상단의 Save 버튼을 클릭하여 저장합니다.  
 > ![apiary_write_complete](images/apiary_write_complete.png)
 
@@ -229,7 +229,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 </details>
 
 <details>
-<summary>API Blueprint GitHub에 푸시하기</summary>
+<summary>API Blueprint 코드를 GitHub으로 관리하기</summary>
 
 작성된 API Blueprint 를 GitHub에 푸시하여 형상관리를 할 수 있습니다.  
 이 작업을 위해서는 Apiary와 GitHub Sync가 되어야 하는데, 이 과정을 보여줍니다.
@@ -266,7 +266,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > *List all repositories* 버튼을 클릭합니다.  
 > <img src="images/list_all_repo.png" width="60%">
 
-> *Authorize apairyio* 버튼을 클릭합니다.  
+> Apiary가 GitHub 접근 권한을 부여하기 위해 *Authorize apairyio* 버튼을 클릭합니다.  
 > <img src="images/auth_github_aiary.png" width="60%">
 
 > 다시 아래 *Link your GitHub account* 버튼을 클릭하면 다음과 같이 생성한 repository를 선택할 수 있습니다.  
