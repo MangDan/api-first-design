@@ -29,21 +29,21 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > GitHub 이메일을 입력합니다.  
 > <img src="images/apiary_github_signup2.png" width="40%">
 
-> Apiary 계정을 생성하면 기본 API 하나를 생성해야 합니다.  
+> Apiary 계정을 처음 만들면 기본 API 프로젝트 하나를 생성해야 합니다.  
 > **Name your first API** 부분에 다음과 같이 *Movie API*를 입력하고 문서 타입은 API Blueprint로 선택합니다.  
 > Apiary는 Swagger와 API Blueprint 두가지를 지원 합니다. (참고 -> [API Blueprint and Swagger](#api-blueprint-and-swagger)
 > <img src="images/apiary_new_api.png" width="40%">
 
 > Apiary 계정과 첫 API Blueprint 프로젝트를 성공적으로 생성하였습니다. :clap:  
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
-> <img src="images/apiary_write_api_1.png" width="80%">
+> <img src="images/apiary_write_api_1.png" width="100%">
 </details>
 
 <details>
 <summary>API Blueprint 설계 문서 작성하기</summary>
 
 이제부터 Movie API 설계 문서를 작성합니다.  
-> 아래의 API Blueprint를 복사해서 좌측 에디터의 샘플 Blueprint를 지우고 붙여넣기 합니다.  
+> 아래의 API Blueprint 코드를 복사해서 좌측 에디터의 샘플 Blueprint를 덮어 씁니다. 
 >```markdown
 > FORMAT: 1A
 > HOST: http://polls.apiblueprint.org/
@@ -112,9 +112,9 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > - name : Drama (string, required)
 >```
 
-> 요청/응답 데이터 정의는 JSON 샘플과 [MSON](#mson) 방식으로 정의하였습니다.  
+> 요청/응답 데이터 정의는 두 가지 유형을 보여주기 위해 JSON 형식과 [MSON](#mson) 형식으로 정의하였습니다.  
 > 자동으로 변환된 HTML문서를 오른쪽 영역에서 볼 수 있습니다.  
-> **List All Movies**와 **Get a Movie**를 클릭하여 URL, 요청 파리미터 및 JSON 응답, Mock URL을 확인할 수 있습니다.  
+> **List All Movies**와 **Get a Movie**를 클릭하여 각각의 서비스 URL, 요청 파리미터 및 JSON 응답, Mock URL을 확인할 수 있습니다.  
 > 우측 상단의 Save 버튼을 클릭하여 저장합니다.  
 > ![apiary_write_complete](images/apiary_write_complete.png)
 
@@ -229,7 +229,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 </details>
 
 <details>
-<summary>API Blueprint GitHub에 푸시하기</summary>
+<summary>API Blueprint 코드를 GitHub으로 관리하기</summary>
 
 작성된 API Blueprint 를 GitHub에 푸시하여 형상관리를 할 수 있습니다.  
 이 작업을 위해서는 Apiary와 GitHub Sync가 되어야 하는데, 이 과정을 보여줍니다.
@@ -266,7 +266,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > *List all repositories* 버튼을 클릭합니다.  
 > <img src="images/list_all_repo.png" width="60%">
 
-> *Authorize apairyio* 버튼을 클릭합니다.  
+> Apiary가 GitHub 접근 권한을 부여하기 위해 *Authorize apairyio* 버튼을 클릭합니다.  
 > <img src="images/auth_github_aiary.png" width="60%">
 
 > 다시 아래 *Link your GitHub account* 버튼을 클릭하면 다음과 같이 생성한 repository를 선택할 수 있습니다.  
@@ -277,7 +277,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/commit_and_sync.png" width="60%">
 
 > 작성한 API Blueprint문서와 GitHub Repository가 싱크됩니다.  
-> <img src="images/apiary_git_sync_complete.png" width="60%">
+> <img src="images/apiary_git_sync_complete.png" width="80%">
 
 > 다시 상단의 Editor 버튼을 클릭하면 우측 **Save** 버튼 옆에 **Push** 버튼이 생성 된 것을 확인하실 수 있습니다.  
 > 이제 문서를 변경하면 변경이 되었다는 알림(빨간점)이 Push 버튼에 나타나며, Push 버튼을 클릭하여 GitHub에 바로 푸시할 수 있습니다.  
@@ -295,6 +295,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 작업은 Visual Studio Code를 통해서 진행합니다.  
 > Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
 > 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
+>    - **Visual Studio Code 터미널: Windows PowerShell 기준**
 > ```
 > mvn -version
 > echo $env:JAVA_HOME
@@ -322,10 +323,11 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/mscode_open_workspace.png" width="80%">
 
 > 기본 Helidon MP Project Template Structure 입니다.  
-> <img src="images/helidon_base_structure.png" width="80%">
+> <img src="images/helidon_base_structure.png" width="30%">
 
 > Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 패키징 및 서비스 실행합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
+>    - **Visual Studio Code 터미널에서 수행**
 > ```
 > cd c:\Oracle\workspace\helidon-moviesvc-mp
 >
@@ -335,6 +337,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > ```
 
 > 다음과 같이 브라우저로 접속해봅니다.  
+> Helidon 템플릿으로 생성한 샘플 REST API 수행결과를 확인합니다.
 >```
 > http://localhost:8080/greet
 >```
@@ -361,7 +364,7 @@ workspace 폴더 하위에 생성하므로 해당 폴더로 이동합니다.
 > mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=helidon-moviesvc-mp -Dpackage=io.helidon.examples.quickstart.mp
 > ```
 
-Helidon SE는 본 실습에서 사용하지 않습니다.
+**Helidon SE는 본 실습에서 사용하지 않습니다.**
 > Helidon SE
 > ```
 > mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-se -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=helidon-moviesvc-mp -Dpackage=io.helidon.examples.quickstart.se
@@ -369,13 +372,14 @@ Helidon SE는 본 실습에서 사용하지 않습니다.
 
 > 관련된 라이브러리와 메이븐 플러그인을 다운로드 받습니다.  
 > 다운로드가 완료되면 다음과 같이 Build Success 화면을 볼 수 있습니다.  
-> <img src="images/maven_generate_helidon.png" width="60%">
+> <img src="images/maven_generate_helidon.png" width="80%">
 
 > Helidon MP Project Template Structure입니다.  
-> <img src="images/helidon_base_structure.png" width="80%">
+> <img src="images/helidon_base_structure.png" width="30%">
 
 > 생성된 프로젝트 폴더로 이동 후 다음과 같이 패키징을 합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
+>    - **Visual Studio Code 터미널에서 수행**
 >```
 > cd helidon-moviesvc-mp
 >
@@ -389,31 +393,35 @@ Helidon SE는 본 실습에서 사용하지 않습니다.
 
 Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 소스를 활용하여 패키징 및 테스트합니다.   
 > VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
-> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 로컬로 Clone합니다. (apiary blueprint 포함)  
+> 다음과 같이 처음 생성한 본인의 GitHub 계정에서 관련된 소스를 로컬로 Clone합니다. (apiary blueprint 포함)  
 > ***실습 시간 관계상 미리 다운로드 받은 레파지토리로 진행합니다. 아래 단계는 건너뜁니다.***  
 > ***만일, c:\Oracle\oraclecloud_api_handson 폴더가 없을 경우 다음 git clone을 실행하세요.***  
 >```
 > git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
 >```
 
-> Helidon 프로젝트에 movie api 소스를 복사합니다.  
+> GitHub에서 받은 Helidon 프로젝트로 미리 구현해 놓은 Movie API 소스를 내 프로젝트로 복사합니다.  
 >```
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\helidon-moviesvc-mp\src\main\resources
 >
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\helidon-moviesvc-mp\src/main/java/io/helidon/examples/quickstart/mp
 >```
-> <img src="images/clone_cp.png" width="60%">
+> <img src="images/clone_cp.png" width="100%">
 
-> 다시 패키징 및 실행합니다.   
+> 포로젝트를 다시 패키징 및 실행합니다.   
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
+>    - **Visual Studio Code 터미널에서 수행**
 >```
+> cd c:\Oracle\workspace\helidon-moviesvc-mp
+> 
 > mvn package
 >
 > java -jar target/helidon-moviesvc-mp.jar
 >```
-> <img src="images/helidon_movie_run.png" width="60%">
+> <img src="images/helidon_movie_run.png" width="100%">
 
 > 다음과 같이 브라우저로 접속해봅니다.
+> Helidon 템플릿으로 생성한 샘플 REST API가 이제 구현되어 Movie API로써 수행결과를 확인합니다.
 >```
 > http://localhost:8080/movies
 >
@@ -432,25 +440,25 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > Apiary의 Test 탭을 클릭하면 Dredd에 대한 사용방법과 초기 설정을 위한 가이드를 볼 수 있습니다.  
 > Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
-> 두 번째 Dredd init 부분을 보면 apiaryApiKey와 apiaryApiName를 볼 수 있는데,  
-> Dredd와 Apiary가 통신하기 위해 필요한 부분으로 사용자와 문서별로 상이하므로 메모해놓습니다.
-> ![dredd_install_init](images/dredd_install_init.png)
+> 보이는 순서대로 로컬 PC에서 수행하면 됩니다.
+> 2 번째 부분은 dredd init하는 부분으로 apiaryApiKey와 apiaryApiName은 dredd와 Apiary 통신을 위해  
+> **개인별로 다 다르므로 Apiary 웹 페이지에서 보이는 본인 것을 사용하시기 바랍니다. 이후 실습을 위해 메모장에 복사해 둡니다.**
+> ![dredd_install_init](images/dredd_install_init_new.png)
 
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
 > 작업 위치는 Helidon Project (quickstart-mp) 입니다.  
+>    - **Visual Studio Code 터미널에서 수행**
 >```
 > cd c:\Oracle\workspace\helidon-moviesvc-mp
 >
 > npm install -g dredd
 >```
-> <img src="images/dredd_install.png" width="60%">
+> <img src="images/dredd_install.png" width="100%">
 
-> dredd init 작업 수행 시 필요한 apiaryApiKey와 apiaryApiName은 API 문서마다 상이하니 아래 내용을 그대로  
-> 복사하지 말고, 꼭 Tests 를 클릭해서 각자의 apiaryApiKey와 apiaryApiName를 확인하고 실행합니다.  
-> 굵은 글씨 부분을 따라서 입력합니다.  
+> Apiary 본인 계정의 Tests에서 확인한 2번째 dredd init 명령을 수행합니다.
 > 참고로 로컬 테스트를 위해서는 Apiary에서 다운로드 받은 apiary 문서 파일 (확장자 .apib)이 필요합니다.  
 > helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비해놓은 파일을 이용해 진행합니다.
-> <code><pre>dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
+> <code><pre>dredd init -r apiary -j apiaryApiKey:<B>{본인의 apiaryApiKey}</B> -j <B>apiaryApiName:{본인의 apiaryApiName}</B>
 > 
 > ? Location of the API description document <B>apiary.apib</B>
 > ? Command to start the API server under test <B>java -jar target/helidon-moviesvc-mp.jar</B>
@@ -465,10 +473,11 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 >```
 > dredd
 >```
-> <img src="images/local_dredd_test.png" width="60%">
+> <img src="images/local_dredd_test.png" width="100%">
 
 > Apiary Tests 로 다시 들어가보면 테스트 결과 리포트를 볼 수 있습니다.  
-> <img src="images/apiary_dredd_result.png" width="80%">
+> ** Apiary에서 정의한 Movie API 스펙에 맞게 Helidon기반 REST API가 잘 구현되었는지 테스트 결과 입니다. **
+> <img src="images/apiary_dredd_result.png" width="100%">
 </details>
 
 
@@ -476,8 +485,8 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 <details>
 <summary>Wercker 계정 생성하기</summary>
 
-> Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만,  
-> Wercker와 GitHub을 활용하여 지속적으로 검증 및 테스트를 수행하고 결과 리포트를 전송합니다.  
+> Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,
+> Wercker와 GitHub을 활용하여 개발 소스 Commit과 동시에 자동으로 테스트를 수행하도록 하여, 검증 및 테스트 및 결과 리포트을 자동화할 수 있습니다.
 > 우선 GitHub 계정을 활용하여 Wercker 계정을 생성합니다.  
 > [Wercker](#http://app.wercker.com)에 접속합니다. 상단의 **Sign Up** 버튼을 클릭합니다.  
 > <img src="images/wercker_home.png" width="80%">
@@ -512,7 +521,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <img src="images/wercker_create_new_app_5.png" width="80%">
 
 > 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.  
-> <img src="images/wercker_trigger_build_now.png" width="60%">
+> <img src="images/wercker_trigger_build_now.png" width="100%">
 
 > 상단 **wercker_pipeline** 버튼을 클릭하면 Wercker Application이 보입니다.  
 > Application을 클릭합니다.  
@@ -536,10 +545,10 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <img src="images/dredd_install_init_2.png" width="80%">
 
 > GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
-> <img src="images/github_dredd.png" width="60%">
+> <img src="images/github_dredd.png" width="80%">
 
-> 다음과 같이 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
-> <img src="images/github_dredd_modify.png" width="60%">
+> 다음과 같이 본인의 apiaryApiKey와 apiaryApiName 값으로 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
+> <img src="images/github_dredd_modify.png" width="80%">
 
 > Wercker trigger가 작동하면서 자동으로 Build가 시작되는 것을 확인할 수 있습니다.  
 > <img src="images/wercker_build_start.png" width="80%">
@@ -549,10 +558,10 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > Apiary의 Tests로 들어가서 **Continuous Integration**을 클릭하면 다음과 같이 Dredd가 전송한   
 > 결과 리포트를 확인할 수 있습니다.  
-> <img src="images/apiary_ci_result.png" width="80%">
+> <img src="images/apiary_ci_result.png" width="100%">
 >
 >> 오류난 상황을 만들어보고 싶으면 다음 Apiary에서 작성한 Movie API의 44번째 라인을 다음과 같이 수정하고  
->> 우측 상단의 Save, Push를 하면 오류 및 오류 정보를 Apiary에서 확인할 수 있습니다. (선택사항 입니다.)
+>> 우측 상단의 Save, Push를 하면 오류 및 오류 정보를 Apiary에서 확인할 수 있습니다. **(선택사항 입니다.)**
 >>```
 >> - id : 2699 (number, required)    ---->     - id : 2699 (string, required)
 >>```
