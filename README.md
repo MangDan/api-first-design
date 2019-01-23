@@ -338,7 +338,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
 > ```
 > mvn -version
-> echo %JAVA_HOME%
+> echo $env:JAVA_HOME
 > ```
 > <img src="images/vscode_confirm_env.png" width="80%">
 
