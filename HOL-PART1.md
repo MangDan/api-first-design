@@ -327,7 +327,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 > Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 패키징 및 서비스 실행합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
-> **Visual Studio Code 터미널에서 수행**
+>    - **Visual Studio Code 터미널에서 수행**
 > ```
 > cd c:\Oracle\workspace\helidon-moviesvc-mp
 >
@@ -379,7 +379,7 @@ workspace 폴더 하위에 생성하므로 해당 폴더로 이동합니다.
 
 > 생성된 프로젝트 폴더로 이동 후 다음과 같이 패키징을 합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
-> **Visual Studio Code 터미널에서 수행**
+>    - **Visual Studio Code 터미널에서 수행**
 >```
 > cd helidon-moviesvc-mp
 >
@@ -393,31 +393,35 @@ workspace 폴더 하위에 생성하므로 해당 폴더로 이동합니다.
 
 Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 소스를 활용하여 패키징 및 테스트합니다.   
 > VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
-> 다음과 같이 처음 생성한 본인의 깃헙 계정에서 관련된 소스를 로컬로 Clone합니다. (apiary blueprint 포함)  
+> 다음과 같이 처음 생성한 본인의 GitHub 계정에서 관련된 소스를 로컬로 Clone합니다. (apiary blueprint 포함)  
 > ***실습 시간 관계상 미리 다운로드 받은 레파지토리로 진행합니다. 아래 단계는 건너뜁니다.***  
 > ***만일, c:\Oracle\oraclecloud_api_handson 폴더가 없을 경우 다음 git clone을 실행하세요.***  
 >```
 > git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
 >```
 
-> Helidon 프로젝트에 movie api 소스를 복사합니다.  
+> GitHub에서 받은 Helidon 프로젝트로 미리 구현해 놓은 Movie API 소스를 내 프로젝트로 복사합니다.  
 >```
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\helidon-moviesvc-mp\src\main\resources
 >
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\helidon-moviesvc-mp\src/main/java/io/helidon/examples/quickstart/mp
 >```
-> <img src="images/clone_cp.png" width="60%">
+> <img src="images/clone_cp.png" width="100%">
 
-> 다시 패키징 및 실행합니다.   
+> 포로젝트를 다시 패키징 및 실행합니다.   
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
+>    - **Visual Studio Code 터미널에서 수행**
 >```
+> cd helidon-moviesvc-mp
+> 
 > mvn package
 >
 > java -jar target/helidon-moviesvc-mp.jar
 >```
-> <img src="images/helidon_movie_run.png" width="60%">
+> <img src="images/helidon_movie_run.png" width="100%">
 
 > 다음과 같이 브라우저로 접속해봅니다.
+> Helidon 템플릿으로 생성한 샘플 REST API가 이제 구현되어 Movie API로써 수행결과를 확인합니다.
 >```
 > http://localhost:8080/movies
 >
