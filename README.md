@@ -942,8 +942,23 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 > Wercker는 GitHub Repository [SCM] 파일을 끌고 온 후 Repository에 포함된 설정 파일과 프로젝트 소스를 기반으로  
 > 동작합니다. 메인은 wercker.yml 파일로 기본적으로 wercker.yml 파일에 정의한 Docker Image를 Pull해서 컨테이너화 하여  
 > 동작하며, wercker.yml에 기술된 파이프라인과 각 파이프라인에 해당하는 스탭으로 실행됩니다.  
-> 파이프라인별로 각각의 Docker Image를 다르게 가져갈 수 있으며, 각 파이프라인별로 Wercker UI에서 워크플로우를 구성할 수도 있습니다. 
-
+> 파이프라인별로 각각의 Docker Image를 다르게 가져갈 수 있으며, 각 파이프라인별로 Wercker UI에서 워크플로우를 구성할 수도 있습니다.  
+> 아래는 wercker.yml파일 예시입니다.
+>```
+> # This references an OpenJDK container from the
+> # Docker Hub https://hub.docker.com/_/openjdk/
+> box: openjdk:8-jdk
+> 
+> # This is the build pipeline
+> build:
+> # This is the step
+>   steps:
+>     - install-packages:
+>       packages: maven
+>     - script:
+>       name: maven build
+>              code: mvn clean package
+>```
 ### 3rd Generation Gateway
 > 서비스는 서비스 특성 혹은 비즈니스 목적에 따라 다양한 환경 (클라우드 혹은 On-premise)에서 운영될 수 있습니다.  
 > 이러한 환경을 위해서는 게이트웨이 또한 서비스와 가장 근접한 위치에 구성이 가능해야 합니다.  
