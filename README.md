@@ -45,6 +45,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;■ Wercker 계정 생성하기  
 &nbsp;&nbsp;&nbsp;&nbsp;■ Continuous Integration 환경 구성 및 실행  
 
+- [PART 1 실습으로 가기](HOL-PART1.md)
+
 #### [PART 2 실습하기](HOL-PART2.md)
 ##### 오라클 데이터베이스와 SQL만 알아도 REST 서비스를 개발한다! 또한 라이프사이클 관리를 위한 차세대 API Platform 환경에 대한 경험까지!!!
 1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기  
