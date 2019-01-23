@@ -323,7 +323,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > <img src="images/mscode_open_workspace.png" width="80%">
 
 > 기본 Helidon MP Project Template Structure 입니다.  
-> <img src="images/helidon_base_structure.png" width="50%">
+> <img src="images/helidon_base_structure.png" width="30%">
 
 > Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 패키징 및 서비스 실행합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
