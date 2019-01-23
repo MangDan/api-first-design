@@ -1,8 +1,8 @@
 # 마이크로 서비스 개발을 위한 API 우선 설계 및 API 구축하기
 
-본 문서는 Oracle Apiary에서 API Blueprint를 활용하여 API 문서를 만들고, 만들어진 문서를 토대로 [Oracle Helidon](http://helidon.io)과 [Oracle Database의 REST Data Service](https://www.oracle.com/database/technologies/appdev/rest.html)로 마이크로 서비스를 구현하는 것을 보여줍니다. 
+본 문서는 Oracle Apiary에서 API Blueprint를 활용하여 API 설계 문서를 보고, 만들어진 문서를 토대로 [Oracle Helidon](http://helidon.io)과 [Oracle Database의 REST Data Service](https://www.oracle.com/database/technologies/appdev/rest.html)로 마이크로 서비스를 구현하는 방법을 보여줍니다. 
 또한 API 문서와 구현된 서비스간의 일치 여부를 확인, 검증하는 [Dredd](https://github.com/apiaryio/dredd) 도구과 CI/CD 도구인 [Wercker](https://app.wercker.com/)를 통합하여 API 문서와 실제 동작하는 서비스간의 지속적인 검증 테스트를 실시하여 서비스에 대한 높은 신뢰와 퀄리티를 유지할 수 있는 방법을 보여줍니다.
-배포된 서비스(ORDS)에 보안 및 다양한 정책을 적용해 보고, 마지막으로 API Gateway에 배포하여 API문서와 API 엔드포인트를 애플리케이션 개발자에게 오픈하는 내용을 담고 있습니다.
+배포된 서비스(ORDS)에 보안 및 다양한 정책을 적용해 보고, 마지막으로 API Gateway에 배포하여 API문서와 API 앤드포인트를 애플리케이션 개발자에게 오픈하는 내용을 담고 있습니다.
 본 문서를 통해 오라클 솔루션을 활용하여 마이크로 서비스 개발에 대한 통합된 개발 라이프사이클을 경험해 볼 수 있습니다.
 
 ***
