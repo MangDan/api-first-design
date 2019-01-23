@@ -563,7 +563,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > API 문서와 서비스를 항상 최신의 상태로 유지시켜 줍니다.  
 
 </details>
-
+<br>
 - [홈으로 가기](README.md)
 <br><br><br><br>
 
