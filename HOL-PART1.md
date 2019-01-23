@@ -1,6 +1,6 @@
 # (PART 1) 마이크로 서비스 개발을 위한 API 우선 설계 및 API 구축하기
 
-### API Blueprint 문서 설계와 Microprofile 기반 Helidon을 활용한 서비스 개발, 그리고 Wercker CI까지!!!
+## API Blueprint 문서 설계와 Microprofile 기반 Helidon을 활용한 서비스 개발, 그리고 Wercker CI까지!!!
 
 ### 전체 흐름도
 ![Scenario2](images/api_first_design_scenario.png)
