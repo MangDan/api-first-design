@@ -35,7 +35,7 @@
 #### [PART 1 실습하기](HOL-PART1.md)
 ##### API Blueprint 문서 설계와 Microprofile 기반 Helidon을 활용한 서비스 개발, 그리고 Wercker CI까지!!!
 1. API 설계 문서 (API Blueprint) 작성하기  
-&nbsp;&nbsp;&nbsp;&nbsp;■ Apiary 계정 생성하기  
+   * Apiary 계정 생성하기  
 &nbsp;&nbsp;&nbsp;&nbsp;■ API Blueprint 설계 문서 작성하기  
 &nbsp;&nbsp;&nbsp;&nbsp;■ API Blueprint GitHub에 푸시하기  
 2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기  
