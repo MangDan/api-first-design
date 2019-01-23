@@ -491,8 +491,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > 굵은 글씨 부분을 따라서 입력합니다.  
 > 참고로 로컬 테스트를 위해서는 Apiary에서 다운로드 받은 apiary 문서 파일 (확장자 .apib)이 필요합니다.  
 > helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비해놓은 파일을 이용해 진행합니다.
-> 
-> dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
+> <code><pre>dredd init -r apiary -j apiaryApiKey:<B>fe79f8fc114e7f3b24681e108ce6a422</B> -j <B>apiaryApiName:movieapi69</B>
 > 
 > ? Location of the API description document <B>apiary.apib</B>
 > ? Command to start the API server under test <B>java -jar target/helidon-moviesvc-mp.jar</B>
