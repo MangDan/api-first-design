@@ -290,7 +290,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 #### 2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
 <details>
-<summary>Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 개발하기</summary>
+<summary>Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 만들기</summary>
 
 > 작업은 Visual Studio Code를 통해서 진행합니다.  
 > Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
