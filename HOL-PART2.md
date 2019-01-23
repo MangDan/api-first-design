@@ -1,14 +1,11 @@
 # (PART 2) 마이크로 서비스 개발을 위한 API 우선 설계 및 API 구축하기
 
 ## 오라클 데이터베이스와 SQL만 알아도 REST 서비스를 개발한다! 또한 라이프사이클 관리를 위한 차세대 API Platform 환경에 대한 경험까지!!!
-1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
-2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배포하기
-3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기 (실습X)
 
-## 전체 흐름도
+### 전체 흐름도
 ![Scenario2](images/api_first_design_scenario.png)
 
-## PART 2 실습하기
+### PART 2 실습하기
 #### 1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
 <details>
 <summary>ORDS REST 서비스 만들고 배포</summary>
