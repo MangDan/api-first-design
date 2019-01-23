@@ -41,15 +41,9 @@
 
 > 조회된 Movie 테이블의 데이트를 확인할 수 있습니다.  
 > 좌측의 REST Data Services 옆 + 버튼을 클릭하여 확장하면 Modules, Privileges, Roles 가 있습니다.  
-> <img src="images/select_movie_click_rest.png" width="80%">
+> <img src="images/select_movie_click_rest.png" width="100%">
 
 > **Modules**를 마우스 우 클릭하고 **New Module**을 선택합니다.  
-> 여기선 Module과 Template이라는 것을 설정 하는데, Module의 URI Prefix와 Template의 URI Pattern을 설정합니다.  
-> 설정이 완료되면 ORDS에서 서비스되는 REST 서비스의 주소는 다음과 같이 구성됩니다.  
-> 스키마 Alias는 사전에 설정이 되어 있으며, 스키마 이름과 동일합니다. (myords0 ~ myords4)
->```
-> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
->```
 
 > Module 설정 Wizard에서 다음과 같이 입력합니다.  
 > 여러 사람이 같이 사용하는 DB이므로 Module은 설정이 안되어 있는 유니크한 값으로 입력합니다.
@@ -64,12 +58,19 @@
 > ```
 > URI Pattern : movie
 > ```
+
+> 설정한 URI Prefix, URI Pattern을 조합하여 ORDS에서 서비스되는 REST 서비스의 주소가 정해집니다.  
+> 스키마 Alias는 사전에 설정이 되어 있으며, 스키마 이름과 동일합니다. (myords0 ~ myords4)
+>```
+> http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
+>```
+
 > <img src="images/ords_template_1.png" width="60%">
 
 > Finish 버튼을 클릭하여 완료합니다.  
 > <img src="images/ords_module_complete_1.png" width="60%">
 
-> 마지막으로 **Handler (Action)**을 추가합니다.  
+> 마지막으로 **Handler (Action)** 을 추가합니다.  
 > 생성한 movie template을 클릭하고 마우스 우 클릭 후 **Add Handler > GET** 을 선택합니다.  
 > <img src="images/handler_get_1.png" width="60%">
 
@@ -90,8 +91,9 @@
 >```
 
 > 다음과 같은 json 데이터가 보이면 성공입니다.  
+> 간단하게 GET 방식의 REST API가 만들어 졌음을 확인할 수 있습니다.
 > **위 서비스는 4.API Platform에서 등록할 때 사용되니, URL을 메모해 놓으시기 바랍니다.**
-> <img src="images/ords_json_all.png" width="60%">
+> <img src="images/ords_json_all.png" width="100%">
 </details>
 
 #### 2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배치하기
@@ -108,14 +110,14 @@
 > 4. awesome.api.world4@gmail.com / Welcome123!!
 > 5. awesome.api.world5@gmail.com / Welcome123!!
 >```
-> <img src="images/apipcs_api.png" width="80%">
+> <img src="images/apipcs_api.png" width="100%">
 
 > 먼저 서비스를 등록합니다.  
 > 서비스 메뉴를 클릭하고, 우측 상단 **생성** 버튼을 클릭합니다.  
-> <img src="images/apipcs_service_1.png" width="80%">
+> <img src="images/apipcs_service_1.png" width="100%">
 
 > 다음과 같이 입력하고 **생성** 버튼을 클릭합니다.  
-> **실습 환경이 단일 인스턴스 환경이므로, 서비스 이름을 다르게 주어야 합니다.**  
+> **하나의 실습용 API Platform 서비스을 모든 실습자가 사용하는 상황이므로, 이름이 겹치지 않게 다르게 주어야 합니다.**  
 >```
 > 이름 : My ORDS Service - "이니셜 혹은 유니크한 값" (e.g. My ORDS Service - Oracle) 
 > 버전 : 1.0  
@@ -127,10 +129,10 @@
 > <img src="images/apipcs_service_create.png" width="60%">
 
 > API 메뉴를 클릭하고 **생성** 버튼을 클릭합니다.  
-> <img src="images/apipcs_first_api.png" width="80%">
+> <img src="images/apipcs_first_api.png" width="100%">
 
 > 다음과 같이 입력하고 **생성** 버튼을 클릭합니다.  
-> **실습 환경이 단일 인스턴스 환경이므로, API 이름을 다르게 주어야 합니다.**  
+> **하나의 실습용 API Platform 서비스을 모든 실습자가 사용하는 상황이므로, 이름이 겹치지 않게 다르게 주어야 합니다.**  
 >```
 > 이름 : Movie API - "이니셜 혹은 유니크한 값" (e.g. Movie API - Oracle)  
 > 버전 : 1.0
@@ -138,9 +140,9 @@
 > <img src="images/apipcs_api_create.png" width="60%">
 
 > 생성된 Movie API를 클릭하고 좌측 **API 구현** 아이콘을 클릭합니다.  
-> API에 대한 엔드포인트, 호출할 서비스 지정, 보안 및 다양한 정책을 적용하는 부분입니다.  
+> API에 대한 수신할 엔드포인트, 호출할 대상서비스 지정, 보안 및 다양한 정책을 적용하는 부분입니다.  
 > **API 요청** 클릭 후 우측 **편집** 버튼을 클릭합니다.  
-> <img src="images/apipcs_api_impl.png" width="60%">
+> <img src="images/apipcs_api_impl.png" width="100%">
 
 > API 요청에서는 노출할 Movie API에 대한 엔드포인트를 지정할 수 있습니다.  
 > API 끝점 URL에 다음과 같이 입력하고 적용합니다.  
@@ -150,7 +152,7 @@
 > <img src="images/apipcs_api_impl_req.png" width="60%">
 
 > 다음은 서비스를 지정하는 부분입니다. **서비스 요청**을 클릭하고 우측 편집 버튼을 클릭합니다.  
-> **서비스 선택**을 클릭하고 생성한 서비스를 지정하고 적용합니다.  
+> **서비스 선택**을 클릭하고 앞서 등록한 서비스를 지정하고 적용합니다.  
 > <img src="images/apipcs_api_service.png" width="60%">  
 > <img src="images/apipcs_api_service_select.png" width="60%">  
 
