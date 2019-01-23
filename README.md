@@ -354,8 +354,9 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 </details><br>
 
 > 여기서는 MicroProfile 기반 Helidon 프로젝트로 API를 개발합니다. [참고 -> Helidon](#helidon)  
-> Maven Generate를 통해 Helidon Template Project를 다운로드 받을 수 있지만, 
-> (참조: Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 방법) ***실습 시간 관계상 미리 생성한 프로젝트로 진행합니다.***  
+> ***실습 시간 관계상 미리 생성한 프로젝트로 진행합니다.***  
+> c:\Oracle\workspace\helidon-moviesvc-mp 프로젝트 폴더가 없을 경우 ***Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 방법***  
+> 을 참고하시기 바랍니다.
 > Visual Studio Code 좌측 상단의 아래 이미지 클릭, **폴더 열기** 버튼 클릭 후 c:\Oracle\workspace 폴더를 선택,  
 > 열기를 선택합니다.  
 > <img src="images/mscode_open_workspace.png" width="80%">
@@ -382,11 +383,17 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 ***
 
 <details>
-<summary>:point_right: Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 방법 (클릭)</summary>
+<summary>:point_right: (선택사항) Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 방법 (클릭)</summary>
 
 Maven generate를 통해 Helidon 템플릿 프로젝트와 디자인 타임 라이브러리, 런타임 라이브러리를  
-다운로드 받습니다. 네트워크 환경에 따라 대략 5분 ~ 10분 가량 소요됩니다.
-다음은 실행 명령어 예제입니다. 여기서는 Helidon (MP)로 진행합니다.
+다운로드 받습니다. 네트워크 환경에 따라 대략 5분 ~ 10분 가량 소요됩니다.  
+다음은 실행 명령어 예제입니다. 실습에서는 Helidon (MP)만 생성합니다.  
+workspace 폴더 하위에 생성하므로 해당 폴더로 이동합니다.  
+> ```
+> cd c:\Oracle\workspace
+> ```
+
+다음을 실행합니다.
 > Helidon MP
 > ```
 > mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=helidon-moviesvc-mp -Dpackage=io.helidon.examples.quickstart.mp
@@ -407,8 +414,10 @@ Maven generate를 통해 Helidon 템플릿 프로젝트와 디자인 타임 라�
 > 생성된 프로젝트 폴더로 이동 후 다음과 같이 패키징을 합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
 >```
-> cd quickstart-mp
+> cd helidon-moviesvc-mp
+>
 > mvn package
+>
 > java -jar target/helidon-moviesvc-mp.jar
 >```
 </details>
@@ -427,6 +436,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > Helidon 프로젝트에 movie api 소스를 복사합니다.  
 >```
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\helidon-moviesvc-mp\src\main\resources
+>
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\*.java c:\Oracle\workspace\helidon-moviesvc-mp\src/main/java/io/helidon/examples/quickstart/mp
 >```
 > <img src="images/clone_cp.png" width="60%">
@@ -604,11 +614,10 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > SQL Developer 좌측 상단의 + 버튼을 클릭하고 Connection을 생성 합니다.  
 > 다음과 같이 입력하고, Connect 버튼을 클릭합니다.  
-> ***(스키마당 동시에 SQL Developer에서 접속할 수 있는 세션수 제한이 있을까? 확인 필요함 ㅜㅜ)***
 > ```
-> Connection Name - myords@apidb
-> Username - myords
-> Password - Welcome123!
+> Connection Name - myords#@apidb (# : 0 ~ 4)
+> Username - myords# (# : 0 ~ 4)
+> Password - Welcome123!!
 > Hostname - 129.213.146.191
 > Port - 1521
 > SID - apidb
@@ -630,7 +639,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > **Modules**를 마우스 우 클릭하고 **New Module**을 선택합니다.  
 > 여기선 Module과 Template이라는 것을 설정 하는데, Module의 URI Prefix와 Template의 URI Pattern을 설정합니다.  
 > 설정이 완료되면 ORDS에서 서비스되는 REST 서비스의 주소는 다음과 같이 구성됩니다.  
-> 스키마 Alias는 사전에 설정이 되어 있으며, 현재 스키마의 Alias는 **myords** 입니다.  
+> 스키마 Alias는 사전에 설정이 되어 있으며, 스키마 이름과 동일합니다. (myords0 ~ myords9)
 >```
 > http://{ORDS서버주소}/{ORDS포트}/ords/{스키마Alias}/{Module_URI_Prefix}/{URI_Pattern}  
 >```
@@ -682,11 +691,15 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 <details>
 <summary>서비스 등록 및 API 정책 적용하기</summary>
 
-> API Management Portal에 접속합니다.  (관리자 계정 외 별도 계정을 만들어야 할 거 같음 ㅜㅜ)
+> API Management Portal에 접속합니다. (관리자 계정 총 5개)
 >```
 > Management Portal : https://apipcs-mangdan1.apiplatform.ocp.oraclecloud.com/apiplatform
-> ID : donghu.kim@oracle.com
-> Password : **********
+> ID (PW) : 
+> 1. awesome.api.world1@gmail.com / Welcome123!!
+> 2. awesome.api.world2@gmail.com / Welcome123!!
+> 3. awesome.api.world3@gmail.com / Welcome123!!
+> 4. awesome.api.world4@gmail.com / Welcome123!!
+> 5. awesome.api.world5@gmail.com / Welcome123!!
 >```
 > <img src="images/apipcs_api.png" width="80%">
 
