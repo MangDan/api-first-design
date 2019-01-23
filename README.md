@@ -32,26 +32,26 @@
 ![Scenario1](images/api_first_design_scenario_0.png)
 
 ![Scenario2](images/api_first_design_scenario.png)
-#### [PART 1](#HOL-PART1.md)
+#### [PART 1](HOL-PART1.md)
 ###### API Blueprint 문서 설계와 Microprofile 기반 Helidon을 활용한 서비스 개발, 그리고 Wercker CI까지!!!
 1. API 설계 문서 (API Blueprint) 작성하기  
-&nbsp;&nbsp;&nbsp;&nbsp;- Apiary 계정 생성하기
-- API Blueprint 설계 문서 작성하기
-- API Blueprint GitHub에 푸시하기
-2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
-- Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 만들기
-- Dredd를 활용하여 API 설계문서와 서비스간의 일치 여부 검증하기
-3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
-- Wercker 계정 생성하기
-- Continuous Integration 환경 구성 및 실행
+&nbsp;&nbsp;&nbsp;&nbsp;■ Apiary 계정 생성하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ API Blueprint 설계 문서 작성하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ API Blueprint GitHub에 푸시하기  
+2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 만들기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ Dredd를 활용하여 API 설계문서와 서비스간의 일치 여부 검증하기  
+3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ Wercker 계정 생성하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ Continuous Integration 환경 구성 및 실행  
 
-#### [PART 2](##HOL-PART2.md)
+#### [PART 2](HOL-PART2.md)
 ###### 오라클 데이터베이스와 SQL만 알아도 REST 서비스를 개발한다! 또한 라이프사이클 관리를 위한 차세대 API Platform 환경에 대한 경험까지!!!
-1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
-- ORDS REST 서비스 만들고 배포하기
-2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배포하기
-- 서비스 등록 및 API 정책 적용하기
-- 배치된 서비스 테스트 하기
-3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기
-- Apiary 연동 및 API 개발자 포탈에 게시 (실습X)
-- 개발자 포탈에서 API 검색 및 문서 보기
+1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ ORDS REST 서비스 만들고 배포하기  
+2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배포하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ 서비스 등록 및 API 정책 적용하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ 배치된 서비스 테스트 하기  
+3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기  
+&nbsp;&nbsp;&nbsp;&nbsp;■ Apiary 연동 및 API 개발자 포탈에 게시 (실습X)  
+&nbsp;&nbsp;&nbsp;&nbsp;■ 개발자 포탈에서 API 검색 및 문서 보기  
