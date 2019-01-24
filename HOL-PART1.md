@@ -493,7 +493,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 <details>
 <summary>Wercker 계정 생성하기</summary>
 
-> [Wercker 바로가기](#https://app.wercker.com)  
+> [Wercker 바로가기](https://app.wercker.com)  
 > Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,
 > Wercker와 GitHub을 활용하여 개발 소스 Commit과 동시에 자동으로 테스트를 수행하도록 하여, 검증 및 테스트 및 결과 리포트을 자동화할 수 있습니다.
 > 우선 GitHub 계정을 활용하여 Wercker 계정을 생성합니다.  
