@@ -541,7 +541,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 > 첫 번째 빌드에서는 오류는 발생하지 않았지만, GitHub Repository에 있는 dredd.yml 파일에 기술되어야 하는  
 > apiaryApiKey와 apiaryApiName이 없어서 Apiary로 테스트 결과 데이트가 전송되지 않습니다.  
-> Apiary의 상단 Tests 링크를 클릭하고 dredd init 라인에 있는 apiaryApiKey와 apiaryApiName을 복사합니다.  
+> Apiary의 상단 Tests 링크를 클릭하고 Tutorial 탭에서  dredd init 라인에 있는 apiaryApiKey와 apiaryApiName을 복사합니다.  
 > <img src="images/dredd_install_init_2.png" width="80%">
 
 > GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
