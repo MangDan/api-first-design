@@ -100,7 +100,8 @@
 <details>
 <summary>서비스 등록 및 API 정책 적용하기</summary>
 
-> API Management Portal에 접속합니다. (관리자 계정 총 5개)
+> API Management Portal에 접속합니다. (사용자 계정 총 5개)
+> 실수로 인한 계정 잠김 등을 고려하여 예비로 5개 계정을 만들어 두었습니다. 권한은 모두 동일하니 원하는 것을 선택하여 사용하세요.
 >```
 > Management Portal : https://apipcs-mangdan1.apiplatform.ocp.oraclecloud.com/apiplatform
 > ID (PW) : 
