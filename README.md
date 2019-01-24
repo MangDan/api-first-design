@@ -28,7 +28,20 @@
 
 ***
 
-### 실습 내용
+### 실습 목표
+
+클라우드 환경에서 운영되는 가상의 영화 예매와 영화 관련상품을 판매하는 사이트에서 영화 정보를 제공하는 새로운 서비스를 제공할  
+계획이 있다고 가정합니다.  
+![Scenario1](images/api_handson_objective_1.png)
+
+이 영화 정보 제공 서비스는 향후 오픈 API로 서비스 할 계획이 있으며, 설계와 개발단계에서의 빠른 피드백으로 코드의 퀄리티를 높여  
+운영에서의 오류를 최소화 하고, 지속적인 API 문서 관리와 사용량에 따라 유연하게 확장 가능한 모델이 필요합니다.
+![Scenario1](images/api_handson_objective_2.png)
+
+이러한 요건을 위해 다음 서비스와 기술을 활용하여 영화 정보 제공 마이크로 서비스 구축을 해보는 것을 목표로 합니다.
+![Scenario1](images/api_handson_objective_3.png)
+
+### 실습 전체 흐름
 ![Scenario1](images/api_first_design_scenario_0.png)
 
 ![Scenario2](images/api_first_design_scenario.png)
