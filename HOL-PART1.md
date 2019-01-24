@@ -358,11 +358,19 @@ workspace 폴더 하위에 생성하므로 해당 폴더로 이동합니다.
 > cd c:\Oracle\workspace
 > ```
 
-다음을 실행합니다.
-> Helidon MP
+다음을 실행합니다. 
+> Helidon MP 
 > ```
 > mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=helidon-moviesvc-mp -Dpackage=io.helidon.examples.quickstart.mp
 > ```
+
+> Helidon MP **Windows PowerShell 에서는 다음과 같이 실행합니다.**
+> ```
+> mvn archetype:generate "-DinteractiveMode=false" "-DarchetypeGroupId=io.helidon.archetypes" "-DarchetypeArtifactId=helidon-quickstart-se" "-DarchetypeVersion=0.11.0" "-DgroupId=io.helidon.examples" "-DartifactId=helidon-moviesvc-mp" "-Dpackage=io.helidon.examples.quickstart.se"
+> ```
+
+
+
 
 **Helidon SE는 본 실습에서 사용하지 않습니다.**
 > Helidon SE
