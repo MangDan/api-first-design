@@ -523,9 +523,10 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 
 > [Wercker 바로가기](https://app.wercker.com)  
 > Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,
-> Wercker와 GitHub을 활용하여 개발 소스 Commit과 동시에 자동으로 테스트를 수행하도록 하여, 검증 및 테스트 및 결과 리포트을 자동화할 수 있습니다.
-> 우선 GitHub 계정을 활용하여 Wercker 계정을 생성합니다.  
-> [Wercker](#http://app.wercker.com)에 접속합니다. 상단의 **Sign Up** 버튼을 클릭합니다.  
+> Wercker와 SCM(GitHub)을 활용하여 API 문서 및 개발 소스 변경을 감지하여 검증 및 테스트를 자동화 할 수 있습니다.  
+> 여기선 이 과정을 보여줍니다. 우선 [Wercker](http://app.wercker.com)에 접속, GitHub 계정을 활용하여  
+> Wercker 계정을 생성합니다. [Wercker 바로가기](http://app.wercker.com)  
+> 상단의 **Sign Up** 버튼을 클릭합니다.  
 > <img src="images/wercker_home.png" width="80%">
 
 > **SIGN UP USING GITHUB** 버튼을 클릭하고 GitHub 아이디와 패스워드를 입력합니다.  
@@ -560,8 +561,6 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 > 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.  
 > <img src="images/wercker_trigger_build_now.png" width="100%">
 
-> 구성한 Wercker Application에 의해 빌드가 진행되는 상황과 내역을 볼 수 있습니다.  
-
 > Wercker trigger가 작동하면서 자동으로 Build가 시작되는 것을 확인할 수 있습니다.  
 > <img src="images/wercker_build_start.png" width="80%">
 
@@ -569,11 +568,11 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 > <img src="images/wercker_build_complete.png" width="80%">
 
 > Apiary의 Tests로 들어가서 **Continuous Integration**을 클릭하면 다음과 같이 Dredd가 전송한   
-> 결과 리포트를 확인할 수 있습니다.  
+> 결과 리포트를 확인할 수 있습니다. (안보이면 F5 Refresh)  
 > <img src="images/apiary_ci_result.png" width="100%">
 >
->> 오류난 상황을 만들어보고 싶으면 다음 Apiary에서 작성한 Movie API의 44번째 라인을 다음과 같이 수정하고  
->> 우측 상단의 Save, Push를 하면 오류 및 오류 정보를 Apiary에서 확인할 수 있습니다. **(선택사항 입니다.)**
+>> **(선택사항)** 오류난 상황을 만들어보고 싶으면 다음 Apiary에서 작성한 Movie API의 44번째 라인의 **number**를  
+>> **string**으로 다음과 같이 수정하고 우측 상단의 Save, Push를 하면 오류 및 오류 정보를 Apiary에서 확인할 수 있습니다.  
 >>```
 >> - id : 2699 (number, required)    ---->     - id : 2699 (string, required)
 >>```
