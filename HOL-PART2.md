@@ -280,7 +280,8 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 </details>
 <br>
 
-- [홈으로 가기](README.md)
+- [홈으로 가기](README.md)  
+- [PART1 가기](HOL-PART1.md)
 <br><br><br><br>
 
 ## 참고
