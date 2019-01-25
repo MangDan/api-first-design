@@ -185,7 +185,7 @@
 > 다음과 같이 설정하고 **적용** 버튼을 클릭합니다.  
 >```
 > API 비율 제한 : 논리적 게이트웨이당
-> API 비율 제한 : 5**
+> API 비율 제한 : 5
 > 시간 간격 : 분
 >```
 > <img src="images/apipcs_api_traffic_setting.png" width="60%">  
