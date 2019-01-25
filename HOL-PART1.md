@@ -598,8 +598,8 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 
 > <img src="images/wercker_first_build.png" width="80%">
 </details>
-<br>
 
+<br>
 - [홈으로 가기](README.md)  
 - [PART2 가기](HOL-PART2.md)
 <br><br><br><br>
