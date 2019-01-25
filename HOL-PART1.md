@@ -486,7 +486,7 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 
 > <img src="images/local_dredd_test.png" width="100%">
 
-> Apiary Tests 로 다시 들어가보면 테스트 결과 리포트를 볼 수 있습니다.  
+> Apiary Tests의 **Local Development**로 들어가면 테스트 결과 리포트를 볼 수 있습니다. 안보이면 Refresh (F5)  
 > ** Apiary에서 정의한 Movie API 스펙에 맞게 Helidon기반 REST API가 잘 구현되었는지 테스트한 결과 입니다. **
 > <img src="images/apiary_dredd_result.png" width="100%">
 </details>
