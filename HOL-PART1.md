@@ -591,7 +591,8 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 </details>
 <br>
 
-- [홈으로 가기](README.md)
+- [홈으로 가기](README.md)  
+- [PART2 가기](HOL-PART2.md)
 <br><br><br><br>
 
 ## 참고
