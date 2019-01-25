@@ -510,6 +510,7 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 
 <details>
 <summary>GitHub의 Dredd.yml 파일 업데이트 및 커밋</summary>
+ 
 > Continuous Integration & Delivery 솔루션인 Wercker는 GitHub과 같은 SCM과 연결되어 동작합니다.  
 > 여기서는 처음에 생성한 GitHub Repository를 연결하여 진행합니다.  
 >```
