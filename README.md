@@ -39,7 +39,7 @@
 이러한 요건을 위해 다음의 서비스와 기술을 활용하여 영화 정보 제공 마이크로 서비스 구축을 해보는 것을 목표로 합니다.  
 ![Scenario1](images/api_handson_objective_3.png)
 
-### 실습 전체 흐름
+### 전체 구현 흐름
 ![Scenario1](images/api_first_design_scenario_0.png)
 
 ![Scenario2](images/api_first_design_scenario.png)
