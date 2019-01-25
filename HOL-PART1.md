@@ -459,15 +459,14 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 > 실습 시간 관계상 helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비되어 있습니다.(apiary.apib)  
 > **여기서 apairyApikey와 ApiaryApiName은 본인의 Apiary 문서로 리포트를 전송하기 위해 사용됩니다.**  
 > **아래 내용 중 굵게 표시된 부분을 동일하게 입력하고 엔터를 입력합니다.**  
->
-> <code><pre>dredd init -r apiary -j apiaryApiKey:<B>{본인의 apiaryApiKey}</B> -j <B>apiaryApiName:{본인의 apiaryApiName}</B>
+> <code><pre>dredd init -r apiary -j apiaryApiKey:<B>{본인의 apiaryApiKey}</B> -j <B>apiaryApiName:{본인의 apiaryApiName}</B>  
 > 
-> ? Location of the API description document <B>apiary.apib</B>
-> ? Command to start the API server under test <B>java -jar target/helidon-moviesvc-mp.jar</B>
-> ? Host of the API under test <B>http://localhost:8080</B>
-> ? Do you want to use hooks to customize Dredd's behavior? <B>Y</B>
-> ? Programming language of the hooks <B>JavaScript</B>
-> ? Found Travis CI configuration, do you want to add Dredd? <B>N</B>
+> ? Location of the API description document <B>apiary.apib</B>  
+> ? Command to start the API server under test <B>java -jar target/helidon-moviesvc-mp.jar</B>  
+> ? Host of the API under test <B>http://localhost:8080</B>  
+> ? Do you want to use hooks to customize Dredd's behavior? <B>Y</B>  
+> ? Programming language of the hooks <B>JavaScript</B>  
+> ? Found Travis CI configuration, do you want to add Dredd? <B>N</B>  
 > </pre></code>
 >
 > ![dredd_init](images/dredd_init.png)
