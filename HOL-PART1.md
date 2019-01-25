@@ -529,7 +529,8 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 
 > 다음과 같이 본인의 apiaryApiKey와 apiaryApiName 값으로 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
 > <img src="images/github_dredd_modify.png" width="80%">
-
+</details>
+ 
 <details>
 <summary>Wercker 계정 생성 및 빌드</summary>
 
@@ -594,7 +595,6 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 > 다양한 채널 (Apiary, 이메일, Slack 등)로 전송해줍니다.  
 > Wercker가 CI/CD 솔루션이므로 모든 테스트를 마친 API는 최종적으로는 다양한 운영 환경에 자동 배포가 되며, 
 > API 문서와 서비스를 항상 최신의 상태로 유지시켜 줍니다.  
-
 
 > <img src="images/wercker_first_build.png" width="80%">
 </details>
