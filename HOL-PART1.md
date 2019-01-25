@@ -498,8 +498,31 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 
 
 #### 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
+
 <details>
-<summary>Wercker 계정 생성하기</summary>
+<summary>GitHub의 Dredd.yml 파일 업데이트 및 커밋</summary>
+> Continuous Integration & Delivery 솔루션인 Wercker는 GitHub과 같은 SCM과 연결되어 동작합니다.  
+> 여기서는 처음에 생성한 GitHub Repository를 연결하여 진행합니다.  
+>```
+> https://github.com/{본인깃헙계정명}/oraclecloud_api_handson
+>```
+
+> 위 GitHub Repository에는 Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며,  
+> Wercker는 wercker.yml 파일에 기술된 스탭과 파이프라인을 기반으로 실행됩니다. [(참고 -> Wercker Config)](#wercker-config)  
+> <img src="images/mygithub_repo.png" width="60%">
+
+> 여기서 Dredd.yml의 apiaryApiKey와 apiaryApiName은 본인이 만든 API Blueprint를 기준으로 변경해야 합니다.  
+> Apiary의 상단 Tests 링크를 클릭하고 Tutorial 탭에서 dredd init 라인에 있는 apiaryApiKey와 apiaryApiName을 복사합니다.  
+> <img src="images/dredd_install_init_2.png" width="80%">
+
+> GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
+> <img src="images/github_dredd.png" width="80%">
+
+> 다음과 같이 본인의 apiaryApiKey와 apiaryApiName 값으로 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
+> <img src="images/github_dredd_modify.png" width="80%">
+
+<details>
+<summary>Wercker 계정 생성 및 빌드</summary>
 
 > [Wercker 바로가기](https://app.wercker.com)  
 > Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,
@@ -540,32 +563,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.  
 > <img src="images/wercker_trigger_build_now.png" width="100%">
 
-> 상단 **wercker_pipeline** 버튼을 클릭하면 Wercker Application이 보입니다.  
-> Application을 클릭합니다.  
-> <img src="images/wercker_pipeline.png" width="80%">
-
 > 구성한 Wercker Application에 의해 빌드가 진행되는 상황과 내역을 볼 수 있습니다.  
-> <img src="images/wercker_first_build.png" width="80%">
-</details>
-
-<details>
-<summary>Continuous Integration 환경 구성 및 실행</summary>
-
-> 처음 GitHub Repository를 생성할 때 따로 제공해드린 GitHub Repository를 Import한 것을 기억하실 겁니다.  
-> Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며, Wercker는 wercker.yml 파일에 기술된  
-> 스탭과 파이프라인을 기반으로 실행됩니다. [(참고 -> Wercker Config)](#wercker-config)  
-> <img src="images/mygithub_repo.png" width="60%">
-
-> 첫 번째 빌드에서는 오류는 발생하지 않았지만, GitHub Repository에 있는 dredd.yml 파일에 기술되어야 하는  
-> apiaryApiKey와 apiaryApiName이 없어서 Apiary로 테스트 결과 데이트가 전송되지 않습니다.  
-> Apiary의 상단 Tests 링크를 클릭하고 Tutorial 탭에서  dredd init 라인에 있는 apiaryApiKey와 apiaryApiName을 복사합니다.  
-> <img src="images/dredd_install_init_2.png" width="80%">
-
-> GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
-> <img src="images/github_dredd.png" width="80%">
-
-> 다음과 같이 본인의 apiaryApiKey와 apiaryApiName 값으로 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
-> <img src="images/github_dredd_modify.png" width="80%">
 
 > Wercker trigger가 작동하면서 자동으로 Build가 시작되는 것을 확인할 수 있습니다.  
 > <img src="images/wercker_build_start.png" width="80%">
@@ -588,6 +586,8 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > Wercker가 CI/CD 솔루션이므로 모든 테스트를 마친 API는 최종적으로는 다양한 운영 환경에 자동 배포가 되며, 
 > API 문서와 서비스를 항상 최신의 상태로 유지시켜 줍니다.  
 
+
+> <img src="images/wercker_first_build.png" width="80%">
 </details>
 <br>
 
