@@ -522,7 +522,7 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 <summary>Wercker 계정 생성 및 빌드</summary>
 
 > [Wercker 바로가기](https://app.wercker.com)  
-> Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,
+> Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,  
 > Wercker와 SCM(GitHub)을 활용하여 API 문서 및 개발 소스 변경을 감지하여 검증 및 테스트를 자동화 할 수 있습니다.  
 > 여기선 이 과정을 보여줍니다. 우선 [Wercker](http://app.wercker.com)에 접속, GitHub 계정을 활용하여  
 > Wercker 계정을 생성합니다. [Wercker 바로가기](http://app.wercker.com)  
