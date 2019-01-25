@@ -443,20 +443,20 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 > Tutorials 탭을 클릭하면 다음과 같이 3 스탭으로 Dredd 테스트를 수행하도록 가이드를 볼 수 있습니다.  
 > ![dredd_install_init](images/dredd_install_init_new.png)
 
-> 위 작업을 순서대로 수행합니다.  
+> 위 작업을 순서대로 수행할 것입니다.  
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
 > 작업 위치는 Helidon Project (quickstart-mp) 입니다.  
 >    - **Visual Studio Code 터미널에서 수행**
 
-> 1. Dredd 툴을 설치합니다.  
+> 1) Dredd 툴을 설치합니다.  
 >```
 > npm install -g dredd 
 >```
 > <img src="images/dredd_install.png" width="100%">
 
-> 2. dredd init 명령을 수행합니다.  
+> 2) dredd init 명령을 실행합니다.  
 > 참고로 로컬 테스트를 위해서는 Apiary에서 다운로드 받은 API Blueprint 파일 (확장자 .apib)이 필요합니다.  
-> 실습 시간 관계상 helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비되어 있습니다.(apiary.apib)  
+> 실습 시간 관계상 helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비되어 있습니다.(apiary.apib)
 >    - **여기서 apairyApikey와 ApiaryApiName은 본인의 Apiary 문서로 리포트를 전송하기 위해 사용됩니다.**  
 >    - **아래 내용 중 굵게 표시된 부분을 동일하게 입력하고 엔터를 입력합니다.**
 > <code><pre>dredd init -r apiary -j apiaryApiKey:<B>{본인의 apiaryApiKey}</B> -j <B>{본인의 apiaryApiName}:movieapi69</B>
@@ -478,7 +478,7 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 >> (New-Object Net.WebClient).DownloadFile('https://{apiaryApiName}.docs.apiary.io/api-description-document','c:\Oracle\workspace\helidon-moviesvc-mp\apiary.apib')
 >>```
 
-> 3. Dredd.yml 파일이 생성되었습니다. Dredd.yml 파일을 이용하여 Dredd를 실행합니다.  
+> 3) Dredd.yml 파일이 생성되었습니다. Dredd.yml 파일을 이용하여 Dredd를 실행합니다.  
 >```
 > dredd
 >```
