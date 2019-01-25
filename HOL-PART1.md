@@ -354,6 +354,7 @@ Maven generate (참조 -> [Maven Generate Option](#maven-generate-option)를 통
 디자인 타임 라이브러리, 런타임 라이브러리를 다운로드 받습니다. 네트워크 환경에 따라 대략 5분 ~ 10분 가량 소요됩니다.  
 다음은 실행 명령어 예제입니다. 실습에서는 Helidon (MP)만 생성합니다.  
 workspace 폴더 하위에 생성하므로 해당 폴더로 이동합니다.  
+:exclamation: Maven generate는 현재 Windows PowerShell에서 오류가 발생합니다.  Windows Command에서 실행하세요.  
 > ```
 > cd c:\Oracle\workspace
 > ```
@@ -363,14 +364,6 @@ workspace 폴더 하위에 생성하므로 해당 폴더로 이동합니다.
 > ```
 > mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.helidon.archetypes -DarchetypeArtifactId=helidon-quickstart-mp -DarchetypeVersion=0.11.0 -DgroupId=io.helidon.examples -DartifactId=helidon-moviesvc-mp -Dpackage=io.helidon.examples.quickstart.mp
 > ```
-
-> Helidon MP **Windows PowerShell 에서는 다음과 같이 실행합니다.**
-> ```
-> mvn archetype:generate "-DinteractiveMode=false" "-DarchetypeGroupId=io.helidon.archetypes" "-DarchetypeArtifactId=helidon-quickstart-se" "-DarchetypeVersion=0.11.0" "-DgroupId=io.helidon.examples" "-DartifactId=helidon-moviesvc-mp" "-Dpackage=io.helidon.examples.quickstart.se"
-> ```
-
-
-
 
 **Helidon SE는 본 실습에서 사용하지 않습니다.**
 > Helidon SE
@@ -405,7 +398,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > ***실습 시간 관계상 미리 다운로드 받은 레파지토리로 진행합니다. 아래 단계는 건너뜁니다.***  
 > ***만일, c:\Oracle\oraclecloud_api_handson 폴더가 없을 경우 다음 git clone을 실행하세요.***  
 >```
-> git clone https://github.com/{깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
+> git clone https://github.com/{본인깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
 >```
 
 > GitHub에서 받은 Helidon 프로젝트로 미리 구현해 놓은 Movie API 소스를 내 프로젝트로 복사합니다.  
@@ -451,6 +444,11 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > 보이는 순서대로 로컬 PC에서 수행하면 됩니다.
 > 2 번째 부분은 dredd init하는 부분으로 apiaryApiKey와 apiaryApiName은 dredd와 Apiary 통신을 위해  
 > **개인별로 다 다르므로 Apiary 웹 페이지에서 보이는 본인 것을 사용하시기 바랍니다. 이후 실습을 위해 메모장에 복사해 둡니다.**
+>```
+> 예시)
+> dredd init -r apiary -j apiaryApiKey:fe79f8fc114e7f3b24681e108ce6a422 -j apiaryApiName:movieapi68
+>```
+
 > ![dredd_install_init](images/dredd_install_init_new.png)
 
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
@@ -464,8 +462,18 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > <img src="images/dredd_install.png" width="100%">
 
 > Apiary 본인 계정의 Tests에서 확인한 2번째 dredd init 명령을 수행합니다.
-> 참고로 로컬 테스트를 위해서는 Apiary에서 다운로드 받은 apiary 문서 파일 (확장자 .apib)이 필요합니다.  
-> helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비해놓은 파일을 이용해 진행합니다.
+> 참고로 로컬 테스트를 위해서는 Apiary에서 다운로드 받은 API Blueprint 파일 (확장자 .apib)이 필요합니다.  
+> helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비해놓은 파일(apiary.apib)을 이용해 진행합니다.
+>> 만일 본인이 직접 작성한 API Blueprint 파일을 사용하고 싶으면 다음 명령어로 직접 다운로드 받아서 진행하시기 바랍니다.
+>>    - **Windows Powershell 명령어 이므로 Visual Studio Code 터미널에서 수행**
+>>    - **DownloadFile URL에서 apiaryApiName은 위에 메모한 apiaryApiName 이름으로 변경하여 실행합니다.**
+>>```
+>> (New-Object Net.WebClient).DownloadFile('https://{apiaryApiName}.docs.apiary.io/api-description-document','c:\Oracle\workspace\helidon-moviesvc-mp\apiary.apib')
+>```
+
+
+> 다음과 같이 Dredd Init을 실행하여 dredd.yml 파일을 생성합니다.  
+> **본인의 Apiary 문서로 리포트를 전달해야 하므로, 반드시 위에서 메모한 본인의 apairyApikey와 ApiaryApiName을 사용하셔야 합니다.**
 > <code><pre>dredd init -r apiary -j apiaryApiKey:<B>{본인의 apiaryApiKey}</B> -j <B>apiaryApiName:{본인의 apiaryApiName}</B>
 > 
 > ? Location of the API description document <B>apiary.apib</B>
