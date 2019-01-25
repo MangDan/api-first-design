@@ -448,27 +448,26 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 > 작업 위치는 Helidon Project (quickstart-mp) 입니다.  
 >    - **Visual Studio Code 터미널에서 수행**
 
-> 1) Dredd 툴을 설치합니다.  
+> :one: Dredd 툴을 설치합니다.  
 >```
-> npm install -g dredd 
+> npm install -g dredd
 >```
 > <img src="images/dredd_install.png" width="100%">
 
-> 2) dredd init 명령을 실행합니다.  
+> :two: dredd init 명령을 실행합니다.  
 > 참고로 로컬 테스트를 위해서는 Apiary에서 다운로드 받은 API Blueprint 파일 (확장자 .apib)이 필요합니다.  
 > 실습 시간 관계상 helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비되어 있습니다.(apiary.apib)
 >    - **여기서 apairyApikey와 ApiaryApiName은 본인의 Apiary 문서로 리포트를 전송하기 위해 사용됩니다.**  
 >    - **아래 내용 중 굵게 표시된 부분을 동일하게 입력하고 엔터를 입력합니다.**
-> <code><pre>dredd init -r apiary -j apiaryApiKey:<B>{본인의 apiaryApiKey}</B> -j <B>{본인의 apiaryApiName}:movieapi69</B>
-> 
-> ? Location of the API description document <B>apiary.apib</B>
-> ? Command to start the API server under test <B>java -jar target/helidon-moviesvc-mp.jar</B>
-> ? Host of the API under test <B>http://localhost:8080</B>
-> ? Do you want to use hooks to customize Dredd's behavior? <B>Y</B>
-> ? Programming language of the hooks <B>JavaScript</B>
-> ? Found Travis CI configuration, do you want to add Dredd? <B>N</B>
-> </pre></code>
+>> dredd init -r apiary -j apiaryApiKey:***{본인의 apiaryApiKey}*** -j apiaryApiName:***{본인의 apiaryApiName}***
+>> ? Location of the API description document ***apiary.apib***
+>> ? Command to start the API server under test ***java -jar target/helidon-moviesvc-mp.jar***
+>> ? Host of the API under test ***http://localhost:8080***
+>> ? Do you want to use hooks to customize Dredd's behavior? ***Y***
+>> ? Programming language of the hooks ***JavaScript***
+>> ? Found Travis CI configuration, do you want to add Dredd? ***N***
 > ![dredd_init](images/dredd_init.png)
+>
 >> **선택사항)** 만일 본인이 직접 작성한 API Blueprint 파일을 사용하고 싶으면 다음 명령어로 직접 다운로드 받아서  
 >> 진행하시기 바랍니다. 참고로 Windows Powershell 명령어 이므로 Visual Studio Code 터미널에서 수행하며,  
 >> DownloadFile URL에서 apiaryApiName은 위에 메모한 apiaryApiName 이름으로 변경하여 실행합니다.  
@@ -478,7 +477,7 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 >> (New-Object Net.WebClient).DownloadFile('https://{apiaryApiName}.docs.apiary.io/api-description-document','c:\Oracle\workspace\helidon-moviesvc-mp\apiary.apib')
 >>```
 
-> 3) Dredd.yml 파일이 생성되었습니다. Dredd.yml 파일을 이용하여 Dredd를 실행합니다.  
+> :three: Dredd.yml 파일이 생성되었습니다. Dredd.yml 파일을 이용하여 Dredd를 실행합니다.  
 >```
 > dredd
 >```
