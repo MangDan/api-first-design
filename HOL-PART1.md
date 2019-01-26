@@ -8,7 +8,7 @@
 ### PART 1 실습하기
 #### 1. API 설계 문서 (API Blueprint) 작성하기
 <details>
-<summary>Apiary 계정 생성하기</summary>
+<summary>1.1 Apiary 계정 생성하기</summary>
 API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
 만약 계정을 가지고 있다면 이 단계를 건너뜁니다.  
 
@@ -40,7 +40,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 </details>
 
 <details>
-<summary>API Blueprint 설계 문서 작성하기</summary>
+<summary>1.2 API Blueprint 설계 문서 작성하기</summary>
 
 이제부터 Movie API 설계 문서를 작성합니다.  
 > 아래의 API Blueprint 코드를 복사해서 좌측 에디터의 샘플 Blueprint를 덮어 씁니다. 
@@ -229,7 +229,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 </details>
 
 <details>
-<summary>API Blueprint 코드를 GitHub으로 관리하기</summary>
+<summary>1.3 API Blueprint 코드를 GitHub으로 관리하기</summary>
 
 작성된 API Blueprint 를 GitHub에 푸시하여 형상관리를 할 수 있습니다.  
 이 작업을 위해서는 Apiary와 GitHub Sync가 되어야 하는데, 이 과정을 보여줍니다.
@@ -290,7 +290,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 
 #### 2. Helidon을 활용하여 마이크로 서비스를 개발하고 API 설계 문서와 일치 여부 테스트하기
 <details>
-<summary>Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 만들기</summary>
+<summary>2.1 Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 만들기</summary>
 
 > 작업은 Visual Studio Code를 통해서 진행합니다.  
 > Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
@@ -434,7 +434,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 </details>
 
 <details>
-<summary>Dredd를 활용하여 API 설계문서와 서비스간의 일치 여부 검증하기</summary>
+<summary>2.2 Dredd를 활용하여 API 설계문서와 서비스간의 일치 여부 검증하기</summary>
 
 Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며, API 문서와 구현된 서비스간 일치 여부를 검증,  
 테스트하는 도구입니다. 현재 API Blueprint와 Swagger를 지원합니다.  
@@ -495,7 +495,7 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 #### 3. Wercker와 Dredd, Github을 사용하여 지속적 통합 테스트 환경 구축하기
 
 <details>
-<summary>GitHub의 Dredd.yml 파일 업데이트 및 커밋</summary>
+<summary>3.1 GitHub의 Dredd.yml 파일 업데이트 및 커밋</summary>
  
 > Continuous Integration & Delivery 솔루션인 Wercker는 GitHub과 같은 SCM과 연결되어 동작합니다.  
 > 여기서는 처음에 생성한 GitHub Repository를 연결하여 진행합니다.  
@@ -519,7 +519,7 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 </details>
  
 <details>
-<summary>Wercker 계정 생성 및 빌드</summary>
+<summary>3.2 Wercker 계정 생성 및 빌드</summary>
 
 > [Wercker 바로가기](https://app.wercker.com)  
 > Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,  
