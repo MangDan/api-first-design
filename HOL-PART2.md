@@ -8,7 +8,7 @@
 ### PART 2 실습하기
 #### 1. ORDS를 활용하여 마이크로 서비스를 개발하고 배포하기
 <details>
-<summary>ORDS REST 서비스 만들고 배포</summary>
+<summary>1.1 ORDS REST 서비스 만들고 배포</summary>
    
 > SQL Developer를 실행합니다.  
 > 좌측에 생성된 Connection (myords@apidb)을 마우스 우클릭 해서 ***Open SQL Worksheet*** 를 선택합니다.  
@@ -98,7 +98,7 @@
 
 #### 2. ORDS 서비스에 보안 및 정책을 적용하고 API Gateway에 배치하기
 <details>
-<summary>서비스 등록 및 API 정책 적용하기</summary>
+<summary>2.1 서비스 등록 및 API 정책 적용하기</summary>
 
 > API Management Portal에 접속합니다. (사용자 계정 총 5개)
 > 실수로 인한 계정 잠김 등을 고려하여 예비로 5개 계정을 만들어 두었습니다. 권한은 모두 동일하니 원하는 것을 선택하여 사용하세요.
@@ -208,7 +208,7 @@
 </details>
 
 <details>
-<summary>배치된 서비스 테스트 하기</summary>
+<summary>2.2 배치된 서비스 테스트 하기</summary>
 
 REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합니다.  
 > Insomnia를 실행하고 중앙 **New Request**를 실행합니다.  
@@ -242,7 +242,7 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 
 #### 3. 애플리케이션 개발자를 위해 개발자 포탈에 API 퍼블리시 하기
 <details>
-<summary>(실습X) Apiary 연동 및 API 개발자 포탈에 게시</summary>
+<summary>3.1 (실습X) Apiary 연동 및 API 개발자 포탈에 게시</summary>
 
 > API Platform에서 생성한 API를 클릭 후 **게시** 아이콘 클릭, **Apiary** 클릭
 > <img src="images/apipcs_publish.png" width="80%">  
@@ -260,7 +260,7 @@ REST API Client 프로그램인 Insomnia를 활용하여 테스트를 진행합�
 </details>
 
 <details>
-<summary>개발자 포탈에서 API 검색 및 문서 보기</summary>
+<summary>3.2 개발자 포탈에서 API 검색 및 문서 보기</summary>
  
 > API 개발자 포탈에 로그인 합니다.  
 > 인증은 위에서 제공된 API Platform 관리자 계정을 사용합니다.  
