@@ -1,4 +1,6 @@
-[settings.json](#settings.json)  
+[settings.json](settings.json)  
+(New-Object Net.WebClient).DownloadFile('https://movieapi75.docs.apiary.io/api-description-document','c:\Oracle\workspace\helidon-moviesvc-mp\apiary.apib')
+
 
 
 # 마이크로 서비스 개발을 위한 API 우선 설계 및 API 구축하기
