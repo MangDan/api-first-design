@@ -8,11 +8,11 @@
 ### PART 1 실습하기
 #### 1. API 설계 문서 (API Blueprint) 작성하기
 <details>
-<summary>1.1 Apiary 계정 생성하기</summary>
+<summary>1.1. Apiary 계정 생성하기</summary>
 API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
 만약 계정을 가지고 있다면 이 단계를 건너뜁니다.  
 
-> [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
+> [Apiary(https://apiary.io)](https://apiary.io){:target="_blank"} 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
 > <img src="images/apiary_home.png" width="80%">
 
 > **Continue with GitHub** 버튼을 클릭합니다.  
