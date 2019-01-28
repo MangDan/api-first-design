@@ -8,33 +8,33 @@
 ### PART 1 실습하기
 #### 1. API 설계 문서 (API Blueprint) 작성하기
 <details>
-<summary>1.1. Apiary 계정 생성하기</summary>
+<summary>1.1 Apiary 계정 생성하기</summary>
 API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 생성하는 단계입니다.  
 만약 계정을 가지고 있다면 이 단계를 건너뜁니다.  
 
-> [Apiary](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
+> 1.1.1 [Apiary(https://apiary.io)](https://apiary.io) 홈페이지에 접속한 후 우측 상단의 **Sign up** 버튼을 클릭합니다.  
 > <img src="images/apiary_home.png" width="80%">
 
-> **Continue with GitHub** 버튼을 클릭합니다.  
+> 1.1.2 **Continue with GitHub** 버튼을 클릭합니다.  
 > <img src="images/apiary_sign_up.png" width="40%">
 
-> GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
+> 1.1.3 GitHub 계정을 입력하고 **Sign In** 버튼을 클릭합니다.  
 > <img src="images/apiary_github_account1.png" width="40%">
 
-> Apiary에서 GitHub에 인증을 위한 권한을 요청합니다.  
+> 1.1.4 Apiary에서 GitHub에 인증을 위한 권한을 요청합니다.  
 > **Authorize apiaryio** 버튼을 클릭합니다.  
 > <img src="images/apiary_github_signup.png" width="40%">
 
-> Apiary에서 사용할 이메일을 입력합니다.  
+> 1.1.5 Apiary에서 사용할 이메일을 입력합니다.  
 > GitHub 이메일을 입력합니다.  
 > <img src="images/apiary_github_signup2.png" width="40%">
 
-> Apiary 계정을 처음 만들면 기본 API 프로젝트 하나를 생성해야 합니다.  
+> 1.1.6 Apiary 계정을 처음 만들면 기본 API 프로젝트 하나를 생성해야 합니다.  
 > **Name your first API** 부분에 다음과 같이 *Movie API*를 입력하고 문서 타입은 API Blueprint로 선택합니다.  
 > Apiary는 Swagger와 API Blueprint 두가지를 지원 합니다. (참고 -> [API Blueprint and Swagger](#api-blueprint-and-swagger)
 > <img src="images/apiary_new_api.png" width="40%">
 
-> Apiary 계정과 첫 API Blueprint 프로젝트를 성공적으로 생성하였습니다. :clap:  
+> 1.1.7 Apiary 계정과 첫 API Blueprint 프로젝트를 성공적으로 생성하였습니다. :clap:  
 > 생성을 하게 되면 좌측에 샘플 API Blueprint 마크다운과 에디터가 보이고, 우측에 HTML 문서가 보입니다.  
 > <img src="images/apiary_write_api_1.png" width="100%">
 </details>
@@ -43,7 +43,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 <summary>1.2 API Blueprint 설계 문서 작성하기</summary>
 
 이제부터 Movie API 설계 문서를 작성합니다.  
-> 아래의 API Blueprint 코드를 복사해서 좌측 에디터의 샘플 Blueprint를 덮어 씁니다. 
+> 1.2.1 아래의 API Blueprint 코드를 복사해서 좌측 에디터의 샘플 Blueprint를 덮어 씁니다. 
 >```markdown
 > FORMAT: 1A
 > HOST: http://polls.apiblueprint.org/
@@ -112,7 +112,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > - name : Drama (string, required)
 >```
 
-> 요청/응답 데이터 정의는 두 가지 유형을 보여주기 위해 JSON 형식과 [MSON](#mson) 형식으로 정의하였습니다.  
+> 1.2.2 요청/응답 데이터 정의는 두 가지 유형을 보여주기 위해 JSON 형식과 [MSON](#mson) 형식으로 정의하였습니다.  
 > 자동으로 변환된 HTML문서를 오른쪽 영역에서 볼 수 있습니다.  
 > **List All Movies**와 **Get a Movie**를 클릭하여 각각의 서비스 URL, 요청 파리미터 및 JSON 응답, Mock URL을 확인할 수 있습니다.  
 > 우측 상단의 Save 버튼을 클릭하여 저장합니다.  
@@ -234,56 +234,56 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 작성된 API Blueprint 를 GitHub에 푸시하여 형상관리를 할 수 있습니다.  
 이 작업을 위해서는 Apiary와 GitHub Sync가 되어야 하는데, 이 과정을 보여줍니다.
 
-> 먼저 GitHub에 Repository를 하나 생성합니다.   
+> 1.3.1 먼저 GitHub에 Repository를 하나 생성합니다.   
 > GitHub에 로그인한 후 New repository를 클릭합니다.  
 > <img src="images/create_github_repo.png" width="80%">
 
-> Repository 이름을 입력합니다. 여기서는 *oraclecloud_api_handson* 이라는 이름으로 생성합니다.  
+> 1.3.2 Repository 이름을 입력합니다. 여기서는 *oraclecloud_api_handson* 이라는 이름으로 생성합니다.  
 > <img src="images/create_github_repo2.png" width="80%">
 
-> 아래 Import code를 클릭합니다.  
+> 1.3.3 아래 Import code를 클릭합니다.  
 > 본 과정에서 사용되는 소스와 설정파일을 포함한 Repository를 복제하여 생성할 것입니다. 
 > <img src="images/import_github_code.png" width="60%">
 
-> clone URL에 아래와 같이 입력하고, Begin Import를 클릭합니다.  
+> 1.3.4 clone URL에 아래와 같이 입력하고, Begin Import를 클릭합니다.  
 > Import하는 레파지토리에는 Helidon 소스, Dredd 및 Wercker 설정 파일등이 포함되어 있으며, 이후 실습에서 사용됩니다.  
 >```
 > https://github.com/mangdan/oraclecloud_api_handson
 >```
 > <img src="images/github_import_repo.png" width="60%">
 
-> GitHub Repository가 생성되었습니다.  
+> 1.3.5 GitHub Repository가 생성되었습니다.  
 > Repository 링크를 클릭하면 Repository와 Import한 파일들을 확인 할 수 있습니다.  
 > <img src="images/github_import_complete.png" width="60%">
 
-> 이제 Apiary 상단의 사람 모양 아이콘 옆 Settings 아이콘을 클릭합니다.  
+> 1.3.6 이제 Apiary 상단의 사람 모양 아이콘 옆 Settings 아이콘을 클릭합니다.  
 > 이 Settings 는 작성한 문서에 대한 설정을 하기 위한 설정 버튼입니다.  
 > <img src="images/apiary_doc_settings.png" width="80%">
 
-> 맨 하단 *Link your GitHub account* 버튼을 클릭합니다.  
+> 1.3.7 맨 하단 *Link your GitHub account* 버튼을 클릭합니다.  
 > <img src="images/doc_link_github.png" width="60%">
 
-> *List all repositories* 버튼을 클릭합니다.  
+> 1.3.8 *List all repositories* 버튼을 클릭합니다.  
 > <img src="images/list_all_repo.png" width="60%">
 
-> Apiary가 GitHub 접근 권한을 부여하기 위해 *Authorize apairyio* 버튼을 클릭합니다.  
+> 1.3.9 Apiary가 GitHub 접근 권한을 부여하기 위해 *Authorize apairyio* 버튼을 클릭합니다.  
 > <img src="images/auth_github_aiary.png" width="60%">
 
-> 다시 아래 *Link your GitHub account* 버튼을 클릭하면 다음과 같이 생성한 repository를 선택할 수 있습니다.  
+> 1.3.10 다시 아래 *Link your GitHub account* 버튼을 클릭하면 다음과 같이 생성한 repository를 선택할 수 있습니다.  
 > 옆의 Connect 버튼을 클릭합니다.  
 > <img src="images/conn_git_repo.png" width="60%">
  
-> *Commit and start sync* 버튼을 클릭합니다.  
+> 1.3.11 *Commit and start sync* 버튼을 클릭합니다.  
 > <img src="images/commit_and_sync.png" width="60%">
 
-> 작성한 API Blueprint문서와 GitHub Repository가 싱크됩니다.  
+> 1.3.12 작성한 API Blueprint문서와 GitHub Repository가 싱크됩니다.  
 > <img src="images/apiary_git_sync_complete.png" width="80%">
 
-> 다시 상단의 Editor 버튼을 클릭하면 우측 **Save** 버튼 옆에 **Push** 버튼이 생성 된 것을 확인하실 수 있습니다.  
+> 1.3.13 다시 상단의 Editor 버튼을 클릭하면 우측 **Save** 버튼 옆에 **Push** 버튼이 생성 된 것을 확인하실 수 있습니다.  
 > 이제 문서를 변경하면 변경이 되었다는 알림(빨간점)이 Push 버튼에 나타나며, Push 버튼을 클릭하여 GitHub에 바로 푸시할 수 있습니다.  
 > <img src="images/apiary_push_btn.png" width="80%">
 
-> GitHub Repository에는 apiary.apib 파일이 생성됩니다.  
+> 1.3.14 GitHub Repository에는 apiary.apib 파일이 생성됩니다.  
 > GitHub에 생성된 파일을 클릭하여 내용을 확인합니다.  
 > <img src="images/github_doc.png" width="60%">
 </details>
@@ -292,7 +292,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 <details>
 <summary>2.1 Helidon MP (MicroProfile) 프로젝트 생성 및 서비스 만들기</summary>
 
-> 작업은 Visual Studio Code를 통해서 진행합니다.  
+> 2.1.1 작업은 Visual Studio Code를 통해서 진행합니다.  
 > Visual Studio Code를 실행하고 Visual Studio Code 상단 터미널을 클릭하고 새 터미널을 오픈합니다.  
 > 다음과 같이 Maven Path와 Java Home 환경 변수를 체크합니다.
 >    - **Visual Studio Code 터미널: Windows PowerShell 기준**
@@ -314,7 +314,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > ```
 </details><br>
 
-> 여기서는 MicroProfile 기반 Helidon 프로젝트로 API를 개발합니다. [참고 -> Helidon](#helidon)  
+> 2.1.2 여기서는 MicroProfile 기반 Helidon 프로젝트로 API를 개발합니다. [참고 -> Helidon](#helidon)  
 > ***실습 시간 관계상 미리 생성한 프로젝트로 진행합니다.***  
 > 만약 c:\Oracle\workspace\helidon-moviesvc-mp 프로젝트 폴더가 없을 경우  
 > 아래 ***Helidon MP/SE 템플릿 프로젝트를 새로 생성하는 방법*** 을 참고하시기 바랍니다.  
@@ -322,10 +322,10 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > c:\Oracle\workspace 폴더를 선택하고 열기를 클릭합니다.  
 > <img src="images/mscode_open_workspace.png" width="80%">
 
-> 기본 Helidon MP Project Template Structure 입니다.  
+> 2.1.3 기본 Helidon MP Project Template Structure 입니다.  
 > <img src="images/helidon_base_structure.png" width="30%">
 
-> Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 패키징 및 서비스 실행합니다.  
+> 2.1.4 Visual Studio Code 터미널에서 생성한 프로젝트 폴더로 이동 후 다음과 같이 패키징 및 서비스 실행합니다.  
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
 >    - **Visual Studio Code 터미널에서 수행**
 > ```
@@ -336,7 +336,7 @@ API 설계 문서를 작성하고 Mock Test를 하기 위한 Apiary 계정을 �
 > java -jar target/helidon-moviesvc-mp.jar
 > ```
 
-> 다음과 같이 브라우저로 접속해봅니다.  
+> 2.1.5 다음과 같이 브라우저로 접속해봅니다.  
 > Helidon 템플릿으로 생성한 샘플 REST API 수행결과를 확인합니다.
 >```
 > http://localhost:8080/greet
@@ -393,7 +393,7 @@ workspace 폴더 하위에 생성하므로 해당 폴더로 이동합니다.
 ***
 
 Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 소스를 활용하여 패키징 및 테스트합니다.   
-> VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
+> 2.1.6 VS Code 터미널에서 Ctrl + C로 실행중인 프로세스를 종료합니다.  
 > 다음과 같이 처음 생성한 본인의 GitHub 계정에서 관련된 소스를 로컬로 Clone합니다. (apiary blueprint 포함)  
 > ***실습 시간 관계상 미리 다운로드 받은 레파지토리로 진행합니다. 아래 단계는 건너뜁니다.***  
 > ***만일, c:\Oracle\oraclecloud_api_handson 폴더가 없을 경우 다음 git clone을 실행하세요.***  
@@ -401,7 +401,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 > git clone https://github.com/{본인깃헙계정명}/oraclecloud_api_handson c:\Oracle\oraclecloud_api_handson
 >```
 
-> GitHub에서 받은 Helidon 프로젝트로 미리 구현해 놓은 Movie API 소스를 내 프로젝트로 복사합니다.  
+> 2.1.7 GitHub에서 받은 Helidon 프로젝트로 미리 구현해 놓은 Movie API 소스를 내 프로젝트로 복사합니다.  
 >```
 > cp c:\Oracle\oraclecloud_api_handson\movie_api\movie*.json c:\Oracle\workspace\helidon-moviesvc-mp\src\main\resources
 >
@@ -409,7 +409,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 >```
 > <img src="images/clone_cp.png" width="100%">
 
-> 포로젝트를 다시 패키징 및 실행합니다.   
+> 2.1.8 프로젝트를 다시 패키징 및 실행합니다.   
 > :large_orange_diamond: 명령어 실행은 생성한 Helidon 프로젝트 폴더 안에서 실행합니다.
 >    - **Visual Studio Code 터미널에서 수행**
 >```
@@ -421,7 +421,7 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 >```
 > <img src="images/helidon_movie_run.png" width="100%">
 
-> 다음과 같이 브라우저로 접속해봅니다.
+> 2.1.9 다음과 같이 브라우저로 접속해봅니다.
 > Helidon 템플릿으로 생성한 샘플 REST API가 이제 구현되어 Movie API로써 수행결과를 확인합니다.
 >```
 > http://localhost:8080/movies
@@ -439,22 +439,22 @@ Apiary에서 설계한 문서 (Movie API) 기반으로 간단하게 개발된 �
 Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며, API 문서와 구현된 서비스간 일치 여부를 검증,  
 테스트하는 도구입니다. 현재 API Blueprint와 Swagger를 지원합니다.  
 
-> Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
+> 2.2.1 Apiary에 접속해서 Movie API 상단 **Tests**을 클릭합니다.  
 > Tutorials 탭을 클릭하면 다음과 같이 3 스탭으로 Dredd 테스트를 수행하도록 가이드를 볼 수 있습니다.  
 > ![dredd_install_init](images/dredd_install_init_new.png)
 
-> 위 작업을 순서대로 수행할 것입니다.  
+> 2.2.2 위 작업을 순서대로 수행할 것입니다.  
 > Visual Studio Code의 터미널 환경에서 Dredd Install 작업을 수행합니다.  
 > 작업 위치는 Helidon Project (quickstart-mp) 입니다.  
 >    - **Visual Studio Code 터미널에서 수행**
 
-> :one: Dredd 툴을 설치합니다.  
+> 2.2.3 :one: Dredd 툴을 설치합니다.  
 >```
 > npm install -g dredd
 >```
 > <img src="images/dredd_install.png" width="100%">
 
-> :two: dredd init 명령을 실행합니다.  
+> 2.2.4 :two: dredd init 명령을 실행합니다.  
 > 참고로 로컬 테스트를 위해서는 Apiary에서 다운로드 받은 API Blueprint 파일 (확장자 .apib)이 필요합니다.  
 > 실습 시간 관계상 helidon-moviesvc-mp 폴더에 사전에 다운로드 받아 준비되어 있습니다.(apiary.apib)
 >    - **여기서 apairyApikey와 ApiaryApiName은 본인의 Apiary 문서로 리포트를 전송하기 위해 사용됩니다.**  
@@ -479,14 +479,13 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 >> (New-Object Net.WebClient).DownloadFile('https://{apiaryApiName}.docs.apiary.io/api-description-document','c:\Oracle\workspace\helidon-moviesvc-mp\apiary.apib')
 >>```
 
-> :three: Dredd.yml 파일이 생성되었습니다. Dredd.yml 파일을 이용하여 Dredd를 실행합니다.  
+> 2.2.5 :three: Dredd.yml 파일이 생성되었습니다. Dredd.yml 파일을 이용하여 Dredd를 실행합니다.  
 >```
 > dredd
 >```
-
 > <img src="images/local_dredd_test.png" width="100%">
 
-> Apiary Tests의 **Local Development**로 들어가면 테스트 결과 리포트를 볼 수 있습니다. 안보이면 Refresh (F5)  
+> 2.2.6 Apiary Tests의 **Local Development**로 들어가면 테스트 결과 리포트를 볼 수 있습니다. 안보이면 Refresh (F5)  
 > Apiary에서 정의한 Movie API 스펙에 맞게 Helidon기반 REST API가 잘 구현되었는지 테스트한 결과 입니다.
 > <img src="images/apiary_dredd_result.png" width="100%">
 </details>
@@ -497,31 +496,31 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 <details>
 <summary>3.1 GitHub의 Dredd.yml 파일 업데이트 및 커밋</summary>
  
-> Continuous Integration & Delivery 솔루션인 Wercker는 GitHub과 같은 SCM과 연결되어 동작합니다.  
+> 3.1.1 Continuous Integration & Delivery 솔루션인 Wercker는 GitHub과 같은 SCM과 연결되어 동작합니다.  
 > 여기서는 처음에 생성한 GitHub Repository를 연결하여 진행합니다.  
 >```
 > https://github.com/{본인깃헙계정명}/oraclecloud_api_handson
 >```
 
-> 위 GitHub Repository에는 Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며,  
+> 3.1.2 위 GitHub Repository에는 Wercker와 Helidon 소스, 기타 관련 설정 파일들이 포함되어 있으며,  
 > Wercker는 wercker.yml 파일에 기술된 스탭과 파이프라인을 기반으로 실행됩니다. [(참고 -> Wercker Config)](#wercker-config)  
 > <img src="images/mygithub_repo.png" width="60%">
 
-> 여기서 Dredd.yml의 apiaryApiKey와 apiaryApiName은 본인이 만든 API Blueprint를 기준으로 변경해야 합니다.  
+> 3.1.3 여기서 Dredd.yml의 apiaryApiKey와 apiaryApiName은 본인이 만든 API Blueprint를 기준으로 변경해야 합니다.  
 > Apiary의 상단 Tests 링크를 클릭하고 Tutorial 탭에서 dredd init 라인에 있는 apiaryApiKey와 apiaryApiName을 복사합니다.  
 > <img src="images/dredd_install_init_2.png" width="80%">
 
-> GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
+> 3.1.4 GitHub Repository로 가서 dredd.yml파일을 클릭하고 우측 상단의 연필 아이콘을 클릭합니다.
 > <img src="images/github_dredd.png" width="80%">
 
-> 다음과 같이 본인의 apiaryApiKey와 apiaryApiName 값으로 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
+> 3.1.5 다음과 같이 본인의 apiaryApiKey와 apiaryApiName 값으로 수정하고 하단 **Commit Changes** 버튼을 클릭하여 커밋합니다.  
 > <img src="images/github_dredd_modify.png" width="80%">
 </details>
  
 <details>
 <summary>3.2 Wercker 계정 생성 및 빌드</summary>
 
-> [Wercker 바로가기](https://app.wercker.com)  
+> 3.2.1 [Wercker 바로가기](https://app.wercker.com)  
 > Wercker는 컨테이너 기반의 CI/CD 도구입니다. Dredd로 로컬에서 간단히 테스트를 할 수 있지만, 구현 API 수가 많아지면,  
 > Wercker와 SCM(GitHub)을 활용하여 API 문서 및 개발 소스 변경을 감지하여 검증 및 테스트를 자동화 할 수 있습니다.  
 > 여기선 이 과정을 보여줍니다. 우선 [Wercker](http://app.wercker.com)에 접속, GitHub 계정을 활용하여 Wercker 계정을 생성합니다.  
@@ -529,45 +528,45 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 > 상단의 **Sign Up** 버튼을 클릭합니다.  
 > <img src="images/wercker_home.png" width="80%">
 
-> **SIGN UP USING GITHUB** 버튼을 클릭하고 GitHub 아이디와 패스워드를 입력합니다.  
+> 3.2.2 **SIGN UP USING GITHUB** 버튼을 클릭하고 GitHub 아이디와 패스워드를 입력합니다.  
 > <img src="images/wercker_github_signup.png" width="60%">
 
-> **Authorize wercker** 버튼을 클릭합니다.  
+> 3.2.3 **Authorize wercker** 버튼을 클릭합니다.  
 > <img src="images/wercker_github_auth.png" width="60%">
 
-> Name, Email을 입력하고 **FINISH UP** 버튼을 클릭합니다.  
+> 3.2.4 Name, Email을 입력하고 **FINISH UP** 버튼을 클릭합니다.  
 > <img src="images/wercker_email.png" width="60%">
 
-> **Create your first application** 버튼을 클릭합니다.  
+> 3.2.5 **Create your first application** 버튼을 클릭합니다.  
 > 혹은 우측 상단의 + 버튼을 클릭하고, Add Application을 선택합니다.  
 > <img src="images/wercker_create_first_app.png" width="80%">
 
-> 다음과 같이 SCM을 GitHub으로 선택하고 Next 버튼을 클릭합니다.  
+> 3.2.6 다음과 같이 SCM을 GitHub으로 선택하고 Next 버튼을 클릭합니다.  
 > <img src="images/wercker_create_new_app_1.png" width="60%">
 
-> GitHub Repository를 선택합니다.  
+> 3.2.7 GitHub Repository를 선택합니다.  
 > <img src="images/wercker_create_new_app_2.png" width="60%">
 
-> **Wercker will check out the code without using an SSH key** 선택합니다.  
+> 3.2.8 **Wercker will check out the code without using an SSH key** 선택합니다.  
 > <img src="images/wercker_create_new_app_3.png" width="60%">
 
-> **Create** 버튼을 클릭하여 Wercker Application을 생성합니다.  
+> 3.2.9 **Create** 버튼을 클릭하여 Wercker Application을 생성합니다.  
 > 혹은 우측 상단의 + 버튼을 클릭하고 Add Application을 선택합니다.  
 > <img src="images/wercker_create_new_app_4.png" width="80%">
 
-> Wercker Application을 성공적으로 생성하였습니다.  
+> 3.2.10 Wercker Application을 성공적으로 생성하였습니다.  
 > <img src="images/wercker_create_new_app_5.png" width="80%">
 
-> 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.  
+> 3.2.11 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.  
 > <img src="images/wercker_trigger_build_now.png" width="100%">
 
-> Wercker trigger가 작동하면서 자동으로 Build가 시작되는 것을 확인할 수 있습니다.  
+> 3.2.12 Wercker trigger가 작동하면서 자동으로 Build가 시작되는 것을 확인할 수 있습니다.  
 > <img src="images/wercker_build_start.png" width="80%">
 
-> Wercker에서 Build 및 Test가 오류 없이 완료되었습니다.  
+> 3.2.13 Wercker에서 Build 및 Test가 오류 없이 완료되었습니다.  
 > <img src="images/wercker_build_complete.png" width="80%">
 
-> Apiary의 Tests로 들어가서 **Continuous Integration**을 클릭하면 다음과 같이 Dredd가 전송한   
+> 3.2.14 Apiary의 Tests로 들어가서 **Continuous Integration**을 클릭하면 다음과 같이 Dredd가 전송한   
 > 결과 리포트를 확인할 수 있습니다. (안보이면 F5 Refresh)  
 > <img src="images/apiary_ci_result.png" width="100%">
 >
