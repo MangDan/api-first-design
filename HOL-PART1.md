@@ -576,11 +576,10 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 >> - id : 2699 (number, required)    ---->     - id : 2699 (string, required)
 >>```
 
-> API Blueprint 문서와 API 소스가 변경이 일어나면 Wercker에 의해서 자동으로 문서 호환 여부를 체크하여 결과를  
+> 3.2.15. API Blueprint 문서와 API 소스가 변경이 일어나면 Wercker에 의해서 자동으로 문서 호환 여부를 체크하여 결과를  
 > 다양한 채널 (Apiary, 이메일, Slack 등)로 전송해줍니다.  
 > Wercker가 CI/CD 솔루션이므로 모든 테스트를 마친 API는 최종적으로는 다양한 운영 환경에 자동 배포가 되며, 
 > API 문서와 서비스를 항상 최신의 상태로 유지시켜 줍니다.  
-
 > <img src="images/wercker_first_build.png" width="80%">
 </details>
 
