@@ -554,7 +554,8 @@ Dredd([참고 -> Dredd](#dredd))는 Apiary에서 주도하는 오픈소스이며
 > 혹은 우측 상단의 + 버튼을 클릭하고 Add Application을 선택합니다.  
 > <img src="images/wercker_create_new_app_4.png" width="80%">
 
-> 3.2.10. Wercker Application을 성공적으로 생성하였습니다.  
+> 3.2.10. Wercker 계정과 Wercker Application 생성이 완료되었습니다.  
+> 이제 첫 Wercker 빌드를 진행합니다.  
 > <img src="images/wercker_create_new_app_5.png" width="80%">
 
 > 3.2.11. 맨 아래 **trigger a build now** 버튼을 클릭하면 빌드가 시작됩니다.  
