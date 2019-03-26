@@ -1,11 +1,3 @@
-[settings.json](settings.json)  
-
-C:\Users\user\AppData\Roaming\Code\User  
-
-(New-Object Net.WebClient).DownloadFile('https://movieapi75.docs.apiary.io/api-description-document','c:\Oracle\workspace\helidon-moviesvc-mp\apiary.apib')
-
-
-
 # 마이크로 서비스 개발을 위한 API 우선 설계 및 API 구축하기
 
 본 문서는 Oracle Apiary에서 API Blueprint를 활용하여 API 설계 문서를 보고, 만들어진 문서를 토대로 [Oracle Helidon](http://helidon.io)과 [Oracle Database의 REST Data Service](https://www.oracle.com/database/technologies/appdev/rest.html)로 마이크로 서비스를 구현하는 방법을 보여줍니다. 
